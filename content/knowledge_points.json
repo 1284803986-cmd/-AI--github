@@ -1,6 +1,12 @@
 {
   "package_id": "g4_math_down_decimal_add_sub",
   "package_name": "四年级数学下册小数加减法内容包",
+  "version": "2026-05-18",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包只记录教材章节、知识点、题型结构和原创出题模板，不保存或复刻整本教材课后题。",
+    "source_rule": "网上教材链接仅用于人工确认范围和目录，不自动爬取、不绕过登录、不抓取收费内容。"
+  },
   "scope": {
     "grade": "四年级",
     "semester": "下册",
@@ -8,9 +14,34 @@
     "textbook": "人教版",
     "unit": "小数加减法"
   },
+  "units": [
+    {
+      "id": "decimal_add_sub",
+      "name": "小数加减法",
+      "lessons": [
+        {
+          "id": "lesson_decimal_add",
+          "name": "小数加法",
+          "knowledge_point_ids": ["decimal_add_same_digits", "decimal_add_different_digits"]
+        },
+        {
+          "id": "lesson_decimal_sub",
+          "name": "小数减法",
+          "knowledge_point_ids": ["decimal_sub_same_digits", "decimal_sub_different_digits"]
+        },
+        {
+          "id": "lesson_decimal_mix",
+          "name": "小数加减混合与解决问题",
+          "knowledge_point_ids": ["decimal_add_sub_different_digits", "decimal_add_sub_word_problem", "decimal_add_sub_checking"]
+        }
+      ]
+    }
+  ],
   "knowledge_points": [
     {
       "id": "decimal_add_same_digits",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "lesson_decimal_add",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
@@ -27,7 +58,28 @@
       "difficulty_levels": ["基础", "提高"]
     },
     {
+      "id": "decimal_add_different_digits",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "lesson_decimal_add",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数位数不同的小数加法",
+      "description": "会在小数末尾补 0，使相同数位对齐后进行加法计算。",
+      "common_mistakes": [
+        "没有补 0 就直接把末位相加",
+        "小数点没有和加数的小数点对齐",
+        "进位后整数部分没有正确处理"
+      ],
+      "recommended_question_types": ["计算题", "填空题", "应用题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
       "id": "decimal_sub_same_digits",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "lesson_decimal_sub",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
@@ -44,7 +96,28 @@
       "difficulty_levels": ["基础", "提高"]
     },
     {
+      "id": "decimal_sub_different_digits",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "lesson_decimal_sub",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数位数不同的小数减法",
+      "description": "会用补 0 和退位的方法完成位数不同的小数减法。",
+      "common_mistakes": [
+        "被减数小数位不够时没有补 0",
+        "退位后相邻数位没有少 1",
+        "把减数和被减数顺序写反"
+      ],
+      "recommended_question_types": ["计算题", "填空题", "判断题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
       "id": "decimal_add_sub_different_digits",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "lesson_decimal_mix",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
@@ -62,6 +135,8 @@
     },
     {
       "id": "decimal_add_sub_word_problem",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "lesson_decimal_mix",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
@@ -79,6 +154,8 @@
     },
     {
       "id": "decimal_add_sub_checking",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "lesson_decimal_mix",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",

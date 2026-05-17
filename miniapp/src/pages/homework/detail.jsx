@@ -42,7 +42,10 @@ export default function HomeworkDetailPage() {
         <Text className="section-title">{assignment.title}</Text>
         <Text className="muted">科目 / 年级：{assignment.subject} / {assignment.grade}</Text>
         <Text className="muted">学期 / 教材：{assignment.semester} / {assignment.textbook}</Text>
+        {assignment.unit ? <Text className="muted">单元：{assignment.unit}</Text> : null}
+        {assignment.lesson ? <Text className="muted">课时：{assignment.lesson}</Text> : null}
         <Text className="muted">知识点：{assignment.knowledgePoint}</Text>
+        {assignment.type ? <Text className="muted">题型：{assignment.type}</Text> : null}
         <Text className="muted">题目数量：{assignment.questionCount}</Text>
         <Text className="muted">创建时间：{new Date(assignment.createdAt).toLocaleString()}</Text>
         <View className="question-card">

@@ -12,7 +12,7 @@ import {
   getSubmissionsByAssignment,
   markSubmissionViewed
 } from "./assignments.js";
-import { ensureInPackage, findKnowledgePoint, loadContentPackage, templatesFor } from "./content.js";
+import { ensureInPackage, findKnowledgePoint, loadContentCatalog, loadContentPackage, templatesFor } from "./content.js";
 import { mockPaper, mockTextbookQuestions, mockWrongQuestion } from "./mock.js";
 import { generateWithAI } from "./openai.js";
 import { paperPrompt, textbookPrompt, wrongQuestionPrompt } from "./prompts.js";
@@ -45,7 +45,7 @@ app.get("/api/health", (_request, response) => {
 
 app.get("/api/content-package", async (_request, response, next) => {
   try {
-    response.json(await loadContentPackage());
+    response.json(await loadContentCatalog());
   } catch (error) {
     next(error);
   }
@@ -55,7 +55,7 @@ app.post("/api/generate/textbook", async (request, response, next) => {
   try {
     const input = requireFields(request.body, ["grade", "semester", "subject", "textbook", "unit", "knowledgePoint", "type", "difficulty", "count"]);
     input.count = clampNumber(input.count, 1, 50);
-    const contentPackage = await loadContentPackage();
+    const contentPackage = await loadContentPackage(input);
     const scopedInput = ensureInPackage(input, contentPackage);
     const knowledgePoint = findKnowledgePoint(contentPackage, scopedInput.knowledgePoint);
     const templates = templatesFor(contentPackage, knowledgePoint, scopedInput.type);
@@ -70,7 +70,7 @@ app.post("/api/generate/wrong-question", async (request, response, next) => {
   try {
     const input = requireFields(request.body, ["originalQuestion"]);
     input.wrongAnswer = String(request.body.wrongAnswer || "");
-    const contentPackage = await loadContentPackage();
+    const contentPackage = await loadContentPackage(input);
     const context = { contentPackage };
     response.json(await generateOrMock(wrongQuestionPrompt(input, context), () => mockWrongQuestion(input, context)));
   } catch (error) {
@@ -83,7 +83,7 @@ app.post("/api/generate/paper", async (request, response, next) => {
     const input = requireFields(request.body, ["subject", "grade", "textbook", "unitRange", "count", "totalScore", "difficultyRatio"]);
     input.count = clampNumber(input.count, 1, 100);
     input.totalScore = clampNumber(input.totalScore, 1, 300);
-    const contentPackage = await loadContentPackage();
+    const contentPackage = await loadContentPackage(input);
     const scopedInput = ensureInPackage({ ...input, unit: input.unitRange, knowledgePoint: input.unitRange }, contentPackage);
     const context = { contentPackage };
     response.json(await generateOrMock(paperPrompt(scopedInput, context), () => mockPaper(scopedInput, context)));
@@ -131,9 +131,10 @@ app.post("/api/assignments", async (request, response, next) => {
   try {
     const input = requireFields(request.body, ["grade", "semester", "subject", "textbook", "knowledgePoint", "difficulty", "count"]);
     input.unit = request.body.unit || input.knowledgePoint;
+    input.lesson = request.body.lesson || "";
     input.type = request.body.type || "计算题";
     input.count = clampNumber(input.count, 1, 50);
-    const contentPackage = await loadContentPackage();
+    const contentPackage = await loadContentPackage(input);
     const scopedInput = ensureInPackage(input, contentPackage);
     const knowledgePoint = findKnowledgePoint(contentPackage, scopedInput.knowledgePoint);
     const templates = templatesFor(contentPackage, knowledgePoint, scopedInput.type);

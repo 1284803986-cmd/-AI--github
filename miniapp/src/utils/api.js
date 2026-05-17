@@ -33,6 +33,10 @@ export function deleteHistory(id) {
   return request(`/api/history/${id}`, "DELETE");
 }
 
+export function getContentPackage() {
+  return request("/api/content-package");
+}
+
 export function generateTextbook(data) {
   return request("/api/generate/textbook", "POST", data);
 }

@@ -1,0 +1,25 @@
+{
+  "sources": [
+    {
+      "id": "manual_reference_g4_math_rj_down",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "source_type": "manual_reference",
+      "status": "pending_user_authorization",
+      "note": "用于登记用户提供的教材来源。未确认授权前，只记录目录、知识点和题型结构，不保存教材原题。",
+      "allowed_use": [
+        "人工确认年级、学科、单元和知识点范围",
+        "整理原创题生成模板",
+        "生成同知识点原创练习题"
+      ],
+      "disallowed_use": [
+        "自动爬取整本教材",
+        "绕过登录或验证码",
+        "抓取收费题库或版权题目",
+        "原样复制教材课后题"
+      ]
+    }
+  ]
+}

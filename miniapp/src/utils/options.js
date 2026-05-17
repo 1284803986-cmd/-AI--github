@@ -12,6 +12,13 @@ export const subjectCards = [
 export const subjectKnowledgeOptions = {
   语文: ["字词基础", "句子训练", "阅读理解", "看图写话", "古诗积累"],
   数学: [
+    "认识钟面时间",
+    "有余数除法计算",
+    "有余数除法应用题",
+    "乘除关系解决问题",
+    "万以内数的读写",
+    "万以内加法",
+    "万以内减法",
     "小数位数相同的小数加法",
     "小数位数相同的小数减法",
     "小数位数不同的小数加减法",
@@ -32,12 +39,12 @@ export const questionTypeOptions = subjectQuestionTypeOptions.数学;
 export const difficultyOptions = ["基础", "提高", "拔高"];
 
 export const defaultSelection = {
-  grade: "四年级",
+  grade: "二年级",
   subject: "数学",
   textbook: "人教版",
   semester: "下册",
-  unit: "小数加减法",
-  knowledgePoint: "小数位数不同的小数加减法"
+  unit: "时间在哪里",
+  knowledgePoint: "认识钟面时间"
 };
 
 export function getKnowledgeOptions(subject) {

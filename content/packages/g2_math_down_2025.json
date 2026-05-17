@@ -1,0 +1,820 @@
+{
+  "package_id": "g2_math_down_rj_2025",
+  "package_name": "二年级数学下册人教版新教材内容包",
+  "version": "2026-05-18",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的授权资料整理单元、课时、知识点、题型结构和原创出题模板，不保存或复刻教材、教辅原题。",
+    "source_rule": "主教材用于确定单元和课时顺序，教辅 PDF 仅用于补充知识点、易错点和题型风格。"
+  },
+  "scope": {
+    "grade": "二年级",
+    "semester": "下册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "rj_g2_math_down_2025_textbook",
+      "source_type": "user_provided_pdf",
+      "name": "26春人教版二年级下册新教材彩色.pdf",
+      "use": "确定主教材单元、课时和知识点分类"
+    },
+    {
+      "id": "g2_math_down_knowledge_notes",
+      "source_type": "user_provided_pdf",
+      "name": "二下数学知识点归纳与晨读晚默资料",
+      "use": "补充知识点表述、常见题型和易错点"
+    },
+    {
+      "id": "g2_math_down_practice_reference",
+      "source_type": "user_provided_pdf",
+      "name": "应用题专项与精选题资料",
+      "use": "只参考题型结构和难度，不保存原题"
+    }
+  ],
+  "units": [
+    {
+      "id": "time",
+      "name": "时间在哪里",
+      "lessons": [
+        {
+          "id": "time_day_clock",
+          "name": "认识一天和钟表",
+          "knowledge_point_ids": ["time_day_order", "time_clock_reading"]
+        },
+        {
+          "id": "time_duration",
+          "name": "经过时间",
+          "knowledge_point_ids": ["time_elapsed_simple", "time_schedule_problem"]
+        }
+      ]
+    },
+    {
+      "id": "division_remainder",
+      "name": "有余数的除法",
+      "lessons": [
+        {
+          "id": "remainder_meaning",
+          "name": "认识余数",
+          "knowledge_point_ids": ["remainder_meaning", "remainder_expression"]
+        },
+        {
+          "id": "remainder_calculation",
+          "name": "有余数除法计算",
+          "knowledge_point_ids": ["remainder_less_than_divisor", "remainder_calculation"]
+        },
+        {
+          "id": "remainder_problem",
+          "name": "解决有余数问题",
+          "knowledge_point_ids": ["remainder_word_problem", "remainder_rounding_context"]
+        }
+      ]
+    },
+    {
+      "id": "multiplication_division_relation",
+      "name": "数量间的乘除关系",
+      "lessons": [
+        {
+          "id": "multiply_relation",
+          "name": "几个几与乘法",
+          "knowledge_point_ids": ["multiply_equal_groups", "multiply_total_problem"]
+        },
+        {
+          "id": "division_relation",
+          "name": "平均分与除法",
+          "knowledge_point_ids": ["division_equal_share", "division_containment"]
+        },
+        {
+          "id": "relation_compare",
+          "name": "乘除关系应用",
+          "knowledge_point_ids": ["multiply_divide_inverse", "multiply_divide_word_problem"]
+        }
+      ]
+    },
+    {
+      "id": "numbers_within_10000",
+      "name": "万以内数的认识",
+      "lessons": [
+        {
+          "id": "counting_units",
+          "name": "千和万的认识",
+          "knowledge_point_ids": ["thousand_ten_thousand", "place_value_composition"]
+        },
+        {
+          "id": "reading_writing",
+          "name": "万以内数的读写",
+          "knowledge_point_ids": ["number_reading_writing", "zero_in_number"]
+        },
+        {
+          "id": "compare_estimate",
+          "name": "大小比较与近似数",
+          "knowledge_point_ids": ["number_compare", "approximate_number"]
+        }
+      ]
+    },
+    {
+      "id": "add_sub_within_10000",
+      "name": "万以内的加法和减法",
+      "lessons": [
+        {
+          "id": "addition",
+          "name": "加法",
+          "knowledge_point_ids": ["three_digit_addition", "continuous_carry_addition"]
+        },
+        {
+          "id": "subtraction",
+          "name": "减法",
+          "knowledge_point_ids": ["three_digit_subtraction", "continuous_borrow_subtraction"]
+        },
+        {
+          "id": "add_sub_problem",
+          "name": "加减法应用",
+          "knowledge_point_ids": ["add_sub_inverse_check", "add_sub_word_problem"]
+        }
+      ]
+    },
+    {
+      "id": "math_comic",
+      "name": "数学连环画",
+      "lessons": [
+        {
+          "id": "story_math",
+          "name": "连环画中的数学问题",
+          "knowledge_point_ids": ["comic_sequence_math", "comic_multi_step_problem"]
+        }
+      ]
+    },
+    {
+      "id": "review_connection",
+      "name": "复习与关联",
+      "lessons": [
+        {
+          "id": "review_number_operation",
+          "name": "数与运算整理",
+          "knowledge_point_ids": ["review_number_operation", "review_problem_solving"]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "time_day_order",
+      "unit_id": "time",
+      "lesson_id": "time_day_clock",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时间在哪里",
+      "name": "一天中的时间顺序",
+      "description": "能结合生活情境辨认上午、中午、下午、晚上等时间顺序。",
+      "common_mistakes": ["把早晚时间顺序混淆", "只看钟面不结合生活情境", "漏掉经过一天后的变化"],
+      "recommended_question_types": ["填空题", "判断题", "应用题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "time_clock_reading",
+      "unit_id": "time",
+      "lesson_id": "time_day_clock",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时间在哪里",
+      "name": "认识钟面时间",
+      "description": "能读出整时、半时和常见分钟数，理解时针、分针表示的意义。",
+      "common_mistakes": ["分针指向数字时不会换算分钟", "时针接近下一个数时读错小时", "把几时半读成整时"],
+      "recommended_question_types": ["填空题", "选择题", "应用题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "time_elapsed_simple",
+      "unit_id": "time",
+      "lesson_id": "time_duration",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时间在哪里",
+      "name": "简单经过时间",
+      "description": "能用开始时间和结束时间求经过了几小时或几分钟。",
+      "common_mistakes": ["直接用结束时间减开始时间时忽略半小时", "跨整点时少算或多算", "单位小时和分钟混用"],
+      "recommended_question_types": ["应用题", "填空题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "time_schedule_problem",
+      "unit_id": "time",
+      "lesson_id": "time_duration",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时间在哪里",
+      "name": "时间安排问题",
+      "description": "会根据日常活动安排判断先后顺序和所用时间。",
+      "common_mistakes": ["没有看清活动先后", "把开始时间当作经过时间", "答语没有写清活动名称"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "remainder_meaning",
+      "unit_id": "division_remainder",
+      "lesson_id": "remainder_meaning",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "余数的意义",
+      "description": "理解平均分后没有分完的部分就是余数。",
+      "common_mistakes": ["把商和余数的位置写反", "不理解剩下的数量为什么是余数", "单位名称写错"],
+      "recommended_question_types": ["填空题", "判断题", "应用题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "remainder_expression",
+      "unit_id": "division_remainder",
+      "lesson_id": "remainder_meaning",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "有余数除法算式",
+      "description": "会把平均分且有剩余的情境写成除法算式并正确读写商和余数。",
+      "common_mistakes": ["漏写余数", "余数后面没有单位", "把除数当成每份结果"],
+      "recommended_question_types": ["计算题", "填空题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "remainder_less_than_divisor",
+      "unit_id": "division_remainder",
+      "lesson_id": "remainder_calculation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "余数要比除数小",
+      "description": "理解在有余数除法中，余数必须小于除数。",
+      "common_mistakes": ["余数大于或等于除数仍认为正确", "商小了导致余数过大", "不会用除数检查余数"],
+      "recommended_question_types": ["判断题", "填空题", "计算题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "remainder_calculation",
+      "unit_id": "division_remainder",
+      "lesson_id": "remainder_calculation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "有余数除法计算",
+      "description": "会用乘法口诀试商，按商、乘、减、比的步骤计算。",
+      "common_mistakes": ["试商过大或过小", "减法算错导致余数错", "没有检查余数是否小于除数"],
+      "recommended_question_types": ["计算题", "填空题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "remainder_word_problem",
+      "unit_id": "division_remainder",
+      "lesson_id": "remainder_problem",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "有余数除法应用题",
+      "description": "能在分组、装盒、排队等情境中列出有余数除法解决问题。",
+      "common_mistakes": ["没有根据问题判断求组数还是剩余", "只写算式没有答语", "把剩余数量也算成一整组"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["基础", "提高", "拔高"]
+    },
+    {
+      "id": "remainder_rounding_context",
+      "unit_id": "division_remainder",
+      "lesson_id": "remainder_problem",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "余数情境中的进一和舍去",
+      "description": "能根据生活情境判断有余数时结果要不要多算一组。",
+      "common_mistakes": ["所有有余数题都进一", "所有有余数题都舍去", "没有结合题目问法判断"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "multiply_equal_groups",
+      "unit_id": "multiplication_division_relation",
+      "lesson_id": "multiply_relation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "几个几与乘法",
+      "description": "能把几个相同加数的和理解成乘法。",
+      "common_mistakes": ["没有看出每组数量相同", "乘数和被乘数含义混淆", "单位名称漏写"],
+      "recommended_question_types": ["填空题", "应用题", "计算题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "multiply_total_problem",
+      "unit_id": "multiplication_division_relation",
+      "lesson_id": "multiply_relation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "求几个几的总数",
+      "description": "会用乘法解决求几个相同数量合起来是多少的问题。",
+      "common_mistakes": ["把几组和每组几个写反但意义不清", "口诀用错", "答语单位错"],
+      "recommended_question_types": ["应用题", "计算题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "division_equal_share",
+      "unit_id": "multiplication_division_relation",
+      "lesson_id": "division_relation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "平均分求每份数",
+      "description": "知道总数和份数，能用除法求每份是多少。",
+      "common_mistakes": ["没有平均分就列除法", "把份数和每份数混淆", "不写单位"],
+      "recommended_question_types": ["应用题", "填空题", "计算题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "division_containment",
+      "unit_id": "multiplication_division_relation",
+      "lesson_id": "division_relation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "按每份数求份数",
+      "description": "知道总数和每份数，能用除法求可以分成几份。",
+      "common_mistakes": ["把问题中的每份数看成份数", "单位名称写成每份物品", "没有检查商是否合理"],
+      "recommended_question_types": ["应用题", "填空题", "计算题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "multiply_divide_inverse",
+      "unit_id": "multiplication_division_relation",
+      "lesson_id": "relation_compare",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "乘除法互逆关系",
+      "description": "理解乘法和除法可以互相检验，能根据一个乘法算式写出相关除法算式。",
+      "common_mistakes": ["除法算式写不完整", "把积、因数位置混乱", "不会用乘法验算除法"],
+      "recommended_question_types": ["填空题", "判断题", "计算题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "multiply_divide_word_problem",
+      "unit_id": "multiplication_division_relation",
+      "lesson_id": "relation_compare",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "乘除关系解决问题",
+      "description": "能根据数量关系判断用乘法还是除法解决实际问题。",
+      "common_mistakes": ["看到数字就直接相乘或相除", "没有找清总数、份数、每份数", "答语不完整"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "thousand_ten_thousand",
+      "unit_id": "numbers_within_10000",
+      "lesson_id": "counting_units",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "千和万的认识",
+      "description": "认识计数单位千和万，理解相邻计数单位之间的十进关系。",
+      "common_mistakes": ["把千和万的大小关系弄反", "数数时满十没有进一", "不知道 10 个一千是一万"],
+      "recommended_question_types": ["填空题", "判断题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "place_value_composition",
+      "unit_id": "numbers_within_10000",
+      "lesson_id": "counting_units",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "万以内数的组成",
+      "description": "会说出一个数由几个千、几个百、几个十和几个一组成。",
+      "common_mistakes": ["数位和计数单位混淆", "中间有 0 的数位漏说", "把个位、十位、百位顺序写反"],
+      "recommended_question_types": ["填空题", "选择题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "number_reading_writing",
+      "unit_id": "numbers_within_10000",
+      "lesson_id": "reading_writing",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "万以内数的读写",
+      "description": "会读写万以内的数，能根据数位顺序正确写数。",
+      "common_mistakes": ["中间或末尾的 0 读写错误", "写数时漏写占位 0", "从低位开始写数"],
+      "recommended_question_types": ["填空题", "判断题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "zero_in_number",
+      "unit_id": "numbers_within_10000",
+      "lesson_id": "reading_writing",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "数中的 0",
+      "description": "理解数中间或末尾的 0 在读数、写数中的作用。",
+      "common_mistakes": ["中间连续 0 读多个零", "末尾 0 读出来", "写数时漏掉占位 0"],
+      "recommended_question_types": ["填空题", "判断题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "number_compare",
+      "unit_id": "numbers_within_10000",
+      "lesson_id": "compare_estimate",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "万以内数大小比较",
+      "description": "能按位数和从高位到低位比较万以内数的大小。",
+      "common_mistakes": ["只比较某一位数字", "位数不同仍从个位比较", "没有从最高位开始比较"],
+      "recommended_question_types": ["填空题", "选择题", "判断题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "approximate_number",
+      "unit_id": "numbers_within_10000",
+      "lesson_id": "compare_estimate",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "近似数",
+      "description": "能用接近整十、整百或整千的数描述数量大约是多少。",
+      "common_mistakes": ["把准确数和近似数混淆", "不会根据语境选择近似数", "估计结果离原数太远"],
+      "recommended_question_types": ["填空题", "应用题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "three_digit_addition",
+      "unit_id": "add_sub_within_10000",
+      "lesson_id": "addition",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "万以内加法",
+      "description": "会进行万以内数的加法，理解相同数位对齐。",
+      "common_mistakes": ["相同数位没有对齐", "进位后忘记加 1", "横式和竖式结果不一致"],
+      "recommended_question_types": ["计算题", "填空题", "应用题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "continuous_carry_addition",
+      "unit_id": "add_sub_within_10000",
+      "lesson_id": "addition",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "连续进位加法",
+      "description": "会处理个位、十位、百位连续满十进一的加法。",
+      "common_mistakes": ["连续进位只进了一次", "进位写错位置", "计算完不检查结果大小"],
+      "recommended_question_types": ["计算题", "判断题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "three_digit_subtraction",
+      "unit_id": "add_sub_within_10000",
+      "lesson_id": "subtraction",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "万以内减法",
+      "description": "会进行万以内数的减法，理解不够减时向前一位退 1。",
+      "common_mistakes": ["退位后原数位没有少 1", "相同数位没有对齐", "被减数和减数位置写反"],
+      "recommended_question_types": ["计算题", "填空题", "应用题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "continuous_borrow_subtraction",
+      "unit_id": "add_sub_within_10000",
+      "lesson_id": "subtraction",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "连续退位减法",
+      "description": "会处理连续退位以及中间有 0 的减法。",
+      "common_mistakes": ["从 0 退位时处理错误", "连续退位漏退", "差的中间 0 漏写"],
+      "recommended_question_types": ["计算题", "判断题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "add_sub_inverse_check",
+      "unit_id": "add_sub_within_10000",
+      "lesson_id": "add_sub_problem",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "加减法验算",
+      "description": "能用加减法互逆关系检查计算结果是否正确。",
+      "common_mistakes": ["验算时仍重复原算式", "没有比较验算结果", "不写验算结论"],
+      "recommended_question_types": ["判断题", "计算题", "变式题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "add_sub_word_problem",
+      "unit_id": "add_sub_within_10000",
+      "lesson_id": "add_sub_problem",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "加减法解决实际问题",
+      "description": "能在总数、相差、还剩等情境中选择加法或减法解决问题。",
+      "common_mistakes": ["没有分清求总数还是求相差", "单位名称不一致", "只列式不写答语"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["基础", "提高", "拔高"]
+    },
+    {
+      "id": "comic_sequence_math",
+      "unit_id": "math_comic",
+      "lesson_id": "story_math",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学连环画",
+      "name": "连环画中的顺序信息",
+      "description": "能按图文顺序找出数量变化过程。",
+      "common_mistakes": ["没有按顺序读图", "漏掉中间变化", "把故事信息和问题信息混淆"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "comic_multi_step_problem",
+      "unit_id": "math_comic",
+      "lesson_id": "story_math",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学连环画",
+      "name": "连环画多步问题",
+      "description": "能从连续情境中提取多个数量关系并分步解决。",
+      "common_mistakes": ["只算一步就作答", "没有说明每一步含义", "把增加和减少看反"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["提高", "拔高"]
+    },
+    {
+      "id": "review_number_operation",
+      "unit_id": "review_connection",
+      "lesson_id": "review_number_operation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复习与关联",
+      "name": "数与运算整理",
+      "description": "整理万以内数的认识、加减法和乘除关系，形成知识网络。",
+      "common_mistakes": ["知识点混在一起不会分类", "计算和数量关系对应不上", "不会用验算检查"],
+      "recommended_question_types": ["填空题", "计算题", "应用题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "review_problem_solving",
+      "unit_id": "review_connection",
+      "lesson_id": "review_number_operation",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复习与关联",
+      "name": "综合解决问题",
+      "description": "综合运用时间、除法、乘除关系、万以内数和加减法解决问题。",
+      "common_mistakes": ["没有先分析数量关系", "多步题步骤混乱", "答案不符合生活实际"],
+      "recommended_question_types": ["应用题", "变式题"],
+      "difficulty_levels": ["提高", "拔高"]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "time_clock_reading",
+      "question_type": "填空题",
+      "template": "钟面上分针指向 6，时针在 {hour} 和下一个数字之间，这时是 {hour} 时 ____ 分。",
+      "answer_rule": "分针指向 6 表示 30 分，所以是半时。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "time_elapsed_simple",
+      "question_type": "应用题",
+      "template": "小华从 {hour} 时开始读书，读了 {m} 分钟后结束。结束时间比开始时间晚了多少分钟？",
+      "answer_rule": "求经过时间，直接看活动持续了多少分钟。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "remainder_expression",
+      "question_type": "计算题",
+      "template": "计算：{dividend} ÷ {divisor} = ____ …… ____",
+      "answer_rule": "用乘法口诀试商，余数要比除数小。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "remainder_less_than_divisor",
+      "question_type": "判断题",
+      "template": "判断：在有余数的除法中，余数可以和除数一样大。____",
+      "answer_rule": "错误。余数必须比除数小。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "remainder_word_problem",
+      "question_type": "应用题",
+      "template": "有 {dividend} 个苹果，每 {divisor} 个装一袋，可以装几袋？还剩几个？",
+      "answer_rule": "用有余数的除法计算，商表示袋数，余数表示剩下的个数。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "remainder_rounding_context",
+      "question_type": "变式题",
+      "template": "有 {dividend} 人坐船，每条船最多坐 {divisor} 人，至少需要几条船？",
+      "answer_rule": "有剩余的人也需要一条船，所以有余数时要多算一条。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "multiply_total_problem",
+      "question_type": "应用题",
+      "template": "每盒有 {m} 支铅笔，{n} 盒一共有多少支？",
+      "answer_rule": "求几个相同数量的总数，用乘法计算。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "division_equal_share",
+      "question_type": "应用题",
+      "template": "把 {total} 颗糖平均分给 {n} 个小朋友，每人分几颗？",
+      "answer_rule": "总数 ÷ 份数 = 每份数。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "division_containment",
+      "question_type": "应用题",
+      "template": "有 {total} 朵花，每 {m} 朵扎一束，可以扎几束？",
+      "answer_rule": "总数 ÷ 每份数 = 份数。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_inverse",
+      "question_type": "填空题",
+      "template": "根据 {m} × {n} = {product}，写出一道除法算式：{product} ÷ {m} = ____。",
+      "answer_rule": "乘法和除法互为逆运算。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "place_value_composition",
+      "question_type": "填空题",
+      "template": "{num4} 由 ____ 个千、____ 个百、____ 个十和 ____ 个一组成。",
+      "answer_rule": "从高位到低位依次看每个数位上的数字。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "number_reading_writing",
+      "question_type": "填空题",
+      "template": "写出由 {thousands} 个千、{hundreds} 个百、{tens} 个十和 {ones} 个一组成的数：____。",
+      "answer_rule": "按千位、百位、十位、个位的顺序写数。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "zero_in_number",
+      "question_type": "判断题",
+      "template": "判断：读 4050 时，中间的 0 和末尾的 0 都要读出来。____",
+      "answer_rule": "错误。中间的 0 要读，末尾的 0 不读。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "number_compare",
+      "question_type": "填空题",
+      "template": "在横线上填“>”“<”或“=”：{num4} ____ {num4b}。",
+      "answer_rule": "先比较位数，位数相同从最高位依次比较。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "approximate_number",
+      "question_type": "填空题",
+      "template": "{num4} 接近整百数 ____。",
+      "answer_rule": "看这个数更接近前一个整百还是后一个整百。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "three_digit_addition",
+      "question_type": "计算题",
+      "template": "计算：{addend1} + {addend2} = ____",
+      "answer_rule": "相同数位对齐，从个位加起，满十向前一位进 1。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "continuous_carry_addition",
+      "question_type": "计算题",
+      "template": "计算：{carry1} + {carry2} = ____",
+      "answer_rule": "连续进位时，每一位的进位都要加到前一位。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "three_digit_subtraction",
+      "question_type": "计算题",
+      "template": "计算：{minuend} - {subtrahend} = ____",
+      "answer_rule": "相同数位对齐，不够减时向前一位退 1。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "continuous_borrow_subtraction",
+      "question_type": "计算题",
+      "template": "计算：{borrow1} - {borrow2} = ____",
+      "answer_rule": "连续退位时，要先借到当前数位再计算。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "add_sub_inverse_check",
+      "question_type": "判断题",
+      "template": "判断：如果 {minuend} - {subtrahend} = {diff}，可以用 {diff} + {subtrahend} = {minuend} 来验算。____",
+      "answer_rule": "正确。差加减数等于被减数，可以用来验算减法。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "add_sub_word_problem",
+      "question_type": "应用题",
+      "template": "图书角原来有 {minuend} 本书，借走 {subtrahend} 本，又买来 {m} 本，现在有多少本？",
+      "answer_rule": "先用原来的数量减去借走的数量，再加上买来的数量。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "comic_sequence_math",
+      "question_type": "应用题",
+      "template": "小明第一天收集 {m} 张贴纸，第二天又收集 {n} 张，送给同学 {divisor} 张后，还剩多少张？",
+      "answer_rule": "按事情发生的顺序，先加后减。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "comic_multi_step_problem",
+      "question_type": "变式题",
+      "template": "小队有 {total} 个任务，上午完成 {m} 个，下午完成的是上午的 {n} 倍，还剩几个任务？",
+      "answer_rule": "先求下午完成的数量，再求已经完成的总数，最后求剩下的数量。",
+      "difficulty": "拔高"
+    },
+    {
+      "knowledge_point_id": "review_number_operation",
+      "question_type": "计算题",
+      "template": "综合计算：{addend1} + {addend2} - {m} = ____",
+      "answer_rule": "按从左到右的顺序计算，注意加减法的意义。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "review_problem_solving",
+      "question_type": "应用题",
+      "template": "学校买来 {total} 个球，平均分给 {n} 个班后还剩 {remainder} 个，每个班分到几个？",
+      "answer_rule": "先用总数减去剩下的，再平均分给各班。",
+      "difficulty": "拔高"
+    }
+  ]
+}

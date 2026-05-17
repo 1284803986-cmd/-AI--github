@@ -55,17 +55,18 @@ export function mockPaper(input, context) {
 function buildQuestion(id, knowledgePoint, template, difficulty) {
   const values = numberSet(id);
   const question = fillTemplate(template.template, values);
+  const answer = calculateAnswer(question, template.answer_rule, values);
   return {
     id,
     question,
-    answer: calculateAnswer(question, template.answer_rule, values),
+    answer,
     explanation: `${template.answer_rule} 本题要点：${knowledgePoint.description}`,
     knowledge_point: knowledgePoint.name,
     difficulty,
     question_type: template.question_type,
     type: template.question_type,
     common_mistake: pick(knowledgePoint.common_mistakes, id - 1),
-    parent_tip: "让孩子先说明小数点为什么要对齐，再动笔计算。"
+    parent_tip: buildParentTip(knowledgePoint)
   };
 }
 
@@ -82,25 +83,116 @@ function buildOriginalAnalysis(originalQuestion, wrongAnswer) {
 
 function numberSet(id) {
   const base = id + 3;
+  const m = (id % 5) + 3;
+  const n = (id % 4) + 2;
+  const product = m * n;
+  const divisor = (id % 4) + 3;
+  const quotient = (id % 5) + 4;
+  const remainder = id % divisor;
+  const dividend = divisor * quotient + remainder;
+  const thousands = (id % 7) + 1;
+  const hundreds = (id * 2) % 10;
+  const tens = (id * 3) % 10;
+  const ones = (id * 4 + 1) % 10;
+  const num4 = thousands * 1000 + hundreds * 100 + tens * 10 + ones;
+  const num4b = num4 + ((id % 2 === 0 ? -1 : 1) * ((id % 6) + 12));
+  const addend1 = 230 + id * 17;
+  const addend2 = 140 + id * 23;
+  const carry1 = 368 + id * 11;
+  const carry2 = 257 + id * 13;
+  const subtrahend = 120 + id * 9;
+  const minuend = subtrahend + 260 + id * 7;
+  const borrow2 = 168 + id * 8;
+  const borrow1 = borrow2 + 501 + id * 6;
+  const diff = minuend - subtrahend;
   return {
     a: (base + 0.5).toFixed(1),
+    a2: (base + 0.25).toFixed(2),
     b: (id + 1.8).toFixed(1),
-    c: (id + 0.6).toFixed(1)
+    b2: (id + 1.75).toFixed(2),
+    c: (id + 0.6).toFixed(1),
+    hour: (id % 9) + 1,
+    m,
+    n,
+    product,
+    total: product * 2,
+    divisor,
+    quotient,
+    remainder,
+    dividend,
+    thousands,
+    hundreds,
+    tens,
+    ones,
+    num4,
+    num4b,
+    addend1,
+    addend2,
+    carry1,
+    carry2,
+    subtrahend,
+    minuend,
+    borrow1,
+    borrow2,
+    diff
   };
 }
 
 function fillTemplate(template, values) {
-  return template.replaceAll("{a}", values.a).replaceAll("{b}", values.b).replaceAll("{c}", values.c);
+  return Object.entries(values).reduce((text, [key, value]) => text.replaceAll(`{${key}}`, String(value)), template);
 }
 
 function calculateAnswer(question, rule, values) {
   if (question.includes("判断")) return rule.includes("错误") ? "错误" : "正确";
   if (question.includes("是否正确")) return rule;
-  if (question.includes("一共")) return `${format(Number(values.a) + Number(values.b))} 元`;
+  if (question.includes("几个？") && question.includes("还剩")) return `${values.quotient} 个，剩 ${values.remainder} 个`;
+  if (question.includes("几袋？还剩几个")) return `${values.quotient} 袋，还剩 ${values.remainder} 个`;
+  if (question.includes("至少需要几条船")) return `${values.quotient + (values.remainder ? 1 : 0)} 条`;
+  if (question.includes("每人分几颗")) return `${Math.floor(values.total / values.n)} 颗`;
+  if (question.includes("可以扎几束")) return `${Math.floor(values.total / values.m)} 束`;
+  if (question.includes("每个班分到几个")) return `${Math.floor((values.total - values.remainder) / values.n)} 个`;
+  if (question.includes("结束时间比开始时间晚了多少分钟")) return `${values.m} 分钟`;
+  if (question.includes("一共有多少支")) return `${values.m * values.n} 支`;
+  if (question.includes("写出一道除法算式")) return String(values.n);
+  if (question.includes("现在有多少本")) return `${values.minuend - values.subtrahend + values.m} 本`;
+  if (question.includes("还剩多少张")) return `${values.m + values.n - values.divisor} 张`;
+  if (question.includes("还剩几个任务")) return `${values.total - values.m - values.m * values.n} 个`;
+  if (question.includes("由 ____ 个千")) return `${values.thousands}，${values.hundreds}，${values.tens}，${values.ones}`;
+  if (question.includes("组成的数")) return String(values.num4);
+  if (question.includes("接近整百数")) return String(Math.round(values.num4 / 100) * 100);
+  if (question.includes("填“>”“<”")) return values.num4 > values.num4b ? ">" : values.num4 < values.num4b ? "<" : "=";
+  if (question.includes("÷") && question.includes("……")) return `${values.quotient} …… ${values.remainder}`;
+  if (question.includes("×")) return format(firstNumber(question) * secondNumber(question));
+  if (question.includes("÷")) return format(firstNumber(question) / secondNumber(question));
+  if (question.includes("一共") && question.includes("米")) return `${format(firstNumber(question) + secondNumber(question))} 米`;
+  if (question.includes("一共")) return `${format(firstNumber(question) + secondNumber(question))} 元`;
   if (question.includes("现在长")) return `${format(Number(values.a) - Number(values.b) + Number(values.c))} 米`;
-  if (question.includes("+")) return format(Number(values.a) + Number(values.b));
-  if (question.includes("-")) return format(Number(values.a) - Number(values.b));
+  if (question.includes("+") || question.includes("-")) return formatArithmetic(question);
   return rule;
+}
+
+function buildParentTip(knowledgePoint) {
+  if (knowledgePoint.subject === "数学" && knowledgePoint.grade === "二年级") {
+    return "让孩子先说清题目里的数量关系，再列式计算，最后检查单位和答语。";
+  }
+  return "让孩子先说明小数点为什么要对齐，再动笔计算。";
+}
+
+function firstNumber(text) {
+  return Number(text.match(/\d+(?:\.\d+)?/)?.[0] || 0);
+}
+
+function secondNumber(text) {
+  return Number(text.match(/\d+(?:\.\d+)?/g)?.[1] || 0);
+}
+
+function formatArithmetic(text) {
+  const expr = text.match(/(\d+(?:\.\d+)?)(?:\s*)([+\-])(?:\s*)(\d+(?:\.\d+)?)(?:\s*([+\-])\s*(\d+(?:\.\d+)?))?/) || [];
+  const first = Number(expr[1] || 0);
+  const second = Number(expr[3] || 0);
+  let value = expr[2] === "-" ? first - second : first + second;
+  if (expr[4] && expr[5]) value = expr[4] === "-" ? value - Number(expr[5]) : value + Number(expr[5]);
+  return format(value);
 }
 
 function format(value) {
