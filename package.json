@@ -1,0 +1,23 @@
+{
+  "name": "primary-ai-question-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev:weapp --workspace miniapp\"",
+    "dev:weapp": "npm run dev:weapp --workspace miniapp",
+    "dev:server": "npm run dev --workspace server",
+    "build:weapp": "npm run build:weapp --workspace miniapp",
+    "start": "npm run start --workspace server"
+  },
+  "workspaces": [
+    "miniapp",
+    "server"
+  ],
+  "devDependencies": {
+    "concurrently": "9.1.2"
+  },
+  "overrides": {
+    "webpack": "5.91.0"
+  }
+}

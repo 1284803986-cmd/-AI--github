@@ -1,0 +1,125 @@
+[
+  {
+    "id": "20c62792-9649-4b64-9f88-7bd161aa3335",
+    "type": "练习题",
+    "payload": {
+      "result": {
+        "title": "四年级数学小数位数不同的小数加减法练习",
+        "grade": "四年级",
+        "semester": "下册",
+        "subject": "数学",
+        "textbook": "人教版",
+        "unit": "小数加减法",
+        "questions": [
+          {
+            "id": 1,
+            "question": "计算：4.5 + 2.8 = ____",
+            "answer": "7.3",
+            "explanation": "位数不同先补 0，再按相同数位相加。 本题要点：会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+            "knowledge_point": "小数位数不同的小数加减法",
+            "difficulty": "基础",
+            "question_type": "计算题",
+            "type": "计算题",
+            "common_mistake": "没有补 0 就直接计算",
+            "parent_tip": "让孩子先说明小数点为什么要对齐，再动笔计算。"
+          },
+          {
+            "id": 2,
+            "question": "计算：5.5 + 3.8 = ____",
+            "answer": "9.3",
+            "explanation": "位数不同先补 0，再按相同数位相加。 本题要点：会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+            "knowledge_point": "小数位数不同的小数加减法",
+            "difficulty": "基础",
+            "question_type": "计算题",
+            "type": "计算题",
+            "common_mistake": "把整数位和小数位混在一起算",
+            "parent_tip": "让孩子先说明小数点为什么要对齐，再动笔计算。"
+          }
+        ]
+      },
+      "questionCount": 2,
+      "subject": "数学",
+      "knowledgePoint": "小数加减法",
+      "fileName": "测试文件",
+      "title": "四年级数学小数位数不同的小数加减法练习",
+      "grade": "四年级"
+    },
+    "createdAt": "2026-05-16T17:29:23.987Z"
+  },
+  {
+    "id": "34eafe0c-d123-41f1-ab87-002ccb0b53bc",
+    "type": "练习题",
+    "payload": {
+      "title": "四年级数学小数位数不同的小数加减法练习",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "content_package": "g4_math_down_decimal_add_sub",
+      "questions": [
+        {
+          "id": 1,
+          "question": "计算：4.5 + 2.8 = ____",
+          "answer": "7.3",
+          "explanation": "位数不同先补 0，再按相同数位相加。 本题要点是：会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+          "knowledge_point": "小数位数不同的小数加减法",
+          "difficulty": "基础",
+          "question_type": "计算题",
+          "type": "计算题",
+          "common_mistake": "没有补 0 就直接计算",
+          "parent_tip": "让孩子先说清楚小数点为什么要对齐，再动笔计算。"
+        },
+        {
+          "id": 2,
+          "question": "计算：5.5 + 3.8 = ____",
+          "answer": "9.3",
+          "explanation": "位数不同先补 0，再按相同数位相加。 本题要点是：会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+          "knowledge_point": "小数位数不同的小数加减法",
+          "difficulty": "基础",
+          "question_type": "计算题",
+          "type": "计算题",
+          "common_mistake": "把整数位和小数位混在一起算",
+          "parent_tip": "让孩子先说清楚小数点为什么要对齐，再动笔计算。"
+        },
+        {
+          "id": 3,
+          "question": "计算：6.5 + 4.8 = ____",
+          "answer": "11.3",
+          "explanation": "位数不同先补 0，再按相同数位相加。 本题要点是：会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+          "knowledge_point": "小数位数不同的小数加减法",
+          "difficulty": "基础",
+          "question_type": "计算题",
+          "type": "计算题",
+          "common_mistake": "结果小数点没有和原竖式对齐",
+          "parent_tip": "让孩子先说清楚小数点为什么要对齐，再动笔计算。"
+        },
+        {
+          "id": 4,
+          "question": "计算：7.5 + 5.8 = ____",
+          "answer": "13.3",
+          "explanation": "位数不同先补 0，再按相同数位相加。 本题要点是：会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+          "knowledge_point": "小数位数不同的小数加减法",
+          "difficulty": "基础",
+          "question_type": "计算题",
+          "type": "计算题",
+          "common_mistake": "没有补 0 就直接计算",
+          "parent_tip": "让孩子先说清楚小数点为什么要对齐，再动笔计算。"
+        },
+        {
+          "id": 5,
+          "question": "计算：8.5 + 6.8 = ____",
+          "answer": "15.3",
+          "explanation": "位数不同先补 0，再按相同数位相加。 本题要点是：会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+          "knowledge_point": "小数位数不同的小数加减法",
+          "difficulty": "基础",
+          "question_type": "计算题",
+          "type": "计算题",
+          "common_mistake": "把整数位和小数位混在一起算",
+          "parent_tip": "让孩子先说清楚小数点为什么要对齐，再动笔计算。"
+        }
+      ]
+    },
+    "createdAt": "2026-05-16T17:18:16.924Z"
+  }
+]

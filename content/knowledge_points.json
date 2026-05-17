@@ -1,0 +1,98 @@
+{
+  "package_id": "g4_math_down_decimal_add_sub",
+  "package_name": "四年级数学下册小数加减法内容包",
+  "scope": {
+    "grade": "四年级",
+    "semester": "下册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "小数加减法"
+  },
+  "knowledge_points": [
+    {
+      "id": "decimal_add_same_digits",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数位数相同的小数加法",
+      "description": "理解小数点对齐的意义，掌握十分位、百分位等相同数位相加的方法。",
+      "common_mistakes": [
+        "只把末尾数字对齐，没有把小数点对齐",
+        "进位后忘记加到前一位",
+        "结果末尾多写或少写 0"
+      ],
+      "recommended_question_types": ["计算题", "填空题", "判断题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "decimal_sub_same_digits",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数位数相同的小数减法",
+      "description": "掌握小数减法的竖式计算，能在相同数位上相减并正确处理退位。",
+      "common_mistakes": [
+        "退位后被减数原数位没有少 1",
+        "把小数点位置写错",
+        "减法顺序颠倒"
+      ],
+      "recommended_question_types": ["计算题", "填空题", "判断题"],
+      "difficulty_levels": ["基础", "提高"]
+    },
+    {
+      "id": "decimal_add_sub_different_digits",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数位数不同的小数加减法",
+      "description": "会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+      "common_mistakes": [
+        "没有补 0 就直接计算",
+        "把整数位和小数位混在一起算",
+        "结果小数点没有和原竖式对齐"
+      ],
+      "recommended_question_types": ["计算题", "填空题", "应用题", "变式题"],
+      "difficulty_levels": ["基础", "提高", "拔高"]
+    },
+    {
+      "id": "decimal_add_sub_word_problem",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数加减法解决实际问题",
+      "description": "能从购物、长度、质量等生活情境中提取数量关系，选择加法或减法解决问题。",
+      "common_mistakes": [
+        "没有分清求总数还是求相差",
+        "单位不统一就直接计算",
+        "只写算式没有写答语"
+      ],
+      "recommended_question_types": ["应用题", "变式题", "填空题"],
+      "difficulty_levels": ["基础", "提高", "拔高"]
+    },
+    {
+      "id": "decimal_add_sub_checking",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数加减法验算",
+      "description": "会用加减法互逆关系进行验算，判断计算结果是否合理。",
+      "common_mistakes": [
+        "验算时仍按原算式重复计算",
+        "没有估算结果大小是否合理",
+        "漏写验算过程"
+      ],
+      "recommended_question_types": ["判断题", "计算题", "变式题"],
+      "difficulty_levels": ["提高", "拔高"]
+    }
+  ]
+}

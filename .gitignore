@@ -1,0 +1,9 @@
+﻿node_modules
+miniapp/node_modules
+miniapp/dist
+miniapp/.swc
+dist
+.env
+npm-debug.log*
+.DS_Store
+*.log

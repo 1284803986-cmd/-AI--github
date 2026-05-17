@@ -1,0 +1,68 @@
+{
+  "package_id": "g4_math_down_decimal_add_sub",
+  "templates": [
+    {
+      "knowledge_point_id": "decimal_add_same_digits",
+      "question_type": "计算题",
+      "template": "计算：{a} + {b} = ____",
+      "answer_rule": "按小数点对齐，相同数位相加。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "decimal_add_same_digits",
+      "question_type": "填空题",
+      "template": "{a} + {b} 的和是 ____。",
+      "answer_rule": "先对齐小数点，再从低位加起。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "decimal_sub_same_digits",
+      "question_type": "计算题",
+      "template": "计算：{a} - {b} = ____",
+      "answer_rule": "按小数点对齐，相同数位相减，不够减时向前一位退 1。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_different_digits",
+      "question_type": "计算题",
+      "template": "计算：{a} + {b} = ____",
+      "answer_rule": "位数不同先补 0，再按相同数位相加。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_different_digits",
+      "question_type": "判断题",
+      "template": "判断：计算小数加减法时，只要把数字末尾对齐就可以。____",
+      "answer_rule": "错误。应把小数点对齐，也就是相同数位对齐。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_word_problem",
+      "question_type": "应用题",
+      "template": "小明买文具花了 {a} 元，买练习本花了 {b} 元，一共花了多少元？",
+      "answer_rule": "求一共用加法，把两个小数相加。",
+      "difficulty": "基础"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_word_problem",
+      "question_type": "变式题",
+      "template": "一根彩带长 {a} 米，用去 {b} 米后，又接上 {c} 米，现在长多少米？",
+      "answer_rule": "先减去用去的长度，再加上接上的长度。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_checking",
+      "question_type": "判断题",
+      "template": "判断：如果 8.6 - 3.2 = 5.4，那么可以用 5.4 + 3.2 = 8.6 来验算。____",
+      "answer_rule": "正确。减法可以用差加减数等于被减数进行验算。",
+      "difficulty": "提高"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_checking",
+      "question_type": "变式题",
+      "template": "小红计算 12.5 - 4.8 = 8.7，请你判断是否正确，并写出验算方法。",
+      "answer_rule": "不正确。可用 8.7 + 4.8 = 13.5 验算，不等于 12.5。",
+      "difficulty": "拔高"
+    }
+  ]
+}

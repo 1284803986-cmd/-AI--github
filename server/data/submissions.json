@@ -1,0 +1,269 @@
+[
+  {
+    "id": "1fba6d3b-cd31-4dce-a0d7-220b25ee11ea",
+    "assignmentId": "23aef21c-6912-4524-8d2d-5c80370d5020",
+    "assignmentCode": "0JSQDZ",
+    "studentName": "1",
+    "submitType": "在线答题",
+    "answers": [
+      {
+        "questionIndex": 1,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 2,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 3,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 4,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 5,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 6,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 7,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 8,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 9,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 10,
+        "answer": "1"
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-17T02:13:47.874Z",
+    "status": "已查看",
+    "teacherComment": ""
+  },
+  {
+    "id": "cd971349-5540-45b0-93e6-0509f0008cee",
+    "assignmentId": "9526e783-3849-4022-873e-4080ead033a4",
+    "assignmentCode": "FEC117",
+    "studentName": "11",
+    "submitType": "在线答题",
+    "answers": [
+      {
+        "questionIndex": 1,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 2,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 3,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 4,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 5,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 6,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 7,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 8,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 9,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 10,
+        "answer": "1"
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-16T22:35:26.563Z",
+    "status": "已查看",
+    "teacherComment": ""
+  },
+  {
+    "id": "c149f061-9471-4fe9-8a9a-7278b685d9a9",
+    "assignmentId": "b83cc96c-06cf-41a3-a987-b3ffed0701c6",
+    "assignmentCode": "LBV3CS",
+    "studentName": "图片测试学生",
+    "submitType": "图片上传",
+    "answers": [],
+    "imagePaths": [
+      "/uploads/b83cc96c-06cf-41a3-a987-b3ffed0701c6-22217f38-7d9c-4f03-9bcf-d969c230fc57.jpg"
+    ],
+    "submittedAt": "2026-05-16T21:42:44.660Z",
+    "status": "待批改",
+    "teacherComment": ""
+  },
+  {
+    "id": "1401629a-1085-45da-85ea-2d6d0c0701c6",
+    "assignmentId": "bddcc9f5-e475-4430-b471-ec547ac6ad71",
+    "assignmentCode": "OAYBWK",
+    "studentName": "闭环测试学生",
+    "submitType": "online",
+    "answers": [
+      {
+        "questionIndex": 0,
+        "answer": "答案一"
+      },
+      {
+        "questionIndex": 1,
+        "answer": "答案二"
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-16T21:42:14.669Z",
+    "status": "待批改",
+    "teacherComment": ""
+  },
+  {
+    "id": "ef932172-9fe5-4450-bfdd-e70216125c01",
+    "assignmentId": "abf6e38c-f504-44ac-bce0-c668a072bce7",
+    "assignmentCode": "WCUNXW",
+    "studentName": "小明",
+    "submitType": "在线答题",
+    "answers": [
+      {
+        "questionIndex": 1,
+        "answer": ""
+      },
+      {
+        "questionIndex": 2,
+        "answer": ""
+      },
+      {
+        "questionIndex": 3,
+        "answer": ""
+      },
+      {
+        "questionIndex": 4,
+        "answer": ""
+      },
+      {
+        "questionIndex": 5,
+        "answer": ""
+      },
+      {
+        "questionIndex": 6,
+        "answer": ""
+      },
+      {
+        "questionIndex": 7,
+        "answer": ""
+      },
+      {
+        "questionIndex": 8,
+        "answer": ""
+      },
+      {
+        "questionIndex": 9,
+        "answer": ""
+      },
+      {
+        "questionIndex": 10,
+        "answer": ""
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-16T21:41:59.143Z",
+    "status": "待批改",
+    "teacherComment": ""
+  },
+  {
+    "id": "f9ed0972-0998-4fed-9bc8-9652ed7596cd",
+    "assignmentId": "6effcd2d-1a69-47e0-bd2c-030f8cd5911c",
+    "assignmentCode": "J47XG9",
+    "studentName": "??????",
+    "submitType": "online",
+    "answers": [
+      {
+        "questionIndex": 0,
+        "answer": "????1"
+      },
+      {
+        "questionIndex": 1,
+        "answer": "????2"
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-16T21:41:42.790Z",
+    "status": "待批改",
+    "teacherComment": ""
+  },
+  {
+    "id": "740717b0-bcb6-4bb2-a54b-6b0107053a36",
+    "assignmentId": "fecf532c-bb9f-4558-97d9-789e0f64bc9b",
+    "assignmentCode": "687FOI",
+    "studentName": "????B",
+    "submitType": "图片上传",
+    "answers": [],
+    "imagePaths": [
+      "/uploads/fecf532c-bb9f-4558-97d9-789e0f64bc9b-3c3939ba-4035-4c88-855d-089114889706.jpg"
+    ],
+    "submittedAt": "2026-05-16T21:32:01.573Z",
+    "status": "待批改",
+    "teacherComment": ""
+  },
+  {
+    "id": "0a6e4457-75d2-4747-a90f-1fe39fbe5198",
+    "assignmentId": "fecf532c-bb9f-4558-97d9-789e0f64bc9b",
+    "assignmentCode": "687FOI",
+    "studentName": "????A",
+    "submitType": "????",
+    "answers": [
+      {
+        "questionIndex": 1,
+        "answer": "7.3"
+      },
+      {
+        "questionIndex": 2,
+        "answer": "9.3"
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-16T21:32:01.563Z",
+    "status": "待批改",
+    "teacherComment": ""
+  },
+  {
+    "id": "fb93598d-c99f-4a31-a1a1-d7cd7e74f9b0",
+    "assignmentId": "663f99a7-084a-471d-92b3-3b191f8f91ee",
+    "assignmentCode": "Q9NEL2",
+    "studentName": "测试学生",
+    "submitType": "在线答题",
+    "answers": [
+      {
+        "questionIndex": 1,
+        "answer": "1.2"
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-16T19:32:15.767Z",
+    "status": "待批改",
+    "teacherComment": ""
+  }
+]

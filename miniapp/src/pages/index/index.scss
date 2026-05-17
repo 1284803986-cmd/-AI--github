@@ -1,0 +1,228 @@
+.top-title {
+  display: none;
+}
+
+.home-hero {
+  margin-top: 0;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  margin-top: 22px;
+  box-sizing: border-box;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 286px;
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  background: #f8fbff;
+  padding: 30px 18px;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.075);
+  box-sizing: border-box;
+}
+
+.role-card.green {
+  background: #f0fdf7;
+}
+
+.role-card.teal {
+  background: #f0fdfa;
+}
+
+.role-card:active {
+  border-color: #60a5fa;
+  background: #eff6ff;
+}
+
+.role-icon-img {
+  width: 116px;
+  height: 116px;
+  border-radius: 24px;
+}
+
+.role-title {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  color: #0f172a;
+  font-size: 37px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.role-desc {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 25px;
+  line-height: 1.42;
+  text-align: center;
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.panel-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.panel-desc {
+  display: block;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 23px;
+  line-height: 1.45;
+}
+
+.switch-button {
+  flex: 0 0 auto;
+  min-width: 136px;
+  height: 54px;
+  margin-left: 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 14px;
+  row-gap: 16px;
+  width: 100%;
+  margin-top: 22px;
+  box-sizing: border-box;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 172px;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  background: #f8fafc;
+  padding: 22px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.065);
+  box-sizing: border-box;
+}
+
+.feature-card.blue {
+  background: #f0f7ff;
+}
+
+.feature-card.red {
+  background: #fff7f4;
+}
+
+.feature-card.green {
+  background: #f0fdf7;
+}
+
+.feature-card.purple {
+  background: #faf7ff;
+}
+
+.feature-card.sky {
+  background: #f4f9ff;
+}
+
+.feature-card.teal {
+  background: #f0fdfa;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #2f86ff;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.feature-icon-img {
+  flex: 0 0 auto;
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+}
+
+.feature-copy {
+  flex: 1;
+  min-width: 0;
+  margin-left: 18px;
+}
+
+.feature-card.red .feature-icon {
+  background: #f15a3b;
+}
+
+.feature-card.green .feature-icon {
+  background: #20b981;
+}
+
+.feature-card.purple .feature-icon {
+  background: #8b5cf6;
+}
+
+.feature-card.sky .feature-icon {
+  background: #3b82f6;
+}
+
+.feature-card.teal .feature-icon {
+  background: #14b8a6;
+}
+
+.feature-title {
+  display: block;
+  flex: 1;
+  width: 100%;
+  margin-top: 0;
+  color: #111827;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.feature-desc {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 26px;
+  line-height: 1.35;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
