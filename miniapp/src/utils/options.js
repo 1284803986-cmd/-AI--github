@@ -1,15 +1,34 @@
 export const gradeOptions = ["一年级", "二年级", "三年级", "四年级", "五年级", "六年级"];
-export const subjectOptions = ["数学", "语文", "英语"];
+export const subjectOptions = ["语文", "数学", "英语"];
 export const textbookOptions = ["人教版", "北师大版", "苏教版"];
 export const semesterOptions = ["上册", "下册"];
-export const knowledgeOptions = [
-  "小数位数相同的小数加法",
-  "小数位数相同的小数减法",
-  "小数位数不同的小数加减法",
-  "小数加减法解决实际问题",
-  "小数加减法验算"
+
+export const subjectCards = [
+  { key: "语文", title: "语文", desc: "字词、阅读和表达练习", icon: "文", tone: "red" },
+  { key: "数学", title: "数学", desc: "计算、应用和思维训练", icon: "数", tone: "blue" },
+  { key: "英语", title: "英语", desc: "单词、句型和阅读练习", icon: "英", tone: "green" }
 ];
-export const questionTypeOptions = ["计算题", "填空题", "判断题", "应用题", "变式题"];
+
+export const subjectKnowledgeOptions = {
+  语文: ["字词基础", "句子训练", "阅读理解", "看图写话", "古诗积累"],
+  数学: [
+    "小数位数相同的小数加法",
+    "小数位数相同的小数减法",
+    "小数位数不同的小数加减法",
+    "小数加减法解决实际问题",
+    "小数加减法验算"
+  ],
+  英语: ["单词拼写", "句型练习", "阅读理解", "情景对话", "语法基础"]
+};
+
+export const subjectQuestionTypeOptions = {
+  语文: ["填空题", "选择题", "判断题", "阅读题", "表达题"],
+  数学: ["计算题", "填空题", "判断题", "应用题", "变式题"],
+  英语: ["选择题", "填空题", "判断题", "阅读题", "翻译题"]
+};
+
+export const knowledgeOptions = subjectKnowledgeOptions.数学;
+export const questionTypeOptions = subjectQuestionTypeOptions.数学;
 export const difficultyOptions = ["基础", "提高", "拔高"];
 
 export const defaultSelection = {
@@ -20,6 +39,22 @@ export const defaultSelection = {
   unit: "小数加减法",
   knowledgePoint: "小数位数不同的小数加减法"
 };
+
+export function getKnowledgeOptions(subject) {
+  return subjectKnowledgeOptions[subject] || knowledgeOptions;
+}
+
+export function getQuestionTypeOptions(subject) {
+  return subjectQuestionTypeOptions[subject] || questionTypeOptions;
+}
+
+export function defaultKnowledgePoint(subject) {
+  return getKnowledgeOptions(subject)[0];
+}
+
+export function defaultQuestionType(subject) {
+  return getQuestionTypeOptions(subject)[0];
+}
 
 export function todayKey() {
   const date = new Date();

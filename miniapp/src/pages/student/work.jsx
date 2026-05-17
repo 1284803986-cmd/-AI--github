@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Taro, { useRouter } from "@tarojs/taro";
 import { Button, Image, Input, ScrollView, Text, Textarea, View } from "@tarojs/components";
 import { getAssignment, submitAssignment, uploadAssignmentImages } from "../../utils/api";
+import { isAnswerCorrect, updateWrongBookByAnswer } from "../../utils/wrongBook";
 import "../../styles/common.scss";
 
 export default function StudentWorkPage() {
@@ -9,6 +10,7 @@ export default function StudentWorkPage() {
   const [assignment, setAssignment] = useState(null);
   const [studentName, setStudentName] = useState("");
   const [answers, setAnswers] = useState([]);
+  const [checks, setChecks] = useState([]);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -21,6 +23,7 @@ export default function StudentWorkPage() {
       const data = await getAssignment(router.params.id);
       setAssignment(data.assignment);
       setAnswers((data.assignment.questions || []).map(() => ""));
+      setChecks([]);
     } catch (error) {
       Taro.showToast({ title: error.message || "加载失败", icon: "none" });
     }
@@ -39,6 +42,14 @@ export default function StudentWorkPage() {
 
   async function submitOnline() {
     if (!studentName.trim()) return Taro.showToast({ title: "请填写学生姓名", icon: "none" });
+    const nextChecks = (assignment.questions || []).map((question, index) => {
+      const userAnswer = answers[index] || "";
+      const correct = isAnswerCorrect(userAnswer, question.answer);
+      updateWrongBookByAnswer(question, userAnswer, "学生作业");
+      return correct;
+    });
+    setChecks(nextChecks);
+
     setLoading(true);
     try {
       await submitAssignment(assignment.id, {
@@ -88,9 +99,11 @@ export default function StudentWorkPage() {
 
       <View className="card">
         <Text className="section-title">在线答题</Text>
+        <Text className="muted">提交后，做错的题会自动加入错题本；做对的题会从错题本移除。</Text>
         {assignment.questions.map((item, index) => (
           <View className="question-card" key={`${item.question}-${index}`}>
             <Text className="question-text">{index + 1}. {item.question}</Text>
+            {checks[index] !== undefined ? <Text className={checks[index] ? "answer-correct" : "answer-wrong"}>{checks[index] ? "答对了，已从错题本移除" : "答错了，已加入错题本"}</Text> : null}
             <Textarea className="textarea" value={answers[index]} placeholder="在这里填写答案" onInput={(event) => updateAnswer(index, event.detail.value)} />
           </View>
         ))}

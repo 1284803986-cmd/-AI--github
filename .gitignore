@@ -1,9 +1,15 @@
-﻿node_modules
+node_modules
 miniapp/node_modules
+node_modules.bad-*
+miniapp/node_modules.bad-*
 miniapp/dist
 miniapp/.swc
+miniapp/project.private.config.json
 dist
 .env
+.npm-cache
+.taro-home
+.tools
 npm-debug.log*
 .DS_Store
 *.log

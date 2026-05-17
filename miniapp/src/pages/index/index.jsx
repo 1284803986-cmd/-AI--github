@@ -7,8 +7,20 @@ import "./index.scss";
 const asset = (name) => `/assets/generated/${name}`;
 
 const roleCards = [
-  { key: "student", title: "我是学生", desc: "做作业、练习和错题巩固", image: asset("icon-student-homework.png"), tone: "teal" },
-  { key: "teacher", title: "我是老师", desc: "布置作业、组卷和查看提交", image: asset("icon-teacher-homework.png"), tone: "green" }
+  {
+    key: "student",
+    title: "我是学生",
+    desc: "做作业、练习和错题巩固",
+    image: asset("icon-student-homework.png"),
+    tone: "teal"
+  },
+  {
+    key: "teacher",
+    title: "我是老师",
+    desc: "布置作业、组卷和查看提交",
+    image: asset("icon-teacher-homework.png"),
+    tone: "green"
+  }
 ];
 
 const studentCards = [
@@ -37,6 +49,11 @@ export default function IndexPage() {
     Taro.setStorageSync("homeRole", nextRole);
   }
 
+  function switchRole() {
+    setRole(null);
+    Taro.removeStorageSync("homeRole");
+  }
+
   const activeCards = role === "student" ? studentCards : teacherCards;
   const roleTitle = role === "student" ? "学生功能" : "老师功能";
   const roleDesc = role === "student" ? "做作业、生成练习题，也可以进行错题巩固。" : "布置作业、生成试卷，并查看学生提交。";
@@ -50,10 +67,10 @@ export default function IndexPage() {
         <View className="hero-overlay" />
         <View className="hero-content">
           <Text className="hero-title">小学 AI 出题助手</Text>
-          <Text className="hero-subtitle">给家长和老师的练习生成工具</Text>
+          <Text className="hero-subtitle">给学生、家长和老师使用的练习生成工具</Text>
           <View className="hero-tags">
             <Text className="hero-tag">智能生成</Text>
-            <Text className="hero-tag">多场景适用</Text>
+            <Text className="hero-tag">分身份使用</Text>
             <Text className="hero-tag">高效省时</Text>
           </View>
         </View>
@@ -61,12 +78,13 @@ export default function IndexPage() {
 
       <View className="notice">
         <Text className="notice-icon">!</Text>
-        <Text>AI 内容仅供辅助，请家长或老师审核后使用</Text>
+        <Text>AI 内容仅供辅助，请家长或老师审核后使用。</Text>
       </View>
 
       {!role && (
         <View className="card">
           <Text className="section-title">请选择身份</Text>
+          <Text className="section-desc">选择后会自动记住，下次打开小程序不用重复选择。</Text>
           <View className="role-grid">
             {roleCards.map((item) => (
               <Button key={item.key} className={`role-card ${item.tone}`} onClick={() => chooseRole(item.key)}>
@@ -86,7 +104,7 @@ export default function IndexPage() {
               <Text className="section-title">{roleTitle}</Text>
               <Text className="panel-desc">{roleDesc}</Text>
             </View>
-            <Button className="switch-button" onClick={() => setRole(null)}>切换身份</Button>
+            <Button className="switch-button" onClick={switchRole}>切换身份</Button>
           </View>
           <View className="feature-grid">
             {activeCards.map((item) => (
