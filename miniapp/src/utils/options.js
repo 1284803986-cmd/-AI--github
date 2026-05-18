@@ -18,19 +18,14 @@ export const subjectKnowledgeOptions = {
     "乘除关系解决问题",
     "万以内数的读写",
     "万以内加法",
-    "万以内减法",
-    "小数位数相同的小数加法",
-    "小数位数相同的小数减法",
-    "小数位数不同的小数加减法",
-    "小数加减法解决实际问题",
-    "小数加减法验算"
+    "万以内减法"
   ],
   英语: ["单词拼写", "句型练习", "阅读理解", "情景对话", "语法基础"]
 };
 
 export const subjectQuestionTypeOptions = {
   语文: ["填空题", "选择题", "判断题", "阅读题", "表达题"],
-  数学: ["计算题", "填空题", "判断题", "应用题", "变式题"],
+  数学: ["计算题", "填空题", "选择题", "判断题", "应用题", "变式题"],
   英语: ["选择题", "填空题", "判断题", "阅读题", "翻译题"]
 };
 
@@ -72,7 +67,7 @@ export function todayKey() {
 }
 
 export function defaultFileName(meta = {}) {
-  return `${meta.grade || "四年级"}_${meta.subject || "数学"}_${meta.knowledgePoint || meta.unit || "小数加减法"}_${todayKey()}`;
+  return `${meta.grade || "二年级"}_${meta.subject || "数学"}_${meta.knowledgePoint || meta.unit || "练习"}_${todayKey()}`;
 }
 
 export function getQuestionCount(result) {

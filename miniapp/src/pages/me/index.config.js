@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: "错题"
+  navigationBarTitleText: "我的"
 });

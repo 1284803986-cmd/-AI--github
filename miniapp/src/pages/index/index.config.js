@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: "小学 AI 出题助手"
+  navigationBarTitleText: "首页"
 });

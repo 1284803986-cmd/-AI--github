@@ -1,141 +1,132 @@
 import React, { useEffect, useMemo, useState } from "react";
-import Taro from "@tarojs/taro";
+import Taro, { useDidShow } from "@tarojs/taro";
 import { Button, Input, ScrollView, Text, View } from "@tarojs/components";
-import { AiNotice, InputField, PrimaryButton, SelectField } from "../../components/form";
+import { AiNotice, SelectField } from "../../components/form";
 import {
-  defaultKnowledgePoint,
-  defaultQuestionType,
   defaultSelection,
   difficultyOptions,
-  getKnowledgeOptions,
-  getQuestionTypeOptions,
   gradeOptions,
-  subjectCards
+  subjectCards,
+  subjectOptions
 } from "../../utils/options";
 import { generateTextbook, getContentPackage } from "../../utils/api";
 import { hasWrongQuestion, isAnswerCorrect, updateWrongBookByAnswer } from "../../utils/wrongBook";
 import "../../styles/common.scss";
 
+const PROGRESS_KEY = "chapterPracticeProgress";
+const ENTRY_KEY = "practiceEntrySelection";
+const QUESTIONS_PER_POINT = 5;
+
 export default function PracticePage() {
-  const [form, setForm] = useState({ ...defaultSelection, lesson: "", type: defaultQuestionType(defaultSelection.subject), difficulty: "基础", count: 5 });
-  const [contentPackage, setContentPackage] = useState(null);
+  const [form, setForm] = useState({ ...defaultSelection, type: "填空题", difficulty: "基础", count: 5 });
+  const [catalog, setCatalog] = useState(null);
+  const [mode, setMode] = useState("selector");
+  const [activeUnitId, setActiveUnitId] = useState("");
+  const [activeType, setActiveType] = useState("");
+  const [progressVersion, setProgressVersion] = useState(0);
   const [result, setResult] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [checks, setChecks] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [mode, setMode] = useState("subject");
   const [loading, setLoading] = useState(false);
 
+  const activePackage = useMemo(() => selectPackage(catalog, form), [catalog, form]);
+  const units = activePackage?.options?.units || [];
+  const activeUnit = units.find((item) => item.id === activeUnitId) || units[0];
+  const typeSummaries = useMemo(() => buildTypeSummaries(activePackage, activeUnit, form, progressVersion), [activePackage, activeUnit, form, progressVersion]);
+  const unitSummaries = useMemo(() => buildUnitSummaries(activePackage, form, progressVersion), [activePackage, form, progressVersion]);
   const questions = useMemo(() => getPracticeQuestions(result), [result]);
   const currentQuestion = questions[currentIndex];
   const currentAnswer = answers[currentIndex] || "";
   const currentCheck = checks[currentIndex];
   const currentInWrongBook = currentQuestion ? hasWrongQuestion(currentQuestion) : false;
-  const contentSelection = useMemo(() => buildContentSelection(contentPackage, form), [contentPackage, form]);
-  const knowledgeOptions = contentSelection.knowledgeOptions.length ? contentSelection.knowledgeOptions : getKnowledgeOptions(form.subject);
-  const questionTypeOptions = contentSelection.questionTypeOptions.length ? contentSelection.questionTypeOptions : getQuestionTypeOptions(form.subject);
-  const currentDifficultyOptions = contentSelection.difficultyOptions.length ? contentSelection.difficultyOptions : difficultyOptions;
 
   useEffect(() => {
     const saved = Taro.getStorageSync("baseSelection");
-    if (saved) {
+    const homeGrade = Taro.getStorageSync("homeGrade");
+    const homeSemester = Taro.getStorageSync("homeSemester");
+    if (saved || homeGrade || homeSemester) {
       setForm((old) => ({
         ...old,
         ...saved,
-        lesson: saved.lesson || old.lesson,
-        knowledgePoint: saved.knowledgePoint || defaultKnowledgePoint(saved.subject || old.subject),
-        type: saved.type || defaultQuestionType(saved.subject || old.subject)
+        grade: homeGrade || saved?.grade || old.grade,
+        semester: homeSemester || saved?.semester || old.semester,
+        type: saved?.type || old.type,
+        difficulty: saved?.difficulty || old.difficulty
       }));
     }
-  }, []);
-
-  useEffect(() => {
     getContentPackage()
       .then((data) => {
-        setContentPackage(data);
-        setForm((old) => normalizeFormByContentPackage(old, data));
+        setCatalog(data);
+        setForm((old) => normalizeSelection(old, data));
       })
-      .catch(() => {
-        setContentPackage(null);
-      });
+      .catch(() => setCatalog(null));
   }, []);
 
-  function chooseSubject(subject) {
-    setForm((old) => normalizeFormByContentPackage({
-      ...old,
-      subject,
-      knowledgePoint: defaultKnowledgePoint(subject),
-      type: defaultQuestionType(subject)
-    }, contentPackage));
-    setMode("form");
+  useDidShow(() => {
+    const entry = Taro.getStorageSync(ENTRY_KEY);
+    if (entry) {
+      Taro.removeStorageSync(ENTRY_KEY);
+      setForm((old) => normalizeSelection({ ...old, ...entry }, catalog));
+      setMode("chapters");
+    }
+  });
+
+  function updateSelection(patch) {
+    const next = normalizeSelection({ ...form, ...patch }, catalog);
+    setForm(next);
+    Taro.setStorageSync("baseSelection", next);
   }
 
-  function updateUnit(unit) {
-    const next = normalizeFormByContentPackage({ ...form, unit, lesson: "", knowledgePoint: "" }, contentPackage);
-    setForm({ ...next, type: firstOrCurrent(next.type, getQuestionTypesForSelection(contentPackage, next), next.type) });
+  function startBySubject(subject) {
+    updateSelection({ subject });
+    setMode("chapters");
   }
 
-  function updateLesson(lesson) {
-    const next = normalizeFormByContentPackage({ ...form, lesson, knowledgePoint: "" }, contentPackage);
-    setForm({ ...next, type: firstOrCurrent(next.type, getQuestionTypesForSelection(contentPackage, next), next.type) });
+  function openUnit(unit) {
+    setActiveUnitId(unit.id);
+    setMode("types");
   }
 
-  function updateKnowledgePoint(knowledgePoint) {
-    const next = normalizeFormByContentPackage({ ...form, knowledgePoint }, contentPackage);
-    setForm({ ...next, type: firstOrCurrent(form.type, getQuestionTypesForSelection(contentPackage, next), form.type) });
-  }
-
-  function updateGrade(grade) {
-    setForm((old) => normalizeFormByContentPackage({ ...old, grade, unit: "", lesson: "", knowledgePoint: "" }, contentPackage));
-  }
-
-  async function generatePractice() {
-    const nextForm = normalizeFormByContentPackage(form, contentPackage);
-    const count = Number(nextForm.count);
+  async function openType(type) {
+    if (!activeUnit) return;
+    const point = findPointForType(activePackage, activeUnit, type);
+    if (!point) {
+      Taro.showToast({ title: "这个题型暂时没有题目", icon: "none" });
+      return;
+    }
+    const nextForm = normalizeSelection({
+      ...form,
+      unit: activeUnit.name,
+      lesson: findLessonName(activeUnit, point),
+      knowledgePoint: point.name,
+      type,
+      count: 5
+    }, catalog);
     setForm(nextForm);
-    if (!nextForm.subject) {
-      Taro.showToast({ title: "请选择学科", icon: "none" });
-      return;
-    }
-    if (!nextForm.grade) {
-      Taro.showToast({ title: "请选择年级", icon: "none" });
-      return;
-    }
-    if (!nextForm.knowledgePoint) {
-      Taro.showToast({ title: "请选择知识点", icon: "none" });
-      return;
-    }
-    if (!String(nextForm.count ?? "").trim()) {
-      Taro.showToast({ title: "请输入题目数量", icon: "none" });
-      return;
-    }
-    if (!Number.isFinite(count) || count < 1) {
-      Taro.showToast({ title: "题目数量不能小于 1", icon: "none" });
+    setActiveType(type);
+    await generatePractice(nextForm);
+  }
+
+  async function generatePractice(nextForm = form) {
+    if (!selectPackage(catalog, nextForm)) {
+      setMode("empty");
       return;
     }
 
     setLoading(true);
     try {
-      const data = await generateTextbook({ ...nextForm, count });
+      const data = await generateTextbook({ ...nextForm, count: Number(nextForm.count) || 5 });
       const nextQuestions = getPracticeQuestions(data);
       setResult(data);
       setAnswers(nextQuestions.map(() => ""));
       setChecks(nextQuestions.map(() => undefined));
       setCurrentIndex(0);
       setMode("practice");
-      Taro.setStorageSync("baseSelection", {
-        grade: nextForm.grade,
-        subject: nextForm.subject,
-        textbook: nextForm.textbook,
-        semester: nextForm.semester,
-        unit: nextForm.unit,
-        lesson: nextForm.lesson,
-        knowledgePoint: nextForm.knowledgePoint,
-        type: nextForm.type
-      });
+      Taro.setStorageSync("baseSelection", nextForm);
       Taro.showToast({ title: "题目生成成功", icon: "success" });
     } catch {
-      Taro.showToast({ title: "生成失败，请稍后再试", icon: "none" });
+      Taro.showToast({ title: "生成失败，请确认后端已启动", icon: "none" });
     } finally {
       setLoading(false);
     }
@@ -159,16 +150,22 @@ export default function PracticePage() {
     updateWrongBookByAnswer(currentQuestion, currentAnswer, "练习");
 
     const nextChecks = [...checks];
-    nextChecks[currentIndex] = { correct, removedFromWrongBook: correct && wasInWrongBook };
+    const alreadyRecorded = Boolean(nextChecks[currentIndex]?.recorded);
+    nextChecks[currentIndex] = { correct, removedFromWrongBook: correct && wasInWrongBook, recorded: true };
     setChecks(nextChecks);
 
+    if (!alreadyRecorded) {
+      recordProgress(form, currentQuestion, correct);
+      setProgressVersion((value) => value + 1);
+    }
+
     if (correct) {
-      Taro.showToast({ title: wasInWrongBook ? "答对了，已移出错题本" : "答对了", icon: "none" });
+      Taro.showToast({ title: wasInWrongBook ? "答对了，已从错题本移除" : "答对了", icon: "none" });
       if (currentIndex < questions.length - 1) {
         setTimeout(() => {
           setCurrentIndex((oldIndex) => Math.min(oldIndex + 1, questions.length - 1));
           Taro.pageScrollTo({ scrollTop: 0, duration: 150 });
-        }, 900);
+        }, 850);
       }
       return;
     }
@@ -195,19 +192,20 @@ export default function PracticePage() {
   }
 
   function backToPrevious() {
-    if (mode === "form") {
-      setMode("subject");
+    if (mode === "types") {
+      setMode("chapters");
       return;
     }
-    Taro.navigateBack({
-      fail: () => {
-        setMode("form");
-        setResult(null);
-        setAnswers([]);
-        setChecks([]);
-        setCurrentIndex(0);
-      }
-    });
+    if (mode === "practice") {
+      setMode("types");
+      setResult(null);
+      return;
+    }
+    if (mode === "chapters" || mode === "empty") {
+      setMode("selector");
+      return;
+    }
+    Taro.navigateBack();
   }
 
   function reshuffleCurrentQuestions() {
@@ -215,7 +213,6 @@ export default function PracticePage() {
       generatePractice();
       return;
     }
-
     const shuffled = shuffle(questions);
     setResult({ ...result, questions: shuffled });
     setAnswers(shuffled.map(() => ""));
@@ -226,16 +223,23 @@ export default function PracticePage() {
 
   return (
     <ScrollView className="page practice-page" scrollY>
-      {mode === "subject" ? (
+      {mode !== "selector" ? <PracticeTopBack title={buildBackTitle(mode, activeUnit)} onBack={backToPrevious} /> : null}
+
+      {mode === "selector" ? (
         <>
           <View className="hero">
-            <Text className="hero-title">选择练习学科</Text>
-            <Text className="hero-subtitle">先选择语文、数学或英语，再设置年级和题目要求。</Text>
+            <Text className="hero-title">章节刷题</Text>
+            <Text className="hero-subtitle">先选年级和学科，再按章节、题型一步步练习。</Text>
           </View>
           <AiNotice />
+          <View className="card">
+            <Text className="section-title">练习条件</Text>
+            <Text className="section-desc">年级和上册/下册已经统一放在首页左上角。这里选择学科即可，减少重复操作。</Text>
+            <SelectField label="年级" value={form.grade} options={gradeOptions} onChange={(grade) => updateSelection({ grade })} />
+          </View>
           <View className="subject-grid">
             {subjectCards.map((item) => (
-              <Button key={item.key} className={`subject-card ${item.tone}`} onClick={() => chooseSubject(item.key)}>
+              <Button key={item.key} className={`subject-card ${item.tone}`} onClick={() => startBySubject(item.key)}>
                 <View className={`subject-icon ${item.tone}`}>
                   <Text>{item.icon}</Text>
                 </View>
@@ -249,29 +253,60 @@ export default function PracticePage() {
         </>
       ) : null}
 
-      {mode === "form" ? (
+      {mode === "chapters" ? (
         <>
           <View className="hero">
-            <Text className="hero-title">{form.subject}练习设置</Text>
-            <Text className="hero-subtitle">选择年级、单元、课时、知识点、题型和题目数量。</Text>
+            <Text className="hero-title">{form.grade}{form.subject}{form.semester}</Text>
+            <Text className="hero-subtitle">选择章节，查看每章题量和完成进度。</Text>
           </View>
-          <AiNotice />
-          <View className="card">
-            <SelectField label="年级" value={form.grade} options={gradeOptions} onChange={updateGrade} />
-            {contentSelection.unitOptions.length ? <SelectField label="单元" value={contentSelection.unitName} options={contentSelection.unitOptions} onChange={updateUnit} /> : null}
-            {contentSelection.lessonOptions.length ? <SelectField label="课时" value={contentSelection.lessonName} options={contentSelection.lessonOptions} onChange={updateLesson} /> : null}
-            <SelectField label="知识点" value={form.knowledgePoint} options={knowledgeOptions} onChange={updateKnowledgePoint} />
-            <SelectField label="题型" value={form.type} options={questionTypeOptions} onChange={(type) => setForm({ ...form, type })} />
-            <SelectField label="难度" value={form.difficulty} options={currentDifficultyOptions} onChange={(difficulty) => setForm({ ...form, difficulty })} />
-            <InputField label="题目数量" value={form.count} onInput={(count) => setForm({ ...form, count: digitsOnly(count) })} />
-            <PrimaryButton loading={loading} onClick={generatePractice}>生成并开始做题</PrimaryButton>
+          {unitSummaries.length ? unitSummaries.map((item, index) => (
+            <Button key={item.unit.id} className="chapter-card" onClick={() => openUnit(item.unit)}>
+              <View className="chapter-main">
+                <Text className="chapter-index">第 {index + 1} 章</Text>
+                <Text className="chapter-title">{item.unit.name}</Text>
+                <Text className="chapter-meta">{item.lessonCount} 个课时 · {item.pointCount} 个知识点 · {item.typeCount} 类题型</Text>
+                <ProgressBar done={item.done} total={item.total} />
+              </View>
+              <Text className="chapter-count">已做 {item.done} / {item.total}</Text>
+            </Button>
+          )) : (
+            <EmptyPackage />
+          )}
+        </>
+      ) : null}
+
+      {mode === "types" && activeUnit ? (
+        <>
+          <View className="hero">
+            <Text className="hero-title">{activeUnit.name}</Text>
+            <Text className="hero-subtitle">选择题型后直接开始做题。</Text>
+          </View>
+          <View className="type-list">
+            {typeSummaries.map((item) => (
+              <Button key={item.type} className="type-card" loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item.type)}>
+                <View className="type-icon"><Text>{typeIcon(item.type)}</Text></View>
+                <View className="type-copy">
+                  <Text className="type-title">{item.type}</Text>
+                  <Text className="type-desc">{item.pointCount} 个知识点 · 已做 {item.done} / {item.total}</Text>
+                  <ProgressBar done={item.done} total={item.total} />
+                </View>
+              </Button>
+            ))}
+          </View>
+        </>
+      ) : null}
+
+      {mode === "empty" ? (
+        <>
+          <View className="hero">
+            <Text className="hero-title">{form.subject}内容整理中</Text>
+            <Text className="hero-subtitle">当前选择的年级、学科和上下册暂无题目内容。请等朋友导入对应内容包后再练习。</Text>
           </View>
         </>
       ) : null}
 
       {mode === "practice" && currentQuestion ? (
         <View className="result-card single-question-card">
-          <Button className="page-back-button" onClick={backToPrevious}>‹ 返回</Button>
           <View className="practice-head">
             <Text className="section-title">第 {currentIndex + 1} 题 / 共 {questions.length} 题</Text>
             <Text className="muted">{[form.subject, form.grade, form.unit, form.lesson, form.knowledgePoint].filter(Boolean).join(" · ")}</Text>
@@ -312,85 +347,141 @@ export default function PracticePage() {
   );
 }
 
-function normalizeFormByContentPackage(form, contentPackage) {
-  const activePackage = selectContentPackage(contentPackage, form);
-  const units = activePackage?.options?.units || [];
-  if (!units.length || form.subject !== activePackage?.scope?.subject) return form;
+function PracticeTopBack({ title, onBack }) {
+  return (
+    <View className="practice-nav">
+      <Button className="practice-nav-button" onClick={onBack}>‹</Button>
+      <Text className="practice-nav-title">{title}</Text>
+    </View>
+  );
+}
 
-  const unit = units.find((item) => item.name === form.unit) || units[0];
-  const lesson = unit.lessons?.find((item) => item.name === form.lesson) || unit.lessons?.[0];
-  const knowledgePoint = lesson?.knowledgePoints?.find((item) => item.name === form.knowledgePoint) || lesson?.knowledgePoints?.[0];
-  const next = {
-    ...form,
-    grade: activePackage.scope?.grade || form.grade,
-    semester: activePackage.scope?.semester || form.semester,
-    subject: activePackage.scope?.subject || form.subject,
-    textbook: activePackage.scope?.textbook || form.textbook,
-    unit: unit?.name || form.unit,
-    lesson: lesson?.name || form.lesson,
-    knowledgePoint: knowledgePoint?.name || form.knowledgePoint
-  };
-  const questionTypes = getQuestionTypesForSelection(contentPackage, next);
-  const difficulties = getDifficultiesForSelection(contentPackage, next);
+function buildBackTitle(mode, activeUnit) {
+  if (mode === "types") return activeUnit?.name || "题型";
+  if (mode === "practice") return "做题";
+  if (mode === "empty") return "暂无内容";
+  return "章节";
+}
+
+function EmptyPackage() {
+  return (
+    <View className="card">
+      <Text className="section-title">内容整理中</Text>
+      <Text className="muted">当前年级、学科或上下册暂无题目内容。只有已导入内容包的组合才会显示章节和题型。</Text>
+    </View>
+  );
+}
+
+function ProgressBar({ done, total }) {
+  const percent = total > 0 ? Math.min(100, Math.round((done / total) * 100)) : 0;
+  return (
+    <View className="progress-wrap">
+      <View className="progress-fill" style={{ width: `${percent}%` }} />
+    </View>
+  );
+}
+
+function normalizeSelection(selection, catalog) {
+  const packages = catalog?.packages || [];
+  const exact = packages.find((item) =>
+    item.scope?.grade === selection.grade &&
+    item.scope?.subject === selection.subject &&
+    item.scope?.semester === selection.semester
+  );
+  const active = exact || null;
+  const firstUnit = active?.options?.units?.[0];
+  const firstPoint = firstUnit?.lessons?.[0]?.knowledgePoints?.[0];
   return {
-    ...next,
-    type: firstOrCurrent(next.type, questionTypes, defaultQuestionType(next.subject)),
-    difficulty: firstOrCurrent(next.difficulty, difficulties, "基础")
+    ...selection,
+    textbook: active?.scope?.textbook || selection.textbook || "人教版",
+    unit: selection.unit || firstUnit?.name || "",
+    knowledgePoint: selection.knowledgePoint || firstPoint?.name || "",
+    type: selection.type || "填空题",
+    difficulty: selection.difficulty || "基础",
+    count: Number(selection.count) || 5
   };
 }
 
-function buildContentSelection(contentPackage, form) {
-  const activePackage = selectContentPackage(contentPackage, form);
+function selectPackage(catalog, form) {
+  const packages = catalog?.packages || [];
+  if (!packages.length) return null;
+  return packages.find((item) =>
+    item.scope?.grade === form.grade &&
+    item.scope?.subject === form.subject &&
+    item.scope?.semester === form.semester
+  ) || null;
+}
+
+function buildUnitSummaries(activePackage, form, version) {
+  void version;
   const units = activePackage?.options?.units || [];
-  if (!units.length || form.subject !== activePackage?.scope?.subject) {
-    return { unitOptions: [], lessonOptions: [], knowledgeOptions: [], questionTypeOptions: [], difficultyOptions: [] };
-  }
+  return units.map((unit) => {
+    const summaries = buildTypeSummaries(activePackage, unit, form, version);
+    return {
+      unit,
+      lessonCount: unit.lessons?.length || 0,
+      pointCount: getUnitPoints(activePackage, unit).length,
+      typeCount: summaries.length,
+      done: summaries.reduce((sum, item) => sum + item.done, 0),
+      total: summaries.reduce((sum, item) => sum + item.total, 0)
+    };
+  });
+}
 
-  const unit = units.find((item) => item.name === form.unit) || units[0];
-  const lesson = unit.lessons?.find((item) => item.name === form.lesson) || unit.lessons?.[0];
-  return {
-    unitName: unit?.name || "",
-    lessonName: lesson?.name || "",
-    unitOptions: units.map((item) => item.name),
-    lessonOptions: (unit?.lessons || []).map((item) => item.name),
-    knowledgeOptions: (lesson?.knowledgePoints || []).map((item) => item.name),
-    questionTypeOptions: getQuestionTypesForSelection(contentPackage, form),
-    difficultyOptions: getDifficultiesForSelection(contentPackage, form)
+function buildTypeSummaries(activePackage, unit, form, version) {
+  void version;
+  if (!unit) return [];
+  const points = getUnitPoints(activePackage, unit);
+  const types = [...new Set(points.flatMap((point) => point.recommendedQuestionTypes || []))];
+  return types.map((type) => {
+    const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
+    const total = Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT);
+    return {
+      type,
+      pointCount,
+      total,
+      done: getProgressCount({ ...form, unit: unit.name, type })
+    };
+  });
+}
+
+function getUnitPoints(activePackage, unit) {
+  const ids = new Set((unit.lessons || []).flatMap((lesson) => lesson.knowledgePoints || []).map((point) => point.id));
+  return (activePackage?.options?.knowledgePoints || []).filter((point) => ids.has(point.id));
+}
+
+function findPointForType(activePackage, unit, type) {
+  return getUnitPoints(activePackage, unit).find((point) => (point.recommendedQuestionTypes || []).includes(type)) || getUnitPoints(activePackage, unit)[0];
+}
+
+function findLessonName(unit, point) {
+  return (unit.lessons || []).find((lesson) => (lesson.knowledgePoints || []).some((item) => item.id === point.id))?.name || "";
+}
+
+function progressKey(form) {
+  return [form.grade, form.subject, form.semester, form.unit, form.type].filter(Boolean).join("|");
+}
+
+function readProgress() {
+  return Taro.getStorageSync(PROGRESS_KEY) || {};
+}
+
+function getProgressCount(form) {
+  return readProgress()[progressKey(form)]?.done || 0;
+}
+
+function recordProgress(form, question, correct) {
+  const data = readProgress();
+  const key = progressKey(form);
+  const old = data[key] || { done: 0, correct: 0, wrong: 0 };
+  data[key] = {
+    done: old.done + 1,
+    correct: old.correct + (correct ? 1 : 0),
+    wrong: old.wrong + (correct ? 0 : 1),
+    lastQuestion: question?.question || "",
+    updatedAt: Date.now()
   };
-}
-
-function getQuestionTypesForSelection(contentPackage, form) {
-  const point = findPoint(selectContentPackage(contentPackage, form), form.knowledgePoint);
-  return point?.recommendedQuestionTypes || [];
-}
-
-function getDifficultiesForSelection(contentPackage, form) {
-  const point = findPoint(selectContentPackage(contentPackage, form), form.knowledgePoint);
-  return point?.difficultyLevels || [];
-}
-
-function findPoint(contentPackage, knowledgePoint) {
-  return contentPackage?.options?.knowledgePoints?.find((item) => item.name === knowledgePoint || item.id === knowledgePoint);
-}
-
-function selectContentPackage(contentPackage, form) {
-  const packages = contentPackage?.packages || [];
-  if (!packages.length) return contentPackage;
-  return packages.find((item) => findPoint(item, form.knowledgePoint))
-    || packages.find((item) => (item.options?.units || []).some((unit) => unit.name === form.unit))
-    || packages.find((item) => item.scope?.grade === form.grade && item.scope?.subject === form.subject && item.scope?.semester === form.semester)
-    || packages.find((item) => item.scope?.grade === form.grade && item.scope?.subject === form.subject)
-    || packages.find((item) => item.scope?.subject === form.subject)
-    || packages[0];
-}
-
-function firstOrCurrent(current, options, fallback) {
-  if (options.includes(current)) return current;
-  return options[0] || fallback;
-}
-
-function digitsOnly(value) {
-  return String(value ?? "").replace(/\D/g, "");
+  Taro.setStorageSync(PROGRESS_KEY, data);
 }
 
 function renderAnswerControl(question, value, onChange) {
@@ -436,6 +527,15 @@ function buildCheckText(check) {
   if (!check) return "";
   if (!check.correct) return "答错了，已加入错题本";
   return check.removedFromWrongBook ? "答对了，已从错题本移除" : "答对了";
+}
+
+function typeIcon(type) {
+  if (type.includes("选择")) return "选";
+  if (type.includes("判断")) return "判";
+  if (type.includes("计算")) return "算";
+  if (type.includes("应用")) return "用";
+  if (type.includes("变式")) return "变";
+  return "填";
 }
 
 function shuffle(items) {

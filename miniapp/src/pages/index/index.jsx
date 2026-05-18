@@ -1,130 +1,177 @@
 import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
-import { Button, Image, Text, View } from "@tarojs/components";
+import { Button, Image, Picker, Text, View } from "@tarojs/components";
+import { gradeOptions, semesterOptions } from "../../utils/options";
 import "../../styles/common.scss";
 import "./index.scss";
 
 const asset = (name) => `/assets/generated/${name}`;
 
-const roleCards = [
-  {
-    key: "student",
-    title: "我是学生",
-    desc: "做作业、练习和错题巩固",
-    image: asset("icon-student-homework.png"),
-    tone: "teal"
+const tabs = ["首页", "语文", "数学", "英语"];
+
+const quickEntries = [
+  { title: "章节练习", desc: "按课本章节刷题", image: asset("icon-practice.png"), action: "practice" },
+  { title: "错题本", desc: "复习做错的题", image: asset("icon-wrong.png"), url: "/pages/wrong/index", tab: true },
+  { title: "学生作业", desc: "输入作业码完成作业", image: asset("icon-student-homework.png"), url: "/pages/student/index" },
+  { title: "历史记录", desc: "查看生成和练习记录", image: asset("icon-history.png"), url: "/pages/history/index" }
+];
+
+const subjectMeta = {
+  语文: {
+    icon: "文",
+    title: "语文学习",
+    desc: "字词、阅读、表达内容正在整理中。",
+    tone: "red"
   },
-  {
-    key: "teacher",
-    title: "我是老师",
-    desc: "布置作业、组卷和查看提交",
-    image: asset("icon-teacher-homework.png"),
+  数学: {
+    icon: "数",
+    title: "数学章节练习",
+    desc: "已导入内容的年级和上下册，会显示章节、题型和进度。",
+    tone: "blue"
+  },
+  英语: {
+    icon: "英",
+    title: "英语学习",
+    desc: "单词、句型、阅读内容正在整理中。",
     tone: "green"
   }
-];
-
-const studentCards = [
-  { key: "studentHomework", title: "学生作业", desc: "输入作业码", image: asset("icon-student-homework.png"), url: "/pages/student/index", tone: "teal" },
-  { key: "practice", title: "练习", desc: "生成练习题", image: asset("icon-practice.png"), url: "/pages/practice/index", tone: "blue" },
-  { key: "wrong", title: "错题", desc: "错题巩固", image: asset("icon-wrong.png"), url: "/pages/wrong/index", tone: "red" },
-  { key: "history", title: "历史记录", desc: "查看记录", image: asset("icon-history.png"), url: "/pages/history/index", tone: "sky" }
-];
-
-const teacherCards = [
-  { key: "homework", title: "老师作业", desc: "布置与查看", image: asset("icon-teacher-homework.png"), url: "/pages/homework/index", tone: "green" },
-  { key: "paper", title: "组卷", desc: "生成试卷", image: asset("icon-paper.png"), url: "/pages/paper/index", tone: "purple" },
-  { key: "history", title: "历史记录", desc: "查看记录", image: asset("icon-history.png"), url: "/pages/history/index", tone: "sky" }
-];
+};
 
 export default function IndexPage() {
-  const [role, setRole] = useState(null);
+  const [grade, setGrade] = useState("二年级");
+  const [semester, setSemester] = useState("下册");
+  const [activeTab, setActiveTab] = useState("首页");
 
   useEffect(() => {
-    const saved = Taro.getStorageSync("homeRole");
-    if (saved === "student" || saved === "teacher") setRole(saved);
+    const savedGrade = Taro.getStorageSync("homeGrade");
+    const savedSemester = Taro.getStorageSync("homeSemester");
+    if (savedGrade) setGrade(savedGrade);
+    if (savedSemester) setSemester(savedSemester);
   }, []);
 
-  function chooseRole(nextRole) {
-    setRole(nextRole);
-    Taro.setStorageSync("homeRole", nextRole);
+  function saveBaseSelection(nextGrade = grade, nextSemester = semester) {
+    Taro.setStorageSync("homeGrade", nextGrade);
+    Taro.setStorageSync("homeSemester", nextSemester);
+    Taro.setStorageSync("baseSelection", {
+      grade: nextGrade,
+      subject: "数学",
+      semester: nextSemester,
+      textbook: "人教版"
+    });
   }
 
-  function switchRole() {
-    setRole(null);
-    Taro.removeStorageSync("homeRole");
+  function updateGrade(nextGrade) {
+    setGrade(nextGrade);
+    saveBaseSelection(nextGrade, semester);
   }
 
-  const activeCards = role === "student" ? studentCards : teacherCards;
-  const roleTitle = role === "student" ? "学生功能" : "老师功能";
-  const roleDesc = role === "student" ? "做作业、生成练习题，也可以进行错题巩固。" : "布置作业、生成试卷，并查看学生提交。";
+  function updateSemester(nextSemester) {
+    setSemester(nextSemester);
+    saveBaseSelection(grade, nextSemester);
+  }
+
+  function openPractice(subject = "数学") {
+    Taro.setStorageSync("practiceEntrySelection", {
+      grade,
+      subject,
+      semester,
+      textbook: "人教版"
+    });
+    Taro.switchTab({ url: "/pages/practice/index" });
+  }
+
+  function openEntry(item) {
+    if (item.action === "practice") {
+      openPractice("数学");
+      return;
+    }
+    if (item.tab) {
+      Taro.switchTab({ url: item.url });
+      return;
+    }
+    Taro.navigateTo({ url: item.url });
+  }
+
+  const subject = subjectMeta[activeTab];
 
   return (
-    <View className="page">
-      <View className="top-title">小学 AI 出题助手</View>
-
-      <View className="hero home-hero visual-hero">
-        <Image className="hero-bg" src={asset("banner-home.png")} mode="aspectFill" />
-        <View className="hero-overlay" />
-        <View className="hero-content">
-          <Text className="hero-title">小学 AI 出题助手</Text>
-          <Text className="hero-subtitle">给学生、家长和老师使用的练习生成工具</Text>
-          <View className="hero-tags">
-            <Text className="hero-tag">智能生成</Text>
-            <Text className="hero-tag">分身份使用</Text>
-            <Text className="hero-tag">高效省时</Text>
-          </View>
+    <View className="page home-page">
+      <View className="home-top">
+        <View className="term-selectors">
+          <Picker mode="selector" range={gradeOptions} value={Math.max(0, gradeOptions.indexOf(grade))} onChange={(event) => updateGrade(gradeOptions[event.detail.value])}>
+            <View className="grade-pill">{grade} ▾</View>
+          </Picker>
+          <Picker mode="selector" range={semesterOptions} value={Math.max(0, semesterOptions.indexOf(semester))} onChange={(event) => updateSemester(semesterOptions[event.detail.value])}>
+            <View className="semester-pill">{semester} ▾</View>
+          </Picker>
         </View>
+        <Button className="teacher-link" onClick={() => Taro.navigateTo({ url: "/pages/homework/index" })}>老师入口</Button>
       </View>
 
-      <View className="notice">
-        <Text className="notice-icon">!</Text>
-        <Text>AI 内容仅供辅助，请家长或老师审核后使用。</Text>
+      <View className="home-tabs">
+        {tabs.map((tab) => (
+          <Button key={tab} className={activeTab === tab ? "home-tab active" : "home-tab"} onClick={() => setActiveTab(tab)}>
+            {tab}
+          </Button>
+        ))}
       </View>
 
-      {!role && (
-        <View className="card">
-          <Text className="section-title">请选择身份</Text>
-          <Text className="section-desc">选择后会自动记住，下次打开小程序不用重复选择。</Text>
-          <View className="role-grid">
-            {roleCards.map((item) => (
-              <Button key={item.key} className={`role-card ${item.tone}`} onClick={() => chooseRole(item.key)}>
-                <Image className="role-icon-img" src={item.image} mode="aspectFit" />
-                <Text className="role-title">{item.title}</Text>
-                <Text className="role-desc">{item.desc}</Text>
-              </Button>
-            ))}
-          </View>
-        </View>
-      )}
-
-      {role && (
-        <View className="card">
-          <View className="panel-head">
-            <View className="panel-title-wrap">
-              <Text className="section-title">{roleTitle}</Text>
-              <Text className="panel-desc">{roleDesc}</Text>
+      {activeTab === "首页" ? (
+        <>
+          <View className="hero home-hero visual-hero">
+            <Image className="hero-bg" src={asset("banner-home.png")} mode="aspectFill" />
+            <View className="hero-overlay" />
+            <View className="hero-content">
+              <Text className="hero-title">小学学习练习</Text>
+              <Text className="hero-subtitle">按年级、学期、学科、章节练习，错题会自动沉淀到错题本。</Text>
+              <View className="hero-tags">
+                <Text className="hero-tag">章节刷题</Text>
+                <Text className="hero-tag">错题巩固</Text>
+                <Text className="hero-tag">作业练习</Text>
+              </View>
             </View>
-            <Button className="switch-button" onClick={switchRole}>切换身份</Button>
           </View>
-          <View className="feature-grid">
-            {activeCards.map((item) => (
-              <Button key={item.key} className={`feature-card ${item.tone}`} onClick={() => Taro.navigateTo({ url: item.url })}>
-                <Image className="feature-icon-img" src={item.image} mode="aspectFit" />
-                <View className="feature-copy">
-                  <Text className="feature-title">{item.title}</Text>
-                  <Text className="feature-desc">{item.desc}</Text>
-                </View>
-              </Button>
-            ))}
+
+          <View className="card">
+            <Text className="section-title">常用入口</Text>
+            <View className="feature-grid">
+              {quickEntries.map((item) => (
+                <Button key={item.title} className="feature-card blue" onClick={() => openEntry(item)}>
+                  <Image className="feature-icon-img" src={item.image} mode="aspectFit" />
+                  <View className="feature-copy">
+                    <Text className="feature-title">{item.title}</Text>
+                    <Text className="feature-desc">{item.desc}</Text>
+                  </View>
+                </Button>
+              ))}
+            </View>
           </View>
+        </>
+      ) : (
+        <View className="subject-panel">
+          <View className={`subject-hero ${subject.tone}`}>
+            <View className={`subject-icon ${subject.tone}`}>
+              <Text>{subject.icon}</Text>
+            </View>
+            <View className="subject-hero-copy">
+              <Text className="subject-hero-title">{grade}{semester}{subject.title}</Text>
+              <Text className="subject-hero-desc">{subject.desc}</Text>
+            </View>
+          </View>
+          {activeTab === "数学" ? (
+            <View className="card">
+              <Text className="section-title">{grade}数学{semester}</Text>
+              <Text className="section-desc">只有当前年级、数学、当前上下册已有内容包时，才会显示章节题目；没有导入的组合会显示暂无。</Text>
+              <Button className="primary-button full-button" onClick={() => openPractice("数学")}>进入数学章节练习</Button>
+            </View>
+          ) : (
+            <View className="card">
+              <Text className="section-title">内容整理中</Text>
+              <Text className="section-desc">当前先完成数学章节刷题。后续导入{activeTab}内容后，这里会显示对应章节。</Text>
+            </View>
+          )}
         </View>
       )}
-
-      <View className="footer-links">
-        <Button className="link-button" onClick={() => Taro.navigateTo({ url: "/pages/privacy/index" })}>隐私说明</Button>
-        <Text className="footer-divider">|</Text>
-        <Button className="link-button" onClick={() => Taro.navigateTo({ url: "/pages/about/index" })}>关于</Button>
-      </View>
     </View>
   );
 }

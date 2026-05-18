@@ -3,12 +3,13 @@ import Taro from "@tarojs/taro";
 import { Button, Input, Picker, Text, Textarea, View } from "@tarojs/components";
 
 export function SelectField({ label, value, options, onChange }) {
-  const index = Math.max(0, options.indexOf(value));
+  const safeOptions = options?.length ? options : [value || ""];
+  const index = Math.max(0, safeOptions.indexOf(value));
   return (
     <View className="field">
       <Text className="field-label">{label}</Text>
-      <Picker mode="selector" range={options} value={index} onChange={(event) => onChange(options[event.detail.value])}>
-        <View className="picker">{value}</View>
+      <Picker mode="selector" range={safeOptions} value={index} onChange={(event) => onChange(safeOptions[event.detail.value])}>
+        <View className="picker">{value || "请选择"}</View>
       </Picker>
     </View>
   );

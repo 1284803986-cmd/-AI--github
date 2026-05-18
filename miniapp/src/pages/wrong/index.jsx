@@ -10,7 +10,7 @@ import "../../styles/common.scss";
 
 export default function WrongPage() {
   const [meta, setMeta] = useState(defaultSelection);
-  const [form, setForm] = useState({ originalQuestion: "计算：12.5 - 4.8 = ____", wrongAnswer: "8.7" });
+  const [form, setForm] = useState({ originalQuestion: "计算：25 ÷ 4 = ____", wrongAnswer: "6" });
   const [wrongItems, setWrongItems] = useState([]);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -28,7 +28,7 @@ export default function WrongPage() {
       setResult(await generateWrongQuestion(nextForm));
       Taro.showToast({ title: "生成成功", icon: "success" });
     } catch {
-      Taro.showToast({ title: "生成失败，请稍后再试", icon: "none" });
+      Taro.showToast({ title: "生成失败，请确认后端已启动", icon: "none" });
     } finally {
       setLoading(false);
     }
