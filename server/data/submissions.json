@@ -1,5 +1,26 @@
 [
   {
+    "id": "830bb10b-71bd-409e-967d-62e17ba1af39",
+    "assignmentId": "fd8b6874-19a1-4f9e-bbac-b1515851f20b",
+    "assignmentCode": "HQ1IYK",
+    "studentName": "XIAOMING",
+    "submitType": "在线答题",
+    "answers": [
+      {
+        "questionIndex": 1,
+        "answer": "1"
+      },
+      {
+        "questionIndex": 2,
+        "answer": "3"
+      }
+    ],
+    "imagePaths": [],
+    "submittedAt": "2026-05-18T03:07:49.032Z",
+    "status": "待批改",
+    "teacherComment": ""
+  },
+  {
     "id": "1fba6d3b-cd31-4dce-a0d7-220b25ee11ea",
     "assignmentId": "23aef21c-6912-4524-8d2d-5c80370d5020",
     "assignmentCode": "0JSQDZ",

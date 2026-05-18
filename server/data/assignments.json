@@ -1,5 +1,48 @@
 [
   {
+    "id": "fd8b6874-19a1-4f9e-bbac-b1515851f20b",
+    "code": "HQ1IYK",
+    "title": "二年级数学时间安排问题练习",
+    "subject": "数学",
+    "grade": "二年级",
+    "semester": "下册",
+    "textbook": "人教版",
+    "unit": "时间在哪里",
+    "lesson": "经过时间",
+    "knowledgePoint": "时间安排问题",
+    "type": "变式题",
+    "difficulty": "提高",
+    "questionCount": 2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "钟面上分针指向 6，时针在 2 和下一个数字之间，这时是 2 时 ____ 分。",
+        "answer": "分针指向 6 表示 30 分，所以是半时。",
+        "explanation": "分针指向 6 表示 30 分，所以是半时。 本题要点：会根据日常活动安排判断先后顺序和所用时间。",
+        "knowledge_point": "时间安排问题",
+        "difficulty": "提高",
+        "question_type": "填空题",
+        "type": "填空题",
+        "common_mistake": "没有看清活动先后",
+        "parent_tip": "让孩子先说清题目里的数量关系，再列式计算，最后检查单位和答语。"
+      },
+      {
+        "id": 2,
+        "question": "小华从 3 时开始读书，读了 5 分钟后结束。结束时间比开始时间晚了多少分钟？",
+        "answer": "5 分钟",
+        "explanation": "求经过时间，直接看活动持续了多少分钟。 本题要点：会根据日常活动安排判断先后顺序和所用时间。",
+        "knowledge_point": "时间安排问题",
+        "difficulty": "提高",
+        "question_type": "应用题",
+        "type": "应用题",
+        "common_mistake": "把开始时间当作经过时间",
+        "parent_tip": "让孩子先说清题目里的数量关系，再列式计算，最后检查单位和答语。"
+      }
+    ],
+    "createdAt": "2026-05-18T03:06:25.578Z",
+    "status": "archived"
+  },
+  {
     "id": "27975d89-a6b6-48f4-a8bc-32461f7b76fc",
     "code": "XH612C",
     "title": "四年级数学小数位数相同的小数加法练习",
@@ -109,7 +152,7 @@
       }
     ],
     "createdAt": "2026-05-17T22:37:50.423Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "ef2a574f-a67b-4980-9fcc-3a90b8f5136f",
@@ -245,7 +288,7 @@
       }
     ],
     "createdAt": "2026-05-17T22:13:34.439Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "d2bed439-5bb6-48cd-b5d4-ea781ffbbe0c",
@@ -441,7 +484,7 @@
       }
     ],
     "createdAt": "2026-05-17T22:03:18.458Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "c0e9e5ca-8f0a-4da3-812f-a18866b08edf",
@@ -577,7 +620,7 @@
       }
     ],
     "createdAt": "2026-05-17T22:01:56.242Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "23aef21c-6912-4524-8d2d-5c80370d5020",
@@ -713,7 +756,7 @@
       }
     ],
     "createdAt": "2026-05-17T02:13:06.955Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "9526e783-3849-4022-873e-4080ead033a4",
@@ -849,7 +892,7 @@
       }
     ],
     "createdAt": "2026-05-16T22:35:02.117Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "8bef0276-dc8c-430a-a3ff-4546e274f4a7",
@@ -985,7 +1028,7 @@
       }
     ],
     "createdAt": "2026-05-16T21:49:28.621Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "b83cc96c-06cf-41a3-a987-b3ffed0701c6",
@@ -1013,7 +1056,7 @@
       }
     ],
     "createdAt": "2026-05-16T21:42:44.647Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "bddcc9f5-e475-4430-b471-ec547ac6ad71",
@@ -1053,7 +1096,7 @@
       }
     ],
     "createdAt": "2026-05-16T21:42:14.653Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "6effcd2d-1a69-47e0-bd2c-030f8cd5911c",

@@ -6,6 +6,7 @@ export default defineAppConfig({
     "pages/homework/index",
     "pages/homework/create",
     "pages/homework/list",
+    "pages/homework/archive",
     "pages/homework/detail",
     "pages/homework/submissions",
     "pages/student/index",

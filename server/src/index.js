@@ -10,7 +10,8 @@ import {
   getAssignments,
   getSubmissionById,
   getSubmissionsByAssignment,
-  markSubmissionViewed
+  markSubmissionViewed,
+  updateAssignmentStatus
 } from "./assignments.js";
 import { ensureInPackage, findKnowledgePoint, loadContentCatalog, loadContentPackage, templatesFor } from "./content.js";
 import { mockPaper, mockTextbookQuestions, mockWrongQuestion } from "./mock.js";
@@ -155,8 +156,10 @@ app.post("/api/assignments", async (request, response, next) => {
 
 app.get("/api/assignments", async (_request, response, next) => {
   try {
+    const status = _request.query.status === "archived" ? "archived" : "published";
     const assignments = await getAssignments();
     const items = assignments
+      .filter((item) => status === "archived" ? item.status === "archived" : item.status !== "archived")
       .slice()
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
       .map(({ questions, ...item }) => ({
@@ -164,6 +167,26 @@ app.get("/api/assignments", async (_request, response, next) => {
         questionCount: item.questionCount || questions?.length || 0
       }));
     response.json({ success: true, assignments: items });
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post("/api/assignments/:id/archive", async (request, response, next) => {
+  try {
+    const assignment = await updateAssignmentStatus(request.params.id, "archived");
+    if (!assignment) return response.status(404).json({ message: "未找到作业" });
+    response.json({ assignment });
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post("/api/assignments/:id/restore", async (request, response, next) => {
+  try {
+    const assignment = await updateAssignmentStatus(request.params.id, "published");
+    if (!assignment) return response.status(404).json({ message: "未找到作业" });
+    response.json({ assignment });
   } catch (error) {
     next(error);
   }

@@ -48,6 +48,19 @@ export async function getAssignmentByCode(code) {
   return assignments.find((item) => String(item.code).toUpperCase() === String(code).trim().toUpperCase());
 }
 
+export async function updateAssignmentStatus(id, status) {
+  const assignments = await getAssignments();
+  let updated = null;
+  const next = assignments.map((item) => {
+    if (item.id !== id) return item;
+    updated = { ...item, status };
+    return updated;
+  });
+  if (!updated) return null;
+  await writeJson(assignmentsPath, next);
+  return updated;
+}
+
 export async function createSubmission(assignmentId, payload) {
   const assignment = await getAssignmentById(assignmentId);
   if (!assignment) return null;

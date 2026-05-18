@@ -61,8 +61,20 @@ export function getAssignments() {
   return request("/api/assignments");
 }
 
+export function getArchivedAssignments() {
+  return request("/api/assignments?status=archived");
+}
+
 export function getAssignment(id) {
   return request(`/api/assignments/${id}`);
+}
+
+export function archiveAssignment(id) {
+  return request(`/api/assignments/${id}/archive`, "POST", {});
+}
+
+export function restoreAssignment(id) {
+  return request(`/api/assignments/${id}/restore`, "POST", {});
 }
 
 export function getAssignmentByCode(code) {
