@@ -1,18 +1,17 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Taro, { useDidShow, useTabItemTap } from "@tarojs/taro";
-import { Button, Input, ScrollView, Text, View } from "@tarojs/components";
+import { Button, ScrollView, Text, View } from "@tarojs/components";
 import { AiNotice, SelectField } from "../../components/form";
 import { defaultSelection, gradeOptions, subjectCards } from "../../utils/options";
 import { generateTextbook, getContentPackage } from "../../utils/api";
-import { hasWrongQuestion, isAnswerCorrect, updateWrongBookByAnswer } from "../../utils/wrongBook";
-import { recordPracticeAnswer } from "../../utils/practiceStats";
+import { createPracticeSession, findDoingPracticeSession, getSessionProgress, hasSessionProgress, savePracticeSession } from "../../utils/practiceSession";
 import "../../styles/common.scss";
 
-const PROGRESS_KEY = "chapterPracticeProgress";
 const ENTRY_KEY = "practiceEntrySelection";
 const HOME_RESTORE_KEY = "homePracticeReturnState";
 const PRACTICE_RESET_KEY = "practiceResetToHome";
 const QUESTIONS_PER_POINT = 5;
+const MAX_TYPE_QUESTIONS = 50;
 
 export default function PracticePage() {
   const [form, setForm] = useState({ ...defaultSelection, type: "填空题", difficulty: "基础", count: 5 });
@@ -23,10 +22,6 @@ export default function PracticePage() {
   const [activeUnitId, setActiveUnitId] = useState("");
   const [activeType, setActiveType] = useState("");
   const [progressVersion, setProgressVersion] = useState(0);
-  const [result, setResult] = useState(null);
-  const [answers, setAnswers] = useState([]);
-  const [checks, setChecks] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
 
   const activePackage = useMemo(() => selectPackage(catalog, form), [catalog, form]);
@@ -34,12 +29,6 @@ export default function PracticePage() {
   const activeUnit = units.find((item) => item.id === activeUnitId || item.name === form.unit) || units[0];
   const typeSummaries = useMemo(() => buildTypeSummaries(activePackage, activeUnit, form, progressVersion), [activePackage, activeUnit, form, progressVersion]);
   const unitSummaries = useMemo(() => buildUnitSummaries(activePackage, form, progressVersion), [activePackage, form, progressVersion]);
-  const questions = useMemo(() => getPracticeQuestions(result), [result]);
-  const currentQuestion = questions[currentIndex];
-  const currentAnswer = answers[currentIndex] || "";
-  const currentCheck = checks[currentIndex];
-  const currentInWrongBook = currentQuestion ? hasWrongQuestion(currentQuestion) : false;
-
   useEffect(() => {
     const saved = Taro.getStorageSync("baseSelection");
     const homeGrade = Taro.getStorageSync("homeGrade");
@@ -82,6 +71,7 @@ export default function PracticePage() {
   }, [catalog, pendingEntry]);
 
   useDidShow(() => {
+    setProgressVersion((value) => value + 1);
     const entry = Taro.getStorageSync(ENTRY_KEY);
     if (entry) {
       Taro.removeStorageSync(ENTRY_KEY);
@@ -113,10 +103,6 @@ export default function PracticePage() {
     setMode("selector");
     setActiveUnitId("");
     setActiveType("");
-    setResult(null);
-    setAnswers([]);
-    setChecks([]);
-    setCurrentIndex(0);
     setForm((old) => normalizeSelection({ ...old, ...reset }, catalog));
   }
 
@@ -132,8 +118,10 @@ export default function PracticePage() {
     setMode("types");
   }
 
-  async function openType(type) {
+  async function openType(summary) {
     if (!activeUnit) return;
+    const type = typeof summary === "string" ? summary : summary.type;
+    const total = typeof summary === "string" ? getTypeTotal(activePackage, activeUnit, type) : summary.total;
     const point = findPointForType(activePackage, activeUnit, type);
     if (!point) {
       Taro.showToast({ title: "这个题型暂时没有题目", icon: "none" });
@@ -145,10 +133,35 @@ export default function PracticePage() {
       lesson: findLessonName(activeUnit, point),
       knowledgePoint: point.name,
       type,
-      count: 5
+      count: Math.min(MAX_TYPE_QUESTIONS, Math.max(1, Number(total) || 5))
     }, catalog);
     setForm(nextForm);
     setActiveType(type);
+    const oldSession = findDoingPracticeSession(nextForm);
+    if (oldSession) {
+      if (!hasSessionProgress(oldSession)) {
+        navigateToSession(oldSession.sessionId, entrySource);
+        return;
+      }
+      const choice = await Taro.showModal({
+        title: "继续未完成练习",
+        content: "这个题型还有未完成的练习，要继续吗？",
+        confirmText: "继续练习",
+        cancelText: "重新开始"
+      });
+      if (choice.confirm) {
+        navigateToSession(oldSession.sessionId, entrySource);
+        return;
+      }
+      const restart = await Taro.showModal({
+        title: "确认重新开始",
+        content: "重新开始会清空当前这组练习进度，确定继续吗？",
+        confirmText: "确定",
+        cancelText: "取消"
+      });
+      if (!restart.confirm) return;
+      savePracticeSession({ ...oldSession, status: "abandoned" });
+    }
     await generatePractice(nextForm);
   }
 
@@ -161,14 +174,15 @@ export default function PracticePage() {
     setLoading(true);
     try {
       const data = await generateTextbook({ ...nextForm, count: Number(nextForm.count) || 5 });
-      const nextQuestions = getPracticeQuestions(data);
-      setResult(data);
-      setAnswers(nextQuestions.map(() => ""));
-      setChecks(nextQuestions.map(() => undefined));
-      setCurrentIndex(0);
-      setMode("practice");
+      const nextQuestions = normalizeGeneratedQuestions(getPracticeQuestions(data), nextForm.type);
+      if (!nextQuestions.length) {
+        Taro.showToast({ title: "题目数据为空，请重新开始。", icon: "none" });
+        return;
+      }
+      const session = createPracticeSession(nextForm, nextQuestions);
       Taro.setStorageSync("baseSelection", nextForm);
       Taro.showToast({ title: "题目生成成功", icon: "success" });
+      navigateToSession(session.sessionId, entrySource);
     } catch {
       Taro.showToast({ title: "生成失败，请确认后端已启动", icon: "none" });
     } finally {
@@ -176,65 +190,14 @@ export default function PracticePage() {
     }
   }
 
-  function updateAnswer(value) {
-    const next = [...answers];
-    next[currentIndex] = value;
-    setAnswers(next);
-  }
-
-  function submitCurrentAnswer() {
-    if (!currentQuestion) return;
-    if (!currentAnswer.trim()) {
-      Taro.showToast({ title: "请先填写答案", icon: "none" });
+  function navigateToSession(nextSessionId, source = "practice") {
+    if (!nextSessionId) {
+      Taro.showToast({ title: "练习数据异常，请重新开始。", icon: "none" });
       return;
     }
-
-    const wasInWrongBook = hasWrongQuestion(currentQuestion);
-    const correct = isAnswerCorrect(currentAnswer, currentQuestion.answer);
-    updateWrongBookByAnswer(currentQuestion, currentAnswer, "练习");
-
-    const nextChecks = [...checks];
-    const alreadyRecorded = Boolean(nextChecks[currentIndex]?.recorded);
-    nextChecks[currentIndex] = { correct, removedFromWrongBook: correct && wasInWrongBook, recorded: true };
-    setChecks(nextChecks);
-
-    if (!alreadyRecorded) {
-      const progress = recordProgress(form, currentQuestion, correct);
-      const total = getTypeTotal(activePackage, activeUnit, form.type);
-      recordPracticeAnswer(form, currentQuestion, correct, { done: progress.done, total });
-      setProgressVersion((value) => value + 1);
-    }
-
-    if (correct) {
-      Taro.showToast({ title: wasInWrongBook ? "答对了，已从错题本移除" : "答对了", icon: "none" });
-      if (currentIndex < questions.length - 1) {
-        setTimeout(() => {
-          setCurrentIndex((oldIndex) => Math.min(oldIndex + 1, questions.length - 1));
-          Taro.pageScrollTo({ scrollTop: 0, duration: 150 });
-        }, 850);
-      }
-      return;
-    }
-
-    Taro.showToast({ title: "答错了，已加入错题本", icon: "none" });
-  }
-
-  function goPrevious() {
-    if (currentIndex <= 0) {
-      Taro.showToast({ title: "已经是第一题", icon: "none" });
-      return;
-    }
-    setCurrentIndex(currentIndex - 1);
-    Taro.pageScrollTo({ scrollTop: 0, duration: 150 });
-  }
-
-  function goNext() {
-    if (currentIndex >= questions.length - 1) {
-      Taro.showToast({ title: "已经是最后一题", icon: "none" });
-      return;
-    }
-    setCurrentIndex(currentIndex + 1);
-    Taro.pageScrollTo({ scrollTop: 0, duration: 150 });
+    Taro.navigateTo({
+      url: `/pages/practice/do/index?sessionId=${encodeURIComponent(nextSessionId)}&source=${source || "practice"}`
+    });
   }
 
   function backToPrevious() {
@@ -252,29 +215,11 @@ export default function PracticePage() {
       setMode("chapters");
       return;
     }
-    if (mode === "practice") {
-      setMode("types");
-      setResult(null);
-      return;
-    }
     if (mode === "chapters" || mode === "empty") {
       setMode("selector");
       return;
     }
     Taro.navigateBack();
-  }
-
-  function reshuffleCurrentQuestions() {
-    if (!questions.length) {
-      generatePractice();
-      return;
-    }
-    const shuffled = shuffle(questions);
-    setResult({ ...result, questions: shuffled });
-    setAnswers(shuffled.map(() => ""));
-    setChecks(shuffled.map(() => undefined));
-    setCurrentIndex(0);
-    Taro.showToast({ title: "已随机换题", icon: "success" });
   }
 
   return (
@@ -339,7 +284,7 @@ export default function PracticePage() {
           </View>
           <View className="type-list">
             {typeSummaries.map((item) => (
-              <Button key={item.type} className="type-card" loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item.type)}>
+              <Button key={item.type} className="type-card" loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item)}>
                 <View className="type-icon"><Text>{typeIcon(item.type)}</Text></View>
                 <View className="type-copy">
                   <Text className="type-title">{item.type}</Text>
@@ -359,44 +304,6 @@ export default function PracticePage() {
         </View>
       ) : null}
 
-      {mode === "practice" && currentQuestion ? (
-        <View className="result-card single-question-card">
-          <View className="practice-head">
-            <Text className="section-title">第 {currentIndex + 1} 题 / 共 {questions.length} 题</Text>
-            <Text className="muted">{[form.subject, form.grade, form.unit, form.lesson, form.knowledgePoint].filter(Boolean).join(" · ")}</Text>
-          </View>
-
-          <View className="question-card">
-            <View className="tag-row">
-              <Text className="tag">{currentQuestion.question_type || currentQuestion.type || form.type}</Text>
-              <Text className="tag">{currentQuestion.difficulty || form.difficulty}</Text>
-              {currentInWrongBook ? <Text className="tag warning-tag">错题本内</Text> : null}
-            </View>
-            <Text className="question-text">{currentQuestion.question}</Text>
-            {currentInWrongBook ? <Text className="tip-text">这道题在错题本里，答对后会自动移除。</Text> : null}
-            {renderAnswerControl(currentQuestion, currentAnswer, updateAnswer)}
-
-            {currentCheck !== undefined ? (
-              <View className="answer-panel">
-                <Text className={currentCheck.correct ? "answer-correct" : "answer-wrong"}>{buildCheckText(currentCheck)}</Text>
-                <Text className="answer-text">我的答案：{currentAnswer || "未填写"}</Text>
-                <Text className="answer-text">参考答案：{currentQuestion.answer}</Text>
-                <Text className="answer-text">解析：{currentQuestion.explanation}</Text>
-              </View>
-            ) : null}
-          </View>
-
-          <View className="button-row">
-            <Button className="secondary-button full-button" loading={loading} disabled={loading} onClick={reshuffleCurrentQuestions}>重新生成</Button>
-          </View>
-
-          <View className="practice-bottom-actions">
-            <Button className="ghost-button practice-action" onClick={goPrevious}>上一题</Button>
-            <Button className="primary-button practice-action" onClick={submitCurrentAnswer}>提交答案</Button>
-            <Button className="ghost-button practice-action" onClick={goNext}>下一题</Button>
-          </View>
-        </View>
-      ) : null}
     </ScrollView>
   );
 }
@@ -412,7 +319,6 @@ function PracticeTopBack({ title, onBack }) {
 
 function buildBackTitle(mode, activeUnit) {
   if (mode === "types") return activeUnit?.name || "题型";
-  if (mode === "practice") return "做题";
   if (mode === "empty") return "暂无内容";
   return "章节";
 }
@@ -487,7 +393,7 @@ function buildTypeSummaries(activePackage, unit, form, version) {
   const types = [...new Set(points.flatMap((point) => point.recommendedQuestionTypes || []))];
   return types.map((type) => {
     const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
-    const total = Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT);
+    const total = Math.min(MAX_TYPE_QUESTIONS, Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT));
     return {
       type,
       pointCount,
@@ -510,84 +416,66 @@ function findLessonName(unit, point) {
   return (unit.lessons || []).find((lesson) => (lesson.knowledgePoints || []).some((item) => item.id === point.id))?.name || "";
 }
 
-function progressKey(form) {
-  return [form.grade, form.subject, form.semester, form.unit, form.type].filter(Boolean).join("|");
-}
-
-function readProgress() {
-  return Taro.getStorageSync(PROGRESS_KEY) || {};
-}
-
 function getProgressCount(form) {
-  return readProgress()[progressKey(form)]?.done || 0;
-}
-
-function recordProgress(form, question, correct) {
-  const data = readProgress();
-  const key = progressKey(form);
-  const old = data[key] || { done: 0, correct: 0, wrong: 0 };
-  const next = {
-    done: old.done + 1,
-    correct: old.correct + (correct ? 1 : 0),
-    wrong: old.wrong + (correct ? 0 : 1),
-    lastQuestion: question?.question || "",
-    updatedAt: Date.now()
-  };
-  data[key] = next;
-  Taro.setStorageSync(PROGRESS_KEY, data);
-  return next;
+  const session = findDoingPracticeSession(form);
+  return session ? getSessionProgress(session).done : 0;
 }
 
 function getTypeTotal(activePackage, unit, type) {
   if (!unit) return 0;
   const points = getUnitPoints(activePackage, unit);
   const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
-  return Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT);
+  return Math.min(MAX_TYPE_QUESTIONS, Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT));
 }
 
-function renderAnswerControl(question, value, onChange) {
-  const type = question.question_type || question.type || "";
-  if (type.includes("判断")) {
-    return (
-      <View className="choice-row">
-        {["正确", "错误"].map((option) => (
-          <Button key={option} className={value === option ? "choice-button active" : "choice-button"} onClick={() => onChange(option)}>
-            {option}
-          </Button>
-        ))}
-      </View>
-    );
+function getChoiceOptions(question) {
+  if (Array.isArray(question.options) && question.options.length) return question.options;
+  const right = String(question.answer || "").trim();
+  if (["A", "B", "C", "D"].includes(right)) {
+    return ["A. 选项A", "B. 选项B", "C. 选项C", "D. 选项D"];
+  }
+  if (!right) return [];
+  const number = Number(right.replace(/[^\d.-]/g, ""));
+  if (Number.isFinite(number)) {
+    const values = [];
+    for (const item of [number, number + 1, Math.max(0, number - 1), number + 2, number + 3, number + 4]) {
+      const text = Number(item.toFixed(2)).toString();
+      if (!values.includes(text)) values.push(text);
+      if (values.length >= 4) break;
+    }
+    return values.map((item, index) => `${["A", "B", "C", "D"][index]}. ${item}`);
+  }
+  return [`A. ${right}`, "B. 以上都不对", "C. 无法确定", "D. 题目条件不足"];
+}
+
+function normalizeGeneratedQuestions(items, selectedType) {
+  return items.map((item, index) => normalizeGeneratedQuestion(item, selectedType, index));
+}
+
+function normalizeGeneratedQuestion(question, selectedType, index) {
+  const type = selectedType || question.question_type || question.type || "填空题";
+  const next = {
+    ...question,
+    question_type: type,
+    type
+  };
+
+  if (type.includes("选择")) {
+    next.options = getChoiceOptions(next);
   }
 
-  if (Array.isArray(question.options) && question.options.length) {
-    return (
-      <View className="choice-list">
-        {question.options.map((option) => (
-          <Button key={option} className={value === option ? "choice-button active" : "choice-button"} onClick={() => onChange(option)}>
-            {option}
-          </Button>
-        ))}
-      </View>
-    );
+  if (type.includes("判断") && !["正确", "错误"].includes(String(next.answer || "").trim())) {
+    next.question = `判断：${question.question} 的参考答案是“${question.answer}”，这个说法是否正确？`;
+    next.answer = "正确";
+    next.id = question.id || index + 1;
   }
 
-  return (
-    <View className="field">
-      <Text className="field-label">我的答案</Text>
-      <Input className="input" value={value} placeholder="在这里填写答案" onInput={(event) => onChange(event.detail.value)} />
-    </View>
-  );
+  return next;
 }
 
 function getPracticeQuestions(result) {
   if (!result) return [];
   return result.questions || [...(result.similar_questions || []), ...(result.variation_questions || [])];
-}
-
-function buildCheckText(check) {
-  if (!check) return "";
-  if (!check.correct) return "答错了，已加入错题本";
-  return check.removedFromWrongBook ? "答对了，已从错题本移除" : "答对了";
 }
 
 function typeIcon(type) {
@@ -597,13 +485,4 @@ function typeIcon(type) {
   if (type.includes("应用")) return "用";
   if (type.includes("变式")) return "变";
   return "填";
-}
-
-function shuffle(items) {
-  const next = [...items];
-  for (let index = next.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [next[index], next[randomIndex]] = [next[randomIndex], next[index]];
-  }
-  return next;
 }

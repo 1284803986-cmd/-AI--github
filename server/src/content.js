@@ -50,7 +50,6 @@ export function templatesFor(contentPackage, knowledgePoint, questionType) {
   const all = contentPackage.templates.filter((item) => item.knowledge_point_id === knowledgePoint.id);
   const typed = all.filter((item) => item.question_type === questionType);
   if (typed.length) return typed;
-  if (all.length) return all;
 
   const sameUnitPointIds = new Set(
     (contentPackage.knowledge_points || [])
@@ -59,7 +58,12 @@ export function templatesFor(contentPackage, knowledgePoint, questionType) {
   );
   const sameUnit = contentPackage.templates.filter((item) => sameUnitPointIds.has(item.knowledge_point_id));
   const sameUnitTyped = sameUnit.filter((item) => item.question_type === questionType);
-  return sameUnitTyped.length ? sameUnitTyped : sameUnit.length ? sameUnit : contentPackage.templates;
+  if (sameUnitTyped.length) return sameUnitTyped;
+
+  const packageTyped = contentPackage.templates.filter((item) => item.question_type === questionType);
+  if (packageTyped.length) return packageTyped;
+
+  return all.length ? all : sameUnit.length ? sameUnit : contentPackage.templates;
 }
 
 export function ensureInPackage(input, contentPackage) {

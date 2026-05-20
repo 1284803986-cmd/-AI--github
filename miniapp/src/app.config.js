@@ -2,6 +2,7 @@ export default defineAppConfig({
   pages: [
     "pages/index/index",
     "pages/practice/index",
+    "pages/practice/do/index",
     "pages/photo-search/index",
     "pages/wrong/index",
     "pages/me/index",

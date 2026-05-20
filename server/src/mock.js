@@ -1,9 +1,10 @@
 import { findKnowledgePoint, templatesFor } from "./content.js";
 
 export function mockTextbookQuestions(input, context) {
-  const count = clamp(input.count, 1, 30);
+  const count = clamp(input.count, 1, 50);
   const knowledgePoint = context.knowledgePoint || findKnowledgePoint(context.contentPackage, input.knowledgePoint);
-  const templates = context.templates?.length ? context.templates : templatesFor(context.contentPackage, knowledgePoint, input.type);
+  const rawTemplates = context.templates?.length ? context.templates : templatesFor(context.contentPackage, knowledgePoint, input.type);
+  const templates = rawTemplates.some((item) => item.question_type === input.type) ? rawTemplates : [genericTemplate(input.type)];
   return {
     title: `${input.grade}数学${knowledgePoint.name}练习`,
     grade: input.grade,
@@ -56,7 +57,7 @@ function buildQuestion(id, knowledgePoint, template, difficulty) {
   const values = numberSet(id);
   const question = fillTemplate(template.template, values);
   const answer = calculateAnswer(question, template.answer_rule, values);
-  return {
+  const item = {
     id,
     question,
     answer,
@@ -68,6 +69,65 @@ function buildQuestion(id, knowledgePoint, template, difficulty) {
     common_mistake: pick(knowledgePoint.common_mistakes, id - 1),
     parent_tip: buildParentTip(knowledgePoint)
   };
+  if (template.question_type === "选择题") item.options = buildOptions(answer, id);
+  return item;
+}
+
+function genericTemplate(type) {
+  if (type === "选择题") {
+    return {
+      question_type: "选择题",
+      template: "选择：{m} × {n} 的结果是（ ）。",
+      answer_rule: "选择正确的乘法结果。",
+      difficulty: "基础"
+    };
+  }
+  if (type === "判断题") {
+    return {
+      question_type: "判断题",
+      template: "判断：{m} × {n} = {product}。",
+      answer_rule: "正确",
+      difficulty: "基础"
+    };
+  }
+  if (type === "应用题") {
+    return {
+      question_type: "应用题",
+      template: "小明有 {total} 个物品，平均分给 {n} 个同学，每人可以分到多少个？",
+      answer_rule: "用除法解决平均分问题。",
+      difficulty: "基础"
+    };
+  }
+  if (type === "计算题") {
+    return {
+      question_type: "计算题",
+      template: "计算：{m} × {n} = ____",
+      answer_rule: "用乘法口诀计算。",
+      difficulty: "基础"
+    };
+  }
+  return {
+    question_type: type || "填空题",
+    template: "根据题意填空：{m} + {n} = ____",
+    answer_rule: "把两个数相加。",
+    difficulty: "基础"
+  };
+}
+
+function buildOptions(answer, id) {
+  const right = String(answer || "").trim();
+  if (["A", "B", "C", "D"].includes(right)) return ["A. 正确答案", "B. 干扰选项", "C. 干扰选项", "D. 干扰选项"];
+  const number = Number(right.replace(/[^\d.-]/g, ""));
+  if (Number.isFinite(number)) {
+    const options = [];
+    for (const item of [number, number + id + 1, Math.max(0, number - id), number + 2, number + 3, number + 4]) {
+      const text = Number(item.toFixed(2)).toString();
+      if (!options.includes(text)) options.push(text);
+      if (options.length >= 4) break;
+    }
+    return options.map((item, index) => `${["A", "B", "C", "D"][index]}. ${item}`);
+  }
+  return [`A. ${right || "正确"}`, "B. 错误", "C. 无法确定", "D. 条件不足"];
 }
 
 function inferKnowledgePoint(question, contentPackage) {

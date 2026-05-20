@@ -3,7 +3,8 @@ import Taro, { useDidShow, useTabItemTap } from "@tarojs/taro";
 import { Button, Image, Picker, Text, View } from "@tarojs/components";
 import { gradeOptions, semesterOptions } from "../../utils/options";
 import { getContentPackage } from "../../utils/api";
-import { getLastPracticeSession, getTodayStats } from "../../utils/practiceStats";
+import { getTodayStats } from "../../utils/practiceStats";
+import { getLatestDoingPracticeSession, getSessionProgress } from "../../utils/practiceSession";
 import { getWrongBook } from "../../utils/wrongBook";
 import "../../styles/common.scss";
 import "./index.scss";
@@ -54,6 +55,7 @@ export default function IndexPage() {
   const [catalog, setCatalog] = useState(null);
   const [showMathChapters, setShowMathChapters] = useState(false);
   const [chapterLoading, setChapterLoading] = useState(false);
+  const [isResuming, setIsResuming] = useState(false);
 
   useEffect(() => {
     const savedGrade = Taro.getStorageSync("homeGrade");
@@ -99,7 +101,7 @@ export default function IndexPage() {
 
   function refreshLearningData() {
     setTodayStats(getTodayStats());
-    setLastPractice(getLastPracticeSession());
+    setLastPractice(formatContinueSession(getLatestDoingPracticeSession()));
     setWrongCount(getWrongBook().length);
   }
 
@@ -181,15 +183,22 @@ export default function IndexPage() {
 
   function continuePractice(event) {
     stopEvent(event);
-    if (!lastPractice) {
-      openPractice("数学");
+    if (isResuming) return;
+    const session = getLatestDoingPracticeSession();
+    if (session?.sessionId) {
+      Taro.removeStorageSync(PRACTICE_RESET_KEY);
+      setIsResuming(true);
+      Taro.navigateTo({
+        url: `/pages/practice/do/index?sessionId=${encodeURIComponent(session.sessionId)}&source=homeResume`,
+        complete: () => setIsResuming(false)
+      });
       return;
     }
-    Taro.setStorageSync("practiceEntrySelection", {
-      ...lastPractice,
-      autoStart: true
-    });
-    Taro.switchTab({ url: "/pages/practice/index" });
+    if (!lastPractice) {
+      Taro.showToast({ title: "暂无继续学习，请先开始章节练习", icon: "none" });
+      return;
+    }
+    Taro.showToast({ title: "暂无继续学习，请先开始章节练习", icon: "none" });
   }
 
   function openEntry(item, event) {
@@ -412,6 +421,22 @@ function getProgressCount(form) {
   const data = Taro.getStorageSync(PROGRESS_KEY) || {};
   const key = [form.grade, form.subject, form.semester, form.unit, form.type].filter(Boolean).join("|");
   return data[key]?.done || 0;
+}
+
+function formatContinueSession(session) {
+  if (!session) return null;
+  const progress = getSessionProgress(session);
+  return {
+    sessionId: session.sessionId,
+    grade: session.grade,
+    subject: session.subject,
+    semester: session.semester || session.term,
+    unit: session.chapterName,
+    type: session.questionType,
+    done: progress.done,
+    total: progress.total,
+    updatedAt: session.updatedAt
+  };
 }
 
 function ProgressBar({ done, total }) {
