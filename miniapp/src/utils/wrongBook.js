@@ -31,23 +31,28 @@ export function upsertWrongQuestion(question, userAnswer = "", source = "练习"
 
   const items = getWrongBook();
   const key = buildQuestionKey(question);
+  const oldIndex = items.findIndex((item) => item.id === key);
+  const oldItem = oldIndex >= 0 ? items[oldIndex] : null;
   const nextItem = {
     id: key,
     question: question.question,
     answer: question.answer || "",
     explanation: question.explanation || "",
+    unit: question.unit || "",
+    lesson: question.lesson || "",
     knowledge_point: question.knowledge_point || "",
     difficulty: question.difficulty || "",
     question_type: question.question_type || question.type || "",
     type: question.type || question.question_type || "",
     common_mistake: question.common_mistake || "",
     parent_tip: question.parent_tip || "",
+    errorCount: (oldItem?.errorCount || 0) + 1,
+    mastered: false,
     userAnswer,
     source,
     updatedAt: new Date().toISOString()
   };
 
-  const oldIndex = items.findIndex((item) => item.id === key);
   if (oldIndex >= 0) {
     const next = [...items];
     next[oldIndex] = { ...items[oldIndex], ...nextItem };

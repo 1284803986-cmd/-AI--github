@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro, { useRouter } from "@tarojs/taro";
 import { Button, Image, Input, ScrollView, Text, Textarea, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import { getAssignment, submitAssignment, uploadAssignmentImages } from "../../utils/api";
 import { isAnswerCorrect, updateWrongBookByAnswer } from "../../utils/wrongBook";
 import "../../styles/common.scss";
@@ -80,10 +81,11 @@ export default function StudentWorkPage() {
     }
   }
 
-  if (!assignment) return <View className="page"><Text className="muted">正在加载...</Text></View>;
+  if (!assignment) return <View className="page"><BackButton /><Text className="muted">正在加载...</Text></View>;
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">{assignment.title}</Text>
         <Text className="hero-subtitle">作业码：{assignment.code}</Text>

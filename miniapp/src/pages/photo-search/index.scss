@@ -1,0 +1,62 @@
+.photo-page {
+  align-items: stretch;
+}
+
+.photo-hero {
+  background: linear-gradient(180deg, #2563eb 0%, #60a5fa 100%);
+}
+
+.photo-preview {
+  display: block;
+  width: 100%;
+  height: 280px;
+  margin-top: 18px;
+  border-radius: 18px;
+  background: #e2e8f0;
+}
+
+.question-input {
+  width: 100%;
+  min-height: 210px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  background: #f8fafc;
+  padding: 20px;
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.analysis-answer,
+.analysis-step,
+.similar-question {
+  display: block;
+  width: 100%;
+  color: #334155;
+  font-size: 27px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.analysis-answer {
+  margin-top: 16px;
+  font-weight: 800;
+}
+
+.analysis-steps {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.analysis-step,
+.similar-question {
+  margin-top: 10px;
+  border-radius: 16px;
+  background: #f0f7ff;
+  padding: 16px;
+  box-sizing: border-box;
+}

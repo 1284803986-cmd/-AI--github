@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { Button, Image, ScrollView, Text, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import { archiveAssignment, getAssignments } from "../../utils/api";
 import "../../styles/common.scss";
 
@@ -91,6 +92,7 @@ export default function HomeworkListPage() {
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">已布置作业</Text>
         <Text className="hero-subtitle">重新进入作业详情，查看学生提交。</Text>

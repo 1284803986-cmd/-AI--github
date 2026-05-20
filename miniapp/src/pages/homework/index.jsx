@@ -1,6 +1,7 @@
 import React from "react";
 import Taro from "@tarojs/taro";
 import { Button, Image, Text, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import "../../styles/common.scss";
 
 const asset = (name) => `/assets/generated/${name}`;
@@ -8,6 +9,7 @@ const asset = (name) => `/assets/generated/${name}`;
 export default function HomeworkCenterPage() {
   return (
     <View className="page">
+      <BackButton />
       <View className="hero visual-hero">
         <Image className="hero-bg" src={asset("banner-homework.png")} mode="aspectFill" />
         <View className="hero-overlay" />

@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Taro from "@tarojs/taro";
 import { ScrollView, Text, View } from "@tarojs/components";
 import { AiNotice, InputField, PrimaryButton, SelectField } from "../../components/form";
+import { BackButton } from "../../components/navigation";
 import { createAssignment, getContentPackage } from "../../utils/api";
 import { defaultQuestionType, defaultSelection, difficultyOptions, getKnowledgeOptions, getQuestionTypeOptions, gradeOptions, semesterOptions, subjectOptions, textbookOptions } from "../../utils/options";
 import "../../styles/common.scss";
@@ -98,6 +99,7 @@ export default function HomeworkCreatePage() {
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">布置作业</Text>
         <Text className="hero-subtitle">生成作业后自动得到作业码，学生可用作业码提交。</Text>

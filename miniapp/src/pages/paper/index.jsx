@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { ScrollView, Text, View } from "@tarojs/components";
 import { AiNotice, InputField, PrimaryButton, SelectField } from "../../components/form";
+import { BackButton } from "../../components/navigation";
 import { ResultView } from "../../components/result";
 import { defaultSelection, knowledgeOptions } from "../../utils/options";
 import { generatePaper } from "../../utils/api";
@@ -31,6 +32,7 @@ export default function PaperPage() {
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero"><Text className="hero-title">组试卷</Text><Text className="hero-subtitle">生成单元测试 / 模拟练习卷</Text></View>
       <AiNotice />
       <View className="card">

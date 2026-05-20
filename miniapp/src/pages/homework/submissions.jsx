@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro, { useRouter } from "@tarojs/taro";
 import { Button, Image, ScrollView, Text, Textarea, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import { getAssignment, getAssignmentSubmissions, markSubmissionViewed } from "../../utils/api";
 import "../../styles/common.scss";
 
@@ -40,6 +41,7 @@ export default function HomeworkSubmissionsPage() {
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">学生提交</Text>
         <Text className="hero-subtitle">{assignment?.title || "作业提交列表"}</Text>

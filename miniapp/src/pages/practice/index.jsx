@@ -1,25 +1,24 @@
 import React, { useEffect, useMemo, useState } from "react";
-import Taro, { useDidShow } from "@tarojs/taro";
+import Taro, { useDidShow, useTabItemTap } from "@tarojs/taro";
 import { Button, Input, ScrollView, Text, View } from "@tarojs/components";
 import { AiNotice, SelectField } from "../../components/form";
-import {
-  defaultSelection,
-  difficultyOptions,
-  gradeOptions,
-  subjectCards,
-  subjectOptions
-} from "../../utils/options";
+import { defaultSelection, gradeOptions, subjectCards } from "../../utils/options";
 import { generateTextbook, getContentPackage } from "../../utils/api";
 import { hasWrongQuestion, isAnswerCorrect, updateWrongBookByAnswer } from "../../utils/wrongBook";
+import { recordPracticeAnswer } from "../../utils/practiceStats";
 import "../../styles/common.scss";
 
 const PROGRESS_KEY = "chapterPracticeProgress";
 const ENTRY_KEY = "practiceEntrySelection";
+const HOME_RESTORE_KEY = "homePracticeReturnState";
+const PRACTICE_RESET_KEY = "practiceResetToHome";
 const QUESTIONS_PER_POINT = 5;
 
 export default function PracticePage() {
   const [form, setForm] = useState({ ...defaultSelection, type: "填空题", difficulty: "基础", count: 5 });
   const [catalog, setCatalog] = useState(null);
+  const [pendingEntry, setPendingEntry] = useState(null);
+  const [entrySource, setEntrySource] = useState("practice");
   const [mode, setMode] = useState("selector");
   const [activeUnitId, setActiveUnitId] = useState("");
   const [activeType, setActiveType] = useState("");
@@ -32,7 +31,7 @@ export default function PracticePage() {
 
   const activePackage = useMemo(() => selectPackage(catalog, form), [catalog, form]);
   const units = activePackage?.options?.units || [];
-  const activeUnit = units.find((item) => item.id === activeUnitId) || units[0];
+  const activeUnit = units.find((item) => item.id === activeUnitId || item.name === form.unit) || units[0];
   const typeSummaries = useMemo(() => buildTypeSummaries(activePackage, activeUnit, form, progressVersion), [activePackage, activeUnit, form, progressVersion]);
   const unitSummaries = useMemo(() => buildUnitSummaries(activePackage, form, progressVersion), [activePackage, form, progressVersion]);
   const questions = useMemo(() => getPracticeQuestions(result), [result]);
@@ -63,13 +62,42 @@ export default function PracticePage() {
       .catch(() => setCatalog(null));
   }, []);
 
+  useEffect(() => {
+    if (!catalog || !pendingEntry) return;
+    const next = normalizeSelection({ ...form, ...pendingEntry }, catalog);
+    const pkg = selectPackage(catalog, next);
+    const unit = findUnit(pkg, next.unit);
+    setForm(next);
+    setActiveUnitId(unit?.id || "");
+    setActiveType(next.type || "");
+    setEntrySource(pendingEntry.source || "practice");
+    setPendingEntry(null);
+    if (pendingEntry.autoStart && unit && next.type) {
+      generatePractice(next);
+    } else if (pendingEntry.targetMode === "types" && unit) {
+      setMode("types");
+    } else {
+      setMode("chapters");
+    }
+  }, [catalog, pendingEntry]);
+
   useDidShow(() => {
     const entry = Taro.getStorageSync(ENTRY_KEY);
     if (entry) {
       Taro.removeStorageSync(ENTRY_KEY);
-      setForm((old) => normalizeSelection({ ...old, ...entry }, catalog));
-      setMode("chapters");
+      setPendingEntry(entry);
+      return;
     }
+    const reset = Taro.getStorageSync(PRACTICE_RESET_KEY);
+    if (reset) {
+      Taro.removeStorageSync(PRACTICE_RESET_KEY);
+      resetPracticeHome(reset);
+    }
+  });
+
+  useTabItemTap(() => {
+    Taro.removeStorageSync(ENTRY_KEY);
+    resetPracticeHome();
   });
 
   function updateSelection(patch) {
@@ -78,13 +106,29 @@ export default function PracticePage() {
     Taro.setStorageSync("baseSelection", next);
   }
 
+  function resetPracticeHome(reset = {}) {
+    Taro.removeStorageSync(HOME_RESTORE_KEY);
+    setPendingEntry(null);
+    setEntrySource("practice");
+    setMode("selector");
+    setActiveUnitId("");
+    setActiveType("");
+    setResult(null);
+    setAnswers([]);
+    setChecks([]);
+    setCurrentIndex(0);
+    setForm((old) => normalizeSelection({ ...old, ...reset }, catalog));
+  }
+
   function startBySubject(subject) {
+    setEntrySource("practice");
     updateSelection({ subject });
     setMode("chapters");
   }
 
   function openUnit(unit) {
     setActiveUnitId(unit.id);
+    setForm((old) => ({ ...old, unit: unit.name }));
     setMode("types");
   }
 
@@ -155,7 +199,9 @@ export default function PracticePage() {
     setChecks(nextChecks);
 
     if (!alreadyRecorded) {
-      recordProgress(form, currentQuestion, correct);
+      const progress = recordProgress(form, currentQuestion, correct);
+      const total = getTypeTotal(activePackage, activeUnit, form.type);
+      recordPracticeAnswer(form, currentQuestion, correct, { done: progress.done, total });
       setProgressVersion((value) => value + 1);
     }
 
@@ -193,6 +239,16 @@ export default function PracticePage() {
 
   function backToPrevious() {
     if (mode === "types") {
+      if (entrySource === "home") {
+        Taro.setStorageSync(HOME_RESTORE_KEY, {
+          grade: form.grade,
+          semester: form.semester,
+          subject: form.subject,
+          unit: activeUnit?.name || form.unit
+        });
+        Taro.switchTab({ url: "/pages/index/index" });
+        return;
+      }
       setMode("chapters");
       return;
     }
@@ -229,7 +285,7 @@ export default function PracticePage() {
         <>
           <View className="hero">
             <Text className="hero-title">章节刷题</Text>
-            <Text className="hero-subtitle">先选年级和学科，再按章节、题型一步步练习。</Text>
+            <Text className="hero-subtitle">先选学科，再按章节、题型一步步练习。</Text>
           </View>
           <AiNotice />
           <View className="card">
@@ -297,12 +353,10 @@ export default function PracticePage() {
       ) : null}
 
       {mode === "empty" ? (
-        <>
-          <View className="hero">
-            <Text className="hero-title">{form.subject}内容整理中</Text>
-            <Text className="hero-subtitle">当前选择的年级、学科和上下册暂无题目内容。请等朋友导入对应内容包后再练习。</Text>
-          </View>
-        </>
+        <View className="hero">
+          <Text className="hero-title">{form.subject}内容整理中</Text>
+          <Text className="hero-subtitle">当前选择的年级、学科和上下册暂无题目内容。请等导入对应内容包后再练习。</Text>
+        </View>
       ) : null}
 
       {mode === "practice" && currentQuestion ? (
@@ -382,13 +436,7 @@ function ProgressBar({ done, total }) {
 }
 
 function normalizeSelection(selection, catalog) {
-  const packages = catalog?.packages || [];
-  const exact = packages.find((item) =>
-    item.scope?.grade === selection.grade &&
-    item.scope?.subject === selection.subject &&
-    item.scope?.semester === selection.semester
-  );
-  const active = exact || null;
+  const active = selectPackage(catalog, selection);
   const firstUnit = active?.options?.units?.[0];
   const firstPoint = firstUnit?.lessons?.[0]?.knowledgePoints?.[0];
   return {
@@ -410,6 +458,10 @@ function selectPackage(catalog, form) {
     item.scope?.subject === form.subject &&
     item.scope?.semester === form.semester
   ) || null;
+}
+
+function findUnit(activePackage, unitNameOrId) {
+  return (activePackage?.options?.units || []).find((unit) => unit.id === unitNameOrId || unit.name === unitNameOrId);
 }
 
 function buildUnitSummaries(activePackage, form, version) {
@@ -474,14 +526,23 @@ function recordProgress(form, question, correct) {
   const data = readProgress();
   const key = progressKey(form);
   const old = data[key] || { done: 0, correct: 0, wrong: 0 };
-  data[key] = {
+  const next = {
     done: old.done + 1,
     correct: old.correct + (correct ? 1 : 0),
     wrong: old.wrong + (correct ? 0 : 1),
     lastQuestion: question?.question || "",
     updatedAt: Date.now()
   };
+  data[key] = next;
   Taro.setStorageSync(PROGRESS_KEY, data);
+  return next;
+}
+
+function getTypeTotal(activePackage, unit, type) {
+  if (!unit) return 0;
+  const points = getUnitPoints(activePackage, unit);
+  const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
+  return Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT);
 }
 
 function renderAnswerControl(question, value, onChange) {

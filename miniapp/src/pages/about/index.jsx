@@ -1,10 +1,12 @@
 import React from "react";
 import { ScrollView, Text, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import "../../styles/common.scss";
 
 export default function AboutPage() {
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">关于</Text>
         <Text className="hero-subtitle">小学 AI 出题助手</Text>

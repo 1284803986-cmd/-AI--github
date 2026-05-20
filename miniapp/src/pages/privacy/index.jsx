@@ -1,10 +1,12 @@
 import React from "react";
 import { ScrollView, Text, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import "../../styles/common.scss";
 
 export default function PrivacyPage() {
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">隐私说明</Text>
         <Text className="hero-subtitle">请放心使用，当前 MVP 不做登录和账号系统</Text>

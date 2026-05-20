@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
-import Taro from "@tarojs/taro";
+import Taro, { useDidShow, useTabItemTap } from "@tarojs/taro";
 import { Button, Image, Picker, Text, View } from "@tarojs/components";
 import { gradeOptions, semesterOptions } from "../../utils/options";
+import { getContentPackage } from "../../utils/api";
+import { getLastPracticeSession, getTodayStats } from "../../utils/practiceStats";
+import { getWrongBook } from "../../utils/wrongBook";
 import "../../styles/common.scss";
 import "./index.scss";
 
 const asset = (name) => `/assets/generated/${name}`;
 
 const tabs = ["首页", "语文", "数学", "英语"];
+const PROGRESS_KEY = "chapterPracticeProgress";
+const HOME_RESTORE_KEY = "homePracticeReturnState";
+const PRACTICE_RESET_KEY = "practiceResetToHome";
+const QUESTIONS_PER_POINT = 5;
 
 const quickEntries = [
   { title: "章节练习", desc: "按课本章节刷题", image: asset("icon-practice.png"), action: "practice" },
   { title: "错题本", desc: "复习做错的题", image: asset("icon-wrong.png"), url: "/pages/wrong/index", tab: true },
   { title: "学生作业", desc: "输入作业码完成作业", image: asset("icon-student-homework.png"), url: "/pages/student/index" },
-  { title: "历史记录", desc: "查看生成和练习记录", image: asset("icon-history.png"), url: "/pages/history/index" }
+  { title: "拍照搜题", desc: "拍照或输入题目看解析", image: asset("icon-history.png"), url: "/pages/photo-search/index" }
 ];
 
 const subjectMeta = {
@@ -41,13 +48,60 @@ export default function IndexPage() {
   const [grade, setGrade] = useState("二年级");
   const [semester, setSemester] = useState("下册");
   const [activeTab, setActiveTab] = useState("首页");
+  const [todayStats, setTodayStats] = useState({ total: 0, correct: 0, accuracy: 0 });
+  const [lastPractice, setLastPractice] = useState(null);
+  const [wrongCount, setWrongCount] = useState(0);
+  const [catalog, setCatalog] = useState(null);
+  const [showMathChapters, setShowMathChapters] = useState(false);
+  const [chapterLoading, setChapterLoading] = useState(false);
 
   useEffect(() => {
     const savedGrade = Taro.getStorageSync("homeGrade");
     const savedSemester = Taro.getStorageSync("homeSemester");
     if (savedGrade) setGrade(savedGrade);
     if (savedSemester) setSemester(savedSemester);
+    refreshLearningData();
   }, []);
+
+  useDidShow(() => {
+    if (restoreHomePracticeState()) {
+      refreshLearningData();
+      return;
+    }
+    resetHomeState();
+    refreshLearningData();
+  });
+
+  useTabItemTap(() => {
+    resetHomeState();
+    refreshLearningData();
+  });
+
+  function resetHomeState() {
+    setActiveTab("首页");
+    setCatalog(null);
+    setShowMathChapters(false);
+    setChapterLoading(false);
+  }
+
+  function restoreHomePracticeState() {
+    const restore = Taro.getStorageSync(HOME_RESTORE_KEY);
+    if (!restore) return false;
+    Taro.removeStorageSync(HOME_RESTORE_KEY);
+    if (restore.grade) setGrade(restore.grade);
+    if (restore.semester) setSemester(restore.semester);
+    setActiveTab("数学");
+    setShowMathChapters(true);
+    setChapterLoading(true);
+    loadCatalog().finally(() => setChapterLoading(false));
+    return true;
+  }
+
+  function refreshLearningData() {
+    setTodayStats(getTodayStats());
+    setLastPractice(getLastPracticeSession());
+    setWrongCount(getWrongBook().length);
+  }
 
   function saveBaseSelection(nextGrade = grade, nextSemester = semester) {
     Taro.setStorageSync("homeGrade", nextGrade);
@@ -62,16 +116,28 @@ export default function IndexPage() {
 
   function updateGrade(nextGrade) {
     setGrade(nextGrade);
+    setShowMathChapters(activeTab === "数学");
     saveBaseSelection(nextGrade, semester);
+    if (activeTab === "数学" && !catalog && !chapterLoading) {
+      setChapterLoading(true);
+      loadCatalog().finally(() => setChapterLoading(false));
+    }
   }
 
   function updateSemester(nextSemester) {
     setSemester(nextSemester);
+    setShowMathChapters(activeTab === "数学");
     saveBaseSelection(grade, nextSemester);
+    if (activeTab === "数学" && !catalog && !chapterLoading) {
+      setChapterLoading(true);
+      loadCatalog().finally(() => setChapterLoading(false));
+    }
   }
 
   function openPractice(subject = "数学") {
-    Taro.setStorageSync("practiceEntrySelection", {
+    Taro.removeStorageSync("practiceEntrySelection");
+    Taro.removeStorageSync(HOME_RESTORE_KEY);
+    Taro.setStorageSync(PRACTICE_RESET_KEY, {
       grade,
       subject,
       semester,
@@ -80,7 +146,54 @@ export default function IndexPage() {
     Taro.switchTab({ url: "/pages/practice/index" });
   }
 
-  function openEntry(item) {
+  function stopEvent(event) {
+    event?.stopPropagation?.();
+  }
+
+  function switchHomeTab(tab, event) {
+    stopEvent(event);
+    if (tab === "首页") {
+      resetHomeState();
+      return;
+    }
+    setActiveTab(tab);
+    if (tab === "数学") {
+      setShowMathChapters(true);
+      if (!catalog && !chapterLoading) {
+        setChapterLoading(true);
+        loadCatalog().finally(() => setChapterLoading(false));
+      }
+      return;
+    }
+    setShowMathChapters(false);
+  }
+
+  async function loadCatalog() {
+    try {
+      const data = await getContentPackage();
+      setCatalog(data);
+      return data;
+    } catch {
+      setCatalog(null);
+      return null;
+    }
+  }
+
+  function continuePractice(event) {
+    stopEvent(event);
+    if (!lastPractice) {
+      openPractice("数学");
+      return;
+    }
+    Taro.setStorageSync("practiceEntrySelection", {
+      ...lastPractice,
+      autoStart: true
+    });
+    Taro.switchTab({ url: "/pages/practice/index" });
+  }
+
+  function openEntry(item, event) {
+    stopEvent(event);
     if (item.action === "practice") {
       openPractice("数学");
       return;
@@ -92,7 +205,28 @@ export default function IndexPage() {
     Taro.navigateTo({ url: item.url });
   }
 
+  function openTeacher(event) {
+    stopEvent(event);
+    Taro.navigateTo({ url: "/pages/homework/index" });
+  }
+
+  function openChapter(unit, event) {
+    stopEvent(event);
+    Taro.setStorageSync("practiceEntrySelection", {
+      grade,
+      subject: "数学",
+      semester,
+      textbook: "人教版",
+      unit: unit.name,
+      targetMode: "types",
+      source: "home"
+    });
+    Taro.switchTab({ url: "/pages/practice/index" });
+  }
+
   const subject = subjectMeta[activeTab];
+  const mathPackage = selectPackage(catalog, { grade, subject: "数学", semester });
+  const mathUnits = buildUnitSummaries(mathPackage, { grade, subject: "数学", semester });
 
   return (
     <View className="page home-page">
@@ -105,14 +239,14 @@ export default function IndexPage() {
             <View className="semester-pill">{semester} ▾</View>
           </Picker>
         </View>
-        <Button className="teacher-link" onClick={() => Taro.navigateTo({ url: "/pages/homework/index" })}>老师入口</Button>
+        <Button className="teacher-link" onClick={openTeacher}>老师入口</Button>
       </View>
 
       <View className="home-tabs">
         {tabs.map((tab) => (
-          <Button key={tab} className={activeTab === tab ? "home-tab active" : "home-tab"} onClick={() => setActiveTab(tab)}>
+          <View key={tab} className={activeTab === tab ? "home-tab active" : "home-tab"} onClick={(event) => switchHomeTab(tab, event)}>
             {tab}
-          </Button>
+          </View>
         ))}
       </View>
 
@@ -132,11 +266,50 @@ export default function IndexPage() {
             </View>
           </View>
 
+          <View className="card continue-card" onClick={continuePractice}>
+            <View className="card-title-row">
+              <Text className="section-title">继续学习</Text>
+              {lastPractice ? <Text className="continue-action">继续</Text> : <Text className="continue-action">去练习</Text>}
+            </View>
+            {lastPractice ? (
+              <>
+                <Text className="continue-title">{lastPractice.grade}{lastPractice.subject}{lastPractice.semester}</Text>
+                <Text className="continue-meta">{lastPractice.unit || "章节练习"} · {lastPractice.type || "题型练习"}</Text>
+                <View className="continue-progress">
+                  <View className="continue-bar">
+                    <View className="continue-bar-inner" style={{ width: `${Math.min(100, Math.round(((lastPractice.done || 0) / Math.max(1, lastPractice.total || 1)) * 100))}%` }} />
+                  </View>
+                  <Text className="continue-count">{lastPractice.done || 0}/{lastPractice.total || 0}</Text>
+                </View>
+              </>
+            ) : (
+              <Text className="continue-empty">还没有练习记录，去开始章节练习吧</Text>
+            )}
+          </View>
+
+          <View className="card">
+            <Text className="section-title">今日学习概况</Text>
+            <View className="summary-grid">
+              <View className="summary-card">
+                <Text className="summary-number">{todayStats.total || 0}</Text>
+                <Text className="summary-label">今日做题</Text>
+              </View>
+              <View className="summary-card">
+                <Text className="summary-number">{todayStats.total ? `${todayStats.accuracy}%` : "--"}</Text>
+                <Text className="summary-label">正确率</Text>
+              </View>
+              <View className="summary-card">
+                <Text className="summary-number">{wrongCount}</Text>
+                <Text className="summary-label">错题数量</Text>
+              </View>
+            </View>
+          </View>
+
           <View className="card">
             <Text className="section-title">常用入口</Text>
             <View className="feature-grid">
               {quickEntries.map((item) => (
-                <Button key={item.title} className="feature-card blue" onClick={() => openEntry(item)}>
+                <Button key={item.title} className="feature-card blue" onClick={(event) => openEntry(item, event)}>
                   <Image className="feature-icon-img" src={item.image} mode="aspectFit" />
                   <View className="feature-copy">
                     <Text className="feature-title">{item.title}</Text>
@@ -159,11 +332,35 @@ export default function IndexPage() {
             </View>
           </View>
           {activeTab === "数学" ? (
-            <View className="card">
-              <Text className="section-title">{grade}数学{semester}</Text>
-              <Text className="section-desc">只有当前年级、数学、当前上下册已有内容包时，才会显示章节题目；没有导入的组合会显示暂无。</Text>
-              <Button className="primary-button full-button" onClick={() => openPractice("数学")}>进入数学章节练习</Button>
-            </View>
+            <>
+              <View className="card">
+                <Text className="section-title">{grade}数学{semester}</Text>
+                <Text className="section-desc">只有当前年级、数学、当前上下册已有内容包时，才会显示章节题目；没有导入的组合会显示暂无。</Text>
+              </View>
+              {showMathChapters ? <View className="home-chapter-list">
+                {chapterLoading ? (
+                  <View className="card">
+                    <Text className="section-title">章节加载中</Text>
+                    <Text className="section-desc">正在读取当前年级和上下册的章节内容。</Text>
+                  </View>
+                ) : mathUnits.length ? mathUnits.map((item, index) => (
+                  <Button key={item.unit.id || item.unit.name} className="home-chapter-card" onClick={(event) => openChapter(item.unit, event)}>
+                    <View className="home-chapter-main">
+                      <Text className="home-chapter-index">第 {index + 1} 章</Text>
+                      <Text className="home-chapter-title">{item.unit.name}</Text>
+                      <Text className="home-chapter-meta">{item.lessonCount} 个课时 · {item.pointCount} 个知识点 · {item.typeCount} 类题型</Text>
+                      <ProgressBar done={item.done} total={item.total} />
+                    </View>
+                    <Text className="home-chapter-count">已做 {item.done} / {item.total}</Text>
+                  </Button>
+                )) : (
+                  <View className="card">
+                    <Text className="section-title">暂无内容</Text>
+                    <Text className="section-desc">当前选择的年级、数学和上下册还没有导入题库。请选择二年级数学下册或四年级数学下册。</Text>
+                  </View>
+                )}
+              </View> : null}
+            </>
           ) : (
             <View className="card">
               <Text className="section-title">内容整理中</Text>
@@ -172,6 +369,56 @@ export default function IndexPage() {
           )}
         </View>
       )}
+    </View>
+  );
+}
+
+function selectPackage(catalog, form) {
+  const packages = catalog?.packages || [];
+  return packages.find((item) =>
+    item.scope?.grade === form.grade &&
+    item.scope?.subject === form.subject &&
+    item.scope?.semester === form.semester
+  ) || null;
+}
+
+function buildUnitSummaries(activePackage, form) {
+  const units = activePackage?.options?.units || [];
+  return units.map((unit) => {
+    const points = getUnitPoints(activePackage, unit);
+    const types = [...new Set(points.flatMap((point) => point.recommendedQuestionTypes || []))];
+    const total = types.reduce((sum, type) => {
+      const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
+      return sum + Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT);
+    }, 0);
+    const done = types.reduce((sum, type) => sum + getProgressCount({ ...form, unit: unit.name, type }), 0);
+    return {
+      unit,
+      lessonCount: unit.lessons?.length || 0,
+      pointCount: points.length,
+      typeCount: types.length,
+      done,
+      total
+    };
+  });
+}
+
+function getUnitPoints(activePackage, unit) {
+  const ids = new Set((unit.lessons || []).flatMap((lesson) => lesson.knowledgePoints || []).map((point) => point.id));
+  return (activePackage?.options?.knowledgePoints || []).filter((point) => ids.has(point.id));
+}
+
+function getProgressCount(form) {
+  const data = Taro.getStorageSync(PROGRESS_KEY) || {};
+  const key = [form.grade, form.subject, form.semester, form.unit, form.type].filter(Boolean).join("|");
+  return data[key]?.done || 0;
+}
+
+function ProgressBar({ done, total }) {
+  const percent = total > 0 ? Math.min(100, Math.round((done / total) * 100)) : 0;
+  return (
+    <View className="home-progress-wrap">
+      <View className="home-progress-fill" style={{ width: `${percent}%` }} />
     </View>
   );
 }

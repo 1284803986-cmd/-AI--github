@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { Button, ScrollView, Text, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import { getArchivedAssignments, restoreAssignment } from "../../utils/api";
 import "../../styles/common.scss";
 
@@ -39,6 +40,7 @@ export default function HomeworkArchivePage() {
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">归档作业</Text>
         <Text className="hero-subtitle">已完成的作业，可查看或恢复。</Text>

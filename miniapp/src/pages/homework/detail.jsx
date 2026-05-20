@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro, { useRouter } from "@tarojs/taro";
 import { Button, ScrollView, Text, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import { exportAssignment, getAssignment } from "../../utils/api";
 import "../../styles/common.scss";
 
@@ -30,10 +31,11 @@ export default function HomeworkDetailPage() {
     }
   }
 
-  if (!assignment) return <View className="page"><Text className="muted">正在加载...</Text></View>;
+  if (!assignment) return <View className="page"><BackButton /><Text className="muted">正在加载...</Text></View>;
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">作业发布页</Text>
         <Text className="hero-subtitle">作业码：{assignment.code}</Text>

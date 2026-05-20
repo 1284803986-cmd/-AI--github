@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Taro from "@tarojs/taro";
 import { Input, ScrollView, Text, View } from "@tarojs/components";
 import { PrimaryButton } from "../../components/form";
+import { BackButton } from "../../components/navigation";
 import { getAssignmentByCode } from "../../utils/api";
 import "../../styles/common.scss";
 
@@ -27,6 +28,7 @@ export default function StudentIndexPage() {
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero">
         <Text className="hero-title">学生做作业</Text>
         <Text className="hero-subtitle">输入老师提供的作业码，在线答题或上传纸质作业。</Text>

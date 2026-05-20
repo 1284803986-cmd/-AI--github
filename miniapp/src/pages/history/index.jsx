@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { Button, ScrollView, Text, View } from "@tarojs/components";
+import { BackButton } from "../../components/navigation";
 import { deleteHistory, exportFile, getHistory } from "../../utils/api";
 import "../../styles/common.scss";
 
@@ -50,6 +51,7 @@ export default function HistoryPage() {
 
   return (
     <ScrollView className="page" scrollY>
+      <BackButton />
       <View className="hero"><Text className="hero-title">历史文件</Text><Text className="hero-subtitle">查看、删除和导出已保存内容</Text></View>
       <View className="card">
         <Button className="secondary-button full-button" onClick={load}>刷新历史文件</Button>

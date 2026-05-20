@@ -673,6 +673,28 @@
   width: 100%;
 }
 
+.back-bar {
+  width: 100%;
+  max-width: 690px;
+  margin: 0 auto 16px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 132px;
+  min-height: 58px;
+  margin: 0;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 .question-card {
   margin-top: 16px;
   border-radius: 16px;
