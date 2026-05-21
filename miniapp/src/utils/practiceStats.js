@@ -1,6 +1,7 @@
 import Taro from "@tarojs/taro";
-import { getQuestionId, getQuestionStem } from "./question";
+import { getQuestionId, getQuestionStem, normalizeQuestionType } from "./question";
 import { getWrongBook } from "./wrongBook";
+import { debugLog } from "./debug";
 
 const DAILY_KEY = "practiceDailyStats";
 const LAST_KEY = "lastPracticeSession";
@@ -31,6 +32,7 @@ export function getLastPracticeSession() {
 }
 
 export function recordPracticeAnswer(meta, question, correct, progress = {}) {
+  const normalizedType = normalizeQuestionType(meta.typeId || meta.type);
   const all = safeGetStorage(DAILY_KEY, {});
   const key = todayKey();
   const old = all[key] || { total: 0, correct: 0 };
@@ -54,8 +56,8 @@ export function recordPracticeAnswer(meta, question, correct, progress = {}) {
     lesson: meta.lesson,
     knowledgePointId: meta.knowledgePointId,
     knowledgePoint: meta.knowledgePoint,
-    typeId: meta.typeId,
-    type: meta.type,
+    typeId: normalizedType,
+    type: normalizedType,
     difficulty: meta.difficulty,
     source: meta.source || "practice",
     done: progress.done || 0,
@@ -67,6 +69,14 @@ export function recordPracticeAnswer(meta, question, correct, progress = {}) {
   };
   Taro.setStorageSync(LAST_KEY, record);
   appendPracticeRecord(record);
+  debugLog("[题型进度调试] answer record", {
+    packageId: record.packageId,
+    unitId: record.unitId,
+    knowledgePointId: record.knowledgePointId,
+    typeId: record.typeId,
+    questionId: record.questionId,
+    isCorrect: record.isCorrect
+  });
 }
 
 export function readChapterProgress() {
@@ -76,6 +86,40 @@ export function readChapterProgress() {
 export function getProgressCount(meta) {
   const key = [meta.grade, meta.subject, meta.semester, meta.unit, meta.type].filter(Boolean).join("|");
   return readChapterProgress()[key]?.done || 0;
+}
+
+export function getTypeProgress(meta = {}) {
+  const normalizedType = normalizeQuestionType(meta.typeId || meta.type);
+  debugLog("[题型进度调试] normalized type", {
+    inputType: meta.type,
+    inputTypeId: meta.typeId,
+    normalizedType
+  });
+
+  const recordsDone = getPracticeRecords().filter((item) => {
+    const source = String(item.source || "");
+    if (source === "wrongBook" || source.includes("错题")) return false;
+    if (meta.packageId && item.packageId !== meta.packageId) return false;
+    if (meta.grade && item.grade !== meta.grade) return false;
+    if (meta.subject && item.subject !== meta.subject) return false;
+    if (meta.semester && item.semester !== meta.semester) return false;
+    if (meta.unitId && item.unitId !== meta.unitId) return false;
+    if (!meta.unitId && meta.unit && item.unit !== meta.unit) return false;
+    return normalizeQuestionType(item.typeId || item.type) === normalizedType;
+  }).length;
+
+  const legacyKey = [meta.grade, meta.subject, meta.semester, meta.unit, normalizedType].filter(Boolean).join("|");
+  const legacyDone = Number(readChapterProgress()[legacyKey]?.done) || 0;
+  const done = Math.max(recordsDone, legacyDone);
+  const result = { done, recordsDone, legacyDone, typeId: normalizedType };
+  debugLog("[题型进度调试] type progress result", {
+    packageId: meta.packageId,
+    unitId: meta.unitId,
+    unit: meta.unit,
+    typeId: normalizedType,
+    result
+  });
+  return result;
 }
 
 export function getPracticeRecords() {
@@ -136,6 +180,7 @@ function readDailyTotals() {
 
 function normalizeRecord(item) {
   if (!item || typeof item !== "object") return null;
+  const normalizedType = normalizeQuestionType(item.typeId || item.type);
   return {
     ...item,
     grade: item.grade || "未记录",
@@ -145,8 +190,8 @@ function normalizeRecord(item) {
     unit: item.unit || "未记录章节",
     knowledgePointId: item.knowledgePointId || "",
     knowledgePoint: item.knowledgePoint || item.knowledge_point || "未记录知识点",
-    typeId: item.typeId || item.type || "未记录题型",
-    type: item.type || item.typeId || "未记录题型",
+    typeId: normalizedType || "未记录题型",
+    type: normalizedType || "未记录题型",
     isCorrect: Boolean(item.isCorrect),
     source: item.source || "practice",
     updatedAt: Number(item.updatedAt) || 0

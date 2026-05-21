@@ -1,5 +1,6 @@
 import Taro from "@tarojs/taro";
-import { getQuestionAnswer, getQuestionExplanation, getQuestionId, getQuestionStem, getQuestionType, normalizeOptions } from "./question";
+import { createPracticeSession } from "./practiceSession";
+import { getQuestionAnswer, getQuestionExplanation, getQuestionId, getQuestionStem, getQuestionType, normalizeOptions, normalizeQuestionType } from "./question";
 
 const WRONG_BOOK_KEY = "wrongBookItems";
 
@@ -50,6 +51,88 @@ export function getWrongBook() {
   return Array.isArray(saved) ? saved.map(normalizeWrongItem) : [];
 }
 
+export function getWrongBookFilterOptions(items = getWrongBook(), filters = {}) {
+  const filtered = getUniqueWrongBookItems(filterWrongBookItems(items, filters, ["type", "knowledgePoint"]));
+  return {
+    grades: uniqueOptions(filtered, (item) => item.grade),
+    subjects: uniqueOptions(filtered, (item) => item.subject),
+    semesters: uniqueOptions(filtered, (item) => item.semester),
+    units: uniqueOptions(filtered, (item) => item.unit),
+    types: uniqueOptions(filtered, (item) => item.type),
+    knowledgePoints: uniqueOptions(filtered, (item) => item.knowledge_point || item.knowledgePoint)
+  };
+}
+
+export function getWrongBookChapterSummary(filters = {}) {
+  const groups = {};
+  getUniqueWrongBookItems(filterWrongBookItems(getWrongBook(), filters, ["unit", "type", "knowledgePoint"])).forEach((item) => {
+    const key = buildChapterKey(item);
+    if (!groups[key]) {
+      groups[key] = {
+        key,
+        unitId: item.unitId || "",
+        packageId: item.packageId || "",
+        grade: item.grade || "",
+        subject: item.subject || "",
+        semester: item.semester || "",
+        textbook: item.textbook || "",
+        unit: item.unit || "未记录章节",
+        total: 0,
+        mastered: 0,
+        unmastered: 0,
+        wrongCount: 0,
+        lastWrongAt: "",
+        typeMap: {}
+      };
+    }
+    groups[key].total += 1;
+    groups[key].mastered += item.mastered ? 1 : 0;
+    groups[key].unmastered += item.mastered ? 0 : 1;
+    groups[key].wrongCount += Number(item.wrongCount) || 0;
+    if (!groups[key].lastWrongAt || new Date(item.lastWrongAt).getTime() > new Date(groups[key].lastWrongAt).getTime()) {
+      groups[key].lastWrongAt = item.lastWrongAt || "";
+    }
+    const type = normalizeQuestionType(item.typeId || item.type) || "未记录题型";
+    groups[key].typeMap[type] = (groups[key].typeMap[type] || 0) + 1;
+  });
+
+  return Object.values(groups)
+    .map((item) => ({
+      ...item,
+      progress: item.total ? Math.round((item.mastered / item.total) * 100) : 0,
+      weakTypes: Object.entries(item.typeMap)
+        .map(([type, count]) => ({ type, count }))
+        .sort((a, b) => b.count - a.count)
+    }))
+    .sort((a, b) => b.unmastered - a.unmastered || b.wrongCount - a.wrongCount);
+}
+
+export function getWrongBookItemsByChapter(chapterKey, filters = {}) {
+  return getUniqueWrongBookItems(filterWrongBookItems(getWrongBook(), filters).filter((item) => buildChapterKey(item) === chapterKey));
+}
+
+export function createWrongBookPracticeSession(items = [], chapter = {}) {
+  const safeItems = getUniqueWrongBookItems(Array.isArray(items) ? items : []);
+  if (!safeItems.length) return null;
+  const first = safeItems[0];
+  const questions = safeItems.map(toPracticeQuestion);
+  return createPracticeSession({
+    packageId: first.packageId || chapter.packageId || "",
+    grade: first.grade || chapter.grade || "二年级",
+    subject: first.subject || chapter.subject || "数学",
+    semester: first.semester || chapter.semester || "下册",
+    textbook: first.textbook || chapter.textbook || "人教版",
+    unitId: first.unitId || chapter.unitId || "",
+    unit: first.unit || chapter.unit || "错题重练",
+    lesson: first.lesson || "",
+    knowledgePointId: first.knowledgePointId || "",
+    knowledgePoint: first.knowledge_point || first.knowledgePoint || "",
+    typeId: first.typeId || first.type || "错题",
+    type: first.type || first.question_type || "错题",
+    difficulty: first.difficulty || "基础"
+  }, questions);
+}
+
 export function setWrongBook(items) {
   Taro.setStorageSync(WRONG_BOOK_KEY, items);
 }
@@ -81,9 +164,9 @@ export function upsertWrongQuestion(question, userAnswer = "", source = "练习"
     correctAnswer: getQuestionAnswer(question),
     explanation: getQuestionExplanation(question),
     difficulty: question.difficulty || "",
-    question_type: getQuestionType(question),
-    type: getQuestionType(question),
-    typeId: question.typeId || getQuestionType(question),
+    question_type: normalizeQuestionType(getQuestionType(question)),
+    type: normalizeQuestionType(getQuestionType(question)),
+    typeId: normalizeQuestionType(question.typeId || getQuestionType(question)),
     common_mistake: question.common_mistake || "",
     parent_tip: question.parent_tip || "",
     wrongCount: (oldItem?.wrongCount || oldItem?.errorCount || 0) + 1,
@@ -139,8 +222,9 @@ export function buildQuestionKey(question) {
     return [packageId, unitId, knowledgePointId, questionId].join("|");
   }
   const stemKey = normalizeAnswer(getQuestionStem(question));
-  const typeKey = getQuestionType(question, "unknown-type");
-  return [packageId, unitId, knowledgePointId, typeKey, stemKey].join("|");
+  const typeKey = normalizeQuestionType(getQuestionType(question, "unknown-type"));
+  const answerKey = normalizeAnswer(getQuestionAnswer(question));
+  return [packageId, unitId, knowledgePointId, typeKey, stemKey, answerKey].join("|");
 }
 
 export function markWrongQuestionPracticed(question, userAnswer = "", correct = true) {
@@ -175,6 +259,7 @@ export function hasWrongQuestionRecord(question) {
 }
 
 export function toPracticeQuestion(item) {
+  const type = normalizeQuestionType(item.typeId || item.type || item.question_type);
   return {
     id: item.questionId || item.id,
     questionId: item.questionId || item.id,
@@ -194,9 +279,9 @@ export function toPracticeQuestion(item) {
     correctAnswer: item.correctAnswer || item.answer,
     explanation: item.explanation,
     difficulty: item.difficulty,
-    question_type: item.question_type || item.type,
-    type: item.type || item.question_type,
-    typeId: item.typeId || item.type || item.question_type,
+    question_type: type,
+    type,
+    typeId: type,
     common_mistake: item.common_mistake,
     parent_tip: item.parent_tip
   };
@@ -204,6 +289,7 @@ export function toPracticeQuestion(item) {
 
 function normalizeWrongItem(item) {
   const wrongCount = item.wrongCount || item.errorCount || 0;
+  const type = normalizeQuestionType(item.typeId || item.type || item.question_type);
   return {
     ...item,
     questionId: item.questionId || item.id,
@@ -212,14 +298,98 @@ function normalizeWrongItem(item) {
     correctAnswer: item.correctAnswer || item.answer || "",
     answer: item.answer || item.correctAnswer || "",
     explanation: item.explanation || item.analysis || "",
-    question_type: item.question_type || item.type || item.typeId || "",
-    type: item.type || item.question_type || item.typeId || "",
-    typeId: item.typeId || item.type || item.question_type || "",
+    question_type: type,
+    type,
+    typeId: type,
     wrongCount,
     errorCount: wrongCount,
     lastWrongAt: item.lastWrongAt || item.updatedAt || item.createdAt || "",
     mastered: Boolean(item.mastered)
   };
+}
+
+function uniqueOptions(items, getter) {
+  return [...new Set(items.map(getter).filter(Boolean))];
+}
+
+function getUniqueWrongBookItems(items = []) {
+  const map = new Map();
+  items.filter(Boolean)
+    .sort(compareWrongBookItems)
+    .forEach((item) => {
+      const key = buildQuestionKey(item);
+      if (!map.has(key)) {
+        map.set(key, item);
+      } else {
+        map.set(key, mergeWrongBookDuplicate(map.get(key), item));
+      }
+    });
+  return [...map.values()];
+}
+
+function mergeWrongBookDuplicate(left, right) {
+  const newest = compareTime(right, left) >= 0 ? right : left;
+  const older = newest === right ? left : right;
+  const wrongCount = (Number(left?.wrongCount || left?.errorCount) || 0) + (Number(right?.wrongCount || right?.errorCount) || 0);
+  return {
+    ...older,
+    ...newest,
+    wrongCount,
+    errorCount: wrongCount,
+    mastered: Boolean(newest.mastered),
+    lastWrongAt: latestTimeValue(left?.lastWrongAt, right?.lastWrongAt) || newest.lastWrongAt || older.lastWrongAt || "",
+    updatedAt: latestTimeValue(left?.updatedAt, right?.updatedAt) || newest.updatedAt || older.updatedAt || "",
+    userAnswer: newest.userAnswer || older.userAnswer
+  };
+}
+
+function compareWrongBookItems(a, b) {
+  if (Boolean(a.mastered) !== Boolean(b.mastered)) return a.mastered ? 1 : -1;
+  const wrongDiff = (Number(b.wrongCount) || 0) - (Number(a.wrongCount) || 0);
+  if (wrongDiff) return wrongDiff;
+  const bTime = new Date(b.lastWrongAt || b.updatedAt || b.createdAt || 0).getTime() || 0;
+  const aTime = new Date(a.lastWrongAt || a.updatedAt || a.createdAt || 0).getTime() || 0;
+  return bTime - aTime;
+}
+
+function compareTime(a, b) {
+  const left = new Date(a?.updatedAt || a?.lastPracticedAt || a?.lastWrongAt || a?.createdAt || 0).getTime() || 0;
+  const right = new Date(b?.updatedAt || b?.lastPracticedAt || b?.lastWrongAt || b?.createdAt || 0).getTime() || 0;
+  return left - right;
+}
+
+function latestTimeValue(left, right) {
+  const leftTime = new Date(left || 0).getTime() || 0;
+  const rightTime = new Date(right || 0).getTime() || 0;
+  return leftTime >= rightTime ? left : right;
+}
+
+function buildChapterKey(item = {}) {
+  return [
+    item.packageId || "unknown-package",
+    item.grade || "unknown-grade",
+    item.subject || "unknown-subject",
+    item.semester || "unknown-semester",
+    item.unitId || item.unit || "unknown-unit"
+  ].join("|");
+}
+
+function filterWrongBookItems(items = [], filters = {}, ignoreKeys = []) {
+  const ignore = new Set(ignoreKeys);
+  return (Array.isArray(items) ? items : []).filter((item) => {
+    if (!ignore.has("grade") && filters.grade && filters.grade !== "全部" && item.grade !== filters.grade) return false;
+    if (!ignore.has("subject") && filters.subject && filters.subject !== "全部" && item.subject !== filters.subject) return false;
+    if (!ignore.has("semester") && filters.semester && filters.semester !== "全部" && item.semester !== filters.semester) return false;
+    if (!ignore.has("unit") && filters.unit && filters.unit !== "全部" && item.unit !== filters.unit && item.unitId !== filters.unit && buildChapterKey(item) !== filters.unit) return false;
+    if (!ignore.has("type") && filters.type && filters.type !== "全部" && normalizeQuestionType(item.typeId || item.type) !== normalizeQuestionType(filters.type)) return false;
+    if (!ignore.has("knowledgePoint") && filters.knowledgePoint && filters.knowledgePoint !== "全部") {
+      const point = item.knowledge_point || item.knowledgePoint || item.knowledgePointId;
+      if (point !== filters.knowledgePoint && item.knowledgePointId !== filters.knowledgePoint) return false;
+    }
+    if (filters.mastered === "已掌握" && !item.mastered) return false;
+    if (filters.mastered === "未掌握" && item.mastered) return false;
+    return true;
+  });
 }
 
 function extractNumbers(value) {

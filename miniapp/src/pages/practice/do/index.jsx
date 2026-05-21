@@ -6,7 +6,7 @@ import { recordPracticeAnswer } from "../../../utils/practiceStats";
 import { buildSessionPatch, getPracticeSession, getSessionProgress, removePracticeSession, updatePracticeSession } from "../../../utils/practiceSession";
 import { switchToTab } from "../../../utils/navigation";
 import { debugLog } from "../../../utils/debug";
-import { getQuestionAnswer, getQuestionExplanation, getQuestionId, getQuestionImage, getQuestionStem, getQuestionType, normalizeOptions } from "../../../utils/question";
+import { getQuestionAnswer, getQuestionExplanation, getQuestionId, getQuestionImage, getQuestionStem, getQuestionType, normalizeOptions, normalizeQuestionType } from "../../../utils/question";
 import "../../../styles/common.scss";
 
 const PROGRESS_KEY = "chapterPracticeProgress";
@@ -133,7 +133,7 @@ export default function PracticeDoPage() {
 
     if (!alreadyRecorded) {
       const meta = sessionToMeta(session, source);
-      const progress = recordProgress(meta, currentQuestion, correct);
+      const progress = source === "wrongBook" ? { done: 0, total: 0 } : recordProgress(meta, currentQuestion, correct);
       const sessionProgress = getSessionProgress({ ...session, checks: nextChecks, submittedMap: buildSessionPatch({ currentIndex, answers, checks: nextChecks }).submittedMap });
       recordPracticeAnswer(meta, currentQuestion, correct, { done: progress.done || sessionProgress.done, total: session.totalCount || sessionProgress.total });
       debugLog("[练习页进度调试] progress saved", {
@@ -315,6 +315,7 @@ function PracticeTopBack({ title, onBack }) {
 }
 
 function sessionToMeta(session, source = "practice") {
+  const type = normalizeQuestionType(session.typeId || session.questionType);
   return {
     grade: session.grade,
     packageId: session.packageId,
@@ -326,8 +327,8 @@ function sessionToMeta(session, source = "practice") {
     lesson: session.lesson,
     knowledgePointId: session.knowledgePointId,
     knowledgePoint: session.knowledgePoint,
-    typeId: session.typeId || session.questionType,
-    type: session.questionType,
+    typeId: type,
+    type,
     difficulty: session.difficulty,
     source
   };
@@ -339,7 +340,7 @@ function normalizeList(list, length, fallback) {
 }
 
 function progressKey(form) {
-  return [form.grade, form.subject, form.semester, form.unit, form.type].filter(Boolean).join("|");
+  return [form.grade, form.subject, form.semester, form.unit, normalizeQuestionType(form.typeId || form.type)].filter(Boolean).join("|");
 }
 
 function readProgress() {

@@ -1,4 +1,5 @@
 import Taro from "@tarojs/taro";
+import { normalizeQuestionType } from "./question";
 
 const SESSIONS_KEY = "practice_sessions";
 const LATEST_KEY = "latest_practice_session_id";
@@ -33,13 +34,14 @@ export function getLatestDoingPracticeSession() {
 }
 
 export function findDoingPracticeSession(meta) {
+  const normalizedType = normalizeQuestionType(meta.typeId || meta.type);
   return Object.values(getPracticeSessions()).find((item) =>
     item?.status === "doing" &&
     item.grade === meta.grade &&
     item.subject === meta.subject &&
     item.semester === meta.semester &&
     item.chapterName === meta.unit &&
-    item.questionType === meta.type
+    normalizeQuestionType(item.typeId || item.questionType) === normalizedType
   ) || null;
 }
 
@@ -59,6 +61,7 @@ export function hasSessionProgress(session) {
 }
 
 export function createPracticeSession(meta, questions) {
+  const normalizedType = normalizeQuestionType(meta.typeId || meta.type);
   const safeQuestions = (Array.isArray(questions) ? questions : []).map((question) => ({
     ...question,
     packageId: question.packageId || meta.packageId,
@@ -71,9 +74,9 @@ export function createPracticeSession(meta, questions) {
     lesson: question.lesson || meta.lesson,
     knowledgePointId: question.knowledgePointId || meta.knowledgePointId,
     knowledge_point: question.knowledge_point || meta.knowledgePoint,
-    typeId: question.typeId || meta.typeId || meta.type,
-    question_type: question.question_type || question.type || meta.type,
-    type: question.type || question.question_type || meta.type,
+    typeId: normalizeQuestionType(question.typeId || question.type || question.question_type || normalizedType),
+    question_type: normalizeQuestionType(question.question_type || question.type || normalizedType),
+    type: normalizeQuestionType(question.type || question.question_type || normalizedType),
     difficulty: question.difficulty || meta.difficulty
   }));
   const now = Date.now();
@@ -91,8 +94,8 @@ export function createPracticeSession(meta, questions) {
     lesson: meta.lesson,
     knowledgePointId: meta.knowledgePointId,
     knowledgePoint: meta.knowledgePoint,
-    typeId: meta.typeId || meta.type,
-    questionType: meta.type,
+    typeId: normalizedType,
+    questionType: normalizedType,
     difficulty: meta.difficulty,
     totalCount: safeQuestions.length,
     questions: safeQuestions,

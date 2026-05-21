@@ -5,9 +5,10 @@ import { AiNotice, SelectField } from "../../components/form";
 import { defaultSelection, gradeOptions, subjectCards } from "../../utils/options";
 import { generateTextbook, getContentPackage } from "../../utils/api";
 import { createPracticeSession, findDoingPracticeSession, getSessionProgress, hasSessionProgress, savePracticeSession } from "../../utils/practiceSession";
+import { getTypeProgress } from "../../utils/practiceStats";
 import { navigateToPage, switchToTab } from "../../utils/navigation";
 import { debugLog, debugWarn } from "../../utils/debug";
-import { getPracticeQuestions, normalizeQuestions } from "../../utils/question";
+import { getPracticeQuestions, normalizeQuestionType, normalizeQuestions } from "../../utils/question";
 import "../../styles/common.scss";
 
 const ENTRY_KEY = "practiceEntrySelection";
@@ -142,7 +143,20 @@ export default function PracticePage() {
   });
 
   function updateSelection(patch) {
-    const next = normalizeSelection({ ...form, ...patch }, catalog);
+    const shouldResetPackage = ["grade", "subject", "semester"].some((key) => patch[key] && patch[key] !== form[key]);
+    const next = normalizeSelection({
+      ...form,
+      ...(shouldResetPackage ? {
+        packageId: "",
+        unitId: "",
+        unit: "",
+        knowledgePointId: "",
+        knowledgePoint: "",
+        typeId: "",
+        type: ""
+      } : {}),
+      ...patch
+    }, catalog);
     setForm(next);
     Taro.setStorageSync("baseSelection", next);
   }
@@ -172,7 +186,7 @@ export default function PracticePage() {
 
   async function openType(summary) {
     if (!activeUnit) return;
-    const type = typeof summary === "string" ? summary : summary.type;
+    const type = normalizeQuestionType(typeof summary === "string" ? summary : summary.type);
     const total = typeof summary === "string" ? getTypeTotal(activePackage, activeUnit, type) : summary.total;
     const point = findPointForType(activePackage, activeUnit, type);
     if (!point) {
@@ -207,8 +221,9 @@ export default function PracticePage() {
     setForm(nextForm);
     setActiveType(type);
     const oldSession = findDoingPracticeSession(nextForm);
+    const completedHistory = getTypeProgress(nextForm).done >= nextForm.count;
     if (oldSession) {
-      if (!hasSessionProgress(oldSession)) {
+      if (!hasSessionProgress(oldSession) && !completedHistory) {
         navigateToSession(oldSession.sessionId, entrySource);
         return;
       }
@@ -216,20 +231,28 @@ export default function PracticePage() {
         title: "继续未完成练习",
         content: "这个题型还有未完成的练习，要继续吗？",
         confirmText: "继续练习",
-        cancelText: "重新开始"
+        cancelText: "重新练习"
       });
       if (choice.confirm) {
         navigateToSession(oldSession.sessionId, entrySource);
         return;
       }
       const restart = await Taro.showModal({
-        title: "确认重新开始",
-        content: "重新开始会清空当前这组练习进度，确定继续吗？",
-        confirmText: "确定",
+        title: "确认重新练习",
+        content: completedHistory ? "重新练习会开启一轮新题，但不会清除历史完成进度。" : "重新练习会清空当前这组未完成练习，确定继续吗？",
+        confirmText: "重新练习",
         cancelText: "取消"
       });
       if (!restart.confirm) return;
       savePracticeSession({ ...oldSession, status: "abandoned" });
+    } else if (completedHistory) {
+      const retry = await Taro.showModal({
+        title: "重新练习",
+        content: "该题型已完成，重新练习不会清除历史进度。",
+        confirmText: "重新练习",
+        cancelText: "取消"
+      });
+      if (!retry.confirm) return;
     }
     await generatePractice(nextForm);
   }
@@ -427,13 +450,15 @@ function normalizeSelection(selection, catalog) {
   const active = selectPackage(catalog, selection);
   const firstUnit = active?.options?.units?.[0];
   const firstPoint = firstUnit?.lessons?.[0]?.knowledgePoints?.[0];
+  const hasCatalog = Boolean(catalog);
   return {
     ...selection,
-    packageId: active?.package_id || selection.packageId || "",
+    packageId: active?.package_id || (hasCatalog ? "" : selection.packageId || ""),
     textbook: active?.scope?.textbook || selection.textbook || "人教版",
-    unitId: selection.unitId || firstUnit?.id || "",
-    unit: selection.unit || firstUnit?.name || "",
-    knowledgePoint: selection.knowledgePoint || firstPoint?.name || "",
+    unitId: active ? selection.unitId || firstUnit?.id || "" : "",
+    unit: active ? selection.unit || firstUnit?.name || "" : "",
+    knowledgePointId: active ? selection.knowledgePointId || firstPoint?.id || "" : "",
+    knowledgePoint: active ? selection.knowledgePoint || firstPoint?.name || "" : "",
     type: selection.type || "填空题",
     difficulty: selection.difficulty || "基础",
     count: Number(selection.count) || 5
@@ -443,11 +468,16 @@ function normalizeSelection(selection, catalog) {
 function selectPackage(catalog, form) {
   const packages = catalog?.packages || [];
   if (!packages.length) return null;
+  const target = normalizeFilter(form);
   if (form.packageId) {
     const byId = packages.find((item) => item.package_id === form.packageId);
-    if (byId) return byId;
+    if (
+      byId &&
+      normalizeGrade(byId.scope?.grade) === target.grade &&
+      normalizeSubject(byId.scope?.subject) === target.subject &&
+      normalizeSemester(byId.scope?.semester) === target.semester
+    ) return byId;
   }
-  const target = normalizeFilter(form);
   return packages.find((item) =>
     normalizeGrade(item.scope?.grade) === target.grade &&
     normalizeSubject(item.scope?.subject) === target.subject &&
@@ -554,15 +584,16 @@ function buildTypeSummaries(activePackage, unit, form, version) {
   void version;
   if (!unit) return [];
   const points = getUnitPoints(activePackage, unit);
-  const types = [...new Set(points.flatMap((point) => point.recommendedQuestionTypes || []))];
+  const types = [...new Set(points.flatMap((point) => point.recommendedQuestionTypes || []).map(normalizeQuestionType).filter(Boolean))];
   return types.map((type) => {
-    const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
+    const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).map(normalizeQuestionType).includes(type)).length;
     const total = Math.min(MAX_TYPE_QUESTIONS, Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT));
+    const done = getProgressCount({ ...form, unitId: unit.id, unit: unit.name, typeId: type, type });
     return {
       type,
       pointCount,
       total,
-      done: getProgressCount({ ...form, unit: unit.name, type })
+      done: Math.min(total, done)
     };
   });
 }
@@ -573,7 +604,8 @@ function getUnitPoints(activePackage, unit) {
 }
 
 function findPointForType(activePackage, unit, type) {
-  return getUnitPoints(activePackage, unit).find((point) => (point.recommendedQuestionTypes || []).includes(type)) || getUnitPoints(activePackage, unit)[0];
+  const normalizedType = normalizeQuestionType(type);
+  return getUnitPoints(activePackage, unit).find((point) => (point.recommendedQuestionTypes || []).map(normalizeQuestionType).includes(normalizedType)) || getUnitPoints(activePackage, unit)[0];
 }
 
 function findLessonName(unit, point) {
@@ -582,13 +614,15 @@ function findLessonName(unit, point) {
 
 function getProgressCount(form) {
   const session = findDoingPracticeSession(form);
-  return session ? getSessionProgress(session).done : 0;
+  const sessionDone = session ? getSessionProgress(session).done : 0;
+  return Math.max(sessionDone, getTypeProgress(form).done);
 }
 
 function getTypeTotal(activePackage, unit, type) {
   if (!unit) return 0;
   const points = getUnitPoints(activePackage, unit);
-  const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
+  const normalizedType = normalizeQuestionType(type);
+  const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).map(normalizeQuestionType).includes(normalizedType)).length;
   return Math.min(MAX_TYPE_QUESTIONS, Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT));
 }
 

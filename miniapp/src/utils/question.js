@@ -8,7 +8,7 @@ export function normalizeQuestions(items = [], selectedType = "") {
 }
 
 export function normalizeQuestion(question = {}, selectedType = "", index = 0) {
-  const type = selectedType || getQuestionType(question, "填空题");
+  const type = normalizeQuestionType(selectedType || getQuestionType(question, "填空题"));
   const next = {
     ...question,
     id: getQuestionId(question, index + 1),
@@ -42,7 +42,45 @@ export function getQuestionStem(question = {}) {
 }
 
 export function getQuestionType(question = {}, fallback = "") {
-  return question.questionType || question.question_type || question.type || question.typeId || fallback;
+  return normalizeQuestionType(question.questionType || question.question_type || question.type || question.typeId || fallback);
+}
+
+export function normalizeQuestionType(value = "") {
+  const raw = String(value || "").trim();
+  const text = raw.toLowerCase().replace(/[\s_-]+/g, "");
+  if (!text) return "";
+
+  if (
+    raw.includes("判断") ||
+    ["judge", "truefalse", "trueorfalse", "tf", "判断题"].includes(text)
+  ) return "判断题";
+
+  if (
+    raw.includes("选择") ||
+    ["choice", "singlechoice", "multiplechoice", "select", "option", "选择题"].includes(text)
+  ) return "选择题";
+
+  if (
+    raw.includes("填空") ||
+    ["blank", "fillblank", "fillintheblank", "填空题"].includes(text)
+  ) return "填空题";
+
+  if (
+    raw.includes("计算") ||
+    ["calculation", "calculate", "compute", "math", "计算题"].includes(text)
+  ) return "计算题";
+
+  if (
+    raw.includes("应用") ||
+    ["application", "wordproblem", "storyproblem", "应用题"].includes(text)
+  ) return "应用题";
+
+  if (
+    raw.includes("变式") ||
+    ["variant", "variation", "similar", "变式题"].includes(text)
+  ) return "变式题";
+
+  return raw;
 }
 
 export function getQuestionAnswer(question = {}) {
@@ -82,9 +120,9 @@ export function normalizeOptions(question = {}) {
 }
 
 export function isChoiceType(type = "") {
-  return String(type).includes("选择");
+  return normalizeQuestionType(type) === "选择题";
 }
 
 export function isJudgeType(type = "") {
-  return String(type).includes("判断");
+  return normalizeQuestionType(type) === "判断题";
 }
