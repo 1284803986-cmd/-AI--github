@@ -6,6 +6,7 @@ export default defineAppConfig({
     "pages/photo-search/index",
     "pages/wrong/index",
     "pages/me/index",
+    "pages/stats/index",
     "pages/homework/index",
     "pages/homework/create",
     "pages/homework/list",

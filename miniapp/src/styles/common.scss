@@ -1145,6 +1145,12 @@
   line-height: 1.75;
 }
 
+.question-image {
+  width: 100%;
+  margin: 8px 0 24px;
+  border-radius: 16px;
+}
+
 .practice-title-row {
   display: flex;
   align-items: center;
@@ -1562,4 +1568,143 @@
 
 .entry-copy.no-image {
   margin-left: 0;
+}
+
+.wrong-page .filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.filter-pill {
+  min-height: 76px;
+  padding: 12px 16px;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  background: #f8fbff;
+  box-sizing: border-box;
+}
+
+.filter-label,
+.filter-value {
+  display: block;
+  line-height: 1.25;
+}
+
+.filter-label {
+  color: #64748b;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.filter-value {
+  margin-top: 4px;
+  color: #0f172a;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.wrong-card {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.wrong-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  margin: 14px 0;
+}
+
+.mastered-tag {
+  border-color: #bbf7d0;
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.empty-state {
+  margin-top: 18px;
+  padding: 28px 20px;
+  border-radius: 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.empty-title {
+  display: block;
+  margin-bottom: 8px;
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.stat-box {
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  background: #f8fbff;
+  box-sizing: border-box;
+}
+
+.stat-value {
+  display: block;
+  color: #2563eb;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.stats-recent {
+  display: block;
+  margin-top: 18px;
+}
+
+.small-picker {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.stat-row-card,
+.weak-card,
+.record-row {
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+.stat-row-title,
+.record-title {
+  display: block;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.35;
 }

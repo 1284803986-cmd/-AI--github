@@ -7,6 +7,7 @@ import { getTodayStats } from "../../utils/practiceStats";
 import { getLatestDoingPracticeSession, getSessionProgress } from "../../utils/practiceSession";
 import { getWrongBook } from "../../utils/wrongBook";
 import { navigateToPage, switchToTab } from "../../utils/navigation";
+import { debugLog, debugWarn } from "../../utils/debug";
 import "../../styles/common.scss";
 import "./index.scss";
 
@@ -61,8 +62,8 @@ export default function IndexPage() {
   useEffect(() => {
     const savedGrade = Taro.getStorageSync("homeGrade");
     const savedSemester = Taro.getStorageSync("homeSemester");
-    if (savedGrade) setGrade(savedGrade);
-    if (savedSemester) setSemester(savedSemester);
+    if (savedGrade) setGrade(normalizeGrade(savedGrade));
+    if (savedSemester) setSemester(normalizeSemester(savedSemester));
     refreshLearningData();
   }, []);
 
@@ -107,20 +108,23 @@ export default function IndexPage() {
   }
 
   function saveBaseSelection(nextGrade = grade, nextSemester = semester) {
-    Taro.setStorageSync("homeGrade", nextGrade);
-    Taro.setStorageSync("homeSemester", nextSemester);
+    const safeGrade = normalizeGrade(nextGrade);
+    const safeSemester = normalizeSemester(nextSemester);
+    Taro.setStorageSync("homeGrade", safeGrade);
+    Taro.setStorageSync("homeSemester", safeSemester);
     Taro.setStorageSync("baseSelection", {
-      grade: nextGrade,
+      grade: safeGrade,
       subject: "数学",
-      semester: nextSemester,
+      semester: safeSemester,
       textbook: "人教版"
     });
   }
 
   function updateGrade(nextGrade) {
-    setGrade(nextGrade);
+    const safeGrade = normalizeGrade(nextGrade);
+    setGrade(safeGrade);
     setShowMathChapters(activeTab === "数学");
-    saveBaseSelection(nextGrade, semester);
+    saveBaseSelection(safeGrade, semester);
     if (activeTab === "数学" && !catalog && !chapterLoading) {
       setChapterLoading(true);
       loadCatalog().finally(() => setChapterLoading(false));
@@ -128,9 +132,10 @@ export default function IndexPage() {
   }
 
   function updateSemester(nextSemester) {
-    setSemester(nextSemester);
+    const safeSemester = normalizeSemester(nextSemester);
+    setSemester(safeSemester);
     setShowMathChapters(activeTab === "数学");
-    saveBaseSelection(grade, nextSemester);
+    saveBaseSelection(grade, safeSemester);
     if (activeTab === "数学" && !catalog && !chapterLoading) {
       setChapterLoading(true);
       loadCatalog().finally(() => setChapterLoading(false));
@@ -174,6 +179,10 @@ export default function IndexPage() {
   async function loadCatalog() {
     try {
       const data = await getContentPackage();
+      debugLog("[首页题库调试] content-package loaded", {
+        packageCount: data?.packages?.length || 0,
+        scopes: (data?.packages || []).map((item) => item.scope)
+      });
       setCatalog(data);
       return data;
     } catch {
@@ -220,21 +229,51 @@ export default function IndexPage() {
 
   function openChapter(unit, event) {
     stopEvent(event);
-    Taro.setStorageSync("practiceEntrySelection", {
-      grade,
-      subject: "数学",
-      semester,
-      textbook: "人教版",
+    const entry = {
+      packageId: mathPackage?.package_id,
+      unitId: unit.id,
+      grade: mathFilter.grade,
+      subject: mathFilter.subject,
+      semester: mathFilter.semester,
+      textbook: mathPackage?.scope?.textbook || "人教版",
       unit: unit.name,
       targetMode: "types",
       source: "home"
+    };
+    const missing = ["packageId", "unitId", "grade", "subject", "semester"].filter((key) => !entry[key]);
+    debugLog("[首页章节链路调试] openChapter", { entry, missing });
+    if (missing.length) {
+      debugWarn("[首页章节链路调试] 缺少必要跳转参数", { missing, entry });
+      Taro.showToast({ title: "章节入口数据异常，请重新进入首页", icon: "none" });
+      return;
+    }
+    Taro.setStorageSync("practiceEntrySelection", {
+      ...entry
     });
     switchToTab("/pages/practice/index");
   }
 
   const subject = subjectMeta[activeTab];
-  const mathPackage = selectPackage(catalog, { grade, subject: "数学", semester });
-  const mathUnits = buildUnitSummaries(mathPackage, { grade, subject: "数学", semester });
+  const mathFilter = { grade: normalizeGrade(grade), subject: "数学", semester: normalizeSemester(semester) };
+  const mathPackage = selectPackage(catalog, mathFilter);
+  const mathUnits = buildUnitSummaries(mathPackage, mathFilter);
+  const mathContentState = getMathContentState(mathPackage, mathUnits);
+
+  useEffect(() => {
+    debugLog("[首页题库调试] math filter result", {
+      selectedGrade: grade,
+      selectedSemester: semester,
+      selectedSubject: "数学",
+      normalizedFilter: mathFilter,
+      matchedPackageId: mathPackage?.package_id || null,
+      matchedScope: mathPackage?.scope || null,
+      unitCount: mathPackage?.options?.units?.length || 0,
+      knowledgePointCount: mathPackage?.options?.knowledgePoints?.length || 0,
+      questionTypeCount: mathPackage?.options?.questionTypes?.length || 0,
+      chapterCardCount: mathUnits.length,
+      contentState: mathContentState
+    });
+  }, [grade, semester, catalog, mathPackage, mathUnits.length, mathContentState]);
 
   return (
     <View className="page home-page">
@@ -351,7 +390,7 @@ export default function IndexPage() {
                     <Text className="section-title">章节加载中</Text>
                     <Text className="section-desc">正在读取当前年级和上下册的章节内容。</Text>
                   </View>
-                ) : mathUnits.length ? mathUnits.map((item, index) => (
+                ) : mathContentState === "ready" ? mathUnits.map((item, index) => (
                   <Button key={item.unit.id || item.unit.name} className="home-chapter-card" onClick={(event) => openChapter(item.unit, event)}>
                     <View className="home-chapter-main">
                       <Text className="home-chapter-index">第 {index + 1} 章</Text>
@@ -363,8 +402,12 @@ export default function IndexPage() {
                   </Button>
                 )) : (
                   <View className="card">
-                    <Text className="section-title">暂无内容</Text>
-                    <Text className="section-desc">当前选择的年级、数学和上下册还没有导入题库。请选择二年级数学下册或四年级数学下册。</Text>
+                    <Text className="section-title">{mathContentState === "empty-package" ? "题库整理中" : "暂无内容"}</Text>
+                    <Text className="section-desc">
+                      {mathContentState === "empty-package"
+                        ? "该内容包已创建，但还没有导入章节。"
+                        : "当前选择的年级、学科和上下册还没有导入题库。"}
+                    </Text>
                   </View>
                 )}
               </View> : null}
@@ -383,11 +426,89 @@ export default function IndexPage() {
 
 function selectPackage(catalog, form) {
   const packages = catalog?.packages || [];
+  const target = normalizeFilter(form);
   return packages.find((item) =>
-    item.scope?.grade === form.grade &&
-    item.scope?.subject === form.subject &&
-    item.scope?.semester === form.semester
+    normalizeGrade(item.scope?.grade) === target.grade &&
+    normalizeSubject(item.scope?.subject) === target.subject &&
+    normalizeSemester(item.scope?.semester) === target.semester
   ) || null;
+}
+
+function normalizeFilter(form) {
+  return {
+    ...form,
+    grade: normalizeGrade(form.grade),
+    subject: normalizeSubject(form.subject),
+    semester: normalizeSemester(form.semester)
+  };
+}
+
+function normalizeGrade(value) {
+  const text = String(value || "").trim();
+  const map = {
+    grade1: "一年级",
+    g1: "一年级",
+    "1": "一年级",
+    "1年级": "一年级",
+    grade2: "二年级",
+    g2: "二年级",
+    "2": "二年级",
+    "2年级": "二年级",
+    grade3: "三年级",
+    g3: "三年级",
+    "3": "三年级",
+    "3年级": "三年级",
+    grade4: "四年级",
+    g4: "四年级",
+    "4": "四年级",
+    "4年级": "四年级",
+    grade5: "五年级",
+    g5: "五年级",
+    "5": "五年级",
+    "5年级": "五年级",
+    grade6: "六年级",
+    g6: "六年级",
+    "6": "六年级",
+    "6年级": "六年级"
+  };
+  return map[text] || text || "二年级";
+}
+
+function normalizeSemester(value) {
+  const text = String(value || "").trim();
+  const map = {
+    first: "上册",
+    up: "上册",
+    upper: "上册",
+    "1": "上册",
+    second: "下册",
+    down: "下册",
+    lower: "下册",
+    "2": "下册"
+  };
+  return map[text] || text || "下册";
+}
+
+function normalizeSubject(value) {
+  const text = String(value || "").trim();
+  const map = {
+    chinese: "语文",
+    cn: "语文",
+    yuwen: "语文",
+    math: "数学",
+    maths: "数学",
+    mathematics: "数学",
+    english: "英语",
+    en: "英语"
+  };
+  return map[text] || text || "数学";
+}
+
+function getMathContentState(activePackage, units) {
+  if (!activePackage) return "missing-package";
+  if (!units.length) return "empty-package";
+  const hasQuestionStructure = units.some((item) => item.pointCount > 0 && item.typeCount > 0 && item.total > 0);
+  return hasQuestionStructure ? "ready" : "empty-package";
 }
 
 function buildUnitSummaries(activePackage, form) {

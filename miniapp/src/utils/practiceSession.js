@@ -59,19 +59,39 @@ export function hasSessionProgress(session) {
 }
 
 export function createPracticeSession(meta, questions) {
-  const safeQuestions = Array.isArray(questions) ? questions : [];
+  const safeQuestions = (Array.isArray(questions) ? questions : []).map((question) => ({
+    ...question,
+    packageId: question.packageId || meta.packageId,
+    grade: question.grade || meta.grade,
+    subject: question.subject || meta.subject,
+    semester: question.semester || meta.semester,
+    textbook: question.textbook || meta.textbook,
+    unitId: question.unitId || meta.unitId || meta.unit,
+    unit: question.unit || meta.unit,
+    lesson: question.lesson || meta.lesson,
+    knowledgePointId: question.knowledgePointId || meta.knowledgePointId,
+    knowledge_point: question.knowledge_point || meta.knowledgePoint,
+    typeId: question.typeId || meta.typeId || meta.type,
+    question_type: question.question_type || question.type || meta.type,
+    type: question.type || question.question_type || meta.type,
+    difficulty: question.difficulty || meta.difficulty
+  }));
   const now = Date.now();
   const session = {
     sessionId: `practice_${now}_${Math.random().toString(36).slice(2, 8)}`,
+    packageId: meta.packageId,
     grade: meta.grade,
     term: meta.semester,
     semester: meta.semester,
     subject: meta.subject,
     textbook: meta.textbook,
-    chapterId: meta.unit,
+    chapterId: meta.unitId || meta.unit,
+    unitId: meta.unitId || meta.unit,
     chapterName: meta.unit,
     lesson: meta.lesson,
+    knowledgePointId: meta.knowledgePointId,
     knowledgePoint: meta.knowledgePoint,
+    typeId: meta.typeId || meta.type,
     questionType: meta.type,
     difficulty: meta.difficulty,
     totalCount: safeQuestions.length,

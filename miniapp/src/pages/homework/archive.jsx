@@ -4,6 +4,7 @@ import { Button, ScrollView, Text, View } from "@tarojs/components";
 import { BackButton } from "../../components/navigation";
 import { getArchivedAssignments, restoreAssignment } from "../../utils/api";
 import { navigateToPage } from "../../utils/navigation";
+import { debugWarn } from "../../utils/debug";
 import "../../styles/common.scss";
 
 export default function HomeworkArchivePage() {
@@ -22,7 +23,7 @@ export default function HomeworkArchivePage() {
       const data = await getArchivedAssignments();
       setItems(data.assignments || []);
     } catch (err) {
-      console.error(err);
+      debugWarn("[作业归档调试] load failed", err);
       setError("归档列表加载失败，请检查后端服务是否启动");
     } finally {
       setLoading(false);

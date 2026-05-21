@@ -6,6 +6,8 @@ import { defaultSelection, gradeOptions, subjectCards } from "../../utils/option
 import { generateTextbook, getContentPackage } from "../../utils/api";
 import { createPracticeSession, findDoingPracticeSession, getSessionProgress, hasSessionProgress, savePracticeSession } from "../../utils/practiceSession";
 import { navigateToPage, switchToTab } from "../../utils/navigation";
+import { debugLog, debugWarn } from "../../utils/debug";
+import { getPracticeQuestions, normalizeQuestions } from "../../utils/question";
 import "../../styles/common.scss";
 
 const ENTRY_KEY = "practiceEntrySelection";
@@ -24,6 +26,7 @@ export default function PracticePage() {
   const [activeType, setActiveType] = useState("");
   const [progressVersion, setProgressVersion] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [entryError, setEntryError] = useState("");
 
   const activePackage = useMemo(() => selectPackage(catalog, form), [catalog, form]);
   const units = activePackage?.options?.units || [];
@@ -54,9 +57,40 @@ export default function PracticePage() {
 
   useEffect(() => {
     if (!catalog || !pendingEntry) return;
+    const missing = validateEntry(pendingEntry);
+    debugLog("[练习页链路调试] received entry", { pendingEntry, missing });
+    if (missing.length) {
+      debugWarn("[练习页链路调试] 入口参数缺失", { missing, pendingEntry });
+      setEntryError("练习入口信息不完整，请返回首页重新进入。");
+      setPendingEntry(null);
+      setMode("empty");
+      return;
+    }
     const next = normalizeSelection({ ...form, ...pendingEntry }, catalog);
     const pkg = selectPackage(catalog, next);
-    const unit = findUnit(pkg, next.unit);
+    const unit = findUnit(pkg, next.unitId || next.unit);
+    debugLog("[练习页链路调试] resolved entry", {
+      filter: {
+        packageId: next.packageId,
+        unitId: next.unitId,
+        grade: next.grade,
+        subject: next.subject,
+        semester: next.semester,
+        unit: next.unit
+      },
+      matchedPackageId: pkg?.package_id || null,
+      matchedScope: pkg?.scope || null,
+      matchedUnit: unit ? { id: unit.id, name: unit.name } : null,
+      unitCount: pkg?.options?.units?.length || 0,
+      knowledgePointCount: pkg?.options?.knowledgePoints?.length || 0
+    });
+    if (!pkg || !unit) {
+      setEntryError("练习入口信息不完整，请返回首页重新进入。");
+      setPendingEntry(null);
+      setMode("empty");
+      return;
+    }
+    setEntryError("");
     setForm(next);
     setActiveUnitId(unit?.id || "");
     setActiveType(next.type || "");
@@ -86,6 +120,22 @@ export default function PracticePage() {
     }
   });
 
+  useEffect(() => {
+    if (mode !== "types" || !activeUnit) return;
+    debugLog("[练习页链路调试] type summaries", {
+      packageId: activePackage?.package_id || null,
+      unitId: activeUnit.id,
+      unitName: activeUnit.name,
+      typeCount: typeSummaries.length,
+      types: typeSummaries.map((item) => ({
+        type: item.type,
+        pointCount: item.pointCount,
+        total: item.total,
+        done: item.done
+      }))
+    });
+  }, [mode, activePackage, activeUnit, typeSummaries]);
+
   useTabItemTap(() => {
     Taro.removeStorageSync(ENTRY_KEY);
     resetPracticeHome();
@@ -100,6 +150,7 @@ export default function PracticePage() {
   function resetPracticeHome(reset = {}) {
     Taro.removeStorageSync(HOME_RESTORE_KEY);
     setPendingEntry(null);
+    setEntryError("");
     setEntrySource("practice");
     setMode("selector");
     setActiveUnitId("");
@@ -125,17 +176,34 @@ export default function PracticePage() {
     const total = typeof summary === "string" ? getTypeTotal(activePackage, activeUnit, type) : summary.total;
     const point = findPointForType(activePackage, activeUnit, type);
     if (!point) {
-      Taro.showToast({ title: "这个题型暂时没有题目", icon: "none" });
+      Taro.showToast({ title: "该题型暂无题目", icon: "none" });
       return;
     }
     const nextForm = normalizeSelection({
       ...form,
+      packageId: activePackage?.package_id || form.packageId,
+      unitId: activeUnit.id,
       unit: activeUnit.name,
       lesson: findLessonName(activeUnit, point),
+      knowledgePointId: point.id,
       knowledgePoint: point.name,
       type,
+      typeId: type,
       count: Math.min(MAX_TYPE_QUESTIONS, Math.max(1, Number(total) || 5))
     }, catalog);
+    debugLog("[练习页题型调试] type selected", {
+      packageId: nextForm.packageId,
+      unitId: nextForm.unitId,
+      unit: nextForm.unit,
+      grade: nextForm.grade,
+      subject: nextForm.subject,
+      semester: nextForm.semester,
+      knowledgePointId: nextForm.knowledgePointId,
+      knowledgePoint: nextForm.knowledgePoint,
+      typeId: nextForm.typeId,
+      type: nextForm.type,
+      total: nextForm.count
+    });
     setForm(nextForm);
     setActiveType(type);
     const oldSession = findDoingPracticeSession(nextForm);
@@ -174,10 +242,20 @@ export default function PracticePage() {
 
     setLoading(true);
     try {
-      const data = await generateTextbook({ ...nextForm, count: Number(nextForm.count) || 5 });
-      const nextQuestions = normalizeGeneratedQuestions(getPracticeQuestions(data), nextForm.type);
+      const queryParams = { ...nextForm, count: Number(nextForm.count) || 5 };
+      debugLog("[练习页题目调试] question query params", queryParams);
+      const data = await generateTextbook(queryParams);
+      const nextQuestions = normalizeQuestions(getPracticeQuestions(data), nextForm.type);
+      debugLog("[练习页题目调试] question list result", {
+        packageId: nextForm.packageId,
+        unitId: nextForm.unitId,
+        knowledgePointId: nextForm.knowledgePointId,
+        typeId: nextForm.typeId,
+        count: nextQuestions.length,
+        sample: nextQuestions[0] || null
+      });
       if (!nextQuestions.length) {
-        Taro.showToast({ title: "题目数据为空，请重新开始。", icon: "none" });
+        Taro.showToast({ title: "该题型暂无题目", icon: "none" });
         return;
       }
       const session = createPracticeSession(nextForm, nextQuestions);
@@ -282,7 +360,7 @@ export default function PracticePage() {
             <Text className="hero-subtitle">选择题型后直接开始做题。</Text>
           </View>
           <View className="type-list">
-            {typeSummaries.map((item) => (
+            {typeSummaries.length ? typeSummaries.map((item) => (
               <Button key={item.type} className="type-card" loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item)}>
                 <View className="type-icon"><Text>{typeIcon(item.type)}</Text></View>
                 <View className="type-copy">
@@ -291,14 +369,19 @@ export default function PracticePage() {
                   <ProgressBar done={item.done} total={item.total} />
                 </View>
               </Button>
-            ))}
+            )) : (
+              <View className="card">
+                <Text className="section-title">该章节暂无题目</Text>
+                <Text className="muted">这个章节已经存在，但还没有配置可练习的题型或题目模板。</Text>
+              </View>
+            )}
           </View>
         </>
       ) : null}
 
       {mode === "empty" ? (
         <View className="hero">
-          <Text className="hero-title">{form.subject}内容整理中</Text>
+          <Text className="hero-title">{entryError || `${form.subject}内容整理中`}</Text>
           <Text className="hero-subtitle">当前选择的年级、学科和上下册暂无题目内容。请等导入对应内容包后再练习。</Text>
         </View>
       ) : null}
@@ -346,7 +429,9 @@ function normalizeSelection(selection, catalog) {
   const firstPoint = firstUnit?.lessons?.[0]?.knowledgePoints?.[0];
   return {
     ...selection,
+    packageId: active?.package_id || selection.packageId || "",
     textbook: active?.scope?.textbook || selection.textbook || "人教版",
+    unitId: selection.unitId || firstUnit?.id || "",
     unit: selection.unit || firstUnit?.name || "",
     knowledgePoint: selection.knowledgePoint || firstPoint?.name || "",
     type: selection.type || "填空题",
@@ -358,15 +443,95 @@ function normalizeSelection(selection, catalog) {
 function selectPackage(catalog, form) {
   const packages = catalog?.packages || [];
   if (!packages.length) return null;
+  if (form.packageId) {
+    const byId = packages.find((item) => item.package_id === form.packageId);
+    if (byId) return byId;
+  }
+  const target = normalizeFilter(form);
   return packages.find((item) =>
-    item.scope?.grade === form.grade &&
-    item.scope?.subject === form.subject &&
-    item.scope?.semester === form.semester
+    normalizeGrade(item.scope?.grade) === target.grade &&
+    normalizeSubject(item.scope?.subject) === target.subject &&
+    normalizeSemester(item.scope?.semester) === target.semester
   ) || null;
 }
 
 function findUnit(activePackage, unitNameOrId) {
   return (activePackage?.options?.units || []).find((unit) => unit.id === unitNameOrId || unit.name === unitNameOrId);
+}
+
+function validateEntry(entry) {
+  if (!entry || entry.source !== "home") return [];
+  return ["packageId", "unitId", "grade", "subject", "semester"].filter((key) => !entry[key]);
+}
+
+function normalizeFilter(form) {
+  return {
+    ...form,
+    grade: normalizeGrade(form.grade),
+    subject: normalizeSubject(form.subject),
+    semester: normalizeSemester(form.semester)
+  };
+}
+
+function normalizeGrade(value) {
+  const text = String(value || "").trim();
+  const map = {
+    grade1: "一年级",
+    g1: "一年级",
+    "1": "一年级",
+    "1年级": "一年级",
+    grade2: "二年级",
+    g2: "二年级",
+    "2": "二年级",
+    "2年级": "二年级",
+    grade3: "三年级",
+    g3: "三年级",
+    "3": "三年级",
+    "3年级": "三年级",
+    grade4: "四年级",
+    g4: "四年级",
+    "4": "四年级",
+    "4年级": "四年级",
+    grade5: "五年级",
+    g5: "五年级",
+    "5": "五年级",
+    "5年级": "五年级",
+    grade6: "六年级",
+    g6: "六年级",
+    "6": "六年级",
+    "6年级": "六年级"
+  };
+  return map[text] || text || "二年级";
+}
+
+function normalizeSemester(value) {
+  const text = String(value || "").trim();
+  const map = {
+    first: "上册",
+    up: "上册",
+    upper: "上册",
+    "1": "上册",
+    second: "下册",
+    down: "下册",
+    lower: "下册",
+    "2": "下册"
+  };
+  return map[text] || text || "下册";
+}
+
+function normalizeSubject(value) {
+  const text = String(value || "").trim();
+  const map = {
+    chinese: "语文",
+    cn: "语文",
+    yuwen: "语文",
+    math: "数学",
+    maths: "数学",
+    mathematics: "数学",
+    english: "英语",
+    en: "英语"
+  };
+  return map[text] || text || "数学";
 }
 
 function buildUnitSummaries(activePackage, form, version) {
@@ -425,56 +590,6 @@ function getTypeTotal(activePackage, unit, type) {
   const points = getUnitPoints(activePackage, unit);
   const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).includes(type)).length;
   return Math.min(MAX_TYPE_QUESTIONS, Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT));
-}
-
-function getChoiceOptions(question) {
-  if (Array.isArray(question.options) && question.options.length) return question.options;
-  const right = String(question.answer || "").trim();
-  if (["A", "B", "C", "D"].includes(right)) {
-    return ["A. 选项A", "B. 选项B", "C. 选项C", "D. 选项D"];
-  }
-  if (!right) return [];
-  const number = Number(right.replace(/[^\d.-]/g, ""));
-  if (Number.isFinite(number)) {
-    const values = [];
-    for (const item of [number, number + 1, Math.max(0, number - 1), number + 2, number + 3, number + 4]) {
-      const text = Number(item.toFixed(2)).toString();
-      if (!values.includes(text)) values.push(text);
-      if (values.length >= 4) break;
-    }
-    return values.map((item, index) => `${["A", "B", "C", "D"][index]}. ${item}`);
-  }
-  return [`A. ${right}`, "B. 以上都不对", "C. 无法确定", "D. 题目条件不足"];
-}
-
-function normalizeGeneratedQuestions(items, selectedType) {
-  return items.map((item, index) => normalizeGeneratedQuestion(item, selectedType, index));
-}
-
-function normalizeGeneratedQuestion(question, selectedType, index) {
-  const type = selectedType || question.question_type || question.type || "填空题";
-  const next = {
-    ...question,
-    question_type: type,
-    type
-  };
-
-  if (type.includes("选择")) {
-    next.options = getChoiceOptions(next);
-  }
-
-  if (type.includes("判断") && !["正确", "错误"].includes(String(next.answer || "").trim())) {
-    next.question = `判断：${question.question} 的参考答案是“${question.answer}”，这个说法是否正确？`;
-    next.answer = "正确";
-    next.id = question.id || index + 1;
-  }
-
-  return next;
-}
-
-function getPracticeQuestions(result) {
-  if (!result) return [];
-  return result.questions || [...(result.similar_questions || []), ...(result.variation_questions || [])];
 }
 
 function typeIcon(type) {

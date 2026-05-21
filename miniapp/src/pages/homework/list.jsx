@@ -4,6 +4,7 @@ import { Button, Image, ScrollView, Text, View } from "@tarojs/components";
 import { BackButton } from "../../components/navigation";
 import { archiveAssignment, getAssignments } from "../../utils/api";
 import { navigateToPage } from "../../utils/navigation";
+import { debugWarn } from "../../utils/debug";
 import "../../styles/common.scss";
 
 const asset = (name) => `/assets/generated/${name}`;
@@ -27,7 +28,7 @@ export default function HomeworkListPage() {
       setItems(activeAssignments);
       setSelectedIds((old) => old.filter((id) => activeAssignments.some((item) => item.id === id)));
     } catch (err) {
-      console.error(err);
+      debugWarn("[作业列表调试] load failed", err);
       setError("作业列表加载失败，请检查后端服务是否启动");
     } finally {
       setLoading(false);

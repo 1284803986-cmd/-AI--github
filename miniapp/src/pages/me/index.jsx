@@ -45,6 +45,12 @@ export default function MePage() {
       <View className="card">
         <Text className="section-title">常用功能</Text>
         <View className="entry-grid">
+          <Button className="entry-card" onClick={() => navigateToPage("/pages/stats/index")}>
+            <View className="entry-copy no-image">
+              <Text className="entry-title">学习统计</Text>
+              <Text className="entry-desc">查看练习数量、正确率和薄弱点</Text>
+            </View>
+          </Button>
           <Button className="entry-card" onClick={() => navigateToPage("/pages/history/index")}>
             <View className="entry-copy no-image">
               <Text className="entry-title">历史记录</Text>

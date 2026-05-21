@@ -101,11 +101,11 @@ export default function StudentWorkPage() {
 
       <View className="card">
         <Text className="section-title">在线答题</Text>
-        <Text className="muted">提交后，做错的题会自动加入错题本；做对的题会从错题本移除。</Text>
+        <Text className="muted">提交后，做错的题会自动加入错题本；错题做对后会标记为已掌握。</Text>
         {assignment.questions.map((item, index) => (
           <View className="question-card" key={`${item.question}-${index}`}>
             <Text className="question-text">{index + 1}. {item.question}</Text>
-            {checks[index] !== undefined ? <Text className={checks[index] ? "answer-correct" : "answer-wrong"}>{checks[index] ? "答对了，已从错题本移除" : "答错了，已加入错题本"}</Text> : null}
+            {checks[index] !== undefined ? <Text className={checks[index] ? "answer-correct" : "answer-wrong"}>{checks[index] ? "答对了，已标记掌握" : "答错了，已加入错题本"}</Text> : null}
             <Textarea className="textarea" value={answers[index]} placeholder="在这里填写答案" onInput={(event) => updateAnswer(index, event.detail.value)} />
           </View>
         ))}

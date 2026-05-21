@@ -1,10 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Taro, { useRouter } from "@tarojs/taro";
-import { Button, Input, ScrollView, Text, Textarea, View } from "@tarojs/components";
+import { Button, Image, Input, ScrollView, Text, Textarea, View } from "@tarojs/components";
 import { evaluateAnswer, hasWrongQuestion, updateWrongBookByAnswer } from "../../../utils/wrongBook";
 import { recordPracticeAnswer } from "../../../utils/practiceStats";
 import { buildSessionPatch, getPracticeSession, getSessionProgress, removePracticeSession, updatePracticeSession } from "../../../utils/practiceSession";
 import { switchToTab } from "../../../utils/navigation";
+import { debugLog } from "../../../utils/debug";
+import { getQuestionAnswer, getQuestionExplanation, getQuestionId, getQuestionImage, getQuestionStem, getQuestionType, normalizeOptions } from "../../../utils/question";
 import "../../../styles/common.scss";
 
 const PROGRESS_KEY = "chapterPracticeProgress";
@@ -12,6 +14,7 @@ const PROGRESS_KEY = "chapterPracticeProgress";
 export default function PracticeDoPage() {
   const router = useRouter();
   const sessionId = router?.params?.sessionId || "";
+  const source = router?.params?.source || "practice";
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
@@ -58,6 +61,16 @@ export default function PracticeDoPage() {
     setLoadError("");
     setLoading(false);
     hidePracticeTabBar();
+    debugLog("[练习页题目调试] question list result", {
+      sessionId: next.sessionId,
+      packageId: next.packageId,
+      unitId: next.unitId || next.chapterId,
+      knowledgePointId: next.knowledgePointId,
+      typeId: next.typeId || next.questionType,
+      count: next.questions.length,
+      currentIndex: safeIndex,
+      currentQuestion: next.questions[safeIndex] || null
+    });
   }
 
   function saveSession(patch = {}) {
@@ -88,9 +101,23 @@ export default function PracticeDoPage() {
     }
 
     const wasInWrongBook = hasWrongQuestion(currentQuestion);
-    const answerResult = evaluateAnswer(currentAnswer, currentQuestion.answer, currentQuestion);
+    const rightAnswer = getQuestionAnswer(currentQuestion);
+    const answerResult = evaluateAnswer(currentAnswer, rightAnswer, currentQuestion);
     const correct = answerResult.correct;
-    updateWrongBookByAnswer(currentQuestion, currentAnswer, "练习");
+    const wrongBookResult = updateWrongBookByAnswer(currentQuestion, currentAnswer, source === "wrongBook" ? "错题重练" : "练习");
+    debugLog("[练习页答题调试] answer submitted", {
+      sessionId: session?.sessionId,
+      packageId: session?.packageId,
+      unitId: session?.unitId || session?.chapterId,
+      knowledgePointId: session?.knowledgePointId,
+      questionId: getQuestionId(currentQuestion, currentIndex),
+      index: currentIndex,
+      type: getQuestionType(currentQuestion, session?.questionType),
+      studentAnswer: currentAnswer,
+      correctAnswer: rightAnswer,
+      isCorrect: correct,
+      status: answerResult.status
+    });
 
     const nextChecks = [...checks];
     const alreadyRecorded = Boolean(nextChecks[currentIndex]?.recorded);
@@ -98,21 +125,30 @@ export default function PracticeDoPage() {
       correct,
       status: answerResult.status,
       formatWarning: answerResult.formatWarning,
-      removedFromWrongBook: correct && wasInWrongBook,
+      masteredWrongBook: correct && (wasInWrongBook || wrongBookResult.mastered),
       recorded: true
     };
     setChecks(nextChecks);
     saveSession({ checks: nextChecks });
 
     if (!alreadyRecorded) {
-      const meta = sessionToMeta(session);
+      const meta = sessionToMeta(session, source);
       const progress = recordProgress(meta, currentQuestion, correct);
       const sessionProgress = getSessionProgress({ ...session, checks: nextChecks, submittedMap: buildSessionPatch({ currentIndex, answers, checks: nextChecks }).submittedMap });
       recordPracticeAnswer(meta, currentQuestion, correct, { done: progress.done || sessionProgress.done, total: session.totalCount || sessionProgress.total });
+      debugLog("[练习页进度调试] progress saved", {
+        sessionId: session?.sessionId,
+        packageId: meta.packageId,
+        unitId: meta.unitId,
+        knowledgePointId: meta.knowledgePointId,
+        questionId: getQuestionId(currentQuestion, currentIndex),
+        isCorrect: correct,
+        progress: { done: progress.done || sessionProgress.done, total: session.totalCount || sessionProgress.total }
+      });
     }
 
     if (correct) {
-      Taro.showToast({ title: answerResult.formatWarning ? "结果是对的，注意单位" : wasInWrongBook ? "答对了，已从错题本移除" : "答对了", icon: "none" });
+      Taro.showToast({ title: answerResult.formatWarning ? "结果是对的，注意单位" : wasInWrongBook ? "答对了，已标记掌握" : "答对了", icon: "none" });
       if (currentIndex < questions.length - 1) {
         setTimeout(() => {
           const nextIndex = Math.min(currentIndex + 1, questions.length - 1);
@@ -211,22 +247,23 @@ export default function PracticeDoPage() {
 
         <View className="question-card">
           <View className="tag-row">
-            <Text className={`question-type-tag ${getQuestionTypeTone(currentQuestion.question_type || currentQuestion.type || session.questionType)}`}>
-              {getQuestionTypeLabel(currentQuestion.question_type || currentQuestion.type || session.questionType)}
+            <Text className={`question-type-tag ${getQuestionTypeTone(getQuestionType(currentQuestion, session.questionType))}`}>
+              {getQuestionTypeLabel(getQuestionType(currentQuestion, session.questionType))}
             </Text>
             <Text className="difficulty-tag">{currentQuestion.difficulty || session.difficulty}</Text>
             {currentInWrongBook ? <Text className="tag warning-tag">错题本内</Text> : null}
           </View>
-          <Text className="question-text">{currentQuestion.question}</Text>
-          {currentInWrongBook ? <Text className="tip-text">这道题在错题本里，答对后会自动移除。</Text> : null}
+          <Text className="question-text">{getQuestionStem(currentQuestion)}</Text>
+          {getQuestionImage(currentQuestion) ? <Image className="question-image" src={getQuestionImage(currentQuestion)} mode="widthFix" /> : null}
+          {currentInWrongBook ? <Text className="tip-text">这道题在错题本里，答对后会自动标记为已掌握。</Text> : null}
           {renderAnswerControl(currentQuestion, currentAnswer, updateAnswer, currentCheck)}
 
           {currentCheck !== undefined ? (
             <View className="answer-panel">
               <Text className={currentCheck.correct ? "answer-correct" : "answer-wrong"}>{buildCheckText(currentCheck)}</Text>
               <Text className="answer-text">我的答案：{currentAnswer || "未填写"}</Text>
-              <Text className="answer-text">{currentCheck.formatWarning ? "参考写法" : "参考答案"}：{currentQuestion.answer}</Text>
-              <Text className="answer-text">解析：{currentQuestion.explanation}</Text>
+              <Text className="answer-text">{currentCheck.formatWarning ? "参考写法" : "参考答案"}：{getQuestionAnswer(currentQuestion)}</Text>
+              <Text className="answer-text">解析：{getQuestionExplanation(currentQuestion) || "暂无解析"}</Text>
             </View>
           ) : null}
         </View>
@@ -277,17 +314,22 @@ function PracticeTopBack({ title, onBack }) {
   );
 }
 
-function sessionToMeta(session) {
+function sessionToMeta(session, source = "practice") {
   return {
     grade: session.grade,
+    packageId: session.packageId,
     subject: session.subject,
     semester: session.semester || session.term,
     textbook: session.textbook,
+    unitId: session.unitId || session.chapterId,
     unit: session.chapterName,
     lesson: session.lesson,
+    knowledgePointId: session.knowledgePointId,
     knowledgePoint: session.knowledgePoint,
+    typeId: session.typeId || session.questionType,
     type: session.questionType,
-    difficulty: session.difficulty
+    difficulty: session.difficulty,
+    source
   };
 }
 
@@ -312,7 +354,12 @@ function recordProgress(form, question, correct) {
     done: old.done + 1,
     correct: old.correct + (correct ? 1 : 0),
     wrong: old.wrong + (correct ? 0 : 1),
-    lastQuestion: question?.question || "",
+    lastQuestion: getQuestionStem(question),
+    packageId: form.packageId,
+    unitId: form.unitId,
+    knowledgePointId: form.knowledgePointId,
+    questionId: getQuestionId(question),
+    isCorrect: correct,
     updatedAt: Date.now()
   };
   data[key] = next;
@@ -332,12 +379,12 @@ function isValidPracticeSession(session) {
 }
 
 function renderAnswerControl(question, value, onChange, check) {
-  const type = question.question_type || question.type || "";
+  const type = getQuestionType(question);
   if (type.includes("判断")) {
     return (
       <View className="choice-row judge-choice-row">
         {["正确", "错误"].map((option) => (
-          <Button key={option} className={getOptionClassName({ value, optionValue: option, rightAnswer: question.answer, check, baseClass: "judge-option" })} onClick={() => onChange(option)}>
+          <Button key={option} className={getOptionClassName({ value, optionValue: option, rightAnswer: getQuestionAnswer(question), check, baseClass: "judge-option" })} onClick={() => onChange(option)}>
             <Text className="judge-mark">{option === "正确" ? "✓" : "✕"}</Text>
             <Text>{option}</Text>
           </Button>
@@ -346,7 +393,7 @@ function renderAnswerControl(question, value, onChange, check) {
     );
   }
 
-  const options = getChoiceOptions(question);
+  const options = normalizeOptions(question);
   if (type.includes("选择") && options.length) {
     return (
       <View className="choice-list">
@@ -354,7 +401,7 @@ function renderAnswerControl(question, value, onChange, check) {
           const optionValue = optionAnswerValue(option, question);
           const parsed = parseChoiceOption(option, index);
           return (
-            <Button key={option} className={getOptionClassName({ value, optionValue, rightAnswer: question.answer, check, baseClass: "choice-option" })} onClick={() => onChange(optionValue)}>
+            <Button key={option} className={getOptionClassName({ value, optionValue, rightAnswer: getQuestionAnswer(question), check, baseClass: "choice-option" })} onClick={() => onChange(optionValue)}>
               <Text className="choice-letter">{parsed.letter}</Text>
               <Text className="choice-copy">{parsed.text}</Text>
             </Button>
@@ -431,28 +478,8 @@ function normalizeOptionAnswer(value) {
   return String(value ?? "").trim().replace(/\s+/g, "").toLowerCase();
 }
 
-function getChoiceOptions(question) {
-  if (Array.isArray(question.options) && question.options.length) return question.options;
-  const right = String(question.answer || "").trim();
-  if (["A", "B", "C", "D"].includes(right)) {
-    return ["A. 选项A", "B. 选项B", "C. 选项C", "D. 选项D"];
-  }
-  if (!right) return [];
-  const number = Number(right.replace(/[^\d.-]/g, ""));
-  if (Number.isFinite(number)) {
-    const values = [];
-    for (const item of [number, number + 1, Math.max(0, number - 1), number + 2, number + 3, number + 4]) {
-      const text = Number(item.toFixed(2)).toString();
-      if (!values.includes(text)) values.push(text);
-      if (values.length >= 4) break;
-    }
-    return values.map((item, index) => `${["A", "B", "C", "D"][index]}. ${item}`);
-  }
-  return [`A. ${right}`, "B. 以上都不对", "C. 无法确定", "D. 题目条件不足"];
-}
-
 function optionAnswerValue(option, question) {
-  if (["A", "B", "C", "D"].includes(String(question.answer || "").trim())) {
+  if (["A", "B", "C", "D"].includes(String(getQuestionAnswer(question) || "").trim())) {
     return String(option).trim().slice(0, 1);
   }
   return String(option).replace(/^[A-D][.、]\s*/, "").trim();
@@ -462,7 +489,7 @@ function buildCheckText(check) {
   if (!check) return "";
   if (!check.correct) return "答错了，已加入错题本";
   if (check.formatWarning) return "结果是对的，注意表达更完整。";
-  return check.removedFromWrongBook ? "答对了，已从错题本移除" : "答对了";
+  return check.masteredWrongBook ? "答对了，已标记掌握" : "答对了";
 }
 
 function hidePracticeTabBar() {
