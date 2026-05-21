@@ -324,6 +324,9 @@ export default function PracticePage() {
   const chapterTotal = unitSummaries.reduce((sum, item) => sum + (Number(item.total) || 0), 0);
   const chapterDone = unitSummaries.reduce((sum, item) => sum + (Number(item.done) || 0), 0);
   const chapterPercent = chapterTotal > 0 ? Math.min(100, Math.round((chapterDone / chapterTotal) * 100)) : 0;
+  const typeTotal = typeSummaries.reduce((sum, item) => sum + (Number(item.total) || 0), 0);
+  const typeDone = typeSummaries.reduce((sum, item) => sum + (Number(item.done) || 0), 0);
+  const typePercent = typeTotal > 0 ? Math.min(100, Math.round((typeDone / typeTotal) * 100)) : 0;
 
   return (
     <ScrollView className="page practice-page page-shell safe-bottom-space" scrollY>
@@ -452,21 +455,48 @@ export default function PracticePage() {
 
       {mode === "types" && activeUnit ? (
         <>
-          <View className="hero hero-card hero-card--blue">
-            <Text className="hero-title">{activeUnit.name}</Text>
-            <Text className="hero-subtitle">选择题型后直接开始做题。</Text>
+          <View className="type-list-hero hero hero-card hero-card--blue">
+            <View className="type-hero-copy">
+              <Text className="hero-title">{activeUnit.name}</Text>
+              <Text className="hero-subtitle">选择题型后直接开始做题。</Text>
+              {typeSummaries.length ? (
+                <View className="type-hero-stats">
+                  <Text className="type-hero-chip">🎯 共 {typeSummaries.length} 类题型</Text>
+                  <Text className="type-hero-chip">🧾 {typeTotal} 题</Text>
+                  <Text className="type-hero-chip">✅ 完成 {typePercent}%</Text>
+                </View>
+              ) : null}
+            </View>
+            <View className="type-hero-illus">
+              <Text className="type-confetti confetti-one">★</Text>
+              <Text className="type-confetti confetti-two">◆</Text>
+              <View className="type-quiz-board">
+                <Text className="type-board-line">A B C</Text>
+                <Text className="type-board-line short">✓ ✕ ?</Text>
+              </View>
+              <View className="type-pencil" />
+              <View className="type-hero-cloud cloud-one" />
+              <View className="type-hero-cloud cloud-two" />
+            </View>
           </View>
-          <View className="type-list">
+          <View className="type-list training-mode-list">
             {typeSummaries.length ? typeSummaries.map((item) => (
-              <Button key={item.type} className="type-card study-card" loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item)}>
-                <View className="type-icon"><Text>{typeIcon(item.type)}</Text></View>
+              <Button key={item.type} className={`type-card training-type-card study-card ${typeTone(item.type)}`} loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item)}>
+                <View className={`type-icon training-type-icon ${typeTone(item.type)}`}><Text>{typeIcon(item.type)}</Text></View>
                 <View className="type-copy">
                   <View className="card-title-row">
                     <Text className="type-title">{item.type}</Text>
                     <Text className={`tag ${typeStatusClass(item)}`}>{typeStatusText(item)}</Text>
                   </View>
                   <Text className="type-desc">{item.pointCount} 个知识点 · 已做 {item.done} / {item.total}</Text>
-                  <ProgressBar done={item.done} total={item.total} />
+                  <View className="type-progress-row">
+                    <ProgressBar done={item.done} total={item.total} />
+                    <Text className="type-count">已做 {item.done} / {item.total}</Text>
+                  </View>
+                </View>
+                <View className="type-entry">
+                  <Text className="type-entry-arrow">›</Text>
+                  <Text className="type-entry-text">开始练习</Text>
                 </View>
               </Button>
             )) : (
@@ -729,14 +759,23 @@ function typeStatusText(item) {
 function typeStatusClass(item) {
   if (!item?.done) return "tag-gray";
   if (item.done >= item.total) return "tag-green";
-  return "tag-blue";
+  return "tag-orange";
 }
 
 function typeIcon(type) {
   if (type.includes("选择")) return "选";
-  if (type.includes("判断")) return "判";
+  if (type.includes("判断")) return "✓";
   if (type.includes("计算")) return "算";
-  if (type.includes("应用")) return "用";
-  if (type.includes("变式")) return "变";
+  if (type.includes("应用")) return "💡";
+  if (type.includes("变式")) return "★";
   return "填";
+}
+
+function typeTone(type) {
+  if (type.includes("选择")) return "choice";
+  if (type.includes("判断")) return "judge";
+  if (type.includes("应用")) return "application";
+  if (type.includes("变式")) return "variant";
+  if (type.includes("计算")) return "calculate";
+  return "fill";
 }
