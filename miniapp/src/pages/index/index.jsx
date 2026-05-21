@@ -6,6 +6,7 @@ import { getContentPackage } from "../../utils/api";
 import { getTodayStats } from "../../utils/practiceStats";
 import { getLatestDoingPracticeSession, getSessionProgress } from "../../utils/practiceSession";
 import { getWrongBook } from "../../utils/wrongBook";
+import { navigateToPage, switchToTab } from "../../utils/navigation";
 import "../../styles/common.scss";
 import "./index.scss";
 
@@ -145,7 +146,7 @@ export default function IndexPage() {
       semester,
       textbook: "人教版"
     });
-    Taro.switchTab({ url: "/pages/practice/index" });
+    switchToTab("/pages/practice/index");
   }
 
   function stopEvent(event) {
@@ -188,10 +189,12 @@ export default function IndexPage() {
     if (session?.sessionId) {
       Taro.removeStorageSync(PRACTICE_RESET_KEY);
       setIsResuming(true);
-      Taro.navigateTo({
-        url: `/pages/practice/do/index?sessionId=${encodeURIComponent(session.sessionId)}&source=homeResume`,
-        complete: () => setIsResuming(false)
-      });
+      navigateToPage(
+        `/pages/practice/do/index?sessionId=${encodeURIComponent(session.sessionId)}&source=homeResume`,
+        {
+          complete: () => setIsResuming(false)
+        }
+      );
       return;
     }
     if (!lastPractice) {
@@ -207,16 +210,12 @@ export default function IndexPage() {
       openPractice("数学");
       return;
     }
-    if (item.tab) {
-      Taro.switchTab({ url: item.url });
-      return;
-    }
-    Taro.navigateTo({ url: item.url });
+    navigateToPage(item.url);
   }
 
   function openTeacher(event) {
     stopEvent(event);
-    Taro.navigateTo({ url: "/pages/homework/index" });
+    navigateToPage("/pages/homework/index");
   }
 
   function openChapter(unit, event) {
@@ -230,7 +229,7 @@ export default function IndexPage() {
       targetMode: "types",
       source: "home"
     });
-    Taro.switchTab({ url: "/pages/practice/index" });
+    switchToTab("/pages/practice/index");
   }
 
   const subject = subjectMeta[activeTab];

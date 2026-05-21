@@ -3,6 +3,7 @@ import Taro from "@tarojs/taro";
 import { Button, Image, ScrollView, Text, View } from "@tarojs/components";
 import { BackButton } from "../../components/navigation";
 import { archiveAssignment, getAssignments } from "../../utils/api";
+import { navigateToPage } from "../../utils/navigation";
 import "../../styles/common.scss";
 
 const asset = (name) => `/assets/generated/${name}`;
@@ -105,7 +106,7 @@ export default function HomeworkListPage() {
         {!loading && !error && !items.length ? (
           <View className="question-card">
             <Text className="muted">暂无已布置作业</Text>
-            <Button className="primary-button full-button" onClick={() => Taro.navigateTo({ url: "/pages/homework/create" })}>去布置作业</Button>
+            <Button className="primary-button full-button" onClick={() => navigateToPage("/pages/homework/create")}>去布置作业</Button>
           </View>
         ) : null}
 
@@ -129,13 +130,13 @@ export default function HomeworkListPage() {
               <Text className="assignment-code">作业码：{item.code}</Text>
             </View>
             <View className="assignment-actions">
-              <Button className="assignment-detail-button" onClick={() => Taro.navigateTo({ url: `/pages/homework/detail?id=${item.id}` })}>查看详情</Button>
+              <Button className="assignment-detail-button" onClick={() => navigateToPage(`/pages/homework/detail?id=${item.id}`)}>查看详情</Button>
               <Button className="assignment-archive-button" onClick={() => archiveItem(item.id)}>归档</Button>
             </View>
           </View>
         ))}
 
-        <View className="archive-entry" onClick={() => Taro.navigateTo({ url: "/pages/homework/archive" })}>
+        <View className="archive-entry" onClick={() => navigateToPage("/pages/homework/archive")}>
           <Image className="archive-entry-icon" src={asset("icon-archive.png")} mode="aspectFit" />
           <View className="archive-entry-copy">
             <Text className="archive-entry-title">查看归档作业</Text>

@@ -3,6 +3,7 @@ import Taro, { useRouter } from "@tarojs/taro";
 import { Button, ScrollView, Text, View } from "@tarojs/components";
 import { BackButton } from "../../components/navigation";
 import { exportAssignment, getAssignment } from "../../utils/api";
+import { navigateToPage } from "../../utils/navigation";
 import "../../styles/common.scss";
 
 export default function HomeworkDetailPage() {
@@ -55,7 +56,7 @@ export default function HomeworkDetailPage() {
           <Text className="tip-text">请把作业码发给学生，学生可从“作业中心 - 学生做作业”进入。</Text>
         </View>
         <View className="button-row">
-          <Button className="secondary-button" onClick={() => Taro.navigateTo({ url: `/pages/homework/submissions?id=${assignment.id}` })}>查看学生提交</Button>
+          <Button className="secondary-button" onClick={() => navigateToPage(`/pages/homework/submissions?id=${assignment.id}`)}>查看学生提交</Button>
           <Button className="ghost-button" onClick={() => Taro.showToast({ title: "已发布，可分享作业码", icon: "success" })}>发布作业</Button>
         </View>
       </View>

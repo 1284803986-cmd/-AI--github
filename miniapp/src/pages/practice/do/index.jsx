@@ -4,6 +4,7 @@ import { Button, Input, ScrollView, Text, Textarea, View } from "@tarojs/compone
 import { evaluateAnswer, hasWrongQuestion, updateWrongBookByAnswer } from "../../../utils/wrongBook";
 import { recordPracticeAnswer } from "../../../utils/practiceStats";
 import { buildSessionPatch, getPracticeSession, getSessionProgress, removePracticeSession, updatePracticeSession } from "../../../utils/practiceSession";
+import { switchToTab } from "../../../utils/navigation";
 import "../../../styles/common.scss";
 
 const PROGRESS_KEY = "chapterPracticeProgress";
@@ -157,7 +158,7 @@ export default function PracticeDoPage() {
       Taro.navigateBack();
       return;
     }
-    Taro.switchTab({ url: "/pages/practice/index" });
+    switchToTab("/pages/practice/index");
   }
 
   if (loading) {

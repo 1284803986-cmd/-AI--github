@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { Button, Text, View } from "@tarojs/components";
+import { navigateToPage } from "../../utils/navigation";
 import "../../styles/common.scss";
 
 export default function MePage() {
@@ -44,25 +45,25 @@ export default function MePage() {
       <View className="card">
         <Text className="section-title">常用功能</Text>
         <View className="entry-grid">
-          <Button className="entry-card" onClick={() => Taro.navigateTo({ url: "/pages/history/index" })}>
+          <Button className="entry-card" onClick={() => navigateToPage("/pages/history/index")}>
             <View className="entry-copy no-image">
               <Text className="entry-title">历史记录</Text>
               <Text className="entry-desc">查看生成和练习记录</Text>
             </View>
           </Button>
-          <Button className="entry-card" onClick={() => Taro.navigateTo({ url: "/pages/privacy/index" })}>
+          <Button className="entry-card" onClick={() => navigateToPage("/pages/privacy/index")}>
             <View className="entry-copy no-image">
               <Text className="entry-title">隐私说明</Text>
               <Text className="entry-desc">查看本地数据说明</Text>
             </View>
           </Button>
-          <Button className="entry-card" onClick={() => Taro.navigateTo({ url: "/pages/about/index" })}>
+          <Button className="entry-card" onClick={() => navigateToPage("/pages/about/index")}>
             <View className="entry-copy no-image">
               <Text className="entry-title">关于小程序</Text>
               <Text className="entry-desc">查看版本和用途</Text>
             </View>
           </Button>
-          <Button className="entry-card" onClick={() => Taro.navigateTo({ url: "/pages/homework/index" })}>
+          <Button className="entry-card" onClick={() => navigateToPage("/pages/homework/index")}>
             <View className="entry-copy no-image">
               <Text className="entry-title">作业中心</Text>
               <Text className="entry-desc">学生作业和老师布置</Text>

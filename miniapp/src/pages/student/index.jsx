@@ -4,6 +4,7 @@ import { Input, ScrollView, Text, View } from "@tarojs/components";
 import { PrimaryButton } from "../../components/form";
 import { BackButton } from "../../components/navigation";
 import { getAssignmentByCode } from "../../utils/api";
+import { navigateToPage } from "../../utils/navigation";
 import "../../styles/common.scss";
 
 export default function StudentIndexPage() {
@@ -18,7 +19,7 @@ export default function StudentIndexPage() {
     setLoading(true);
     try {
       const data = await getAssignmentByCode(code);
-      Taro.navigateTo({ url: `/pages/student/work?id=${data.assignment.id}` });
+      navigateToPage(`/pages/student/work?id=${data.assignment.id}`);
     } catch (error) {
       Taro.showToast({ title: error.message || "未找到作业", icon: "none" });
     } finally {

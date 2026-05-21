@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { Button, Input, Text, View } from "@tarojs/components";
 import { exportFile, saveHistory } from "../utils/api";
+import { navigateToPage } from "../utils/navigation";
 import { defaultFileName } from "../utils/options";
 
 export function ResultView({ result, meta, type, onBack, onRegenerate, onSaved }) {
@@ -76,7 +77,7 @@ export function ResultView({ result, meta, type, onBack, onRegenerate, onSaved }
 
       <View className="button-row">
         <Button className="ghost-button" onClick={onBack}>返回修改</Button>
-        <Button className="secondary-button" onClick={() => Taro.navigateTo({ url: "/pages/history/index" })}>查看历史</Button>
+        <Button className="secondary-button" onClick={() => navigateToPage("/pages/history/index")}>查看历史</Button>
       </View>
 
       {showSave ? (
@@ -102,7 +103,7 @@ export function ResultView({ result, meta, type, onBack, onRegenerate, onSaved }
               <Button className="ghost-button" onClick={() => exportBy("pdf")}>导出 PDF</Button>
             </View>
             <View className="button-row">
-              <Button className="secondary-button" onClick={() => Taro.navigateTo({ url: "/pages/history/index" })}>查看历史</Button>
+              <Button className="secondary-button" onClick={() => navigateToPage("/pages/history/index")}>查看历史</Button>
               <Button className="ghost-button" onClick={onRegenerate}>继续生成</Button>
             </View>
           </View>

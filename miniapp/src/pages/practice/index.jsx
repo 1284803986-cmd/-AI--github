@@ -5,6 +5,7 @@ import { AiNotice, SelectField } from "../../components/form";
 import { defaultSelection, gradeOptions, subjectCards } from "../../utils/options";
 import { generateTextbook, getContentPackage } from "../../utils/api";
 import { createPracticeSession, findDoingPracticeSession, getSessionProgress, hasSessionProgress, savePracticeSession } from "../../utils/practiceSession";
+import { navigateToPage, switchToTab } from "../../utils/navigation";
 import "../../styles/common.scss";
 
 const ENTRY_KEY = "practiceEntrySelection";
@@ -195,9 +196,7 @@ export default function PracticePage() {
       Taro.showToast({ title: "练习数据异常，请重新开始。", icon: "none" });
       return;
     }
-    Taro.navigateTo({
-      url: `/pages/practice/do/index?sessionId=${encodeURIComponent(nextSessionId)}&source=${source || "practice"}`
-    });
+    navigateToPage(`/pages/practice/do/index?sessionId=${encodeURIComponent(nextSessionId)}&source=${source || "practice"}`);
   }
 
   function backToPrevious() {
@@ -209,7 +208,7 @@ export default function PracticePage() {
           subject: form.subject,
           unit: activeUnit?.name || form.unit
         });
-        Taro.switchTab({ url: "/pages/index/index" });
+        switchToTab("/pages/index/index");
         return;
       }
       setMode("chapters");

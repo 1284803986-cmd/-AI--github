@@ -1,6 +1,7 @@
 import React from "react";
 import Taro from "@tarojs/taro";
 import { Button, View } from "@tarojs/components";
+import { navigateToPage } from "../utils/navigation";
 
 export function BackButton({ fallback = "/pages/index/index" }) {
   function handleBack() {
@@ -9,7 +10,7 @@ export function BackButton({ fallback = "/pages/index/index" }) {
       Taro.navigateBack();
       return;
     }
-    Taro.switchTab({ url: fallback });
+    navigateToPage(fallback);
   }
 
   return (

@@ -3,6 +3,7 @@ import Taro from "@tarojs/taro";
 import { Button, ScrollView, Text, View } from "@tarojs/components";
 import { BackButton } from "../../components/navigation";
 import { getArchivedAssignments, restoreAssignment } from "../../utils/api";
+import { navigateToPage } from "../../utils/navigation";
 import "../../styles/common.scss";
 
 export default function HomeworkArchivePage() {
@@ -60,7 +61,7 @@ export default function HomeworkArchivePage() {
               <Text className="assignment-code">作业码：{item.code}</Text>
             </View>
             <View className="assignment-actions">
-              <Button className="assignment-detail-button" onClick={() => Taro.navigateTo({ url: `/pages/homework/detail?id=${item.id}` })}>查看详情</Button>
+              <Button className="assignment-detail-button" onClick={() => navigateToPage(`/pages/homework/detail?id=${item.id}`)}>查看详情</Button>
               <Button className="assignment-archive-button" onClick={() => restoreItem(item.id)}>恢复</Button>
             </View>
           </View>
