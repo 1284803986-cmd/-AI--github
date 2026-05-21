@@ -28,6 +28,7 @@ export default function PracticeDoPage() {
   const currentAnswer = answers[currentIndex] || "";
   const currentCheck = checks[currentIndex];
   const currentInWrongBook = currentQuestion ? hasWrongQuestion(currentQuestion) : false;
+  const progressPercent = questions.length ? Math.min(100, Math.round(((currentIndex + 1) / questions.length) * 100)) : 0;
 
   useEffect(() => {
     hidePracticeTabBar();
@@ -199,7 +200,7 @@ export default function PracticeDoPage() {
 
   if (loading) {
     return (
-      <View className="page practice-page">
+      <View className="page practice-page do-page">
         <PracticeTopBack title="做题" onBack={handleBack} />
         <View className="card">
           <Text className="section-title">加载中...</Text>
@@ -211,7 +212,7 @@ export default function PracticeDoPage() {
 
   if (loadError) {
     return (
-      <View className="page practice-page">
+      <View className="page practice-page do-page">
         <PracticeTopBack title="做题" onBack={handleBack} />
         <View className="card">
           <Text className="section-title">{loadError}</Text>
@@ -223,7 +224,7 @@ export default function PracticeDoPage() {
 
   if (!currentQuestion) {
     return (
-      <View className="page practice-page">
+      <View className="page practice-page do-page">
         <PracticeTopBack title="做题" onBack={handleBack} />
         <View className="card">
           <Text className="section-title">题目数据为空，请重新开始。</Text>
@@ -234,18 +235,25 @@ export default function PracticeDoPage() {
   }
 
   return (
-    <ScrollView className="page practice-page" scrollY>
+    <ScrollView className="page practice-page do-page page-shell safe-bottom-space" scrollY>
       <PracticeTopBack title="做题" onBack={handleBack} />
-      <View className="result-card single-question-card">
+      <View className="result-card single-question-card study-card">
         <View className="practice-head">
-          <View className="practice-title-row">
-            <Text className="section-title">第 {currentIndex + 1} 题 / 共 {questions.length} 题</Text>
-            <Button className="answer-sheet-button" onClick={() => setShowAnswerSheet(true)}>答题卡</Button>
+          <View className="practice-progress-icon">☑</View>
+          <View className="practice-progress-copy">
+            <Text className="practice-progress-title">第 <Text className="practice-progress-current">{currentIndex + 1}</Text> 题 / 共 {questions.length} 题</Text>
+            <View className="practice-progress-track">
+              <View className="practice-progress-bar" style={{ width: `${progressPercent}%` }} />
+            </View>
           </View>
-          <Text className="muted">{[session.subject, session.grade, session.chapterName, session.lesson, session.knowledgePoint].filter(Boolean).join(" · ")}</Text>
+          <View className="practice-progress-side">
+            <Text className="practice-progress-percent">{progressPercent}%</Text>
+            <Button className="practice-card-sheet" onClick={() => setShowAnswerSheet(true)}>答题卡</Button>
+          </View>
         </View>
+        <Text className="practice-source-line">📘 {[session.subject, session.grade, session.chapterName, session.lesson, session.knowledgePoint].filter(Boolean).join(" · ")}</Text>
 
-        <View className="question-card">
+        <View className="question-card study-card">
           <View className="tag-row">
             <Text className={`question-type-tag ${getQuestionTypeTone(getQuestionType(currentQuestion, session.questionType))}`}>
               {getQuestionTypeLabel(getQuestionType(currentQuestion, session.questionType))}
@@ -259,19 +267,26 @@ export default function PracticeDoPage() {
           {renderAnswerControl(currentQuestion, currentAnswer, updateAnswer, currentCheck)}
 
           {currentCheck !== undefined ? (
-            <View className="answer-panel">
-              <Text className={currentCheck.correct ? "answer-correct" : "answer-wrong"}>{buildCheckText(currentCheck)}</Text>
+            <View className={currentCheck.correct ? "answer-panel answer-panel-correct" : "answer-panel answer-panel-wrong"}>
+              <View className="answer-feedback-head">
+                <Text className="answer-feedback-icon">{currentCheck.correct ? "✓" : "!"}</Text>
+                <Text className={currentCheck.correct ? "answer-correct" : "answer-wrong"}>{buildCheckText(currentCheck)}</Text>
+              </View>
               <Text className="answer-text">我的答案：{currentAnswer || "未填写"}</Text>
-              <Text className="answer-text">{currentCheck.formatWarning ? "参考写法" : "参考答案"}：{getQuestionAnswer(currentQuestion)}</Text>
+              <Text className="answer-text">{currentCheck.formatWarning ? "参考写法" : "正确答案"}：{getQuestionAnswer(currentQuestion)}</Text>
               <Text className="answer-text">解析：{getQuestionExplanation(currentQuestion) || "暂无解析"}</Text>
             </View>
           ) : null}
         </View>
+        <View className="practice-encourage">
+          <Text className="practice-encourage-icon">★</Text>
+          <Text>相信自己，你一定可以的！</Text>
+        </View>
 
         <View className="practice-bottom-actions">
-          <Button className="ghost-button practice-action" onClick={goPrevious}>上一题</Button>
-          <Button className="primary-button practice-action" onClick={submitCurrentAnswer}>提交答案</Button>
-          <Button className="ghost-button practice-action" onClick={goNext}>下一题</Button>
+          <Button className="ghost-button btn-ghost practice-action" onClick={goPrevious}>上一题</Button>
+          <Button className="primary-button btn-primary practice-action" onClick={submitCurrentAnswer}>提交答案</Button>
+          <Button className="ghost-button btn-ghost practice-action" onClick={goNext}>下一题</Button>
         </View>
 
         {showAnswerSheet ? (
@@ -306,12 +321,24 @@ export default function PracticeDoPage() {
 }
 
 function PracticeTopBack({ title, onBack }) {
+  const statusBarHeight = getStatusBarHeight();
+
   return (
-    <View className="practice-nav">
+    <View className="practice-nav" style={{ paddingTop: `${statusBarHeight}px` }}>
       <Button className="practice-nav-button" onClick={onBack}>‹</Button>
       <Text className="practice-nav-title">{title}</Text>
+      <View />
     </View>
   );
+}
+
+function getStatusBarHeight() {
+  try {
+    const info = Taro.getSystemInfoSync?.();
+    return Number(info?.statusBarHeight) || 0;
+  } catch (error) {
+    return 0;
+  }
 }
 
 function sessionToMeta(session, source = "practice") {
@@ -490,7 +517,7 @@ function buildCheckText(check) {
   if (!check) return "";
   if (!check.correct) return "答错了，已加入错题本";
   if (check.formatWarning) return "结果是对的，注意表达更完整。";
-  return check.masteredWrongBook ? "答对了，已标记掌握" : "答对了";
+  return check.masteredWrongBook ? "答对了，已标记掌握" : "答对了，继续保持！";
 }
 
 function hidePracticeTabBar() {
