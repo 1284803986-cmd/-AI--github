@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Taro, { useDidShow, useTabItemTap } from "@tarojs/taro";
-import { Button, Image, Picker, Text, View } from "@tarojs/components";
+import { Button, Picker, Text, View } from "@tarojs/components";
 import { gradeOptions, semesterOptions } from "../../utils/options";
 import { getContentPackage } from "../../utils/api";
 import { getTodayStats } from "../../utils/practiceStats";
@@ -11,8 +11,6 @@ import { debugLog, debugWarn } from "../../utils/debug";
 import "../../styles/common.scss";
 import "./index.scss";
 
-const asset = (name) => `/assets/generated/${name}`;
-
 const tabs = ["首页", "语文", "数学", "英语"];
 const PROGRESS_KEY = "chapterPracticeProgress";
 const HOME_RESTORE_KEY = "homePracticeReturnState";
@@ -20,11 +18,18 @@ const PRACTICE_RESET_KEY = "practiceResetToHome";
 const QUESTIONS_PER_POINT = 5;
 
 const quickEntries = [
-  { title: "章节练习", desc: "按课本章节刷题", image: asset("icon-practice.png"), action: "practice" },
-  { title: "错题本", desc: "复习做错的题", image: asset("icon-wrong.png"), url: "/pages/wrong/index", tab: true },
-  { title: "学生作业", desc: "输入作业码完成作业", image: asset("icon-student-homework.png"), url: "/pages/student/index" },
-  { title: "拍照搜题", desc: "拍照或输入题目看解析", image: asset("icon-history.png"), url: "/pages/photo-search/index" }
+  { title: "章节练习", desc: "同步章节刷题", icon: "✎", tone: "practice", action: "practice" },
+  { title: "错题本", desc: "巩固薄弱知识", icon: "✕", tone: "wrong", url: "/pages/wrong/index" },
+  { title: "学习统计", desc: "学习情况分析", icon: "↗", tone: "stats", url: "/pages/stats/index" },
+  { title: "作业中心", desc: "查看作业任务", icon: "!", tone: "homework", url: "/pages/student/index" }
 ];
+
+const tabIcons = {
+  首页: "⌂",
+  语文: "文",
+  数学: "△",
+  英语: "A"
+};
 
 const subjectMeta = {
   语文: {
@@ -276,92 +281,120 @@ export default function IndexPage() {
   }, [grade, semester, catalog, mathPackage, mathUnits.length, mathContentState]);
 
   return (
-    <View className="page home-page">
+    <View className="page home-page page-shell safe-bottom-space">
       <View className="home-top">
         <View className="term-selectors">
           <Picker mode="selector" range={gradeOptions} value={Math.max(0, gradeOptions.indexOf(grade))} onChange={(event) => updateGrade(gradeOptions[event.detail.value])}>
-            <View className="grade-pill">{grade} ▾</View>
+            <View className="grade-pill">{grade}<Text className="pill-arrow">▾</Text></View>
           </Picker>
           <Picker mode="selector" range={semesterOptions} value={Math.max(0, semesterOptions.indexOf(semester))} onChange={(event) => updateSemester(semesterOptions[event.detail.value])}>
-            <View className="semester-pill">{semester} ▾</View>
+            <View className="semester-pill">{semester}<Text className="pill-arrow">▾</Text></View>
           </Picker>
         </View>
-        <Button className="teacher-link" onClick={openTeacher}>老师入口</Button>
+        <Button className="teacher-link" onClick={openTeacher}><Text className="teacher-avatar">👨‍🏫</Text>老师入口 ›</Button>
       </View>
 
       <View className="home-tabs">
         {tabs.map((tab) => (
           <View key={tab} className={activeTab === tab ? "home-tab active" : "home-tab"} onClick={(event) => switchHomeTab(tab, event)}>
-            {tab}
+            <Text className={`home-tab-icon ${tab === "语文" ? "red" : tab === "英语" ? "green" : "blue"}`}>{tabIcons[tab]}</Text>
+            <Text>{tab}</Text>
           </View>
         ))}
       </View>
 
       {activeTab === "首页" ? (
         <>
-          <View className="hero home-hero visual-hero">
-            <Image className="hero-bg" src={asset("banner-home.png")} mode="aspectFill" />
-            <View className="hero-overlay" />
+          <View className="hero home-hero visual-hero hero-card hero-card--blue">
             <View className="hero-content">
               <Text className="hero-title">小学学习练习</Text>
-              <Text className="hero-subtitle">按年级、学期、学科、章节练习，错题会自动沉淀到错题本。</Text>
+              <Text className="hero-subtitle">同步教材，巩固知识，快乐提升每一步</Text>
               <View className="hero-tags">
                 <Text className="hero-tag">章节刷题</Text>
                 <Text className="hero-tag">错题巩固</Text>
-                <Text className="hero-tag">作业练习</Text>
+                <Text className="hero-tag">学习统计</Text>
               </View>
+            </View>
+            <View className="home-hero-illustration">
+              <Text className="confetti confetti-a">◆</Text>
+              <Text className="confetti confetti-b">★</Text>
+              <Text className="confetti confetti-c">~</Text>
+              <View className="book-illus">
+                <View className="book-page left" />
+                <View className="book-page right" />
+                <View className="pencil-illus" />
+              </View>
+              <View className="trophy-illus"><Text>★</Text></View>
+              <View className="cloud cloud-a" />
+              <View className="cloud cloud-b" />
             </View>
           </View>
 
-          <View className="card continue-card" onClick={continuePractice}>
-            <View className="card-title-row">
-              <Text className="section-title">继续学习</Text>
-              {lastPractice ? <Text className="continue-action">继续</Text> : <Text className="continue-action">去练习</Text>}
-            </View>
+          <View className="card continue-card study-card learning-path-card" onClick={continuePractice}>
+            <Text className="continue-ribbon">继续学习 ▶</Text>
             {lastPractice ? (
               <>
-                <Text className="continue-title">{lastPractice.grade}{lastPractice.subject}{lastPractice.semester}</Text>
-                <Text className="continue-meta">{lastPractice.unit || "章节练习"} · {lastPractice.type || "题型练习"}</Text>
-                <View className="continue-progress">
-                  <View className="continue-bar">
-                    <View className="continue-bar-inner" style={{ width: `${Math.min(100, Math.round(((lastPractice.done || 0) / Math.max(1, lastPractice.total || 1)) * 100))}%` }} />
+                <View className="continue-book-icon"><Text>数</Text></View>
+                <View className="continue-copy">
+                  <Text className="continue-title">{lastPractice.grade}{lastPractice.subject}{lastPractice.semester}</Text>
+                  <Text className="continue-meta">当前章节：{lastPractice.unit || "章节练习"}</Text>
+                  <Text className="continue-meta">当前题型：{lastPractice.type || "题型练习"}</Text>
+                  <View className="continue-progress">
+                    <Text className="continue-done">已做 {lastPractice.done || 0} / {lastPractice.total || 0} 题</Text>
+                    <View className="continue-bar progress-track">
+                      <View className="continue-bar-inner progress-bar" style={{ width: `${Math.min(100, Math.round(((lastPractice.done || 0) / Math.max(1, lastPractice.total || 1)) * 100))}%` }} />
+                    </View>
+                    <Text className="continue-percent">{Math.min(100, Math.round(((lastPractice.done || 0) / Math.max(1, lastPractice.total || 1)) * 100))}%</Text>
                   </View>
-                  <Text className="continue-count">{lastPractice.done || 0}/{lastPractice.total || 0}</Text>
                 </View>
+                <Text className="continue-arrow">›</Text>
               </>
             ) : (
-              <Text className="continue-empty">还没有练习记录，去开始章节练习吧</Text>
+              <>
+                <View className="continue-book-icon"><Text>学</Text></View>
+                <View className="continue-copy">
+                  <Text className="continue-title">{grade}数学{semester}</Text>
+                  <Text className="continue-empty">还没有练习记录，去开始章节练习吧</Text>
+                </View>
+                <Text className="continue-arrow">›</Text>
+              </>
             )}
           </View>
 
-          <View className="card">
+          <View className="card study-card">
             <Text className="section-title">今日学习概况</Text>
-            <View className="summary-grid">
-              <View className="summary-card">
-                <Text className="summary-number">{todayStats.total || 0}</Text>
-                <Text className="summary-label">今日做题</Text>
+            <View className="summary-grid stat-grid">
+              <View className="summary-card stat-card summary-practice">
+                <Text className="summary-icon">☑</Text>
+                <Text className="summary-number stat-value">{todayStats.total || 0}</Text>
+                <Text className="summary-label stat-label">今日做题</Text>
               </View>
-              <View className="summary-card">
-                <Text className="summary-number">{todayStats.total ? `${todayStats.accuracy}%` : "--"}</Text>
-                <Text className="summary-label">正确率</Text>
+              <View className="summary-card stat-card summary-accuracy">
+                <Text className="summary-icon">◎</Text>
+                <Text className="summary-number stat-value">{todayStats.total ? `${todayStats.accuracy}%` : "--"}</Text>
+                <Text className="summary-label stat-label">正确率</Text>
               </View>
-              <View className="summary-card">
-                <Text className="summary-number">{wrongCount}</Text>
-                <Text className="summary-label">错题数量</Text>
+              <View className="summary-card stat-card summary-wrong">
+                <Text className="summary-icon">★</Text>
+                <Text className="summary-number stat-value">{wrongCount}</Text>
+                <Text className="summary-label stat-label">错题数量</Text>
               </View>
             </View>
           </View>
 
-          <View className="card">
+          <View className="card study-card">
             <Text className="section-title">常用入口</Text>
-            <View className="feature-grid">
+            <View className="feature-grid learning-entry-grid">
               {quickEntries.map((item) => (
-                <Button key={item.title} className="feature-card blue" onClick={(event) => openEntry(item, event)}>
-                  <Image className="feature-icon-img" src={item.image} mode="aspectFit" />
-                  <View className="feature-copy">
-                    <Text className="feature-title">{item.title}</Text>
-                    <Text className="feature-desc">{item.desc}</Text>
+                <Button key={item.title} className={`feature-card learning-entry-card ${item.tone}`} onClick={(event) => openEntry(item, event)}>
+                  <View className="feature-illus">
+                    <Text>{item.icon}</Text>
                   </View>
+                  <View className="feature-copy">
+                    <Text className="feature-title learning-entry-title">{item.title}</Text>
+                    <Text className="feature-desc learning-entry-desc">{item.desc}</Text>
+                  </View>
+                  <Text className="feature-arrow">›</Text>
                 </Button>
               ))}
             </View>

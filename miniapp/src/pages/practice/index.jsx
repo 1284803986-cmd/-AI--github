@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Taro, { useDidShow, useTabItemTap } from "@tarojs/taro";
-import { Button, ScrollView, Text, View } from "@tarojs/components";
-import { AiNotice, SelectField } from "../../components/form";
+import { Button, Picker, ScrollView, Text, View } from "@tarojs/components";
 import { defaultSelection, gradeOptions, subjectCards } from "../../utils/options";
 import { generateTextbook, getContentPackage } from "../../utils/api";
 import { createPracticeSession, findDoingPracticeSession, getSessionProgress, hasSessionProgress, savePracticeSession } from "../../utils/practiceSession";
@@ -322,32 +321,75 @@ export default function PracticePage() {
     Taro.navigateBack();
   }
 
+  const chapterTotal = unitSummaries.reduce((sum, item) => sum + (Number(item.total) || 0), 0);
+  const chapterDone = unitSummaries.reduce((sum, item) => sum + (Number(item.done) || 0), 0);
+  const chapterPercent = chapterTotal > 0 ? Math.min(100, Math.round((chapterDone / chapterTotal) * 100)) : 0;
+
   return (
-    <ScrollView className="page practice-page" scrollY>
+    <ScrollView className="page practice-page page-shell safe-bottom-space" scrollY>
       {mode !== "selector" ? <PracticeTopBack title={buildBackTitle(mode, activeUnit)} onBack={backToPrevious} /> : null}
 
       {mode === "selector" ? (
         <>
-          <View className="hero">
-            <Text className="hero-title">章节刷题</Text>
-            <Text className="hero-subtitle">先选学科，再按章节、题型一步步练习。</Text>
+          <View className="practice-start-hero hero hero-card hero-card--blue">
+            <View className="practice-start-hero-copy">
+              <Text className="hero-title">章节刷题</Text>
+              <Text className="hero-subtitle">先选学科，再按章节、题型一步步练习。</Text>
+              <View className="hero-tags">
+                <Text className="hero-tag">选学科</Text>
+                <Text className="hero-tag">看章节</Text>
+                <Text className="hero-tag">按题型练</Text>
+              </View>
+            </View>
+            <View className="practice-hero-illus">
+              <Text className="practice-star star-a">★</Text>
+              <Text className="practice-star star-b">◆</Text>
+              <View className="practice-open-book">
+                <View className="practice-book-page left" />
+                <View className="practice-book-page right" />
+                <View className="practice-pencil" />
+              </View>
+              <View className="practice-cup"><Text>★</Text></View>
+              <View className="practice-cloud cloud-left" />
+              <View className="practice-cloud cloud-right" />
+            </View>
           </View>
-          <AiNotice />
-          <View className="card">
-            <Text className="section-title">练习条件</Text>
-            <Text className="section-desc">年级和上册/下册已经统一放在首页左上角。这里选择学科即可，减少重复操作。</Text>
-            <SelectField label="年级" value={form.grade} options={gradeOptions} onChange={(grade) => updateSelection({ grade })} />
+
+          <View className="practice-tip-card">
+            <View className="practice-tip-icon">💡</View>
+            <View className="practice-tip-copy">
+              <Text className="practice-tip-title">学习小贴士</Text>
+              <Text className="practice-tip-desc">AI 内容仅供辅助，请家长或老师审核后使用。请不要输入学生真实姓名、手机号、身份证等敏感信息。</Text>
+            </View>
           </View>
-          <View className="subject-grid">
+
+          <View className="practice-condition-card study-card">
+            <View className="condition-icon">☑</View>
+            <View className="condition-copy">
+              <Text className="condition-label">当前学习条件</Text>
+              <Text className="condition-value">{form.grade} · {form.semester}</Text>
+            </View>
+            <Picker mode="selector" range={gradeOptions} value={Math.max(0, gradeOptions.indexOf(form.grade))} onChange={(event) => updateSelection({ grade: gradeOptions[event.detail.value] })}>
+              <View className="condition-arrow">›</View>
+            </Picker>
+          </View>
+
+          <View className="practice-subject-section">
+            <Text className="section-title">选择学科</Text>
+            <Text className="section-desc">从学科开始，按课本章节一步步完成练习。</Text>
+          </View>
+
+          <View className="subject-grid practice-subject-grid">
             {subjectCards.map((item) => (
-              <Button key={item.key} className={`subject-card ${item.tone}`} onClick={() => startBySubject(item.key)}>
-                <View className={`subject-icon ${item.tone}`}>
-                  <Text>{item.icon}</Text>
+              <Button key={item.key} className={`subject-card practice-subject-card ${item.tone}`} onClick={() => startBySubject(item.key)}>
+                <View className={`subject-icon practice-subject-icon ${item.tone}`}>
+                  <Text>{subjectIcon(item.key)}</Text>
                 </View>
                 <View className="subject-copy">
                   <Text className="subject-title">{item.title}</Text>
                   <Text className="subject-desc">{item.desc}</Text>
                 </View>
+                <Text className="subject-arrow">›</Text>
               </Button>
             ))}
           </View>
@@ -356,19 +398,51 @@ export default function PracticePage() {
 
       {mode === "chapters" ? (
         <>
-          <View className="hero">
-            <Text className="hero-title">{form.grade}{form.subject}{form.semester}</Text>
-            <Text className="hero-subtitle">选择章节，查看每章题量和完成进度。</Text>
+          <View className="chapter-list-hero hero hero-card hero-card--blue">
+            <View className="chapter-hero-copy">
+              <Text className="hero-title">{form.grade}{form.subject}{form.semester}</Text>
+              <Text className="hero-subtitle">选择章节，查看每章题量和完成进度。</Text>
+              {unitSummaries.length ? (
+                <View className="chapter-hero-stats">
+                  <Text className="chapter-hero-chip">📖 共 {unitSummaries.length} 章</Text>
+                  <Text className="chapter-hero-chip">🧾 {chapterTotal} 题</Text>
+                  <Text className="chapter-hero-chip">✅ 完成 {chapterPercent}%</Text>
+                </View>
+              ) : null}
+            </View>
+            <View className="chapter-hero-illus">
+              <Text className="chapter-confetti confetti-one">★</Text>
+              <Text className="chapter-confetti confetti-two">◆</Text>
+              <View className="chapter-hero-book">
+                <View className="chapter-book-page left" />
+                <View className="chapter-book-page right" />
+                <View className="chapter-hero-pencil" />
+              </View>
+              <View className="chapter-hero-trophy"><Text>★</Text></View>
+              <View className="chapter-hero-cloud cloud-one" />
+              <View className="chapter-hero-cloud cloud-two" />
+            </View>
           </View>
           {unitSummaries.length ? unitSummaries.map((item, index) => (
-            <Button key={item.unit.id} className="chapter-card" onClick={() => openUnit(item.unit)}>
+            <Button key={item.unit.id} className="chapter-card course-chapter-card study-card" onClick={() => openUnit(item.unit)}>
+              <View className="chapter-visual">
+                <Text className={`chapter-index chapter-index-${(index % 4) + 1}`}>第 {index + 1} 章</Text>
+                <View className={`chapter-visual-icon icon-${(index % 6) + 1}`}>
+                  <Text>{chapterVisualIcon(item.unit.name)}</Text>
+                </View>
+              </View>
               <View className="chapter-main">
-                <Text className="chapter-index">第 {index + 1} 章</Text>
                 <Text className="chapter-title">{item.unit.name}</Text>
                 <Text className="chapter-meta">{item.lessonCount} 个课时 · {item.pointCount} 个知识点 · {item.typeCount} 类题型</Text>
-                <ProgressBar done={item.done} total={item.total} />
+                <View className="chapter-progress-row">
+                  <ProgressBar done={item.done} total={item.total} />
+                  <Text className="chapter-count">已做 {item.done} / {item.total}</Text>
+                </View>
               </View>
-              <Text className="chapter-count">已做 {item.done} / {item.total}</Text>
+              <View className="chapter-entry">
+                <Text className="chapter-entry-arrow">›</Text>
+                <Text className="chapter-entry-text">开始学习</Text>
+              </View>
             </Button>
           )) : (
             <EmptyPackage />
@@ -378,22 +452,25 @@ export default function PracticePage() {
 
       {mode === "types" && activeUnit ? (
         <>
-          <View className="hero">
+          <View className="hero hero-card hero-card--blue">
             <Text className="hero-title">{activeUnit.name}</Text>
             <Text className="hero-subtitle">选择题型后直接开始做题。</Text>
           </View>
           <View className="type-list">
             {typeSummaries.length ? typeSummaries.map((item) => (
-              <Button key={item.type} className="type-card" loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item)}>
+              <Button key={item.type} className="type-card study-card" loading={loading && activeType === item.type} disabled={loading} onClick={() => openType(item)}>
                 <View className="type-icon"><Text>{typeIcon(item.type)}</Text></View>
                 <View className="type-copy">
-                  <Text className="type-title">{item.type}</Text>
+                  <View className="card-title-row">
+                    <Text className="type-title">{item.type}</Text>
+                    <Text className={`tag ${typeStatusClass(item)}`}>{typeStatusText(item)}</Text>
+                  </View>
                   <Text className="type-desc">{item.pointCount} 个知识点 · 已做 {item.done} / {item.total}</Text>
                   <ProgressBar done={item.done} total={item.total} />
                 </View>
               </Button>
             )) : (
-              <View className="card">
+              <View className="card empty-card">
                 <Text className="section-title">该章节暂无题目</Text>
                 <Text className="muted">这个章节已经存在，但还没有配置可练习的题型或题目模板。</Text>
               </View>
@@ -403,7 +480,7 @@ export default function PracticePage() {
       ) : null}
 
       {mode === "empty" ? (
-        <View className="hero">
+        <View className="hero hero-card">
           <Text className="hero-title">{entryError || `${form.subject}内容整理中`}</Text>
           <Text className="hero-subtitle">当前选择的年级、学科和上下册暂无题目内容。请等导入对应内容包后再练习。</Text>
         </View>
@@ -483,6 +560,23 @@ function selectPackage(catalog, form) {
     normalizeSubject(item.scope?.subject) === target.subject &&
     normalizeSemester(item.scope?.semester) === target.semester
   ) || null;
+}
+
+function subjectIcon(subject) {
+  if (subject === "语文") return "文";
+  if (subject === "英语") return "Aa";
+  return "∑";
+}
+
+function chapterVisualIcon(name = "") {
+  if (name.includes("时间")) return "⏰";
+  if (name.includes("余数") || name.includes("除法")) return "123";
+  if (name.includes("乘除")) return "▦";
+  if (name.includes("万以内数")) return "△";
+  if (name.includes("加法") || name.includes("减法")) return "⌗";
+  if (name.includes("图形")) return "◔";
+  if (name.includes("解决")) return "?";
+  return "✎";
 }
 
 function findUnit(activePackage, unitNameOrId) {
@@ -624,6 +718,18 @@ function getTypeTotal(activePackage, unit, type) {
   const normalizedType = normalizeQuestionType(type);
   const pointCount = points.filter((point) => (point.recommendedQuestionTypes || []).map(normalizeQuestionType).includes(normalizedType)).length;
   return Math.min(MAX_TYPE_QUESTIONS, Math.max(QUESTIONS_PER_POINT, pointCount * QUESTIONS_PER_POINT));
+}
+
+function typeStatusText(item) {
+  if (!item?.done) return "未开始";
+  if (item.done >= item.total) return "已完成";
+  return "练习中";
+}
+
+function typeStatusClass(item) {
+  if (!item?.done) return "tag-gray";
+  if (item.done >= item.total) return "tag-green";
+  return "tag-blue";
 }
 
 function typeIcon(type) {
