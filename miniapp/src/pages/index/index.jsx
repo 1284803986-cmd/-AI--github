@@ -413,9 +413,14 @@ export default function IndexPage() {
           </View>
           {activeTab === "数学" ? (
             <>
-              <View className="card">
-                <Text className="section-title">{grade}数学{semester}</Text>
-                <Text className="section-desc">只有当前年级、数学、当前上下册已有内容包时，才会显示章节题目；没有导入的组合会显示暂无。</Text>
+              <View className="card study-card home-math-guide-card">
+                <View className="home-math-guide-icon">
+                  <Text>数</Text>
+                </View>
+                <View className="home-math-guide-copy">
+                  <Text className="section-title">{grade}数学{semester}</Text>
+                  <Text className="section-desc">已导入内容会显示章节、题型和进度；没有导入的组合会显示暂无。</Text>
+                </View>
               </View>
               {showMathChapters ? <View className="home-chapter-list">
                 {chapterLoading ? (
@@ -424,14 +429,25 @@ export default function IndexPage() {
                     <Text className="section-desc">正在读取当前年级和上下册的章节内容。</Text>
                   </View>
                 ) : mathContentState === "ready" ? mathUnits.map((item, index) => (
-                  <Button key={item.unit.id || item.unit.name} className="home-chapter-card" onClick={(event) => openChapter(item.unit, event)}>
-                    <View className="home-chapter-main">
-                      <Text className="home-chapter-index">第 {index + 1} 章</Text>
-                      <Text className="home-chapter-title">{item.unit.name}</Text>
-                      <Text className="home-chapter-meta">{item.lessonCount} 个课时 · {item.pointCount} 个知识点 · {item.typeCount} 类题型</Text>
-                      <ProgressBar done={item.done} total={item.total} />
+                  <Button key={item.unit.id || item.unit.name} className="chapter-card course-chapter-card study-card home-course-chapter-card" onClick={(event) => openChapter(item.unit, event)}>
+                    <View className="chapter-visual">
+                      <Text className={`chapter-index chapter-index-${(index % 4) + 1}`}>第 {index + 1} 章</Text>
+                      <View className={`chapter-visual-icon icon-${(index % 6) + 1}`}>
+                        <Text>{chapterVisualIcon(item.unit.name)}</Text>
+                      </View>
                     </View>
-                    <Text className="home-chapter-count">已做 {item.done} / {item.total}</Text>
+                    <View className="chapter-main">
+                      <Text className="chapter-title">{item.unit.name}</Text>
+                      <Text className="chapter-meta">{item.lessonCount} 个课时 · {item.pointCount} 个知识点 · {item.typeCount} 类题型</Text>
+                      <View className="chapter-progress-row">
+                        <ProgressBar done={item.done} total={item.total} />
+                        <Text className="chapter-count">已做 {item.done} / {item.total}</Text>
+                      </View>
+                    </View>
+                    <View className="chapter-entry">
+                      <Text className="chapter-entry-arrow">›</Text>
+                      <Text className="chapter-entry-text">开始学习</Text>
+                    </View>
                   </Button>
                 )) : (
                   <View className="card">
@@ -592,11 +608,22 @@ function formatContinueSession(session) {
   };
 }
 
+function chapterVisualIcon(name = "") {
+  if (name.includes("时间")) return "⏰";
+  if (name.includes("余数") || name.includes("除法")) return "123";
+  if (name.includes("乘除")) return "▦";
+  if (name.includes("万以内数")) return "△";
+  if (name.includes("加法") || name.includes("减法")) return "🧮";
+  if (name.includes("图形")) return "◔";
+  if (name.includes("解决")) return "?";
+  return "📘";
+}
+
 function ProgressBar({ done, total }) {
   const percent = total > 0 ? Math.min(100, Math.round((done / total) * 100)) : 0;
   return (
-    <View className="home-progress-wrap">
-      <View className="home-progress-fill" style={{ width: `${percent}%` }} />
+    <View className="progress-wrap">
+      <View className="progress-fill" style={{ width: `${percent}%` }} />
     </View>
   );
 }
