@@ -1,0 +1,15 @@
+[Unit]
+Description=Primary AI Question Assistant API
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/primary-ai-question-assistant
+EnvironmentFile=/opt/primary-ai-question-assistant/.env
+ExecStart=/usr/bin/npm run start --workspace server
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

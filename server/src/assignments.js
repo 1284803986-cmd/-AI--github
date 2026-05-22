@@ -1,10 +1,8 @@
 import crypto from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, extname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { dataDir } from "./data-dir.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const dataDir = join(__dirname, "..", "data");
 const uploadDir = join(dataDir, "uploads");
 const assignmentsPath = join(dataDir, "assignments.json");
 const submissionsPath = join(dataDir, "submissions.json");

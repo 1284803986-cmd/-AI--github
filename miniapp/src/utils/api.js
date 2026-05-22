@@ -1,6 +1,6 @@
 import Taro from "@tarojs/taro";
 
-const API_BASE = "http://127.0.0.1:8787";
+export const API_BASE = process.env.MINIAPP_API_BASE || "http://127.0.0.1:8787";
 
 export async function request(path, method = "GET", data = undefined) {
   try {

@@ -20,6 +20,9 @@
   cache: {
     enable: false
   },
+  defineConstants: {
+    "process.env.MINIAPP_API_BASE": JSON.stringify(process.env.MINIAPP_API_BASE || "http://127.0.0.1:8787")
+  },
   copy: {
     patterns: [
       {

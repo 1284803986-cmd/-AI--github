@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import Taro, { useRouter } from "@tarojs/taro";
 import { Button, Image, ScrollView, Text, Textarea, View } from "@tarojs/components";
 import { BackButton } from "../../components/navigation";
-import { getAssignment, getAssignmentSubmissions, markSubmissionViewed } from "../../utils/api";
+import { API_BASE, getAssignment, getAssignmentSubmissions, markSubmissionViewed } from "../../utils/api";
 import "../../styles/common.scss";
-
-const API_BASE = "http://127.0.0.1:8787";
 
 export default function HomeworkSubmissionsPage() {
   const router = useRouter();

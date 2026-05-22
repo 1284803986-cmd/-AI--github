@@ -1,0 +1,3 @@
+@echo off
+set MINIAPP_API_BASE=https://api.example.com
+npm.cmd run build:weapp

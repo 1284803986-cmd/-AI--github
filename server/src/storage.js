@@ -1,10 +1,9 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
 import crypto from "node:crypto";
+import { dataDir } from "./data-dir.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const historyPath = join(__dirname, "..", "data", "history.json");
+const historyPath = join(dataDir, "history.json");
 
 export async function getHistory() {
   try {

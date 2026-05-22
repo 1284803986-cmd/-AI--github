@@ -18,6 +18,7 @@ import { mockPaper, mockTextbookQuestions, mockWrongQuestion } from "./mock.js";
 import { generateWithAI } from "./openai.js";
 import { paperPrompt, textbookPrompt, wrongQuestionPrompt } from "./prompts.js";
 import { appendHistory, deleteHistory, getHistory } from "./storage.js";
+import { dataDir } from "./data-dir.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: join(__dirname, "..", "..", ".env") });
@@ -38,7 +39,7 @@ app.use((request, _response, next) => {
 });
 app.options("*", (_request, response) => response.sendStatus(204));
 app.use(express.json({ limit: "2mb" }));
-app.use("/uploads", express.static(join(__dirname, "..", "data", "uploads")));
+app.use("/uploads", express.static(join(dataDir, "uploads")));
 
 app.get("/api/health", (_request, response) => {
   response.json({ ok: true, app: "primary-ai-question-assistant" });
