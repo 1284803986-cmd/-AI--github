@@ -41,21 +41,42 @@ export default function HomeworkArchivePage() {
   }
 
   return (
-    <ScrollView className="page" scrollY>
+    <ScrollView className="page homework-page page-shell safe-bottom-space" scrollY>
       <BackButton />
-      <View className="hero">
-        <Text className="hero-title">归档作业</Text>
-        <Text className="hero-subtitle">已完成的作业，可查看或恢复。</Text>
+      <View className="hero hero-card hero-card--blue homework-hero archive-hero">
+        <View className="homework-hero-copy">
+          <Text className="hero-title">归档作业</Text>
+          <Text className="hero-subtitle">已完成的作业，可查看或恢复。</Text>
+          <View className="homework-hero-tags">
+            <Text className="homework-hero-tag">作业归档</Text>
+            <Text className="homework-hero-tag">历史任务</Text>
+          </View>
+        </View>
+        <View className="homework-hero-illus">
+          <View className="homework-board" />
+          <View className="homework-bell" />
+          <View className="homework-check-star" />
+        </View>
       </View>
 
-      <View className="card">
-        <Text className="section-title">归档列表</Text>
+      <View className="card study-card homework-card">
+        <View className="card-title-row">
+          <View>
+            <Text className="section-title">归档列表</Text>
+            <Text className="section-subtitle">已归档的作业会保存在这里。</Text>
+          </View>
+        </View>
         {loading ? <Text className="muted">正在加载...</Text> : null}
         {error ? <Text className="tip-text">{error}</Text> : null}
-        {!loading && !error && !items.length ? <Text className="muted">暂无归档作业</Text> : null}
+        {!loading && !error && !items.length ? (
+          <View className="empty-card homework-empty-card">
+            <Text className="empty-illustration">✓</Text>
+            <Text className="empty-title">暂无归档作业</Text>
+          </View>
+        ) : null}
 
         {items.map((item) => (
-          <View className="assignment-row" key={item.id}>
+          <View className="assignment-row study-card homework-assignment-card" key={item.id}>
             <View className="assignment-main">
               <Text className="assignment-title">{item.title}</Text>
               <Text className="assignment-meta">{formatTime(item.createdAt)} · {item.grade} · {item.knowledgePoint}</Text>

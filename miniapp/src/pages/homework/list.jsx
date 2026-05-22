@@ -93,26 +93,43 @@ export default function HomeworkListPage() {
   }
 
   return (
-    <ScrollView className="page" scrollY>
+    <ScrollView className="page homework-page page-shell safe-bottom-space" scrollY>
       <BackButton />
-      <View className="hero">
-        <Text className="hero-title">已布置作业</Text>
-        <Text className="hero-subtitle">重新进入作业详情，查看学生提交。</Text>
+      <View className="hero hero-card hero-card--blue homework-hero">
+        <View className="homework-hero-copy">
+          <Text className="hero-title">已布置作业</Text>
+          <Text className="hero-subtitle">重新进入作业详情，查看学生提交。</Text>
+          <View className="homework-hero-tags">
+            <Text className="homework-hero-tag">任务清单</Text>
+            <Text className="homework-hero-tag">提交查看</Text>
+          </View>
+        </View>
+        <View className="homework-hero-illus">
+          <View className="homework-board" />
+          <View className="homework-bell" />
+          <View className="homework-check-star" />
+        </View>
       </View>
 
-      <View className="card">
-        <Text className="section-title">作业列表</Text>
+      <View className="card study-card homework-card">
+        <View className="card-title-row">
+          <View>
+            <Text className="section-title">作业列表</Text>
+            <Text className="section-subtitle">集中查看当前正在进行的作业。</Text>
+          </View>
+        </View>
         {loading ? <Text className="muted">正在加载...</Text> : null}
         {error ? <Text className="tip-text">{error}</Text> : null}
         {!loading && !error && !items.length ? (
-          <View className="question-card">
-            <Text className="muted">暂无已布置作业</Text>
-            <Button className="primary-button full-button" onClick={() => navigateToPage("/pages/homework/create")}>去布置作业</Button>
+          <View className="question-card empty-card homework-empty-card">
+            <Text className="empty-illustration">📋</Text>
+            <Text className="empty-title">暂无作业，先去练习几道题吧。</Text>
+            <Button className="primary-button btn-primary full-button" onClick={() => navigateToPage("/pages/homework/create")}>去布置作业</Button>
           </View>
         ) : null}
 
         {!loading && !error && items.length ? (
-          <View className="bulk-toolbar">
+          <View className="bulk-toolbar homework-bulk-toolbar">
             <Text className="bulk-count">已选 {selectedIds.length} 条</Text>
             <Button className="bulk-button" onClick={selectAll}>全选</Button>
             <Button className="bulk-button" onClick={invertSelection}>反选</Button>
@@ -121,7 +138,7 @@ export default function HomeworkListPage() {
         ) : null}
 
         {items.map((item) => (
-          <View className="assignment-row" key={item.id}>
+          <View className="assignment-row study-card homework-assignment-card" key={item.id}>
             <View className={selectedIds.includes(item.id) ? "assignment-check active" : "assignment-check"} onClick={() => toggleSelected(item.id)}>
               <Text>{selectedIds.includes(item.id) ? "✓" : ""}</Text>
             </View>
@@ -137,7 +154,7 @@ export default function HomeworkListPage() {
           </View>
         ))}
 
-        <View className="archive-entry" onClick={() => navigateToPage("/pages/homework/archive")}>
+        <View className="archive-entry homework-archive-entry" onClick={() => navigateToPage("/pages/homework/archive")}>
           <Image className="archive-entry-icon" src={asset("icon-archive.png")} mode="aspectFit" />
           <View className="archive-entry-copy">
             <Text className="archive-entry-title">查看归档作业</Text>
