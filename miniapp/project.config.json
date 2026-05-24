@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/",
   "projectname": "小学AI出题助手",
   "description": "小学 AI 出题助手微信小程序 MVP",
-  "appid": "wxffb388d0050776dd",
+  "appid": "wxcdb8ba5e646bc37e",
   "setting": {
     "urlCheck": false,
     "es6": false,
