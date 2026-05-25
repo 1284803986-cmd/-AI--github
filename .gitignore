@@ -5,6 +5,7 @@ miniapp/node_modules.bad-*
 miniapp/dist
 miniapp/.swc
 miniapp/project.private.config.json
+project.private.config.json
 dist
 .env
 .npm-cache
