@@ -26,10 +26,10 @@ export const questionTypeOptions = subjectQuestionTypeOptions.数学;
 export const difficultyOptions = ["基础", "提高", "拔高"];
 
 export const defaultSelection = {
-  grade: "二年级",
+  grade: "一年级",
   subject: "数学",
   textbook: "人教版",
-  semester: "下册",
+  semester: "上册",
   unit: "时间在哪里",
   knowledgePoint: "认识钟面时间"
 };
@@ -59,7 +59,7 @@ export function todayKey() {
 }
 
 export function defaultFileName(meta = {}) {
-  return `${meta.grade || "二年级"}_${meta.subject || "数学"}_${meta.knowledgePoint || meta.unit || "练习"}_${todayKey()}`;
+  return `${meta.grade || "一年级"}_${meta.subject || "数学"}_${meta.knowledgePoint || meta.unit || "练习"}_${todayKey()}`;
 }
 
 export function getQuestionCount(result) {

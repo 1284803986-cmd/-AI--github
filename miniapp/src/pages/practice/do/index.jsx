@@ -6,7 +6,7 @@ import { recordPracticeAnswer } from "../../../utils/practiceStats";
 import { buildSessionPatch, getPracticeSession, getSessionProgress, removePracticeSession, updatePracticeSession } from "../../../utils/practiceSession";
 import { switchToTab } from "../../../utils/navigation";
 import { debugLog } from "../../../utils/debug";
-import { getQuestionAnswer, getQuestionExplanation, getQuestionId, getQuestionImage, getQuestionStem, getQuestionType, normalizeOptions, normalizeQuestionType } from "../../../utils/question";
+import { getQuestionAnswer, getQuestionExplanation, getQuestionId, getQuestionImage, getQuestionStem, getQuestionType, normalizeOptions, normalizeQuestionStem, normalizeQuestionType } from "../../../utils/question";
 import "../../../styles/common.scss";
 
 const PROGRESS_KEY = "chapterPracticeProgress";
@@ -251,7 +251,7 @@ export default function PracticeDoPage() {
             <Button className="practice-card-sheet" onClick={() => setShowAnswerSheet(true)}>答题卡</Button>
           </View>
         </View>
-        <Text className="practice-source-line">📘 {[session.subject, session.grade, session.chapterName, session.lesson, session.knowledgePoint].filter(Boolean).join(" · ")}</Text>
+        <Text className="practice-source-line">📘 {[session.subject, getSessionGradeSemester(session), session.chapterName, session.lesson, session.knowledgePoint].filter(Boolean).join(" · ")}</Text>
 
         <View className="question-card study-card">
           <View className="tag-row">
@@ -261,7 +261,7 @@ export default function PracticeDoPage() {
             <Text className="difficulty-tag">{currentQuestion.difficulty || session.difficulty}</Text>
             {currentInWrongBook ? <Text className="tag warning-tag">错题本内</Text> : null}
           </View>
-          <Text className="question-text">{getQuestionStem(currentQuestion)}</Text>
+          <Text className="question-text">{normalizeQuestionStem(currentQuestion)}</Text>
           {getQuestionImage(currentQuestion) ? <Image className="question-image" src={getQuestionImage(currentQuestion)} mode="widthFix" /> : null}
           {currentInWrongBook ? <Text className="tip-text">这道题在错题本里，答对后会自动标记为已掌握。</Text> : null}
           {renderAnswerControl(currentQuestion, currentAnswer, updateAnswer, currentCheck)}
@@ -339,6 +339,13 @@ function getStatusBarHeight() {
   } catch (error) {
     return 0;
   }
+}
+
+function getSessionGradeSemester(session) {
+  const grade = session?.grade || Taro.getStorageSync("homeGrade") || "";
+  const saved = Taro.getStorageSync("baseSelection") || {};
+  const semester = session?.semester || session?.term || Taro.getStorageSync("homeSemester") || saved.semester || "";
+  return [grade, semester].filter(Boolean).join("");
 }
 
 function sessionToMeta(session, source = "practice") {

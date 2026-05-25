@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Taro, { useDidShow } from "@tarojs/taro";
 import { Button, Picker, ScrollView, Text, View } from "@tarojs/components";
-import { gradeOptions, semesterOptions } from "../../utils/options";
+import { defaultSelection } from "../../utils/options";
 import {
   createWrongBookPracticeSession,
   getWrongBook,
@@ -11,35 +11,42 @@ import {
   markWrongQuestionMastered,
   toPracticeQuestion
 } from "../../utils/wrongBook";
+import { normalizeQuestionStem } from "../../utils/question";
 import { navigateToPage } from "../../utils/navigation";
 import "../../styles/common.scss";
+import "./index.scss";
 
 const ALL = "全部";
-const subjectOptions = [ALL, "语文", "数学", "英语"];
-const masteredOptions = [ALL, "未掌握", "已掌握"];
+const subjectOptions = ["语文", "数学", "英语"];
+const detailModeLabels = {
+  all: "全部错题",
+  unmastered: "未掌握",
+  mastered: "已掌握",
+  frequent: "高频错题"
+};
 
 export default function WrongPage() {
   const [wrongItems, setWrongItems] = useState([]);
   const [selectedChapter, setSelectedChapter] = useState(null);
+  const [detailMode, setDetailMode] = useState("all");
   const [filters, setFilters] = useState({
-    grade: ALL,
-    subject: ALL,
-    semester: ALL,
-    mastered: ALL,
+    grade: defaultSelection.grade,
+    subject: "数学",
+    semester: defaultSelection.semester,
     type: ALL,
     knowledgePoint: ALL
   });
 
   useDidShow(() => {
     setWrongItems(getWrongBook());
+    syncHomeScope();
   });
 
   const baseFilters = useMemo(() => ({
     grade: filters.grade,
     subject: filters.subject,
-    semester: filters.semester,
-    mastered: filters.mastered
-  }), [filters.grade, filters.subject, filters.semester, filters.mastered]);
+    semester: filters.semester
+  }), [filters.grade, filters.subject, filters.semester]);
 
   const chapterSummaries = useMemo(() => getWrongBookChapterSummary(baseFilters), [wrongItems, baseFilters]);
   const filterOptions = useMemo(() => getWrongBookFilterOptions(wrongItems, {
@@ -48,29 +55,69 @@ export default function WrongPage() {
   }), [wrongItems, baseFilters, selectedChapter]);
   const detailItems = useMemo(() => {
     if (!selectedChapter) return [];
-    return getWrongBookItemsByChapter(selectedChapter.key, {
+    const modeMastered = detailMode === "unmastered" ? "未掌握" : detailMode === "mastered" ? "已掌握" : ALL;
+    const items = getWrongBookItemsByChapter(selectedChapter.key, {
       ...baseFilters,
+      mastered: modeMastered,
       type: filters.type,
       knowledgePoint: filters.knowledgePoint
     });
-  }, [selectedChapter, filters, baseFilters, wrongItems]);
+    if (detailMode === "frequent") {
+      return [...items].sort((a, b) => (Number(b.wrongCount) || 0) - (Number(a.wrongCount) || 0) || new Date(b.lastWrongAt || 0).getTime() - new Date(a.lastWrongAt || 0).getTime());
+    }
+    return items;
+  }, [selectedChapter, filters, baseFilters, wrongItems, detailMode]);
+
+  const subjectCounts = useMemo(() => {
+    const counts = {};
+    subjectOptions.forEach((subject) => {
+      counts[subject] = getWrongBookChapterSummary({
+        grade: filters.grade,
+        semester: filters.semester,
+        subject
+      }).reduce((sum, chapter) => sum + (Number(chapter.total) || 0), 0);
+    });
+    return counts;
+  }, [wrongItems, filters.grade, filters.semester]);
+
+  const scopedWrongTotal = useMemo(() => subjectOptions.reduce((sum, subject) => sum + (subjectCounts[subject] || 0), 0), [subjectCounts]);
 
   function updateFilter(key, value) {
     setFilters((old) => ({ ...old, [key]: value }));
-    if (["grade", "subject", "semester", "mastered"].includes(key)) {
+    if (["grade", "subject", "semester"].includes(key)) {
       setSelectedChapter(null);
+      setDetailMode("all");
     }
   }
 
-  function openChapter(chapter) {
+  function syncHomeScope() {
+    const saved = Taro.getStorageSync("baseSelection") || {};
+    const grade = Taro.getStorageSync("homeGrade") || saved.grade || defaultSelection.grade;
+    const semester = Taro.getStorageSync("homeSemester") || saved.semester || defaultSelection.semester;
+    setFilters((old) => {
+      if (old.grade === grade && old.semester === semester) return old;
+      setSelectedChapter(null);
+      setDetailMode("all");
+      return {
+        ...old,
+        grade,
+        semester,
+        type: ALL,
+        knowledgePoint: ALL
+      };
+    });
+  }
+
+  function openChapter(chapter, mode = "all") {
     setSelectedChapter(chapter);
+    setDetailMode(mode);
     setFilters((old) => ({ ...old, type: ALL, knowledgePoint: ALL }));
   }
 
   async function startChapterReview(chapter) {
     const chapterItems = getWrongBookItemsByChapter(chapter.key, baseFilters);
     const unmasteredItems = chapterItems.filter((item) => !item.mastered);
-    let reviewItems = unmasteredItems;
+    let reviewItems = sortReviewItems(unmasteredItems);
     if (!reviewItems.length && chapterItems.length) {
       const confirm = await Taro.showModal({
         title: "本章错题已全部掌握",
@@ -79,7 +126,7 @@ export default function WrongPage() {
         cancelText: "取消"
       });
       if (!confirm.confirm) return;
-      reviewItems = chapterItems;
+      reviewItems = sortReviewItems(chapterItems);
     }
     if (!reviewItems.length) {
       Taro.showToast({ title: "该章节暂无错题", icon: "none" });
@@ -134,17 +181,21 @@ export default function WrongPage() {
       </View>
 
       <View className="card study-card wrong-filter-card">
-        <View className="card-title-row">
+        <View className="wrong-scope-card">
           <View>
-            <Text className="section-title">基础筛选</Text>
-            <Text className="section-subtitle">先确定范围，再集中复习错题。</Text>
+            <Text className="wrong-scope-title">当前范围：{filters.grade}{filters.semester} · {filters.subject}</Text>
+            <Text className="wrong-scope-desc">{filters.grade}{filters.semester}错题目录 · 同步首页选择</Text>
           </View>
+          <Text className="wrong-scope-badge">当前范围</Text>
         </View>
-        <View className="filter-grid">
-          <FilterPicker label="年级" value={filters.grade} options={[ALL, ...gradeOptions]} onChange={(value) => updateFilter("grade", value)} />
-          <FilterPicker label="学科" value={filters.subject} options={subjectOptions} onChange={(value) => updateFilter("subject", value)} />
-          <FilterPicker label="上下册" value={filters.semester} options={[ALL, ...semesterOptions]} onChange={(value) => updateFilter("semester", value)} />
-          <FilterPicker label="掌握" value={filters.mastered} options={masteredOptions} onChange={(value) => updateFilter("mastered", value)} />
+        <View className="wrong-subject-tabs">
+          {subjectOptions.map((subject) => (
+            <Button key={subject} className={filters.subject === subject ? "wrong-subject-tab active" : "wrong-subject-tab"} onClick={() => updateFilter("subject", subject)}>
+              <Text className="wrong-subject-icon">{subjectIcon(subject)}</Text>
+              <Text>{subject}</Text>
+              <Text className="wrong-subject-count">{subjectCounts[subject] || 0}</Text>
+            </Button>
+          ))}
         </View>
       </View>
 
@@ -158,31 +209,25 @@ export default function WrongPage() {
             <Text className="wrong-count-pill">{chapterSummaries.length} 个章节</Text>
           </View>
 
-          {!hasWrongItems ? (
-            <EmptyState title="暂无错题，继续保持！" desc="练习或作业里答错的题会自动进入这里。" />
+          {!hasWrongItems || scopedWrongTotal === 0 ? (
+            <EmptyState title={`暂无${filters.grade}${filters.semester}${filters.subject}错题`} desc="练习过程中答错的题会自动进入这里。" />
           ) : chapterSummaries.length ? (
             chapterSummaries.map((chapter) => (
               <View key={chapter.key} className="wrong-chapter-card study-card learning-path-card review-task-card">
                 <View className="wrong-card-top">
                   <View className="wrong-chapter-icon">
-                    <Text>错</Text>
+                    <Text>{subjectIcon(chapter.subject)}</Text>
                   </View>
                   <View className="wrong-chapter-main">
-                    <View className="tag-row">
-                      {[chapter.grade, chapter.subject, chapter.semester].filter(Boolean).map((label) => (
-                        <Text className="tag tag-blue" key={label}>{label}</Text>
-                      ))}
-                      {chapter.textbook ? <Text className="tag tag-gray">{chapter.textbook}</Text> : null}
-                    </View>
                     <Text className="wrong-chapter-title">{chapter.unit}</Text>
-                    <Text className="wrong-chapter-desc">共 {chapter.total} 道错题 · 未掌握 {chapter.unmastered} 道 · 已掌握 {chapter.mastered} 道</Text>
+                    <Text className="wrong-chapter-desc">{[chapter.grade, chapter.semester, chapter.subject, chapter.textbook].filter(Boolean).join(" · ")}</Text>
                   </View>
+                  <Button className="wrong-error-badge" onClick={() => openChapter(chapter, "frequent")}>错 {chapter.wrongCount} 次</Button>
                 </View>
                 <View className="wrong-summary-grid">
-                  <SummaryItem label="总错题" value={chapter.total} tone="blue" />
-                  <SummaryItem label="未掌握" value={chapter.unmastered} tone="red" />
-                  <SummaryItem label="已掌握" value={chapter.mastered} tone="green" />
-                  <SummaryItem label="错误次数" value={chapter.wrongCount} tone="orange" />
+                  <SummaryItem label="总错题" value={chapter.total} tone="blue" onClick={() => openChapter(chapter, "all")} />
+                  <SummaryItem label="未掌握" value={chapter.unmastered} tone="red" onClick={() => openChapter(chapter, "unmastered")} />
+                  <SummaryItem label="已掌握" value={chapter.mastered} tone="green" onClick={() => openChapter(chapter, "mastered")} />
                 </View>
                 <View className="wrong-progress-wrap">
                   <View className="wrong-progress-fill" style={{ width: `${chapter.progress}%` }} />
@@ -196,12 +241,11 @@ export default function WrongPage() {
                 </Text>
                 <View className="button-row wrong-chapter-actions">
                   <Button className="primary-button btn-primary" onClick={() => startChapterReview(chapter)}>开始重练</Button>
-                  <Button className="ghost-button btn-ghost" onClick={() => openChapter(chapter)}>查看错题</Button>
                 </View>
               </View>
             ))
           ) : (
-            <EmptyState title="当前筛选条件下暂无错题。" desc="可以调整年级、学科、上下册或掌握状态再看看。" />
+            <EmptyState title={`暂无${filters.grade}${filters.semester}${filters.subject}错题`} desc="练习过程中答错的题会自动进入这里。" />
           )}
         </View>
       ) : (
@@ -209,7 +253,7 @@ export default function WrongPage() {
           <View className="wrong-detail-head">
             <Button className="ghost-button small-button wrong-back-button" onClick={() => setSelectedChapter(null)}>返回章节</Button>
             <View className="detail-title-wrap">
-              <Text className="section-title">{selectedChapter.unit}</Text>
+              <Text className="section-title">{selectedChapter.unit} · {detailModeLabels[detailMode] || "全部错题"}</Text>
               <Text className="wrong-detail-path">{[selectedChapter.grade, selectedChapter.subject, selectedChapter.semester, selectedChapter.unit].filter(Boolean).join("｜")}</Text>
               <Text className="muted">本章 {detailItems.length} 道错题</Text>
             </View>
@@ -218,7 +262,6 @@ export default function WrongPage() {
           <View className="filter-grid wrong-detail-filter">
             <FilterPicker label="题型" value={filters.type} options={[ALL, ...filterOptions.types]} onChange={(value) => updateFilter("type", value)} />
             <FilterPicker label="知识点" value={filters.knowledgePoint} options={[ALL, ...filterOptions.knowledgePoints]} onChange={(value) => updateFilter("knowledgePoint", value)} />
-            <FilterPicker label="掌握" value={filters.mastered} options={masteredOptions} onChange={(value) => updateFilter("mastered", value)} />
           </View>
 
           {detailItems.length ? (
@@ -230,7 +273,7 @@ export default function WrongPage() {
                   {item.type ? <Text className="tag">{item.type}</Text> : null}
                   <Text className={item.mastered ? "tag mastered-tag" : "tag warning-tag"}>{item.mastered ? "已掌握" : "未掌握"}</Text>
                 </View>
-                <Text className="question-text">{shortText(item.question, 72)}</Text>
+                <Text className="question-text">{shortText(normalizeQuestionStem(item), 72)}</Text>
                 <View className="wrong-meta-grid">
                   <Text className="wrong-info-chip">章节：{item.unit || "未记录"}</Text>
                   <Text className="wrong-info-chip wrong-info-chip--orange">错误次数：{item.wrongCount || 1}</Text>
@@ -272,13 +315,32 @@ function FilterPicker({ label, value, options, onChange }) {
   );
 }
 
-function SummaryItem({ label, value, tone = "blue" }) {
+function SummaryItem({ label, value, tone = "blue", onClick }) {
   return (
-    <View className={`wrong-summary-item wrong-summary-item--${tone}`}>
+    <Button className={`wrong-summary-item wrong-summary-item--${tone}`} onClick={onClick}>
       <Text className="wrong-summary-value">{Number(value) || 0}</Text>
-      <Text className="wrong-summary-label">{label}</Text>
-    </View>
+      <View className="wrong-summary-label-row">
+        <Text className="wrong-summary-label">{label}</Text>
+        <Text className="wrong-summary-arrow">›</Text>
+      </View>
+    </Button>
   );
+}
+
+function subjectIcon(subject) {
+  if (subject === "语文") return "文";
+  if (subject === "英语") return "英";
+  return "数";
+}
+
+function sortReviewItems(items = []) {
+  return [...items].sort((a, b) => {
+    const masteredA = a.mastered ? 1 : 0;
+    const masteredB = b.mastered ? 1 : 0;
+    return masteredA - masteredB ||
+      (Number(b.wrongCount) || 0) - (Number(a.wrongCount) || 0) ||
+      new Date(b.lastWrongAt || 0).getTime() - new Date(a.lastWrongAt || 0).getTime();
+  });
 }
 
 function EmptyState({ title, desc }) {

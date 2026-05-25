@@ -7,7 +7,7 @@ import "../../styles/common.scss";
 
 export default function MePage() {
   const [role, setRole] = useState("学生");
-  const [grade, setGrade] = useState("二年级");
+  const [grade, setGrade] = useState("一年级");
   const [stats, setStats] = useState(() => getLearningStats());
 
   useEffect(() => {

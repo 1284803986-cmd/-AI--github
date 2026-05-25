@@ -18,16 +18,16 @@ const PRACTICE_RESET_KEY = "practiceResetToHome";
 const QUESTIONS_PER_POINT = 5;
 
 const quickEntries = [
-  { title: "章节练习", desc: "同步章节刷题", icon: "✎", tone: "practice", action: "practice" },
-  { title: "错题本", desc: "巩固薄弱知识", icon: "✕", tone: "wrong", url: "/pages/wrong/index" },
-  { title: "学习统计", desc: "学习情况分析", icon: "↗", tone: "stats", url: "/pages/stats/index" },
-  { title: "作业中心", desc: "查看作业任务", icon: "!", tone: "homework", url: "/pages/student/index" }
+  { title: "章节练习", desc: "同步章节刷题", icon: "书", tone: "practice", action: "practice" },
+  { title: "错题本", desc: "巩固薄弱知识", icon: "错", tone: "wrong", url: "/pages/wrong/index" },
+  { title: "学习统计", desc: "学习情况分析", icon: "图", tone: "stats", url: "/pages/stats/index" },
+  { title: "作业中心", desc: "查看作业任务", icon: "作", tone: "homework", url: "/pages/student/index" }
 ];
 
 const tabIcons = {
-  首页: "⌂",
+  首页: "首",
   语文: "文",
-  数学: "△",
+  数学: "数",
   英语: "A"
 };
 
@@ -53,8 +53,8 @@ const subjectMeta = {
 };
 
 export default function IndexPage() {
-  const [grade, setGrade] = useState("二年级");
-  const [semester, setSemester] = useState("下册");
+  const [grade, setGrade] = useState("一年级");
+  const [semester, setSemester] = useState("上册");
   const [activeTab, setActiveTab] = useState("首页");
   const [todayStats, setTodayStats] = useState({ total: 0, correct: 0, accuracy: 0 });
   const [lastPractice, setLastPractice] = useState(null);
@@ -353,8 +353,8 @@ export default function IndexPage() {
               <>
                 <View className="continue-book-icon"><Text>学</Text></View>
                 <View className="continue-copy">
-                  <Text className="continue-title">{grade}数学{semester}</Text>
-                  <Text className="continue-empty">还没有练习记录，去开始章节练习吧</Text>
+                  <Text className="continue-title">{grade}{semester}</Text>
+                  <Text className="continue-empty">已同步到练习、错题和章节。还没有练习记录，去开始章节练习吧</Text>
                 </View>
                 <Text className="continue-arrow">›</Text>
               </>
@@ -402,26 +402,17 @@ export default function IndexPage() {
         </>
       ) : (
         <View className="subject-panel">
-          <View className={`subject-hero ${subject.tone}`}>
-            <View className={`subject-icon ${subject.tone}`}>
+          <View className="card study-card home-math-guide-card">
+            <View className={`home-math-guide-icon ${subject.tone}`}>
               <Text>{subject.icon}</Text>
             </View>
-            <View className="subject-hero-copy">
-              <Text className="subject-hero-title">{grade}{semester}{subject.title}</Text>
-              <Text className="subject-hero-desc">{subject.desc}</Text>
+            <View className="home-math-guide-copy">
+              <Text className="section-title">{grade}{semester}{activeTab}章节练习</Text>
+              <Text className="section-desc">已导入内容的年级和上下册，会显示章节、题型和进度。</Text>
             </View>
           </View>
           {activeTab === "数学" ? (
             <>
-              <View className="card study-card home-math-guide-card">
-                <View className="home-math-guide-icon">
-                  <Text>数</Text>
-                </View>
-                <View className="home-math-guide-copy">
-                  <Text className="section-title">{grade}数学{semester}</Text>
-                  <Text className="section-desc">已导入内容会显示章节、题型和进度；没有导入的组合会显示暂无。</Text>
-                </View>
-              </View>
               {showMathChapters ? <View className="home-chapter-list">
                 {chapterLoading ? (
                   <View className="card">
@@ -462,10 +453,12 @@ export default function IndexPage() {
               </View> : null}
             </>
           ) : (
-            <View className="card">
-              <Text className="section-title">内容整理中</Text>
-              <Text className="section-desc">当前先完成数学章节刷题。后续导入{activeTab}内容后，这里会显示对应章节。</Text>
-            </View>
+            <>
+              <View className="card">
+                <Text className="section-title">内容整理中</Text>
+                <Text className="section-desc">当前先完成数学章节刷题。后续导入{activeTab}内容后，这里会显示对应章节。</Text>
+              </View>
+            </>
           )}
         </View>
       )}
@@ -520,7 +513,7 @@ function normalizeGrade(value) {
     "6": "六年级",
     "6年级": "六年级"
   };
-  return map[text] || text || "二年级";
+  return map[text] || text || "一年级";
 }
 
 function normalizeSemester(value) {
@@ -535,7 +528,7 @@ function normalizeSemester(value) {
     lower: "下册",
     "2": "下册"
   };
-  return map[text] || text || "下册";
+  return map[text] || text || "上册";
 }
 
 function normalizeSubject(value) {

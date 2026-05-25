@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Taro, { useDidShow, useTabItemTap } from "@tarojs/taro";
-import { Button, Picker, ScrollView, Text, View } from "@tarojs/components";
-import { defaultSelection, gradeOptions, subjectCards } from "../../utils/options";
+import { Button, ScrollView, Text, View } from "@tarojs/components";
+import { defaultSelection, subjectCards } from "../../utils/options";
 import { generateTextbook, getContentPackage } from "../../utils/api";
 import { createPracticeSession, findDoingPracticeSession, getSessionProgress, hasSessionProgress, savePracticeSession } from "../../utils/practiceSession";
 import { getTypeProgress } from "../../utils/practiceStats";
@@ -9,6 +9,7 @@ import { navigateToPage, switchToTab } from "../../utils/navigation";
 import { debugLog, debugWarn } from "../../utils/debug";
 import { getPracticeQuestions, normalizeQuestionType, normalizeQuestions } from "../../utils/question";
 import "../../styles/common.scss";
+import "./index.scss";
 
 const ENTRY_KEY = "practiceEntrySelection";
 const HOME_RESTORE_KEY = "homePracticeReturnState";
@@ -34,19 +35,7 @@ export default function PracticePage() {
   const typeSummaries = useMemo(() => buildTypeSummaries(activePackage, activeUnit, form, progressVersion), [activePackage, activeUnit, form, progressVersion]);
   const unitSummaries = useMemo(() => buildUnitSummaries(activePackage, form, progressVersion), [activePackage, form, progressVersion]);
   useEffect(() => {
-    const saved = Taro.getStorageSync("baseSelection");
-    const homeGrade = Taro.getStorageSync("homeGrade");
-    const homeSemester = Taro.getStorageSync("homeSemester");
-    if (saved || homeGrade || homeSemester) {
-      setForm((old) => ({
-        ...old,
-        ...saved,
-        grade: homeGrade || saved?.grade || old.grade,
-        semester: homeSemester || saved?.semester || old.semester,
-        type: saved?.type || old.type,
-        difficulty: saved?.difficulty || old.difficulty
-      }));
-    }
+    syncBaseSelectionFromHome({ resetIfChanged: false });
     getContentPackage()
       .then((data) => {
         setCatalog(data);
@@ -117,7 +106,9 @@ export default function PracticePage() {
     if (reset) {
       Taro.removeStorageSync(PRACTICE_RESET_KEY);
       resetPracticeHome(reset);
+      return;
     }
+    syncBaseSelectionFromHome({ resetIfChanged: true });
   });
 
   useEffect(() => {
@@ -142,7 +133,13 @@ export default function PracticePage() {
   });
 
   function updateSelection(patch) {
-    const shouldResetPackage = ["grade", "subject", "semester"].some((key) => patch[key] && patch[key] !== form[key]);
+    const normalizedPatch = {
+      ...patch,
+      ...(patch.grade ? { grade: normalizeGrade(patch.grade) } : {}),
+      ...(patch.semester ? { semester: normalizeSemester(patch.semester) } : {}),
+      ...(patch.subject ? { subject: normalizeSubject(patch.subject) } : {})
+    };
+    const shouldResetPackage = ["grade", "subject", "semester"].some((key) => normalizedPatch[key] && normalizedPatch[key] !== form[key]);
     const next = normalizeSelection({
       ...form,
       ...(shouldResetPackage ? {
@@ -154,10 +151,52 @@ export default function PracticePage() {
         typeId: "",
         type: ""
       } : {}),
-      ...patch
+      ...normalizedPatch
     }, catalog);
     setForm(next);
     Taro.setStorageSync("baseSelection", next);
+  }
+
+  function readGlobalBaseSelection() {
+    const saved = Taro.getStorageSync("baseSelection") || {};
+    const homeGrade = Taro.getStorageSync("homeGrade");
+    const homeSemester = Taro.getStorageSync("homeSemester");
+    return {
+      ...saved,
+      grade: normalizeGrade(homeGrade || saved.grade || defaultSelection.grade),
+      semester: normalizeSemester(homeSemester || saved.semester || defaultSelection.semester),
+      textbook: saved.textbook || defaultSelection.textbook,
+      subject: saved.subject || defaultSelection.subject
+    };
+  }
+
+  function syncBaseSelectionFromHome({ resetIfChanged = false } = {}) {
+    const globalSelection = readGlobalBaseSelection();
+    setForm((old) => {
+      const changed = old.grade !== globalSelection.grade || old.semester !== globalSelection.semester;
+      const next = normalizeSelection({
+        ...old,
+        ...globalSelection,
+        ...(changed ? {
+          packageId: "",
+          unitId: "",
+          unit: "",
+          knowledgePointId: "",
+          knowledgePoint: "",
+          typeId: "",
+          type: ""
+        } : {})
+      }, catalog);
+      if (changed && resetIfChanged) {
+        setPendingEntry(null);
+        setEntryError("");
+        setMode("selector");
+        setActiveUnitId("");
+        setActiveType("");
+      }
+      Taro.setStorageSync("baseSelection", next);
+      return next;
+    });
   }
 
   function resetPracticeHome(reset = {}) {
@@ -168,12 +207,20 @@ export default function PracticePage() {
     setMode("selector");
     setActiveUnitId("");
     setActiveType("");
-    setForm((old) => normalizeSelection({ ...old, ...reset }, catalog));
+    const globalSelection = readGlobalBaseSelection();
+    setForm((old) => normalizeSelection({
+      ...old,
+      ...globalSelection,
+      ...reset,
+      grade: globalSelection.grade,
+      semester: globalSelection.semester
+    }, catalog));
   }
 
   function startBySubject(subject) {
     setEntrySource("practice");
-    updateSelection({ subject });
+    const globalSelection = readGlobalBaseSelection();
+    updateSelection({ ...globalSelection, subject });
     setMode("chapters");
   }
 
@@ -369,12 +416,11 @@ export default function PracticePage() {
           <View className="practice-condition-card study-card">
             <View className="condition-icon">☑</View>
             <View className="condition-copy">
-              <Text className="condition-label">当前学习条件</Text>
-              <Text className="condition-value">{form.grade} · {form.semester}</Text>
+              <Text className="condition-label">当前练习范围</Text>
+              <Text className="condition-value">{form.grade}{form.semester}</Text>
+              <Text className="condition-desc">同步首页左上角选择，练习页不再单独选择年级和册别</Text>
             </View>
-            <Picker mode="selector" range={gradeOptions} value={Math.max(0, gradeOptions.indexOf(form.grade))} onChange={(event) => updateSelection({ grade: gradeOptions[event.detail.value] })}>
-              <View className="condition-arrow">›</View>
-            </Picker>
+            <View className="condition-sync-badge">首页同步</View>
           </View>
 
           <View className="practice-subject-section">
@@ -403,8 +449,8 @@ export default function PracticePage() {
         <>
           <View className="chapter-list-hero hero hero-card hero-card--blue">
             <View className="chapter-hero-copy">
-              <Text className="hero-title">{form.grade}{form.subject}{form.semester}</Text>
-              <Text className="hero-subtitle">选择章节，查看每章题量和完成进度。</Text>
+              <Text className="hero-title">{form.grade}{form.semester}{form.subject}章节练习</Text>
+              <Text className="hero-subtitle">当前范围来自首页设置，选择章节查看题量和完成进度。</Text>
               {unitSummaries.length ? (
                 <View className="chapter-hero-stats">
                   <Text className="chapter-hero-chip">📖 共 {unitSummaries.length} 章</Text>
@@ -458,7 +504,7 @@ export default function PracticePage() {
           <View className="type-list-hero hero hero-card hero-card--blue">
             <View className="type-hero-copy">
               <Text className="hero-title">{activeUnit.name}</Text>
-              <Text className="hero-subtitle">选择题型后直接开始做题。</Text>
+              <Text className="hero-subtitle">{form.grade}{form.semester} · {form.subject} · 选择题型后直接开始做题。</Text>
               {typeSummaries.length ? (
                 <View className="type-hero-stats">
                   <Text className="type-hero-chip">🎯 共 {typeSummaries.length} 类题型</Text>
@@ -554,12 +600,16 @@ function ProgressBar({ done, total }) {
 }
 
 function normalizeSelection(selection, catalog) {
-  const active = selectPackage(catalog, selection);
+  const normalized = normalizeFilter(selection);
+  const active = selectPackage(catalog, normalized);
   const firstUnit = active?.options?.units?.[0];
   const firstPoint = firstUnit?.lessons?.[0]?.knowledgePoints?.[0];
   const hasCatalog = Boolean(catalog);
   return {
     ...selection,
+    grade: normalized.grade,
+    subject: normalized.subject,
+    semester: normalized.semester,
     packageId: active?.package_id || (hasCatalog ? "" : selection.packageId || ""),
     textbook: active?.scope?.textbook || selection.textbook || "人教版",
     unitId: active ? selection.unitId || firstUnit?.id || "" : "",
@@ -655,7 +705,7 @@ function normalizeGrade(value) {
     "6": "六年级",
     "6年级": "六年级"
   };
-  return map[text] || text || "二年级";
+  return map[text] || text || "一年级";
 }
 
 function normalizeSemester(value) {
@@ -670,7 +720,7 @@ function normalizeSemester(value) {
     lower: "下册",
     "2": "下册"
   };
-  return map[text] || text || "下册";
+  return map[text] || text || "上册";
 }
 
 function normalizeSubject(value) {

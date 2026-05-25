@@ -13,7 +13,7 @@ export function normalizeQuestion(question = {}, selectedType = "", index = 0) {
     ...question,
     id: getQuestionId(question, index + 1),
     questionId: getQuestionId(question, index + 1),
-    question: getQuestionStem(question),
+    question: normalizeQuestionStem(question),
     options: normalizeOptions(question),
     answer: getQuestionAnswer(question),
     explanation: getQuestionExplanation(question),
@@ -26,7 +26,7 @@ export function normalizeQuestion(question = {}, selectedType = "", index = 0) {
   }
 
   if (isJudgeType(type) && !["正确", "错误"].includes(String(next.answer || "").trim())) {
-    next.question = `判断：${getQuestionStem(question)} 的参考答案是“${getQuestionAnswer(question)}”，这个说法是否正确？`;
+    next.question = `${normalizeQuestionStem(question)} 的参考答案是“${getQuestionAnswer(question)}”，这个说法是否正确？`;
     next.answer = "正确";
   }
 
@@ -39,6 +39,12 @@ export function getQuestionId(question = {}, fallback = "") {
 
 export function getQuestionStem(question = {}) {
   return question.question || question.stem || question.title || "";
+}
+
+export function normalizeQuestionStem(question = {}) {
+  const stem = typeof question === "string" ? question : getQuestionStem(question);
+  if (typeof stem !== "string") return "";
+  return stem.trim().replace(/^(?:判断题?|单选题?|选择题?|多选题?|填空题?|解答题?|应用题?)(?:\s*[:：、\-－—–]\s*|\s+)/, "").trim();
 }
 
 export function getQuestionType(question = {}, fallback = "") {

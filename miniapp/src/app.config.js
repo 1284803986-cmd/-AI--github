@@ -35,26 +35,26 @@ export default defineAppConfig({
       {
         pagePath: "pages/index/index",
         text: "首页",
-        iconPath: "assets/generated/icon-history.png",
-        selectedIconPath: "assets/generated/icon-history.png"
+        iconPath: "assets/generated/tab-home.png",
+        selectedIconPath: "assets/generated/tab-home-active.png"
       },
       {
         pagePath: "pages/practice/index",
         text: "练习",
-        iconPath: "assets/generated/icon-practice.png",
-        selectedIconPath: "assets/generated/icon-practice.png"
+        iconPath: "assets/generated/tab-practice.png",
+        selectedIconPath: "assets/generated/tab-practice-active.png"
       },
       {
         pagePath: "pages/wrong/index",
         text: "错题",
-        iconPath: "assets/generated/icon-wrong.png",
-        selectedIconPath: "assets/generated/icon-wrong.png"
+        iconPath: "assets/generated/tab-wrong.png",
+        selectedIconPath: "assets/generated/tab-wrong-active.png"
       },
       {
         pagePath: "pages/me/index",
         text: "我的",
-        iconPath: "assets/generated/icon-student-homework.png",
-        selectedIconPath: "assets/generated/icon-student-homework.png"
+        iconPath: "assets/generated/tab-me.png",
+        selectedIconPath: "assets/generated/tab-me-active.png"
       }
     ]
   }

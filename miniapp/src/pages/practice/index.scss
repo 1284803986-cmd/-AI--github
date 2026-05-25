@@ -1,0 +1,103 @@
+.practice-page {
+  background: linear-gradient(180deg, #eef6ff 0%, #f8fbff 38%, #f8fafc 100%);
+  padding-bottom: calc(156px + env(safe-area-inset-bottom));
+}
+
+.practice-page .practice-condition-card {
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  border: 1px solid rgba(191, 219, 254, 0.7);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.12) 0, rgba(96, 165, 250, 0) 130px),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.08);
+}
+
+.practice-page .practice-condition-card .condition-icon {
+  background: linear-gradient(180deg, #dbeafe 0%, #93c5fd 100%);
+  color: #1d4ed8;
+  box-shadow: inset 0 -6px 14px rgba(37, 99, 235, 0.12);
+}
+
+.practice-page .condition-label {
+  color: #64748b;
+}
+
+.practice-page .condition-value {
+  margin-top: 4px;
+  color: #0f172a;
+  letter-spacing: 0;
+}
+
+.practice-page .condition-desc {
+  max-width: 430px;
+  color: #64748b;
+}
+
+.condition-sync-badge {
+  flex: 0 0 auto;
+  padding: 9px 16px;
+  border: 1px solid rgba(147, 197, 253, 0.55);
+  border-radius: 999px;
+  background: rgba(239, 246, 255, 0.9);
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.practice-page .practice-subject-section {
+  margin-top: 22px;
+  margin-bottom: 12px;
+}
+
+.practice-page .practice-subject-card.subject-card {
+  border: 1px solid rgba(226, 232, 240, 0.82);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
+}
+
+.practice-page .practice-subject-card.subject-card::before {
+  opacity: 0.58;
+}
+
+.practice-page .practice-subject-icon.subject-icon {
+  width: 82px;
+  height: 82px;
+  border-radius: 25px;
+  box-shadow: inset 0 -7px 15px rgba(15, 23, 42, 0.08), 0 12px 20px rgba(15, 23, 42, 0.08);
+}
+
+.practice-page .practice-subject-card .subject-title {
+  letter-spacing: 0;
+}
+
+.practice-page .chapter-list-hero,
+.practice-page .type-list-hero {
+  border: 1px solid rgba(219, 234, 254, 0.44);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.13);
+}
+
+.practice-page .chapter-list-hero .hero-title,
+.practice-page .type-list-hero .hero-title {
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+.practice-page .chapter-list-hero .hero-subtitle,
+.practice-page .type-list-hero .hero-subtitle {
+  line-height: 1.48;
+  opacity: 0.92;
+}
+
+.practice-page .course-chapter-card.study-card,
+.practice-page .training-type-card.study-card {
+  border-color: rgba(219, 234, 254, 0.82);
+  box-shadow: 0 14px 28px rgba(30, 64, 175, 0.07);
+}
+
+.practice-page .empty-card,
+.practice-page .hero-card:not(.hero-card--blue) {
+  border: 1px dashed rgba(147, 197, 253, 0.66);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
