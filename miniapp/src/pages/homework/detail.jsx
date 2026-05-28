@@ -4,11 +4,17 @@ import { Button, ScrollView, Text, View } from "@tarojs/components";
 import { BackButton } from "../../components/navigation";
 import { exportAssignment, getAssignment } from "../../utils/api";
 import { navigateToPage } from "../../utils/navigation";
+import { usePageShare } from "../../utils/share";
 import "../../styles/common.scss";
 
 export default function HomeworkDetailPage() {
   const router = useRouter();
   const [assignment, setAssignment] = useState(null);
+
+  usePageShare(() => ({
+    title: assignment?.title ? `${assignment.title} - 小智练题` : "小智练题作业",
+    path: assignment?.id ? `/pages/student/work?id=${encodeURIComponent(assignment.id)}` : "/pages/index/index"
+  }));
 
   useEffect(() => {
     load();

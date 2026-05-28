@@ -8,6 +8,7 @@ import { getLatestDoingPracticeSession, getSessionProgress } from "../../utils/p
 import { getWrongBook } from "../../utils/wrongBook";
 import { navigateToPage, switchToTab } from "../../utils/navigation";
 import { debugLog, debugWarn } from "../../utils/debug";
+import { usePageShare } from "../../utils/share";
 import "../../styles/common.scss";
 import "./index.scss";
 
@@ -63,6 +64,11 @@ export default function IndexPage() {
   const [showMathChapters, setShowMathChapters] = useState(false);
   const [chapterLoading, setChapterLoading] = useState(false);
   const [isResuming, setIsResuming] = useState(false);
+
+  usePageShare({
+    title: "小智练题 - 小学同步练习工具",
+    path: "/pages/index/index"
+  });
 
   useEffect(() => {
     const savedGrade = Taro.getStorageSync("homeGrade");

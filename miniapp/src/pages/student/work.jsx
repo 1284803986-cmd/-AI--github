@@ -4,6 +4,7 @@ import { Button, Image, Input, ScrollView, Text, Textarea, View } from "@tarojs/
 import { BackButton } from "../../components/navigation";
 import { getAssignment, submitAssignment, uploadAssignmentImages } from "../../utils/api";
 import { isAnswerCorrect, updateWrongBookByAnswer } from "../../utils/wrongBook";
+import { usePageShare } from "../../utils/share";
 import "../../styles/common.scss";
 
 export default function StudentWorkPage() {
@@ -14,6 +15,11 @@ export default function StudentWorkPage() {
   const [checks, setChecks] = useState([]);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  usePageShare(() => ({
+    title: assignment?.title ? `${assignment.title} - 小智练题` : "小智练题作业",
+    path: router.params.id ? `/pages/student/work?id=${encodeURIComponent(router.params.id)}` : "/pages/index/index"
+  }));
 
   useEffect(() => {
     load();

@@ -8,6 +8,7 @@ import { getTypeProgress } from "../../utils/practiceStats";
 import { navigateToPage, switchToTab } from "../../utils/navigation";
 import { debugLog, debugWarn } from "../../utils/debug";
 import { getPracticeQuestions, normalizeQuestionType, normalizeQuestions } from "../../utils/question";
+import { usePageShare } from "../../utils/share";
 import "../../styles/common.scss";
 import "./index.scss";
 
@@ -28,6 +29,11 @@ export default function PracticePage() {
   const [progressVersion, setProgressVersion] = useState(0);
   const [loading, setLoading] = useState(false);
   const [entryError, setEntryError] = useState("");
+
+  usePageShare(() => ({
+    title: `${form.grade || ""}${form.subject || ""}${form.semester || ""}练习 - 小智练题`,
+    path: "/pages/practice/index"
+  }));
 
   const activePackage = useMemo(() => selectPackage(catalog, form), [catalog, form]);
   const units = activePackage?.options?.units || [];
