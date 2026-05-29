@@ -1,0 +1,1633 @@
+{
+  "package_id": "g2_math_up_rj_2026",
+  "package_name": "二年级数学上册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "二年级",
+    "semester": "上册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g2_math_up_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\2上-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g2_math_up_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 2546 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "classification",
+      "name": "分类与整理",
+      "lessons": [
+        {
+          "id": "classification_lesson_1",
+          "name": "按一个标准分类",
+          "knowledge_point_ids": [
+            "classification_1"
+          ]
+        },
+        {
+          "id": "classification_lesson_2",
+          "name": "按不同标准分类",
+          "knowledge_point_ids": [
+            "classification_2"
+          ]
+        },
+        {
+          "id": "classification_lesson_3",
+          "name": "整理数据",
+          "knowledge_point_ids": [
+            "classification_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multiply_1_6",
+      "name": "1-6的表内乘法",
+      "lessons": [
+        {
+          "id": "multiply_1_6_lesson_1",
+          "name": "乘法的初步认识",
+          "knowledge_point_ids": [
+            "multiply_1_6_1"
+          ]
+        },
+        {
+          "id": "multiply_1_6_lesson_2",
+          "name": "2-6的乘法口诀",
+          "knowledge_point_ids": [
+            "multiply_1_6_2"
+          ]
+        },
+        {
+          "id": "multiply_1_6_lesson_3",
+          "name": "乘加乘减",
+          "knowledge_point_ids": [
+            "multiply_1_6_3"
+          ]
+        },
+        {
+          "id": "multiply_1_6_lesson_4",
+          "name": "乘法应用",
+          "knowledge_point_ids": [
+            "multiply_1_6_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "divide_1_6",
+      "name": "1-6的表内除法",
+      "lessons": [
+        {
+          "id": "divide_1_6_lesson_1",
+          "name": "平均分",
+          "knowledge_point_ids": [
+            "divide_1_6_1"
+          ]
+        },
+        {
+          "id": "divide_1_6_lesson_2",
+          "name": "除法的意义",
+          "knowledge_point_ids": [
+            "divide_1_6_2"
+          ]
+        },
+        {
+          "id": "divide_1_6_lesson_3",
+          "name": "用乘法口诀求商",
+          "knowledge_point_ids": [
+            "divide_1_6_3"
+          ]
+        },
+        {
+          "id": "divide_1_6_lesson_4",
+          "name": "除法应用",
+          "knowledge_point_ids": [
+            "divide_1_6_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "length_cm_m",
+      "name": "厘米和米",
+      "lessons": [
+        {
+          "id": "length_cm_m_lesson_1",
+          "name": "认识厘米",
+          "knowledge_point_ids": [
+            "length_cm_m_1"
+          ]
+        },
+        {
+          "id": "length_cm_m_lesson_2",
+          "name": "认识米",
+          "knowledge_point_ids": [
+            "length_cm_m_2"
+          ]
+        },
+        {
+          "id": "length_cm_m_lesson_3",
+          "name": "长度估测",
+          "knowledge_point_ids": [
+            "length_cm_m_3"
+          ]
+        },
+        {
+          "id": "length_cm_m_lesson_4",
+          "name": "长度单位换算",
+          "knowledge_point_ids": [
+            "length_cm_m_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multiply_divide_7_9",
+      "name": "7-9的表内乘、除法",
+      "lessons": [
+        {
+          "id": "multiply_divide_7_9_lesson_1",
+          "name": "7的乘法口诀",
+          "knowledge_point_ids": [
+            "multiply_divide_7_9_1"
+          ]
+        },
+        {
+          "id": "multiply_divide_7_9_lesson_2",
+          "name": "8的乘法口诀",
+          "knowledge_point_ids": [
+            "multiply_divide_7_9_2"
+          ]
+        },
+        {
+          "id": "multiply_divide_7_9_lesson_3",
+          "name": "9的乘法口诀",
+          "knowledge_point_ids": [
+            "multiply_divide_7_9_3"
+          ]
+        },
+        {
+          "id": "multiply_divide_7_9_lesson_4",
+          "name": "乘除混合应用",
+          "knowledge_point_ids": [
+            "multiply_divide_7_9_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "name": "复习与关联",
+      "lessons": [
+        {
+          "id": "review_lesson_1",
+          "name": "表内乘除整理",
+          "knowledge_point_ids": [
+            "review_1"
+          ]
+        },
+        {
+          "id": "review_lesson_2",
+          "name": "测量与分类综合",
+          "knowledge_point_ids": [
+            "review_2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tour_guide",
+      "name": "校园小导游",
+      "lessons": [
+        {
+          "id": "tour_guide_lesson_1",
+          "name": "方向路线描述",
+          "knowledge_point_ids": [
+            "tour_guide_1"
+          ]
+        },
+        {
+          "id": "tour_guide_lesson_2",
+          "name": "生活中的乘除问题",
+          "knowledge_point_ids": [
+            "tour_guide_2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_ruler",
+      "name": "身体上的尺子",
+      "lessons": [
+        {
+          "id": "body_ruler_lesson_1",
+          "name": "身体尺估测",
+          "knowledge_point_ids": [
+            "body_ruler_1"
+          ]
+        },
+        {
+          "id": "body_ruler_lesson_2",
+          "name": "测量活动",
+          "knowledge_point_ids": [
+            "body_ruler_2"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "classification_1",
+      "unit_id": "classification",
+      "lesson_id": "classification_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分类与整理",
+      "name": "按一个标准分类",
+      "description": "围绕“分类与整理”中“按一个标准分类”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "按一个标准分类：知识点混在一起不分类",
+        "按一个标准分类：步骤顺序混乱",
+        "按一个标准分类：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "classification_2",
+      "unit_id": "classification",
+      "lesson_id": "classification_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分类与整理",
+      "name": "按不同标准分类",
+      "description": "围绕“分类与整理”中“按不同标准分类”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "按不同标准分类：知识点混在一起不分类",
+        "按不同标准分类：步骤顺序混乱",
+        "按不同标准分类：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "classification_3",
+      "unit_id": "classification",
+      "lesson_id": "classification_lesson_3",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分类与整理",
+      "name": "整理数据",
+      "description": "围绕“分类与整理”中“整理数据”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "整理数据：知识点混在一起不分类",
+        "整理数据：步骤顺序混乱",
+        "整理数据：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_1_6_1",
+      "unit_id": "multiply_1_6",
+      "lesson_id": "multiply_1_6_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内乘法",
+      "name": "乘法的初步认识",
+      "description": "围绕“1-6的表内乘法”中“乘法的初步认识”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘法的初步认识：相同数位没有对齐",
+        "乘法的初步认识：进位、退位或约分步骤遗漏",
+        "乘法的初步认识：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_1_6_2",
+      "unit_id": "multiply_1_6",
+      "lesson_id": "multiply_1_6_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内乘法",
+      "name": "2-6的乘法口诀",
+      "description": "围绕“1-6的表内乘法”中“2-6的乘法口诀”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "2-6的乘法口诀：相同数位没有对齐",
+        "2-6的乘法口诀：进位、退位或约分步骤遗漏",
+        "2-6的乘法口诀：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_1_6_3",
+      "unit_id": "multiply_1_6",
+      "lesson_id": "multiply_1_6_lesson_3",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内乘法",
+      "name": "乘加乘减",
+      "description": "围绕“1-6的表内乘法”中“乘加乘减”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘加乘减：相同数位没有对齐",
+        "乘加乘减：进位、退位或约分步骤遗漏",
+        "乘加乘减：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_1_6_4",
+      "unit_id": "multiply_1_6",
+      "lesson_id": "multiply_1_6_lesson_4",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内乘法",
+      "name": "乘法应用",
+      "description": "围绕“1-6的表内乘法”中“乘法应用”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘法应用：没有先找清数量关系",
+        "乘法应用：只列式不写答语",
+        "乘法应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_1_6_1",
+      "unit_id": "divide_1_6",
+      "lesson_id": "divide_1_6_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内除法",
+      "name": "平均分",
+      "description": "围绕“1-6的表内除法”中“平均分”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "平均分：相同数位没有对齐",
+        "平均分：进位、退位或约分步骤遗漏",
+        "平均分：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_1_6_2",
+      "unit_id": "divide_1_6",
+      "lesson_id": "divide_1_6_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内除法",
+      "name": "除法的意义",
+      "description": "围绕“1-6的表内除法”中“除法的意义”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "除法的意义：相同数位没有对齐",
+        "除法的意义：进位、退位或约分步骤遗漏",
+        "除法的意义：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_1_6_3",
+      "unit_id": "divide_1_6",
+      "lesson_id": "divide_1_6_lesson_3",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内除法",
+      "name": "用乘法口诀求商",
+      "description": "围绕“1-6的表内除法”中“用乘法口诀求商”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "用乘法口诀求商：相同数位没有对齐",
+        "用乘法口诀求商：进位、退位或约分步骤遗漏",
+        "用乘法口诀求商：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_1_6_4",
+      "unit_id": "divide_1_6",
+      "lesson_id": "divide_1_6_lesson_4",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-6的表内除法",
+      "name": "除法应用",
+      "description": "围绕“1-6的表内除法”中“除法应用”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "除法应用：没有先找清数量关系",
+        "除法应用：只列式不写答语",
+        "除法应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_cm_m_1",
+      "unit_id": "length_cm_m",
+      "lesson_id": "length_cm_m_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "厘米和米",
+      "name": "认识厘米",
+      "description": "围绕“厘米和米”中“认识厘米”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "认识厘米：没有看清题目要求",
+        "认识厘米：答语单位写错或漏写",
+        "认识厘米：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_cm_m_2",
+      "unit_id": "length_cm_m",
+      "lesson_id": "length_cm_m_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "厘米和米",
+      "name": "认识米",
+      "description": "围绕“厘米和米”中“认识米”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "认识米：没有看清题目要求",
+        "认识米：答语单位写错或漏写",
+        "认识米：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_cm_m_3",
+      "unit_id": "length_cm_m",
+      "lesson_id": "length_cm_m_lesson_3",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "厘米和米",
+      "name": "长度估测",
+      "description": "围绕“厘米和米”中“长度估测”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "长度估测：没有看清题目要求",
+        "长度估测：答语单位写错或漏写",
+        "长度估测：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_cm_m_4",
+      "unit_id": "length_cm_m",
+      "lesson_id": "length_cm_m_lesson_4",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "厘米和米",
+      "name": "长度单位换算",
+      "description": "围绕“厘米和米”中“长度单位换算”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "长度单位换算：没有看清题目要求",
+        "长度单位换算：答语单位写错或漏写",
+        "长度单位换算：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_divide_7_9_1",
+      "unit_id": "multiply_divide_7_9",
+      "lesson_id": "multiply_divide_7_9_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "7-9的表内乘、除法",
+      "name": "7的乘法口诀",
+      "description": "围绕“7-9的表内乘、除法”中“7的乘法口诀”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "7的乘法口诀：相同数位没有对齐",
+        "7的乘法口诀：进位、退位或约分步骤遗漏",
+        "7的乘法口诀：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_divide_7_9_2",
+      "unit_id": "multiply_divide_7_9",
+      "lesson_id": "multiply_divide_7_9_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "7-9的表内乘、除法",
+      "name": "8的乘法口诀",
+      "description": "围绕“7-9的表内乘、除法”中“8的乘法口诀”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "8的乘法口诀：相同数位没有对齐",
+        "8的乘法口诀：进位、退位或约分步骤遗漏",
+        "8的乘法口诀：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_divide_7_9_3",
+      "unit_id": "multiply_divide_7_9",
+      "lesson_id": "multiply_divide_7_9_lesson_3",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "7-9的表内乘、除法",
+      "name": "9的乘法口诀",
+      "description": "围绕“7-9的表内乘、除法”中“9的乘法口诀”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "9的乘法口诀：相同数位没有对齐",
+        "9的乘法口诀：进位、退位或约分步骤遗漏",
+        "9的乘法口诀：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_divide_7_9_4",
+      "unit_id": "multiply_divide_7_9",
+      "lesson_id": "multiply_divide_7_9_lesson_4",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "7-9的表内乘、除法",
+      "name": "乘除混合应用",
+      "description": "围绕“7-9的表内乘、除法”中“乘除混合应用”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘除混合应用：没有先找清数量关系",
+        "乘除混合应用：只列式不写答语",
+        "乘除混合应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_1",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复习与关联",
+      "name": "表内乘除整理",
+      "description": "围绕“复习与关联”中“表内乘除整理”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "表内乘除整理：相同数位没有对齐",
+        "表内乘除整理：进位、退位或约分步骤遗漏",
+        "表内乘除整理：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_2",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复习与关联",
+      "name": "测量与分类综合",
+      "description": "围绕“复习与关联”中“测量与分类综合”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "测量与分类综合：知识点混在一起不分类",
+        "测量与分类综合：步骤顺序混乱",
+        "测量与分类综合：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "tour_guide_1",
+      "unit_id": "tour_guide",
+      "lesson_id": "tour_guide_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "校园小导游",
+      "name": "方向路线描述",
+      "description": "围绕“校园小导游”中“方向路线描述”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "方向路线描述：把图形名称或单位混淆",
+        "方向路线描述：周长、面积、体积公式用错",
+        "方向路线描述：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "tour_guide_2",
+      "unit_id": "tour_guide",
+      "lesson_id": "tour_guide_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "校园小导游",
+      "name": "生活中的乘除问题",
+      "description": "围绕“校园小导游”中“生活中的乘除问题”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "生活中的乘除问题：没有先找清数量关系",
+        "生活中的乘除问题：只列式不写答语",
+        "生活中的乘除问题：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "body_ruler_1",
+      "unit_id": "body_ruler",
+      "lesson_id": "body_ruler_lesson_1",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "身体上的尺子",
+      "name": "身体尺估测",
+      "description": "围绕“身体上的尺子”中“身体尺估测”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "身体尺估测：没有看清题目要求",
+        "身体尺估测：答语单位写错或漏写",
+        "身体尺估测：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "body_ruler_2",
+      "unit_id": "body_ruler",
+      "lesson_id": "body_ruler_lesson_2",
+      "grade": "二年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "身体上的尺子",
+      "name": "测量活动",
+      "description": "围绕“身体上的尺子”中“测量活动”这一知识点，生成符合二年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "测量活动：没有看清题目要求",
+        "测量活动：答语单位写错或漏写",
+        "测量活动：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "classification_1",
+      "question_type": "计算题",
+      "template": "围绕“按一个标准分类”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“按一个标准分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_1",
+      "question_type": "应用题",
+      "template": "围绕“按一个标准分类”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“按一个标准分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_1",
+      "question_type": "变式题",
+      "template": "围绕“按一个标准分类”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“按一个标准分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_2",
+      "question_type": "计算题",
+      "template": "围绕“按不同标准分类”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“按不同标准分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_2",
+      "question_type": "应用题",
+      "template": "围绕“按不同标准分类”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“按不同标准分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_2",
+      "question_type": "变式题",
+      "template": "围绕“按不同标准分类”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“按不同标准分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_3",
+      "question_type": "计算题",
+      "template": "围绕“整理数据”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“整理数据”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_3",
+      "question_type": "应用题",
+      "template": "围绕“整理数据”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“整理数据”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "classification_3",
+      "question_type": "变式题",
+      "template": "围绕“整理数据”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“整理数据”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_1",
+      "question_type": "计算题",
+      "template": "围绕“乘法的初步认识”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法的初步认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_1",
+      "question_type": "填空题",
+      "template": "围绕“乘法的初步认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘法的初步认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法的初步认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_1",
+      "question_type": "判断题",
+      "template": "围绕“乘法的初步认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法的初步认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_2",
+      "question_type": "计算题",
+      "template": "围绕“2-6的乘法口诀”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“2-6的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_2",
+      "question_type": "填空题",
+      "template": "围绕“2-6的乘法口诀”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“2-6的乘法口诀”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“2-6的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_2",
+      "question_type": "判断题",
+      "template": "围绕“2-6的乘法口诀”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“2-6的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_3",
+      "question_type": "计算题",
+      "template": "围绕“乘加乘减”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘加乘减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_3",
+      "question_type": "填空题",
+      "template": "围绕“乘加乘减”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘加乘减”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘加乘减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_3",
+      "question_type": "判断题",
+      "template": "围绕“乘加乘减”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘加乘减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_4",
+      "question_type": "应用题",
+      "template": "围绕“乘法应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_4",
+      "question_type": "填空题",
+      "template": "围绕“乘法应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘法应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_1_6_4",
+      "question_type": "变式题",
+      "template": "围绕“乘法应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_1",
+      "question_type": "计算题",
+      "template": "围绕“平均分”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平均分”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_1",
+      "question_type": "填空题",
+      "template": "围绕“平均分”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“平均分”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平均分”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_1",
+      "question_type": "判断题",
+      "template": "围绕“平均分”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平均分”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_2",
+      "question_type": "计算题",
+      "template": "围绕“除法的意义”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_2",
+      "question_type": "填空题",
+      "template": "围绕“除法的意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“除法的意义”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_2",
+      "question_type": "判断题",
+      "template": "围绕“除法的意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_3",
+      "question_type": "计算题",
+      "template": "围绕“用乘法口诀求商”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用乘法口诀求商”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_3",
+      "question_type": "填空题",
+      "template": "围绕“用乘法口诀求商”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“用乘法口诀求商”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用乘法口诀求商”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_3",
+      "question_type": "判断题",
+      "template": "围绕“用乘法口诀求商”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用乘法口诀求商”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_4",
+      "question_type": "应用题",
+      "template": "围绕“除法应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_4",
+      "question_type": "填空题",
+      "template": "围绕“除法应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“除法应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_1_6_4",
+      "question_type": "变式题",
+      "template": "围绕“除法应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_1",
+      "question_type": "填空题",
+      "template": "围绕“认识厘米”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“认识厘米”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识厘米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_1",
+      "question_type": "选择题",
+      "template": "围绕“认识厘米”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识厘米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_1",
+      "question_type": "判断题",
+      "template": "围绕“认识厘米”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识厘米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_2",
+      "question_type": "填空题",
+      "template": "围绕“认识米”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“认识米”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_2",
+      "question_type": "选择题",
+      "template": "围绕“认识米”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_2",
+      "question_type": "判断题",
+      "template": "围绕“认识米”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_3",
+      "question_type": "填空题",
+      "template": "围绕“长度估测”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“长度估测”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长度估测”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_3",
+      "question_type": "选择题",
+      "template": "围绕“长度估测”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长度估测”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_3",
+      "question_type": "判断题",
+      "template": "围绕“长度估测”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长度估测”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_4",
+      "question_type": "填空题",
+      "template": "围绕“长度单位换算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“长度单位换算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长度单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_4",
+      "question_type": "选择题",
+      "template": "围绕“长度单位换算”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长度单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_cm_m_4",
+      "question_type": "判断题",
+      "template": "围绕“长度单位换算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长度单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_1",
+      "question_type": "计算题",
+      "template": "围绕“7的乘法口诀”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“7的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_1",
+      "question_type": "填空题",
+      "template": "围绕“7的乘法口诀”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“7的乘法口诀”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“7的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_1",
+      "question_type": "判断题",
+      "template": "围绕“7的乘法口诀”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“7的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_2",
+      "question_type": "计算题",
+      "template": "围绕“8的乘法口诀”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“8的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_2",
+      "question_type": "填空题",
+      "template": "围绕“8的乘法口诀”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“8的乘法口诀”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“8的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_2",
+      "question_type": "判断题",
+      "template": "围绕“8的乘法口诀”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“8的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_3",
+      "question_type": "计算题",
+      "template": "围绕“9的乘法口诀”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“9的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_3",
+      "question_type": "填空题",
+      "template": "围绕“9的乘法口诀”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“9的乘法口诀”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“9的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_3",
+      "question_type": "判断题",
+      "template": "围绕“9的乘法口诀”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“9的乘法口诀”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_4",
+      "question_type": "应用题",
+      "template": "围绕“乘除混合应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“乘除混合应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_4",
+      "question_type": "填空题",
+      "template": "围绕“乘除混合应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘除混合应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘除混合应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_7_9_4",
+      "question_type": "变式题",
+      "template": "围绕“乘除混合应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“乘除混合应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "计算题",
+      "template": "围绕“表内乘除整理”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“表内乘除整理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "填空题",
+      "template": "围绕“表内乘除整理”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“表内乘除整理”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“表内乘除整理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "判断题",
+      "template": "围绕“表内乘除整理”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“表内乘除整理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "计算题",
+      "template": "围绕“测量与分类综合”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“测量与分类综合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "应用题",
+      "template": "围绕“测量与分类综合”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“测量与分类综合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "变式题",
+      "template": "围绕“测量与分类综合”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“测量与分类综合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "tour_guide_1",
+      "question_type": "填空题",
+      "template": "围绕“方向路线描述”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“方向路线描述”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“方向路线描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "tour_guide_1",
+      "question_type": "选择题",
+      "template": "围绕“方向路线描述”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“方向路线描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "tour_guide_1",
+      "question_type": "应用题",
+      "template": "围绕“方向路线描述”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“方向路线描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "tour_guide_2",
+      "question_type": "应用题",
+      "template": "围绕“生活中的乘除问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“生活中的乘除问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "tour_guide_2",
+      "question_type": "填空题",
+      "template": "围绕“生活中的乘除问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“生活中的乘除问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“生活中的乘除问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "tour_guide_2",
+      "question_type": "变式题",
+      "template": "围绕“生活中的乘除问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“生活中的乘除问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "body_ruler_1",
+      "question_type": "填空题",
+      "template": "围绕“身体尺估测”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“身体尺估测”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“身体尺估测”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "body_ruler_1",
+      "question_type": "选择题",
+      "template": "围绕“身体尺估测”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“身体尺估测”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "body_ruler_1",
+      "question_type": "判断题",
+      "template": "围绕“身体尺估测”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“身体尺估测”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "body_ruler_2",
+      "question_type": "填空题",
+      "template": "围绕“测量活动”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“测量活动”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“测量活动”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "body_ruler_2",
+      "question_type": "选择题",
+      "template": "围绕“测量活动”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“测量活动”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "body_ruler_2",
+      "question_type": "判断题",
+      "template": "围绕“测量活动”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“测量活动”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 2546,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 1388,
+      "slides": 254,
+      "practice": 654,
+      "knowledge": 20,
+      "textbook": 2,
+      "student_sheet": 104,
+      "other": 124
+    },
+    "top_terms": [
+      "活动二",
+      "活动一",
+      "活动三",
+      "探究1",
+      "探究2",
+      "探究3",
+      "解决问题",
+      "的问题",
+      "的乘法口诀",
+      "平均分",
+      "中指出",
+      "9的乘法口诀",
+      "用乘法口诀求商",
+      "厘米",
+      "做一做",
+      "迁移应用",
+      "5的乘法口诀",
+      "认识除法",
+      "用学习的知识解决做一做中",
+      "乘加",
+      "乘减",
+      "问题一",
+      "任务一",
+      "问题二",
+      "问题三",
+      "任务二",
+      "课时",
+      "计算",
+      "并说说口诀的特点",
+      "课程标准",
+      "6的乘法口诀",
+      "会读",
+      "知道",
+      "问题四",
+      "数与",
+      "代数",
+      "问题五",
+      "问题六",
+      "中的问题",
+      "求每份数的问题",
+      "7的乘法口诀",
+      "8的乘法口诀",
+      "除数",
+      "6的表内乘法",
+      "相同加数求和",
+      "4的乘法口诀",
+      "巩固与应用",
+      "除法",
+      "归纳",
+      "抽象"
+    ],
+    "top_headings": [
+      "3. 能用学习的知识解决做一做中的问题",
+      "2、3、4的乘法口诀",
+      "1、2、3的乘法口诀",
+      "《课程标准》",
+      "《 数学课程标准 》",
+      "2. 能编制出",
+      "《表内除法（一）》",
+      "《 1～6的表内乘法 》",
+      "《1～6的表内乘法》",
+      "2. 编制并熟练记忆",
+      "3. 掌握“乘加、乘减”运算顺序，正确计算相关算式；运用乘法知识解",
+      "4. 通过“观察游乐园场景、摆图形、编口诀”等活动，经历乘法意义的",
+      "5. 在解决实际问题中，学会分析数量关系，提升问题解决能力，构建数",
+      "6. 感受乘法口诀的简洁性与实用性，激发对数学运算的兴趣，体会数学",
+      "1.理解乘法的意义，掌握乘法算式的转化与读写，熟练编制并运用",
+      "2.运用乘法知识解决实际问题，准确区分“几个几相加”与“几和几相",
+      "1.深入理解乘法意义，突破“几个几”的表述混淆，灵活运用乘法解决",
+      "2.熟练记忆乘法口诀，尤其是易混淆口诀，理解口诀间的内在规律并实",
+      "1.生活情境导入，直观具象",
+      "2.活动驱动学习，自主建构",
+      "3.口诀分层递进，规律渗透",
+      "1、2、3、4、6 的口诀，遵循“由简到繁、由易到难”的认知规律",
+      "4.问题解决强化，方法多元",
+      "2.1《乘法的初步认识》",
+      "1. 能用连加分别算出",
+      "2. 能找出加法算式的共同点，并转化为乘法算式，",
+      "3. 能通过摆小棒、数樱桃，把相同加数的加法改写成乘法算式",
+      "2.2《乘法的意义及应用》",
+      "1. 能通过竖着看、横着看列出加法算式和相应的乘法算式",
+      "2. 能从结果、乘数位置对比，发现规律"
+    ]
+  }
+}

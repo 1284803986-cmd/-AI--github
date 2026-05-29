@@ -1,14 +1,20 @@
 import Taro from "@tarojs/taro";
 
 export const API_BASE = process.env.MINIAPP_API_BASE || "http://127.0.0.1:8787";
+export const AUTH_TOKEN_KEY = "authToken";
+export const AUTH_USER_KEY = "authUser";
 
 export async function request(path, method = "GET", data = undefined) {
   try {
+    const token = Taro.getStorageSync(AUTH_TOKEN_KEY);
     const response = await Taro.request({
       url: `${API_BASE}${path}`,
       method,
       data,
-      header: { "content-type": "application/json" }
+      header: {
+        "content-type": "application/json",
+        ...(token ? { Authorization: `Bearer ${token}` } : {})
+      }
     });
 
     if (response.statusCode < 200 || response.statusCode >= 300) {
@@ -18,6 +24,34 @@ export async function request(path, method = "GET", data = undefined) {
     return response.data;
   } catch (error) {
     throw new Error(error.message || "网络连接失败，请确认后端服务已启动");
+  }
+}
+
+export async function loginWithWechat(profile = {}) {
+  const loginResult = await Taro.login();
+  if (!loginResult.code) throw new Error("微信登录失败，请重试");
+  const result = await request("/api/auth/wechat-login", "POST", { code: loginResult.code, profile });
+  if (result.token) Taro.setStorageSync(AUTH_TOKEN_KEY, result.token);
+  if (result.user) Taro.setStorageSync(AUTH_USER_KEY, result.user);
+  return result;
+}
+
+export async function getCurrentUser() {
+  const result = await request("/api/auth/me");
+  if (result.user) Taro.setStorageSync(AUTH_USER_KEY, result.user);
+  if (!result.loggedIn) {
+    Taro.removeStorageSync(AUTH_TOKEN_KEY);
+    Taro.removeStorageSync(AUTH_USER_KEY);
+  }
+  return result;
+}
+
+export async function logout() {
+  try {
+    await request("/api/auth/logout", "POST", {});
+  } finally {
+    Taro.removeStorageSync(AUTH_TOKEN_KEY);
+    Taro.removeStorageSync(AUTH_USER_KEY);
   }
 }
 

@@ -1,0 +1,1807 @@
+{
+  "package_id": "g3_math_down_rj_2026",
+  "package_name": "三年级数学下册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "三年级",
+    "semester": "下册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g3_math_down_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\3下-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g3_math_down_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 2088 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "position_direction",
+      "name": "位置与方向",
+      "lessons": [
+        {
+          "id": "position_direction_lesson_1",
+          "name": "东南西北",
+          "knowledge_point_ids": [
+            "position_direction_1"
+          ]
+        },
+        {
+          "id": "position_direction_lesson_2",
+          "name": "东北东南西北方向",
+          "knowledge_point_ids": [
+            "position_direction_2"
+          ]
+        },
+        {
+          "id": "position_direction_lesson_3",
+          "name": "路线描述",
+          "knowledge_point_ids": [
+            "position_direction_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "division_multi_digit",
+      "name": "除数是一位数的除法",
+      "lessons": [
+        {
+          "id": "division_multi_digit_lesson_1",
+          "name": "口算除法",
+          "knowledge_point_ids": [
+            "division_multi_digit_1"
+          ]
+        },
+        {
+          "id": "division_multi_digit_lesson_2",
+          "name": "笔算除法",
+          "knowledge_point_ids": [
+            "division_multi_digit_2"
+          ]
+        },
+        {
+          "id": "division_multi_digit_lesson_3",
+          "name": "有余数除法",
+          "knowledge_point_ids": [
+            "division_multi_digit_3"
+          ]
+        },
+        {
+          "id": "division_multi_digit_lesson_4",
+          "name": "除法验算",
+          "knowledge_point_ids": [
+            "division_multi_digit_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "复式统计表",
+      "lessons": [
+        {
+          "id": "statistics_lesson_1",
+          "name": "读取统计表",
+          "knowledge_point_ids": [
+            "statistics_1"
+          ]
+        },
+        {
+          "id": "statistics_lesson_2",
+          "name": "整理数据",
+          "knowledge_point_ids": [
+            "statistics_2"
+          ]
+        },
+        {
+          "id": "statistics_lesson_3",
+          "name": "比较与分析",
+          "knowledge_point_ids": [
+            "statistics_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multiply_two_digit",
+      "name": "两位数乘两位数",
+      "lessons": [
+        {
+          "id": "multiply_two_digit_lesson_1",
+          "name": "口算乘法",
+          "knowledge_point_ids": [
+            "multiply_two_digit_1"
+          ]
+        },
+        {
+          "id": "multiply_two_digit_lesson_2",
+          "name": "笔算乘法",
+          "knowledge_point_ids": [
+            "multiply_two_digit_2"
+          ]
+        },
+        {
+          "id": "multiply_two_digit_lesson_3",
+          "name": "乘法估算",
+          "knowledge_point_ids": [
+            "multiply_two_digit_3"
+          ]
+        },
+        {
+          "id": "multiply_two_digit_lesson_4",
+          "name": "解决乘法问题",
+          "knowledge_point_ids": [
+            "multiply_two_digit_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "area",
+      "name": "面积",
+      "lessons": [
+        {
+          "id": "area_lesson_1",
+          "name": "面积的认识",
+          "knowledge_point_ids": [
+            "area_1"
+          ]
+        },
+        {
+          "id": "area_lesson_2",
+          "name": "面积单位",
+          "knowledge_point_ids": [
+            "area_2"
+          ]
+        },
+        {
+          "id": "area_lesson_3",
+          "name": "长方形面积",
+          "knowledge_point_ids": [
+            "area_3"
+          ]
+        },
+        {
+          "id": "area_lesson_4",
+          "name": "正方形面积",
+          "knowledge_point_ids": [
+            "area_4"
+          ]
+        },
+        {
+          "id": "area_lesson_5",
+          "name": "面积单位换算",
+          "knowledge_point_ids": [
+            "area_5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "year_month_day",
+      "name": "年、月、日",
+      "lessons": [
+        {
+          "id": "year_month_day_lesson_1",
+          "name": "年月日认识",
+          "knowledge_point_ids": [
+            "year_month_day_1"
+          ]
+        },
+        {
+          "id": "year_month_day_lesson_2",
+          "name": "平年闰年",
+          "knowledge_point_ids": [
+            "year_month_day_2"
+          ]
+        },
+        {
+          "id": "year_month_day_lesson_3",
+          "name": "24时计时法",
+          "knowledge_point_ids": [
+            "year_month_day_3"
+          ]
+        },
+        {
+          "id": "year_month_day_lesson_4",
+          "name": "经过天数",
+          "knowledge_point_ids": [
+            "year_month_day_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decimal_intro",
+      "name": "小数的初步认识",
+      "lessons": [
+        {
+          "id": "decimal_intro_lesson_1",
+          "name": "认识小数",
+          "knowledge_point_ids": [
+            "decimal_intro_1"
+          ]
+        },
+        {
+          "id": "decimal_intro_lesson_2",
+          "name": "小数大小比较",
+          "knowledge_point_ids": [
+            "decimal_intro_2"
+          ]
+        },
+        {
+          "id": "decimal_intro_lesson_3",
+          "name": "简单小数加减",
+          "knowledge_point_ids": [
+            "decimal_intro_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--搭配（二）",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "排列组合",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "列表解决问题",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "position_direction_1",
+      "unit_id": "position_direction",
+      "lesson_id": "position_direction_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置与方向",
+      "name": "东南西北",
+      "description": "围绕“位置与方向”中“东南西北”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "东南西北：把图形名称或单位混淆",
+        "东南西北：周长、面积、体积公式用错",
+        "东南西北：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_direction_2",
+      "unit_id": "position_direction",
+      "lesson_id": "position_direction_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置与方向",
+      "name": "东北东南西北方向",
+      "description": "围绕“位置与方向”中“东北东南西北方向”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "东北东南西北方向：把图形名称或单位混淆",
+        "东北东南西北方向：周长、面积、体积公式用错",
+        "东北东南西北方向：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_direction_3",
+      "unit_id": "position_direction",
+      "lesson_id": "position_direction_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置与方向",
+      "name": "路线描述",
+      "description": "围绕“位置与方向”中“路线描述”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "路线描述：把图形名称或单位混淆",
+        "路线描述：周长、面积、体积公式用错",
+        "路线描述：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_multi_digit_1",
+      "unit_id": "division_multi_digit",
+      "lesson_id": "division_multi_digit_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是一位数的除法",
+      "name": "口算除法",
+      "description": "围绕“除数是一位数的除法”中“口算除法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "口算除法：相同数位没有对齐",
+        "口算除法：进位、退位或约分步骤遗漏",
+        "口算除法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_multi_digit_2",
+      "unit_id": "division_multi_digit",
+      "lesson_id": "division_multi_digit_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是一位数的除法",
+      "name": "笔算除法",
+      "description": "围绕“除数是一位数的除法”中“笔算除法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "笔算除法：相同数位没有对齐",
+        "笔算除法：进位、退位或约分步骤遗漏",
+        "笔算除法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_multi_digit_3",
+      "unit_id": "division_multi_digit",
+      "lesson_id": "division_multi_digit_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是一位数的除法",
+      "name": "有余数除法",
+      "description": "围绕“除数是一位数的除法”中“有余数除法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "有余数除法：相同数位没有对齐",
+        "有余数除法：进位、退位或约分步骤遗漏",
+        "有余数除法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_multi_digit_4",
+      "unit_id": "division_multi_digit",
+      "lesson_id": "division_multi_digit_lesson_4",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是一位数的除法",
+      "name": "除法验算",
+      "description": "围绕“除数是一位数的除法”中“除法验算”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "除法验算：相同数位没有对齐",
+        "除法验算：进位、退位或约分步骤遗漏",
+        "除法验算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_1",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复式统计表",
+      "name": "读取统计表",
+      "description": "围绕“复式统计表”中“读取统计表”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "读取统计表：没有看清题目要求",
+        "读取统计表：答语单位写错或漏写",
+        "读取统计表：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_2",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复式统计表",
+      "name": "整理数据",
+      "description": "围绕“复式统计表”中“整理数据”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "整理数据：知识点混在一起不分类",
+        "整理数据：步骤顺序混乱",
+        "整理数据：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_3",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复式统计表",
+      "name": "比较与分析",
+      "description": "围绕“复式统计表”中“比较与分析”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "比较与分析：没有看清题目要求",
+        "比较与分析：答语单位写错或漏写",
+        "比较与分析：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_two_digit_1",
+      "unit_id": "multiply_two_digit",
+      "lesson_id": "multiply_two_digit_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "两位数乘两位数",
+      "name": "口算乘法",
+      "description": "围绕“两位数乘两位数”中“口算乘法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "口算乘法：相同数位没有对齐",
+        "口算乘法：进位、退位或约分步骤遗漏",
+        "口算乘法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_two_digit_2",
+      "unit_id": "multiply_two_digit",
+      "lesson_id": "multiply_two_digit_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "两位数乘两位数",
+      "name": "笔算乘法",
+      "description": "围绕“两位数乘两位数”中“笔算乘法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "笔算乘法：相同数位没有对齐",
+        "笔算乘法：进位、退位或约分步骤遗漏",
+        "笔算乘法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_two_digit_3",
+      "unit_id": "multiply_two_digit",
+      "lesson_id": "multiply_two_digit_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "两位数乘两位数",
+      "name": "乘法估算",
+      "description": "围绕“两位数乘两位数”中“乘法估算”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘法估算：相同数位没有对齐",
+        "乘法估算：进位、退位或约分步骤遗漏",
+        "乘法估算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_two_digit_4",
+      "unit_id": "multiply_two_digit",
+      "lesson_id": "multiply_two_digit_lesson_4",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "两位数乘两位数",
+      "name": "解决乘法问题",
+      "description": "围绕“两位数乘两位数”中“解决乘法问题”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "解决乘法问题：没有先找清数量关系",
+        "解决乘法问题：只列式不写答语",
+        "解决乘法问题：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "area_1",
+      "unit_id": "area",
+      "lesson_id": "area_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "面积",
+      "name": "面积的认识",
+      "description": "围绕“面积”中“面积的认识”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "面积的认识：把图形名称或单位混淆",
+        "面积的认识：周长、面积、体积公式用错",
+        "面积的认识：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "area_2",
+      "unit_id": "area",
+      "lesson_id": "area_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "面积",
+      "name": "面积单位",
+      "description": "围绕“面积”中“面积单位”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "面积单位：把图形名称或单位混淆",
+        "面积单位：周长、面积、体积公式用错",
+        "面积单位：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "area_3",
+      "unit_id": "area",
+      "lesson_id": "area_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "面积",
+      "name": "长方形面积",
+      "description": "围绕“面积”中“长方形面积”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "长方形面积：把图形名称或单位混淆",
+        "长方形面积：周长、面积、体积公式用错",
+        "长方形面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "area_4",
+      "unit_id": "area",
+      "lesson_id": "area_lesson_4",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "面积",
+      "name": "正方形面积",
+      "description": "围绕“面积”中“正方形面积”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "正方形面积：把图形名称或单位混淆",
+        "正方形面积：周长、面积、体积公式用错",
+        "正方形面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "area_5",
+      "unit_id": "area",
+      "lesson_id": "area_lesson_5",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "面积",
+      "name": "面积单位换算",
+      "description": "围绕“面积”中“面积单位换算”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "面积单位换算：把图形名称或单位混淆",
+        "面积单位换算：周长、面积、体积公式用错",
+        "面积单位换算：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "year_month_day_1",
+      "unit_id": "year_month_day",
+      "lesson_id": "year_month_day_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "年、月、日",
+      "name": "年月日认识",
+      "description": "围绕“年、月、日”中“年月日认识”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "年月日认识：没有看清题目要求",
+        "年月日认识：答语单位写错或漏写",
+        "年月日认识：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "year_month_day_2",
+      "unit_id": "year_month_day",
+      "lesson_id": "year_month_day_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "年、月、日",
+      "name": "平年闰年",
+      "description": "围绕“年、月、日”中“平年闰年”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "平年闰年：没有看清题目要求",
+        "平年闰年：答语单位写错或漏写",
+        "平年闰年：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "year_month_day_3",
+      "unit_id": "year_month_day",
+      "lesson_id": "year_month_day_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "年、月、日",
+      "name": "24时计时法",
+      "description": "围绕“年、月、日”中“24时计时法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "24时计时法：没有看清题目要求",
+        "24时计时法：答语单位写错或漏写",
+        "24时计时法：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "year_month_day_4",
+      "unit_id": "year_month_day",
+      "lesson_id": "year_month_day_lesson_4",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "年、月、日",
+      "name": "经过天数",
+      "description": "围绕“年、月、日”中“经过天数”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "经过天数：没有看清题目要求",
+        "经过天数：答语单位写错或漏写",
+        "经过天数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_intro_1",
+      "unit_id": "decimal_intro",
+      "lesson_id": "decimal_intro_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的初步认识",
+      "name": "认识小数",
+      "description": "围绕“小数的初步认识”中“认识小数”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "认识小数：相同数位没有对齐",
+        "认识小数：进位、退位或约分步骤遗漏",
+        "认识小数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_intro_2",
+      "unit_id": "decimal_intro",
+      "lesson_id": "decimal_intro_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的初步认识",
+      "name": "小数大小比较",
+      "description": "围绕“小数的初步认识”中“小数大小比较”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数大小比较：相同数位没有对齐",
+        "小数大小比较：进位、退位或约分步骤遗漏",
+        "小数大小比较：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_intro_3",
+      "unit_id": "decimal_intro",
+      "lesson_id": "decimal_intro_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的初步认识",
+      "name": "简单小数加减",
+      "description": "围绕“小数的初步认识”中“简单小数加减”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "简单小数加减：相同数位没有对齐",
+        "简单小数加减：进位、退位或约分步骤遗漏",
+        "简单小数加减：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--搭配（二）",
+      "name": "排列组合",
+      "description": "围绕“数学广角--搭配（二）”中“排列组合”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "排列组合：把图形名称或单位混淆",
+        "排列组合：周长、面积、体积公式用错",
+        "排列组合：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--搭配（二）",
+      "name": "列表解决问题",
+      "description": "围绕“数学广角--搭配（二）”中“列表解决问题”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "列表解决问题：把图形名称或单位混淆",
+        "列表解决问题：周长、面积、体积公式用错",
+        "列表解决问题：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "position_direction_1",
+      "question_type": "填空题",
+      "template": "围绕“东南西北”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“东南西北”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“东南西北”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_1",
+      "question_type": "选择题",
+      "template": "围绕“东南西北”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“东南西北”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_1",
+      "question_type": "应用题",
+      "template": "围绕“东南西北”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“东南西北”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_2",
+      "question_type": "填空题",
+      "template": "围绕“东北东南西北方向”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“东北东南西北方向”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“东北东南西北方向”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_2",
+      "question_type": "选择题",
+      "template": "围绕“东北东南西北方向”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“东北东南西北方向”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_2",
+      "question_type": "应用题",
+      "template": "围绕“东北东南西北方向”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“东北东南西北方向”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_3",
+      "question_type": "填空题",
+      "template": "围绕“路线描述”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“路线描述”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“路线描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_3",
+      "question_type": "选择题",
+      "template": "围绕“路线描述”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“路线描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_3",
+      "question_type": "应用题",
+      "template": "围绕“路线描述”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“路线描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_1",
+      "question_type": "计算题",
+      "template": "围绕“口算除法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_1",
+      "question_type": "填空题",
+      "template": "围绕“口算除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“口算除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_1",
+      "question_type": "判断题",
+      "template": "围绕“口算除法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_2",
+      "question_type": "计算题",
+      "template": "围绕“笔算除法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_2",
+      "question_type": "填空题",
+      "template": "围绕“笔算除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“笔算除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_2",
+      "question_type": "判断题",
+      "template": "围绕“笔算除法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_3",
+      "question_type": "计算题",
+      "template": "围绕“有余数除法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有余数除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_3",
+      "question_type": "填空题",
+      "template": "围绕“有余数除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“有余数除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有余数除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_3",
+      "question_type": "判断题",
+      "template": "围绕“有余数除法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有余数除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_4",
+      "question_type": "计算题",
+      "template": "围绕“除法验算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法验算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_4",
+      "question_type": "填空题",
+      "template": "围绕“除法验算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“除法验算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法验算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_multi_digit_4",
+      "question_type": "判断题",
+      "template": "围绕“除法验算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法验算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "填空题",
+      "template": "围绕“读取统计表”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“读取统计表”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“读取统计表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "选择题",
+      "template": "围绕“读取统计表”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“读取统计表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "判断题",
+      "template": "围绕“读取统计表”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“读取统计表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "计算题",
+      "template": "围绕“整理数据”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“整理数据”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "应用题",
+      "template": "围绕“整理数据”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“整理数据”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "变式题",
+      "template": "围绕“整理数据”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“整理数据”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "填空题",
+      "template": "围绕“比较与分析”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“比较与分析”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比较与分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "选择题",
+      "template": "围绕“比较与分析”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比较与分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "判断题",
+      "template": "围绕“比较与分析”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比较与分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_1",
+      "question_type": "计算题",
+      "template": "围绕“口算乘法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_1",
+      "question_type": "填空题",
+      "template": "围绕“口算乘法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“口算乘法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_1",
+      "question_type": "判断题",
+      "template": "围绕“口算乘法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_2",
+      "question_type": "计算题",
+      "template": "围绕“笔算乘法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_2",
+      "question_type": "填空题",
+      "template": "围绕“笔算乘法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“笔算乘法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_2",
+      "question_type": "判断题",
+      "template": "围绕“笔算乘法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_3",
+      "question_type": "计算题",
+      "template": "围绕“乘法估算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_3",
+      "question_type": "填空题",
+      "template": "围绕“乘法估算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘法估算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_3",
+      "question_type": "判断题",
+      "template": "围绕“乘法估算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_4",
+      "question_type": "应用题",
+      "template": "围绕“解决乘法问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“解决乘法问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_4",
+      "question_type": "填空题",
+      "template": "围绕“解决乘法问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“解决乘法问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解决乘法问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_two_digit_4",
+      "question_type": "变式题",
+      "template": "围绕“解决乘法问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“解决乘法问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_1",
+      "question_type": "填空题",
+      "template": "围绕“面积的认识”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“面积的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_1",
+      "question_type": "选择题",
+      "template": "围绕“面积的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_1",
+      "question_type": "应用题",
+      "template": "围绕“面积的认识”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“面积的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_2",
+      "question_type": "填空题",
+      "template": "围绕“面积单位”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“面积单位”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_2",
+      "question_type": "选择题",
+      "template": "围绕“面积单位”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_2",
+      "question_type": "应用题",
+      "template": "围绕“面积单位”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“面积单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_3",
+      "question_type": "填空题",
+      "template": "围绕“长方形面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“长方形面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_3",
+      "question_type": "选择题",
+      "template": "围绕“长方形面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_3",
+      "question_type": "应用题",
+      "template": "围绕“长方形面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“长方形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_4",
+      "question_type": "填空题",
+      "template": "围绕“正方形面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“正方形面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正方形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_4",
+      "question_type": "选择题",
+      "template": "围绕“正方形面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正方形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_4",
+      "question_type": "应用题",
+      "template": "围绕“正方形面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“正方形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_5",
+      "question_type": "填空题",
+      "template": "围绕“面积单位换算”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“面积单位换算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_5",
+      "question_type": "选择题",
+      "template": "围绕“面积单位换算”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "area_5",
+      "question_type": "应用题",
+      "template": "围绕“面积单位换算”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“面积单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_1",
+      "question_type": "填空题",
+      "template": "围绕“年月日认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“年月日认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“年月日认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_1",
+      "question_type": "选择题",
+      "template": "围绕“年月日认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“年月日认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_1",
+      "question_type": "判断题",
+      "template": "围绕“年月日认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“年月日认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_2",
+      "question_type": "填空题",
+      "template": "围绕“平年闰年”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“平年闰年”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平年闰年”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_2",
+      "question_type": "选择题",
+      "template": "围绕“平年闰年”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平年闰年”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_2",
+      "question_type": "判断题",
+      "template": "围绕“平年闰年”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平年闰年”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_3",
+      "question_type": "填空题",
+      "template": "围绕“24时计时法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“24时计时法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“24时计时法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_3",
+      "question_type": "选择题",
+      "template": "围绕“24时计时法”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“24时计时法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_3",
+      "question_type": "判断题",
+      "template": "围绕“24时计时法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“24时计时法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_4",
+      "question_type": "填空题",
+      "template": "围绕“经过天数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“经过天数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过天数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_4",
+      "question_type": "选择题",
+      "template": "围绕“经过天数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过天数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "year_month_day_4",
+      "question_type": "判断题",
+      "template": "围绕“经过天数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过天数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_1",
+      "question_type": "计算题",
+      "template": "围绕“认识小数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_1",
+      "question_type": "填空题",
+      "template": "围绕“认识小数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“认识小数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_1",
+      "question_type": "判断题",
+      "template": "围绕“认识小数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_2",
+      "question_type": "计算题",
+      "template": "围绕“小数大小比较”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_2",
+      "question_type": "填空题",
+      "template": "围绕“小数大小比较”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数大小比较”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_2",
+      "question_type": "判断题",
+      "template": "围绕“小数大小比较”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_3",
+      "question_type": "计算题",
+      "template": "围绕“简单小数加减”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单小数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_3",
+      "question_type": "填空题",
+      "template": "围绕“简单小数加减”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“简单小数加减”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单小数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_intro_3",
+      "question_type": "判断题",
+      "template": "围绕“简单小数加减”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单小数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“排列组合”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“排列组合”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“排列组合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“排列组合”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“排列组合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“排列组合”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“排列组合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“列表解决问题”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“列表解决问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“列表解决问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“列表解决问题”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“列表解决问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“列表解决问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“列表解决问题”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 2088,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 1096,
+      "slides": 76,
+      "practice": 646,
+      "knowledge": 54,
+      "textbook": 4,
+      "student_sheet": 58,
+      "other": 154
+    },
+    "top_terms": [
+      "预设",
+      "提问",
+      "教师活动",
+      "学生活动",
+      "设计意图",
+      "二次备课",
+      "厘米",
+      "详解",
+      "平方分米",
+      "平方厘米",
+      "边长",
+      "难点",
+      "平方米",
+      "分米",
+      "重点",
+      "四连方",
+      "面积",
+      "教学准备",
+      "周长",
+      "做一做",
+      "学情分析",
+      "核心素养目标",
+      "情境与问题",
+      "知识与技能",
+      "思维与表达",
+      "交流与反思",
+      "强调",
+      "课件",
+      "板书设计",
+      "教学环节四",
+      "课堂小结",
+      "课时教学设计",
+      "课题",
+      "课型",
+      "新授课",
+      "课时",
+      "一课时",
+      "授课时间",
+      "教材分析",
+      "学习重点难点",
+      "学习活动设计",
+      "教学环节一",
+      "教学环节二",
+      "教学环节三",
+      "作业设计",
+      "基础性作业",
+      "提升性作业",
+      "拓展性作业",
+      "教学反思与改进",
+      "成功之处"
+    ],
+    "top_headings": [
+      "1.教材分析",
+      "2.学情分析",
+      "3.核心素养目标",
+      "4.学习重点难点",
+      "5.教学准备",
+      "6.学习活动设计",
+      "7.作业设计",
+      "8.板书设计",
+      "9.教学反思与改进",
+      "1. 提问：“学习完本节课，你有什么收获？”",
+      "1. 提问：通过本节课的学习，你有什么收获？",
+      "1. 积极发言分享收获",
+      "1.45",
+      "1. 提问：“通过本节课的学习，你有什么收获？”",
+      "3.在解决实际问题后，能反思解题过程的合理性，对比不同解法的优劣",
+      "2. 引导学生从知识、方法、经验等方面进行总结",
+      "1. 出示本节课的学习目标",
+      "《村居》",
+      "《猫和老鼠》",
+      "《魔豆传奇》",
+      "1. 思考教师提出的问题",
+      "2. 引导学生回顾",
+      "第2单元 除数是一位数的除法",
+      "《江雪》",
+      "1. 独立完成填空",
+      "2. 汇报答案",
+      "第4单元 两位数乘两位数",
+      "《梅花》",
+      "1. 观察情境图，理解题意",
+      "1. 阅读情境，理解题意"
+    ]
+  }
+}

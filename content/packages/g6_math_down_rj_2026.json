@@ -1,0 +1,1620 @@
+{
+  "package_id": "g6_math_down_rj_2026",
+  "package_name": "六年级数学下册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "六年级",
+    "semester": "下册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g6_math_down_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\6下-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g6_math_down_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1210 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "negative_numbers",
+      "name": "负数",
+      "lessons": [
+        {
+          "id": "negative_numbers_lesson_1",
+          "name": "负数的意义",
+          "knowledge_point_ids": [
+            "negative_numbers_1"
+          ]
+        },
+        {
+          "id": "negative_numbers_lesson_2",
+          "name": "正负数表示相反量",
+          "knowledge_point_ids": [
+            "negative_numbers_2"
+          ]
+        },
+        {
+          "id": "negative_numbers_lesson_3",
+          "name": "数轴上的负数",
+          "knowledge_point_ids": [
+            "negative_numbers_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "percent_two",
+      "name": "百分数（二）",
+      "lessons": [
+        {
+          "id": "percent_two_lesson_1",
+          "name": "折扣",
+          "knowledge_point_ids": [
+            "percent_two_1"
+          ]
+        },
+        {
+          "id": "percent_two_lesson_2",
+          "name": "成数",
+          "knowledge_point_ids": [
+            "percent_two_2"
+          ]
+        },
+        {
+          "id": "percent_two_lesson_3",
+          "name": "税率",
+          "knowledge_point_ids": [
+            "percent_two_3"
+          ]
+        },
+        {
+          "id": "percent_two_lesson_4",
+          "name": "利率",
+          "knowledge_point_ids": [
+            "percent_two_4"
+          ]
+        },
+        {
+          "id": "percent_two_lesson_5",
+          "name": "百分数应用",
+          "knowledge_point_ids": [
+            "percent_two_5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cylinder_cone",
+      "name": "圆柱与圆锥",
+      "lessons": [
+        {
+          "id": "cylinder_cone_lesson_1",
+          "name": "圆柱的认识",
+          "knowledge_point_ids": [
+            "cylinder_cone_1"
+          ]
+        },
+        {
+          "id": "cylinder_cone_lesson_2",
+          "name": "圆柱表面积",
+          "knowledge_point_ids": [
+            "cylinder_cone_2"
+          ]
+        },
+        {
+          "id": "cylinder_cone_lesson_3",
+          "name": "圆柱体积",
+          "knowledge_point_ids": [
+            "cylinder_cone_3"
+          ]
+        },
+        {
+          "id": "cylinder_cone_lesson_4",
+          "name": "圆锥体积",
+          "knowledge_point_ids": [
+            "cylinder_cone_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "proportion",
+      "name": "比例",
+      "lessons": [
+        {
+          "id": "proportion_lesson_1",
+          "name": "比例的意义和基本性质",
+          "knowledge_point_ids": [
+            "proportion_1"
+          ]
+        },
+        {
+          "id": "proportion_lesson_2",
+          "name": "解比例",
+          "knowledge_point_ids": [
+            "proportion_2"
+          ]
+        },
+        {
+          "id": "proportion_lesson_3",
+          "name": "正比例",
+          "knowledge_point_ids": [
+            "proportion_3"
+          ]
+        },
+        {
+          "id": "proportion_lesson_4",
+          "name": "反比例",
+          "knowledge_point_ids": [
+            "proportion_4"
+          ]
+        },
+        {
+          "id": "proportion_lesson_5",
+          "name": "比例尺",
+          "knowledge_point_ids": [
+            "proportion_5"
+          ]
+        },
+        {
+          "id": "proportion_lesson_6",
+          "name": "图形放大缩小",
+          "knowledge_point_ids": [
+            "proportion_6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--鸽巢问题",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "抽屉原理",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "最不利情况",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_3",
+          "name": "鸽巢应用",
+          "knowledge_point_ids": [
+            "math_wide_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "name": "整理和复习",
+      "lessons": [
+        {
+          "id": "review_lesson_1",
+          "name": "数与代数",
+          "knowledge_point_ids": [
+            "review_1"
+          ]
+        },
+        {
+          "id": "review_lesson_2",
+          "name": "图形与几何",
+          "knowledge_point_ids": [
+            "review_2"
+          ]
+        },
+        {
+          "id": "review_lesson_3",
+          "name": "统计与概率",
+          "knowledge_point_ids": [
+            "review_3"
+          ]
+        },
+        {
+          "id": "review_lesson_4",
+          "name": "综合与实践",
+          "knowledge_point_ids": [
+            "review_4"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "negative_numbers_1",
+      "unit_id": "negative_numbers",
+      "lesson_id": "negative_numbers_lesson_1",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "负数",
+      "name": "负数的意义",
+      "description": "围绕“负数”中“负数的意义”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "负数的意义：没有看清题目要求",
+        "负数的意义：答语单位写错或漏写",
+        "负数的意义：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "negative_numbers_2",
+      "unit_id": "negative_numbers",
+      "lesson_id": "negative_numbers_lesson_2",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "负数",
+      "name": "正负数表示相反量",
+      "description": "围绕“负数”中“正负数表示相反量”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "正负数表示相反量：没有看清题目要求",
+        "正负数表示相反量：答语单位写错或漏写",
+        "正负数表示相反量：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "negative_numbers_3",
+      "unit_id": "negative_numbers",
+      "lesson_id": "negative_numbers_lesson_3",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "负数",
+      "name": "数轴上的负数",
+      "description": "围绕“负数”中“数轴上的负数”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "数轴上的负数：没有看清题目要求",
+        "数轴上的负数：答语单位写错或漏写",
+        "数轴上的负数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_two_1",
+      "unit_id": "percent_two",
+      "lesson_id": "percent_two_lesson_1",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（二）",
+      "name": "折扣",
+      "description": "围绕“百分数（二）”中“折扣”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "折扣：相同数位没有对齐",
+        "折扣：进位、退位或约分步骤遗漏",
+        "折扣：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_two_2",
+      "unit_id": "percent_two",
+      "lesson_id": "percent_two_lesson_2",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（二）",
+      "name": "成数",
+      "description": "围绕“百分数（二）”中“成数”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "成数：相同数位没有对齐",
+        "成数：进位、退位或约分步骤遗漏",
+        "成数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_two_3",
+      "unit_id": "percent_two",
+      "lesson_id": "percent_two_lesson_3",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（二）",
+      "name": "税率",
+      "description": "围绕“百分数（二）”中“税率”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "税率：相同数位没有对齐",
+        "税率：进位、退位或约分步骤遗漏",
+        "税率：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_two_4",
+      "unit_id": "percent_two",
+      "lesson_id": "percent_two_lesson_4",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（二）",
+      "name": "利率",
+      "description": "围绕“百分数（二）”中“利率”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "利率：相同数位没有对齐",
+        "利率：进位、退位或约分步骤遗漏",
+        "利率：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_two_5",
+      "unit_id": "percent_two",
+      "lesson_id": "percent_two_lesson_5",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（二）",
+      "name": "百分数应用",
+      "description": "围绕“百分数（二）”中“百分数应用”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "百分数应用：没有先找清数量关系",
+        "百分数应用：只列式不写答语",
+        "百分数应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cylinder_cone_1",
+      "unit_id": "cylinder_cone",
+      "lesson_id": "cylinder_cone_lesson_1",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆柱与圆锥",
+      "name": "圆柱的认识",
+      "description": "围绕“圆柱与圆锥”中“圆柱的认识”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "圆柱的认识：把图形名称或单位混淆",
+        "圆柱的认识：周长、面积、体积公式用错",
+        "圆柱的认识：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cylinder_cone_2",
+      "unit_id": "cylinder_cone",
+      "lesson_id": "cylinder_cone_lesson_2",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆柱与圆锥",
+      "name": "圆柱表面积",
+      "description": "围绕“圆柱与圆锥”中“圆柱表面积”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "圆柱表面积：把图形名称或单位混淆",
+        "圆柱表面积：周长、面积、体积公式用错",
+        "圆柱表面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cylinder_cone_3",
+      "unit_id": "cylinder_cone",
+      "lesson_id": "cylinder_cone_lesson_3",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆柱与圆锥",
+      "name": "圆柱体积",
+      "description": "围绕“圆柱与圆锥”中“圆柱体积”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "圆柱体积：把图形名称或单位混淆",
+        "圆柱体积：周长、面积、体积公式用错",
+        "圆柱体积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cylinder_cone_4",
+      "unit_id": "cylinder_cone",
+      "lesson_id": "cylinder_cone_lesson_4",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆柱与圆锥",
+      "name": "圆锥体积",
+      "description": "围绕“圆柱与圆锥”中“圆锥体积”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "圆锥体积：把图形名称或单位混淆",
+        "圆锥体积：周长、面积、体积公式用错",
+        "圆锥体积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "proportion_1",
+      "unit_id": "proportion",
+      "lesson_id": "proportion_lesson_1",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比例",
+      "name": "比例的意义和基本性质",
+      "description": "围绕“比例”中“比例的意义和基本性质”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "比例的意义和基本性质：相同数位没有对齐",
+        "比例的意义和基本性质：进位、退位或约分步骤遗漏",
+        "比例的意义和基本性质：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "proportion_2",
+      "unit_id": "proportion",
+      "lesson_id": "proportion_lesson_2",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比例",
+      "name": "解比例",
+      "description": "围绕“比例”中“解比例”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "解比例：相同数位没有对齐",
+        "解比例：进位、退位或约分步骤遗漏",
+        "解比例：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "proportion_3",
+      "unit_id": "proportion",
+      "lesson_id": "proportion_lesson_3",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比例",
+      "name": "正比例",
+      "description": "围绕“比例”中“正比例”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "正比例：相同数位没有对齐",
+        "正比例：进位、退位或约分步骤遗漏",
+        "正比例：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "proportion_4",
+      "unit_id": "proportion",
+      "lesson_id": "proportion_lesson_4",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比例",
+      "name": "反比例",
+      "description": "围绕“比例”中“反比例”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "反比例：相同数位没有对齐",
+        "反比例：进位、退位或约分步骤遗漏",
+        "反比例：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "proportion_5",
+      "unit_id": "proportion",
+      "lesson_id": "proportion_lesson_5",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比例",
+      "name": "比例尺",
+      "description": "围绕“比例”中“比例尺”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "比例尺：相同数位没有对齐",
+        "比例尺：进位、退位或约分步骤遗漏",
+        "比例尺：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "proportion_6",
+      "unit_id": "proportion",
+      "lesson_id": "proportion_lesson_6",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比例",
+      "name": "图形放大缩小",
+      "description": "围绕“比例”中“图形放大缩小”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "图形放大缩小：把图形名称或单位混淆",
+        "图形放大缩小：周长、面积、体积公式用错",
+        "图形放大缩小：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--鸽巢问题",
+      "name": "抽屉原理",
+      "description": "围绕“数学广角--鸽巢问题”中“抽屉原理”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "抽屉原理：把图形名称或单位混淆",
+        "抽屉原理：周长、面积、体积公式用错",
+        "抽屉原理：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--鸽巢问题",
+      "name": "最不利情况",
+      "description": "围绕“数学广角--鸽巢问题”中“最不利情况”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "最不利情况：把图形名称或单位混淆",
+        "最不利情况：周长、面积、体积公式用错",
+        "最不利情况：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_3",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_3",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--鸽巢问题",
+      "name": "鸽巢应用",
+      "description": "围绕“数学广角--鸽巢问题”中“鸽巢应用”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "鸽巢应用：把图形名称或单位混淆",
+        "鸽巢应用：周长、面积、体积公式用错",
+        "鸽巢应用：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_1",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_1",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "整理和复习",
+      "name": "数与代数",
+      "description": "围绕“整理和复习”中“数与代数”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "数与代数：知识点混在一起不分类",
+        "数与代数：步骤顺序混乱",
+        "数与代数：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_2",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_2",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "整理和复习",
+      "name": "图形与几何",
+      "description": "围绕“整理和复习”中“图形与几何”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "图形与几何：把图形名称或单位混淆",
+        "图形与几何：周长、面积、体积公式用错",
+        "图形与几何：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_3",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_3",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "整理和复习",
+      "name": "统计与概率",
+      "description": "围绕“整理和复习”中“统计与概率”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "统计与概率：知识点混在一起不分类",
+        "统计与概率：步骤顺序混乱",
+        "统计与概率：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_4",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_4",
+      "grade": "六年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "整理和复习",
+      "name": "综合与实践",
+      "description": "围绕“整理和复习”中“综合与实践”这一知识点，生成符合六年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "综合与实践：知识点混在一起不分类",
+        "综合与实践：步骤顺序混乱",
+        "综合与实践：结果不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "negative_numbers_1",
+      "question_type": "填空题",
+      "template": "围绕“负数的意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“负数的意义”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“负数的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_1",
+      "question_type": "选择题",
+      "template": "围绕“负数的意义”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“负数的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_1",
+      "question_type": "判断题",
+      "template": "围绕“负数的意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“负数的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_2",
+      "question_type": "填空题",
+      "template": "围绕“正负数表示相反量”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“正负数表示相反量”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正负数表示相反量”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_2",
+      "question_type": "选择题",
+      "template": "围绕“正负数表示相反量”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正负数表示相反量”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_2",
+      "question_type": "判断题",
+      "template": "围绕“正负数表示相反量”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正负数表示相反量”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_3",
+      "question_type": "填空题",
+      "template": "围绕“数轴上的负数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“数轴上的负数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数轴上的负数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_3",
+      "question_type": "选择题",
+      "template": "围绕“数轴上的负数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数轴上的负数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "negative_numbers_3",
+      "question_type": "判断题",
+      "template": "围绕“数轴上的负数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数轴上的负数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_1",
+      "question_type": "计算题",
+      "template": "围绕“折扣”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“折扣”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_1",
+      "question_type": "填空题",
+      "template": "围绕“折扣”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“折扣”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“折扣”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_1",
+      "question_type": "判断题",
+      "template": "围绕“折扣”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“折扣”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_2",
+      "question_type": "计算题",
+      "template": "围绕“成数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“成数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_2",
+      "question_type": "填空题",
+      "template": "围绕“成数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“成数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“成数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_2",
+      "question_type": "判断题",
+      "template": "围绕“成数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“成数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_3",
+      "question_type": "计算题",
+      "template": "围绕“税率”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“税率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_3",
+      "question_type": "填空题",
+      "template": "围绕“税率”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“税率”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“税率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_3",
+      "question_type": "判断题",
+      "template": "围绕“税率”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“税率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_4",
+      "question_type": "计算题",
+      "template": "围绕“利率”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“利率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_4",
+      "question_type": "填空题",
+      "template": "围绕“利率”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“利率”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“利率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_4",
+      "question_type": "判断题",
+      "template": "围绕“利率”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“利率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_5",
+      "question_type": "应用题",
+      "template": "围绕“百分数应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“百分数应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_5",
+      "question_type": "填空题",
+      "template": "围绕“百分数应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“百分数应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分数应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_two_5",
+      "question_type": "变式题",
+      "template": "围绕“百分数应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“百分数应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_1",
+      "question_type": "填空题",
+      "template": "围绕“圆柱的认识”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“圆柱的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆柱的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_1",
+      "question_type": "选择题",
+      "template": "围绕“圆柱的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆柱的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_1",
+      "question_type": "应用题",
+      "template": "围绕“圆柱的认识”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“圆柱的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_2",
+      "question_type": "填空题",
+      "template": "围绕“圆柱表面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“圆柱表面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆柱表面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_2",
+      "question_type": "选择题",
+      "template": "围绕“圆柱表面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆柱表面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_2",
+      "question_type": "应用题",
+      "template": "围绕“圆柱表面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“圆柱表面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_3",
+      "question_type": "填空题",
+      "template": "围绕“圆柱体积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“圆柱体积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆柱体积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_3",
+      "question_type": "选择题",
+      "template": "围绕“圆柱体积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆柱体积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_3",
+      "question_type": "应用题",
+      "template": "围绕“圆柱体积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“圆柱体积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_4",
+      "question_type": "填空题",
+      "template": "围绕“圆锥体积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“圆锥体积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆锥体积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_4",
+      "question_type": "选择题",
+      "template": "围绕“圆锥体积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆锥体积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cylinder_cone_4",
+      "question_type": "应用题",
+      "template": "围绕“圆锥体积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“圆锥体积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_1",
+      "question_type": "计算题",
+      "template": "围绕“比例的意义和基本性质”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比例的意义和基本性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_1",
+      "question_type": "填空题",
+      "template": "围绕“比例的意义和基本性质”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“比例的意义和基本性质”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比例的意义和基本性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_1",
+      "question_type": "判断题",
+      "template": "围绕“比例的意义和基本性质”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比例的意义和基本性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_2",
+      "question_type": "计算题",
+      "template": "围绕“解比例”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_2",
+      "question_type": "填空题",
+      "template": "围绕“解比例”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“解比例”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_2",
+      "question_type": "判断题",
+      "template": "围绕“解比例”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_3",
+      "question_type": "计算题",
+      "template": "围绕“正比例”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_3",
+      "question_type": "填空题",
+      "template": "围绕“正比例”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“正比例”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_3",
+      "question_type": "判断题",
+      "template": "围绕“正比例”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_4",
+      "question_type": "计算题",
+      "template": "围绕“反比例”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“反比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_4",
+      "question_type": "填空题",
+      "template": "围绕“反比例”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“反比例”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“反比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_4",
+      "question_type": "判断题",
+      "template": "围绕“反比例”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“反比例”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_5",
+      "question_type": "计算题",
+      "template": "围绕“比例尺”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比例尺”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_5",
+      "question_type": "填空题",
+      "template": "围绕“比例尺”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“比例尺”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比例尺”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_5",
+      "question_type": "判断题",
+      "template": "围绕“比例尺”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比例尺”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_6",
+      "question_type": "填空题",
+      "template": "围绕“图形放大缩小”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“图形放大缩小”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“图形放大缩小”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_6",
+      "question_type": "选择题",
+      "template": "围绕“图形放大缩小”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“图形放大缩小”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "proportion_6",
+      "question_type": "应用题",
+      "template": "围绕“图形放大缩小”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“图形放大缩小”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“抽屉原理”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“抽屉原理”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“抽屉原理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“抽屉原理”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“抽屉原理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“抽屉原理”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“抽屉原理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“最不利情况”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“最不利情况”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“最不利情况”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“最不利情况”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“最不利情况”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“最不利情况”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“最不利情况”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "填空题",
+      "template": "围绕“鸽巢应用”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“鸽巢应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“鸽巢应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "选择题",
+      "template": "围绕“鸽巢应用”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“鸽巢应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "应用题",
+      "template": "围绕“鸽巢应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“鸽巢应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "计算题",
+      "template": "围绕“数与代数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数与代数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "应用题",
+      "template": "围绕“数与代数”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“数与代数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "变式题",
+      "template": "围绕“数与代数”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“数与代数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "填空题",
+      "template": "围绕“图形与几何”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“图形与几何”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“图形与几何”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "选择题",
+      "template": "围绕“图形与几何”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“图形与几何”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "应用题",
+      "template": "围绕“图形与几何”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“图形与几何”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_3",
+      "question_type": "计算题",
+      "template": "围绕“统计与概率”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“统计与概率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_3",
+      "question_type": "应用题",
+      "template": "围绕“统计与概率”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“统计与概率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_3",
+      "question_type": "变式题",
+      "template": "围绕“统计与概率”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“统计与概率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_4",
+      "question_type": "计算题",
+      "template": "围绕“综合与实践”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“综合与实践”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_4",
+      "question_type": "应用题",
+      "template": "围绕“综合与实践”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“综合与实践”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_4",
+      "question_type": "变式题",
+      "template": "围绕“综合与实践”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“综合与实践”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1210,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 586,
+      "practice": 444,
+      "student_sheet": 46,
+      "other": 122,
+      "knowledge": 10,
+      "textbook": 2
+    },
+    "top_terms": [
+      "做一做",
+      "课堂小结",
+      "比例尺",
+      "教学目标",
+      "教学过程",
+      "教学重难点",
+      "教学反思",
+      "一定",
+      "巩固练习",
+      "同学们",
+      "底面积",
+      "实际距离",
+      "圆柱",
+      "图上距离",
+      "时间",
+      "例如",
+      "比例",
+      "提问",
+      "为什么",
+      "底面",
+      "原价",
+      "数量",
+      "重点",
+      "难点",
+      "六年级下册",
+      "鸽巢问题",
+      "板书",
+      "万元",
+      "整理和复习",
+      "圆锥",
+      "探索新知",
+      "今天的数学课你们有哪些收",
+      "获呢",
+      "总价",
+      "高是",
+      "随堂练习",
+      "路程",
+      "小时",
+      "提示",
+      "圆柱的侧面积",
+      "所以",
+      "单位",
+      "表示",
+      "重难点",
+      "第6单元",
+      "指名学生汇报",
+      "现价",
+      "新课导入",
+      "利息",
+      "千米"
+    ],
+    "top_headings": [
+      "3.14×",
+      "第6单元 整理和复习",
+      "第4单元 比例",
+      "1.数与代数",
+      "12.56",
+      "0.25",
+      "1.圆柱",
+      "1. 我会填",
+      "1. 圆 柱",
+      "3.14÷2",
+      "第2单元 百分数（二）",
+      "3.14×（8÷2）",
+      "23.1km",
+      "2.图形与几何",
+      "6.28",
+      "2.75%",
+      "50.24",
+      "第3单元 圆柱与圆锥",
+      "5.综合与实践",
+      "1.10",
+      "1.30",
+      "3. 比例的应用",
+      "《 。 》",
+      "9.42",
+      "2.4m",
+      "2.10%×2",
+      "3.14×4",
+      "2.圆锥",
+      "3、4题",
+      "第2课时"
+    ]
+  }
+}

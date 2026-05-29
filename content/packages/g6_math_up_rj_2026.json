@@ -1,0 +1,1509 @@
+{
+  "package_id": "g6_math_up_rj_2026",
+  "package_name": "六年级数学上册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "六年级",
+    "semester": "上册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g6_math_up_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\6上-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g6_math_up_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1274 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "fraction_multiply",
+      "name": "分数乘法",
+      "lessons": [
+        {
+          "id": "fraction_multiply_lesson_1",
+          "name": "分数乘整数",
+          "knowledge_point_ids": [
+            "fraction_multiply_1"
+          ]
+        },
+        {
+          "id": "fraction_multiply_lesson_2",
+          "name": "分数乘分数",
+          "knowledge_point_ids": [
+            "fraction_multiply_2"
+          ]
+        },
+        {
+          "id": "fraction_multiply_lesson_3",
+          "name": "分数乘法应用",
+          "knowledge_point_ids": [
+            "fraction_multiply_3"
+          ]
+        },
+        {
+          "id": "fraction_multiply_lesson_4",
+          "name": "倒数",
+          "knowledge_point_ids": [
+            "fraction_multiply_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "position_direction",
+      "name": "位置与方向（二）",
+      "lessons": [
+        {
+          "id": "position_direction_lesson_1",
+          "name": "用方向和距离确定位置",
+          "knowledge_point_ids": [
+            "position_direction_1"
+          ]
+        },
+        {
+          "id": "position_direction_lesson_2",
+          "name": "描述路线图",
+          "knowledge_point_ids": [
+            "position_direction_2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction_divide",
+      "name": "分数除法",
+      "lessons": [
+        {
+          "id": "fraction_divide_lesson_1",
+          "name": "分数除以整数",
+          "knowledge_point_ids": [
+            "fraction_divide_1"
+          ]
+        },
+        {
+          "id": "fraction_divide_lesson_2",
+          "name": "一个数除以分数",
+          "knowledge_point_ids": [
+            "fraction_divide_2"
+          ]
+        },
+        {
+          "id": "fraction_divide_lesson_3",
+          "name": "分数除法应用",
+          "knowledge_point_ids": [
+            "fraction_divide_3"
+          ]
+        },
+        {
+          "id": "fraction_divide_lesson_4",
+          "name": "比的意义",
+          "knowledge_point_ids": [
+            "fraction_divide_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circle",
+      "name": "圆",
+      "lessons": [
+        {
+          "id": "circle_lesson_1",
+          "name": "圆的认识",
+          "knowledge_point_ids": [
+            "circle_1"
+          ]
+        },
+        {
+          "id": "circle_lesson_2",
+          "name": "圆的周长",
+          "knowledge_point_ids": [
+            "circle_2"
+          ]
+        },
+        {
+          "id": "circle_lesson_3",
+          "name": "圆的面积",
+          "knowledge_point_ids": [
+            "circle_3"
+          ]
+        },
+        {
+          "id": "circle_lesson_4",
+          "name": "扇形",
+          "knowledge_point_ids": [
+            "circle_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "percent",
+      "name": "百分数（一）",
+      "lessons": [
+        {
+          "id": "percent_lesson_1",
+          "name": "百分数意义",
+          "knowledge_point_ids": [
+            "percent_1"
+          ]
+        },
+        {
+          "id": "percent_lesson_2",
+          "name": "百分数与分数小数互化",
+          "knowledge_point_ids": [
+            "percent_2"
+          ]
+        },
+        {
+          "id": "percent_lesson_3",
+          "name": "百分率",
+          "knowledge_point_ids": [
+            "percent_3"
+          ]
+        },
+        {
+          "id": "percent_lesson_4",
+          "name": "求一个数的百分之几",
+          "knowledge_point_ids": [
+            "percent_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "扇形统计图",
+      "lessons": [
+        {
+          "id": "statistics_lesson_1",
+          "name": "认识扇形统计图",
+          "knowledge_point_ids": [
+            "statistics_1"
+          ]
+        },
+        {
+          "id": "statistics_lesson_2",
+          "name": "统计图选择",
+          "knowledge_point_ids": [
+            "statistics_2"
+          ]
+        },
+        {
+          "id": "statistics_lesson_3",
+          "name": "数据解释",
+          "knowledge_point_ids": [
+            "statistics_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--数与形",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "图形规律",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "数形结合",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "fraction_multiply_1",
+      "unit_id": "fraction_multiply",
+      "lesson_id": "fraction_multiply_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数乘法",
+      "name": "分数乘整数",
+      "description": "围绕“分数乘法”中“分数乘整数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数乘整数：相同数位没有对齐",
+        "分数乘整数：进位、退位或约分步骤遗漏",
+        "分数乘整数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_multiply_2",
+      "unit_id": "fraction_multiply",
+      "lesson_id": "fraction_multiply_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数乘法",
+      "name": "分数乘分数",
+      "description": "围绕“分数乘法”中“分数乘分数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数乘分数：相同数位没有对齐",
+        "分数乘分数：进位、退位或约分步骤遗漏",
+        "分数乘分数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_multiply_3",
+      "unit_id": "fraction_multiply",
+      "lesson_id": "fraction_multiply_lesson_3",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数乘法",
+      "name": "分数乘法应用",
+      "description": "围绕“分数乘法”中“分数乘法应用”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数乘法应用：没有先找清数量关系",
+        "分数乘法应用：只列式不写答语",
+        "分数乘法应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_multiply_4",
+      "unit_id": "fraction_multiply",
+      "lesson_id": "fraction_multiply_lesson_4",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数乘法",
+      "name": "倒数",
+      "description": "围绕“分数乘法”中“倒数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "倒数：相同数位没有对齐",
+        "倒数：进位、退位或约分步骤遗漏",
+        "倒数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_direction_1",
+      "unit_id": "position_direction",
+      "lesson_id": "position_direction_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置与方向（二）",
+      "name": "用方向和距离确定位置",
+      "description": "围绕“位置与方向（二）”中“用方向和距离确定位置”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "用方向和距离确定位置：把图形名称或单位混淆",
+        "用方向和距离确定位置：周长、面积、体积公式用错",
+        "用方向和距离确定位置：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_direction_2",
+      "unit_id": "position_direction",
+      "lesson_id": "position_direction_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置与方向（二）",
+      "name": "描述路线图",
+      "description": "围绕“位置与方向（二）”中“描述路线图”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "描述路线图：把图形名称或单位混淆",
+        "描述路线图：周长、面积、体积公式用错",
+        "描述路线图：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_divide_1",
+      "unit_id": "fraction_divide",
+      "lesson_id": "fraction_divide_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数除法",
+      "name": "分数除以整数",
+      "description": "围绕“分数除法”中“分数除以整数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数除以整数：相同数位没有对齐",
+        "分数除以整数：进位、退位或约分步骤遗漏",
+        "分数除以整数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_divide_2",
+      "unit_id": "fraction_divide",
+      "lesson_id": "fraction_divide_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数除法",
+      "name": "一个数除以分数",
+      "description": "围绕“分数除法”中“一个数除以分数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "一个数除以分数：相同数位没有对齐",
+        "一个数除以分数：进位、退位或约分步骤遗漏",
+        "一个数除以分数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_divide_3",
+      "unit_id": "fraction_divide",
+      "lesson_id": "fraction_divide_lesson_3",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数除法",
+      "name": "分数除法应用",
+      "description": "围绕“分数除法”中“分数除法应用”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数除法应用：没有先找清数量关系",
+        "分数除法应用：只列式不写答语",
+        "分数除法应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_divide_4",
+      "unit_id": "fraction_divide",
+      "lesson_id": "fraction_divide_lesson_4",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数除法",
+      "name": "比的意义",
+      "description": "围绕“分数除法”中“比的意义”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "比的意义：相同数位没有对齐",
+        "比的意义：进位、退位或约分步骤遗漏",
+        "比的意义：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "circle_1",
+      "unit_id": "circle",
+      "lesson_id": "circle_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆",
+      "name": "圆的认识",
+      "description": "围绕“圆”中“圆的认识”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "圆的认识：把图形名称或单位混淆",
+        "圆的认识：周长、面积、体积公式用错",
+        "圆的认识：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "circle_2",
+      "unit_id": "circle",
+      "lesson_id": "circle_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆",
+      "name": "圆的周长",
+      "description": "围绕“圆”中“圆的周长”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "圆的周长：把图形名称或单位混淆",
+        "圆的周长：周长、面积、体积公式用错",
+        "圆的周长：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "circle_3",
+      "unit_id": "circle",
+      "lesson_id": "circle_lesson_3",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆",
+      "name": "圆的面积",
+      "description": "围绕“圆”中“圆的面积”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "圆的面积：把图形名称或单位混淆",
+        "圆的面积：周长、面积、体积公式用错",
+        "圆的面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "circle_4",
+      "unit_id": "circle",
+      "lesson_id": "circle_lesson_4",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "圆",
+      "name": "扇形",
+      "description": "围绕“圆”中“扇形”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "扇形：把图形名称或单位混淆",
+        "扇形：周长、面积、体积公式用错",
+        "扇形：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_1",
+      "unit_id": "percent",
+      "lesson_id": "percent_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（一）",
+      "name": "百分数意义",
+      "description": "围绕“百分数（一）”中“百分数意义”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "百分数意义：相同数位没有对齐",
+        "百分数意义：进位、退位或约分步骤遗漏",
+        "百分数意义：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_2",
+      "unit_id": "percent",
+      "lesson_id": "percent_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（一）",
+      "name": "百分数与分数小数互化",
+      "description": "围绕“百分数（一）”中“百分数与分数小数互化”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "百分数与分数小数互化：相同数位没有对齐",
+        "百分数与分数小数互化：进位、退位或约分步骤遗漏",
+        "百分数与分数小数互化：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_3",
+      "unit_id": "percent",
+      "lesson_id": "percent_lesson_3",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（一）",
+      "name": "百分率",
+      "description": "围绕“百分数（一）”中“百分率”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "百分率：相同数位没有对齐",
+        "百分率：进位、退位或约分步骤遗漏",
+        "百分率：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "percent_4",
+      "unit_id": "percent",
+      "lesson_id": "percent_lesson_4",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（一）",
+      "name": "求一个数的百分之几",
+      "description": "围绕“百分数（一）”中“求一个数的百分之几”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "求一个数的百分之几：相同数位没有对齐",
+        "求一个数的百分之几：进位、退位或约分步骤遗漏",
+        "求一个数的百分之几：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_1",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "扇形统计图",
+      "name": "认识扇形统计图",
+      "description": "围绕“扇形统计图”中“认识扇形统计图”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "认识扇形统计图：没有看清题目要求",
+        "认识扇形统计图：答语单位写错或漏写",
+        "认识扇形统计图：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_2",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "扇形统计图",
+      "name": "统计图选择",
+      "description": "围绕“扇形统计图”中“统计图选择”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "统计图选择：没有看清题目要求",
+        "统计图选择：答语单位写错或漏写",
+        "统计图选择：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_3",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_3",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "扇形统计图",
+      "name": "数据解释",
+      "description": "围绕“扇形统计图”中“数据解释”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "数据解释：没有看清题目要求",
+        "数据解释：答语单位写错或漏写",
+        "数据解释：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--数与形",
+      "name": "图形规律",
+      "description": "围绕“数学广角--数与形”中“图形规律”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "图形规律：把图形名称或单位混淆",
+        "图形规律：周长、面积、体积公式用错",
+        "图形规律：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--数与形",
+      "name": "数形结合",
+      "description": "围绕“数学广角--数与形”中“数形结合”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "数形结合：把图形名称或单位混淆",
+        "数形结合：周长、面积、体积公式用错",
+        "数形结合：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "fraction_multiply_1",
+      "question_type": "计算题",
+      "template": "围绕“分数乘整数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数乘整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_1",
+      "question_type": "填空题",
+      "template": "围绕“分数乘整数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数乘整数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数乘整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_1",
+      "question_type": "判断题",
+      "template": "围绕“分数乘整数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数乘整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_2",
+      "question_type": "计算题",
+      "template": "围绕“分数乘分数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数乘分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_2",
+      "question_type": "填空题",
+      "template": "围绕“分数乘分数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数乘分数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数乘分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_2",
+      "question_type": "判断题",
+      "template": "围绕“分数乘分数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数乘分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_3",
+      "question_type": "应用题",
+      "template": "围绕“分数乘法应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“分数乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_3",
+      "question_type": "填空题",
+      "template": "围绕“分数乘法应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数乘法应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_3",
+      "question_type": "变式题",
+      "template": "围绕“分数乘法应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“分数乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_4",
+      "question_type": "计算题",
+      "template": "围绕“倒数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“倒数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_4",
+      "question_type": "填空题",
+      "template": "围绕“倒数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“倒数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“倒数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_multiply_4",
+      "question_type": "判断题",
+      "template": "围绕“倒数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“倒数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_1",
+      "question_type": "填空题",
+      "template": "围绕“用方向和距离确定位置”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“用方向和距离确定位置”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用方向和距离确定位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_1",
+      "question_type": "选择题",
+      "template": "围绕“用方向和距离确定位置”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用方向和距离确定位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_1",
+      "question_type": "应用题",
+      "template": "围绕“用方向和距离确定位置”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“用方向和距离确定位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_2",
+      "question_type": "填空题",
+      "template": "围绕“描述路线图”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“描述路线图”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“描述路线图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_2",
+      "question_type": "选择题",
+      "template": "围绕“描述路线图”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“描述路线图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_direction_2",
+      "question_type": "应用题",
+      "template": "围绕“描述路线图”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“描述路线图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_1",
+      "question_type": "计算题",
+      "template": "围绕“分数除以整数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数除以整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_1",
+      "question_type": "填空题",
+      "template": "围绕“分数除以整数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数除以整数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数除以整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_1",
+      "question_type": "判断题",
+      "template": "围绕“分数除以整数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数除以整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_2",
+      "question_type": "计算题",
+      "template": "围绕“一个数除以分数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一个数除以分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_2",
+      "question_type": "填空题",
+      "template": "围绕“一个数除以分数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“一个数除以分数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一个数除以分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_2",
+      "question_type": "判断题",
+      "template": "围绕“一个数除以分数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一个数除以分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_3",
+      "question_type": "应用题",
+      "template": "围绕“分数除法应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“分数除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_3",
+      "question_type": "填空题",
+      "template": "围绕“分数除法应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数除法应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_3",
+      "question_type": "变式题",
+      "template": "围绕“分数除法应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“分数除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_4",
+      "question_type": "计算题",
+      "template": "围绕“比的意义”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_4",
+      "question_type": "填空题",
+      "template": "围绕“比的意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“比的意义”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_divide_4",
+      "question_type": "判断题",
+      "template": "围绕“比的意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_1",
+      "question_type": "填空题",
+      "template": "围绕“圆的认识”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“圆的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_1",
+      "question_type": "选择题",
+      "template": "围绕“圆的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_1",
+      "question_type": "应用题",
+      "template": "围绕“圆的认识”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“圆的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_2",
+      "question_type": "填空题",
+      "template": "围绕“圆的周长”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“圆的周长”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆的周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_2",
+      "question_type": "选择题",
+      "template": "围绕“圆的周长”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆的周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_2",
+      "question_type": "应用题",
+      "template": "围绕“圆的周长”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“圆的周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_3",
+      "question_type": "填空题",
+      "template": "围绕“圆的面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“圆的面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆的面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_3",
+      "question_type": "选择题",
+      "template": "围绕“圆的面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“圆的面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_3",
+      "question_type": "应用题",
+      "template": "围绕“圆的面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“圆的面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_4",
+      "question_type": "填空题",
+      "template": "围绕“扇形”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“扇形”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“扇形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_4",
+      "question_type": "选择题",
+      "template": "围绕“扇形”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“扇形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "circle_4",
+      "question_type": "应用题",
+      "template": "围绕“扇形”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“扇形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_1",
+      "question_type": "计算题",
+      "template": "围绕“百分数意义”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_1",
+      "question_type": "填空题",
+      "template": "围绕“百分数意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“百分数意义”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_1",
+      "question_type": "判断题",
+      "template": "围绕“百分数意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_2",
+      "question_type": "计算题",
+      "template": "围绕“百分数与分数小数互化”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分数与分数小数互化”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_2",
+      "question_type": "填空题",
+      "template": "围绕“百分数与分数小数互化”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“百分数与分数小数互化”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分数与分数小数互化”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_2",
+      "question_type": "判断题",
+      "template": "围绕“百分数与分数小数互化”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分数与分数小数互化”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_3",
+      "question_type": "计算题",
+      "template": "围绕“百分率”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_3",
+      "question_type": "填空题",
+      "template": "围绕“百分率”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“百分率”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_3",
+      "question_type": "判断题",
+      "template": "围绕“百分率”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“百分率”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_4",
+      "question_type": "计算题",
+      "template": "围绕“求一个数的百分之几”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“求一个数的百分之几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_4",
+      "question_type": "填空题",
+      "template": "围绕“求一个数的百分之几”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“求一个数的百分之几”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“求一个数的百分之几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "percent_4",
+      "question_type": "判断题",
+      "template": "围绕“求一个数的百分之几”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“求一个数的百分之几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "填空题",
+      "template": "围绕“认识扇形统计图”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“认识扇形统计图”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识扇形统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "选择题",
+      "template": "围绕“认识扇形统计图”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识扇形统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "判断题",
+      "template": "围绕“认识扇形统计图”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识扇形统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "填空题",
+      "template": "围绕“统计图选择”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“统计图选择”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“统计图选择”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "选择题",
+      "template": "围绕“统计图选择”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“统计图选择”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "判断题",
+      "template": "围绕“统计图选择”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“统计图选择”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "填空题",
+      "template": "围绕“数据解释”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“数据解释”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数据解释”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "选择题",
+      "template": "围绕“数据解释”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数据解释”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "判断题",
+      "template": "围绕“数据解释”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数据解释”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“图形规律”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“图形规律”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“图形规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“图形规律”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“图形规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“图形规律”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“图形规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“数形结合”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“数形结合”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数形结合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“数形结合”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数形结合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“数形结合”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“数形结合”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1274,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 804,
+      "knowledge": 18,
+      "practice": 184,
+      "student_sheet": 160,
+      "other": 108
+    },
+    "top_terms": [
+      "解析",
+      "教科书",
+      "状元成才路",
+      "厘米",
+      "单位",
+      "半径",
+      "课时",
+      "新课讲解",
+      "圆心",
+      "方向",
+      "表示",
+      "我爱展示",
+      "教材",
+      "单选题",
+      "月价格",
+      "读作",
+      "课堂练习",
+      "知识点讲解",
+      "百分数",
+      "练习二十三",
+      "平方厘米",
+      "直径",
+      "平方米",
+      "练习十五",
+      "千克",
+      "六年级上册",
+      "距离",
+      "小时",
+      "个小正方形",
+      "月的价格比",
+      "月的价格和",
+      "课后作业",
+      "课本",
+      "分数",
+      "千米",
+      "判断",
+      "公顷",
+      "是多少",
+      "做一做",
+      "解决问题",
+      "比的基本性质",
+      "计算",
+      "方法一",
+      "比的意义",
+      "圆的认识",
+      "万平方千米",
+      "万千克",
+      "亿吨",
+      "深化知识",
+      "正方形"
+    ],
+    "top_headings": [
+      "3.14",
+      "0.04",
+      "0.96",
+      "1. 从课后习题中选取；",
+      "2. 完成练习册本课时的习题",
+      "《 创优作业 100 分 》",
+      "1.8m",
+      "0.25",
+      "65.5%",
+      "3.14×5",
+      "0.75",
+      "6.28",
+      "3.14×",
+      "0.15",
+      "14. 说一说小动物居住的位置",
+      "《 状元作业本 》",
+      "2.1 dm",
+      "2.4 dm",
+      "3. 下面每个图中最外圈有多少个小正方形？",
+      "0.45",
+      "14.4%",
+      "3.24",
+      "0.6966",
+      "0.6966(m",
+      "5.42",
+      "7.37",
+      "1.95",
+      "2. 从课时练中选取",
+      "12.56",
+      "25.12"
+    ]
+  }
+}

@@ -32,6 +32,12 @@
       "source_type": "user_provided_pdf",
       "name": "应用题专项与精选题资料",
       "use": "只参考题型结构和难度，不保存原题"
+    },
+    {
+      "id": "g2_math_down_rj_2025_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1971 份可读资料，用于细化知识点、常见易错点和原创题模板。"
     }
   ],
   "units": [
@@ -42,12 +48,18 @@
         {
           "id": "time_day_clock",
           "name": "认识一天和钟表",
-          "knowledge_point_ids": ["time_day_order", "time_clock_reading"]
+          "knowledge_point_ids": [
+            "time_day_order",
+            "time_clock_reading"
+          ]
         },
         {
           "id": "time_duration",
           "name": "经过时间",
-          "knowledge_point_ids": ["time_elapsed_simple", "time_schedule_problem"]
+          "knowledge_point_ids": [
+            "time_elapsed_simple",
+            "time_schedule_problem"
+          ]
         }
       ]
     },
@@ -58,17 +70,26 @@
         {
           "id": "remainder_meaning",
           "name": "认识余数",
-          "knowledge_point_ids": ["remainder_meaning", "remainder_expression"]
+          "knowledge_point_ids": [
+            "remainder_meaning",
+            "remainder_expression"
+          ]
         },
         {
           "id": "remainder_calculation",
           "name": "有余数除法计算",
-          "knowledge_point_ids": ["remainder_less_than_divisor", "remainder_calculation"]
+          "knowledge_point_ids": [
+            "remainder_less_than_divisor",
+            "remainder_calculation"
+          ]
         },
         {
           "id": "remainder_problem",
           "name": "解决有余数问题",
-          "knowledge_point_ids": ["remainder_word_problem", "remainder_rounding_context"]
+          "knowledge_point_ids": [
+            "remainder_word_problem",
+            "remainder_rounding_context"
+          ]
         }
       ]
     },
@@ -79,17 +100,26 @@
         {
           "id": "multiply_relation",
           "name": "几个几与乘法",
-          "knowledge_point_ids": ["multiply_equal_groups", "multiply_total_problem"]
+          "knowledge_point_ids": [
+            "multiply_equal_groups",
+            "multiply_total_problem"
+          ]
         },
         {
           "id": "division_relation",
           "name": "平均分与除法",
-          "knowledge_point_ids": ["division_equal_share", "division_containment"]
+          "knowledge_point_ids": [
+            "division_equal_share",
+            "division_containment"
+          ]
         },
         {
           "id": "relation_compare",
           "name": "乘除关系应用",
-          "knowledge_point_ids": ["multiply_divide_inverse", "multiply_divide_word_problem"]
+          "knowledge_point_ids": [
+            "multiply_divide_inverse",
+            "multiply_divide_word_problem"
+          ]
         }
       ]
     },
@@ -100,17 +130,26 @@
         {
           "id": "counting_units",
           "name": "千和万的认识",
-          "knowledge_point_ids": ["thousand_ten_thousand", "place_value_composition"]
+          "knowledge_point_ids": [
+            "thousand_ten_thousand",
+            "place_value_composition"
+          ]
         },
         {
           "id": "reading_writing",
           "name": "万以内数的读写",
-          "knowledge_point_ids": ["number_reading_writing", "zero_in_number"]
+          "knowledge_point_ids": [
+            "number_reading_writing",
+            "zero_in_number"
+          ]
         },
         {
           "id": "compare_estimate",
           "name": "大小比较与近似数",
-          "knowledge_point_ids": ["number_compare", "approximate_number"]
+          "knowledge_point_ids": [
+            "number_compare",
+            "approximate_number"
+          ]
         }
       ]
     },
@@ -121,17 +160,26 @@
         {
           "id": "addition",
           "name": "加法",
-          "knowledge_point_ids": ["three_digit_addition", "continuous_carry_addition"]
+          "knowledge_point_ids": [
+            "three_digit_addition",
+            "continuous_carry_addition"
+          ]
         },
         {
           "id": "subtraction",
           "name": "减法",
-          "knowledge_point_ids": ["three_digit_subtraction", "continuous_borrow_subtraction"]
+          "knowledge_point_ids": [
+            "three_digit_subtraction",
+            "continuous_borrow_subtraction"
+          ]
         },
         {
           "id": "add_sub_problem",
           "name": "加减法应用",
-          "knowledge_point_ids": ["add_sub_inverse_check", "add_sub_word_problem"]
+          "knowledge_point_ids": [
+            "add_sub_inverse_check",
+            "add_sub_word_problem"
+          ]
         }
       ]
     },
@@ -142,7 +190,10 @@
         {
           "id": "story_math",
           "name": "连环画中的数学问题",
-          "knowledge_point_ids": ["comic_sequence_math", "comic_multi_step_problem"]
+          "knowledge_point_ids": [
+            "comic_sequence_math",
+            "comic_multi_step_problem"
+          ]
         }
       ]
     },
@@ -153,7 +204,10 @@
         {
           "id": "review_number_operation",
           "name": "数与运算整理",
-          "knowledge_point_ids": ["review_number_operation", "review_problem_solving"]
+          "knowledge_point_ids": [
+            "review_number_operation",
+            "review_problem_solving"
+          ]
         }
       ]
     }
@@ -170,9 +224,20 @@
       "unit": "时间在哪里",
       "name": "一天中的时间顺序",
       "description": "能结合生活情境辨认上午、中午、下午、晚上等时间顺序。",
-      "common_mistakes": ["把早晚时间顺序混淆", "只看钟面不结合生活情境", "漏掉经过一天后的变化"],
-      "recommended_question_types": ["填空题", "判断题", "应用题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "把早晚时间顺序混淆",
+        "只看钟面不结合生活情境",
+        "漏掉经过一天后的变化"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "判断题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "time_clock_reading",
@@ -185,9 +250,20 @@
       "unit": "时间在哪里",
       "name": "认识钟面时间",
       "description": "能读出整时、半时和常见分钟数，理解时针、分针表示的意义。",
-      "common_mistakes": ["分针指向数字时不会换算分钟", "时针接近下一个数时读错小时", "把几时半读成整时"],
-      "recommended_question_types": ["填空题", "选择题", "应用题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "分针指向数字时不会换算分钟",
+        "时针接近下一个数时读错小时",
+        "把几时半读成整时"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "time_elapsed_simple",
@@ -200,9 +276,19 @@
       "unit": "时间在哪里",
       "name": "简单经过时间",
       "description": "能用开始时间和结束时间求经过了几小时或几分钟。",
-      "common_mistakes": ["直接用结束时间减开始时间时忽略半小时", "跨整点时少算或多算", "单位小时和分钟混用"],
-      "recommended_question_types": ["应用题", "填空题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "直接用结束时间减开始时间时忽略半小时",
+        "跨整点时少算或多算",
+        "单位小时和分钟混用"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "time_schedule_problem",
@@ -215,9 +301,19 @@
       "unit": "时间在哪里",
       "name": "时间安排问题",
       "description": "会根据日常活动安排判断先后顺序和所用时间。",
-      "common_mistakes": ["没有看清活动先后", "把开始时间当作经过时间", "答语没有写清活动名称"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "没有看清活动先后",
+        "把开始时间当作经过时间",
+        "答语没有写清活动名称"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "remainder_meaning",
@@ -230,9 +326,20 @@
       "unit": "有余数的除法",
       "name": "余数的意义",
       "description": "理解平均分后没有分完的部分就是余数。",
-      "common_mistakes": ["把商和余数的位置写反", "不理解剩下的数量为什么是余数", "单位名称写错"],
-      "recommended_question_types": ["填空题", "判断题", "应用题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "把商和余数的位置写反",
+        "不理解剩下的数量为什么是余数",
+        "单位名称写错"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "判断题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "remainder_expression",
@@ -245,9 +352,19 @@
       "unit": "有余数的除法",
       "name": "有余数除法算式",
       "description": "会把平均分且有剩余的情境写成除法算式并正确读写商和余数。",
-      "common_mistakes": ["漏写余数", "余数后面没有单位", "把除数当成每份结果"],
-      "recommended_question_types": ["计算题", "填空题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "漏写余数",
+        "余数后面没有单位",
+        "把除数当成每份结果"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "remainder_less_than_divisor",
@@ -260,9 +377,20 @@
       "unit": "有余数的除法",
       "name": "余数要比除数小",
       "description": "理解在有余数除法中，余数必须小于除数。",
-      "common_mistakes": ["余数大于或等于除数仍认为正确", "商小了导致余数过大", "不会用除数检查余数"],
-      "recommended_question_types": ["判断题", "填空题", "计算题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "余数大于或等于除数仍认为正确",
+        "商小了导致余数过大",
+        "不会用除数检查余数"
+      ],
+      "recommended_question_types": [
+        "判断题",
+        "填空题",
+        "计算题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "remainder_calculation",
@@ -275,9 +403,19 @@
       "unit": "有余数的除法",
       "name": "有余数除法计算",
       "description": "会用乘法口诀试商，按商、乘、减、比的步骤计算。",
-      "common_mistakes": ["试商过大或过小", "减法算错导致余数错", "没有检查余数是否小于除数"],
-      "recommended_question_types": ["计算题", "填空题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "试商过大或过小",
+        "减法算错导致余数错",
+        "没有检查余数是否小于除数"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "remainder_word_problem",
@@ -290,9 +428,20 @@
       "unit": "有余数的除法",
       "name": "有余数除法应用题",
       "description": "能在分组、装盒、排队等情境中列出有余数除法解决问题。",
-      "common_mistakes": ["没有根据问题判断求组数还是剩余", "只写算式没有答语", "把剩余数量也算成一整组"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["基础", "提高", "拔高"]
+      "common_mistakes": [
+        "没有根据问题判断求组数还是剩余",
+        "只写算式没有答语",
+        "把剩余数量也算成一整组"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "remainder_rounding_context",
@@ -305,9 +454,19 @@
       "unit": "有余数的除法",
       "name": "余数情境中的进一和舍去",
       "description": "能根据生活情境判断有余数时结果要不要多算一组。",
-      "common_mistakes": ["所有有余数题都进一", "所有有余数题都舍去", "没有结合题目问法判断"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "所有有余数题都进一",
+        "所有有余数题都舍去",
+        "没有结合题目问法判断"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "multiply_equal_groups",
@@ -320,9 +479,20 @@
       "unit": "数量间的乘除关系",
       "name": "几个几与乘法",
       "description": "能把几个相同加数的和理解成乘法。",
-      "common_mistakes": ["没有看出每组数量相同", "乘数和被乘数含义混淆", "单位名称漏写"],
-      "recommended_question_types": ["填空题", "应用题", "计算题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "没有看出每组数量相同",
+        "乘数和被乘数含义混淆",
+        "单位名称漏写"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "应用题",
+        "计算题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "multiply_total_problem",
@@ -335,9 +505,19 @@
       "unit": "数量间的乘除关系",
       "name": "求几个几的总数",
       "description": "会用乘法解决求几个相同数量合起来是多少的问题。",
-      "common_mistakes": ["把几组和每组几个写反但意义不清", "口诀用错", "答语单位错"],
-      "recommended_question_types": ["应用题", "计算题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "把几组和每组几个写反但意义不清",
+        "口诀用错",
+        "答语单位错"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "计算题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "division_equal_share",
@@ -350,9 +530,20 @@
       "unit": "数量间的乘除关系",
       "name": "平均分求每份数",
       "description": "知道总数和份数，能用除法求每份是多少。",
-      "common_mistakes": ["没有平均分就列除法", "把份数和每份数混淆", "不写单位"],
-      "recommended_question_types": ["应用题", "填空题", "计算题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "没有平均分就列除法",
+        "把份数和每份数混淆",
+        "不写单位"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "计算题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "division_containment",
@@ -365,9 +556,20 @@
       "unit": "数量间的乘除关系",
       "name": "按每份数求份数",
       "description": "知道总数和每份数，能用除法求可以分成几份。",
-      "common_mistakes": ["把问题中的每份数看成份数", "单位名称写成每份物品", "没有检查商是否合理"],
-      "recommended_question_types": ["应用题", "填空题", "计算题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "把问题中的每份数看成份数",
+        "单位名称写成每份物品",
+        "没有检查商是否合理"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "计算题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "multiply_divide_inverse",
@@ -380,9 +582,20 @@
       "unit": "数量间的乘除关系",
       "name": "乘除法互逆关系",
       "description": "理解乘法和除法可以互相检验，能根据一个乘法算式写出相关除法算式。",
-      "common_mistakes": ["除法算式写不完整", "把积、因数位置混乱", "不会用乘法验算除法"],
-      "recommended_question_types": ["填空题", "判断题", "计算题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "除法算式写不完整",
+        "把积、因数位置混乱",
+        "不会用乘法验算除法"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "判断题",
+        "计算题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "multiply_divide_word_problem",
@@ -395,9 +608,19 @@
       "unit": "数量间的乘除关系",
       "name": "乘除关系解决问题",
       "description": "能根据数量关系判断用乘法还是除法解决实际问题。",
-      "common_mistakes": ["看到数字就直接相乘或相除", "没有找清总数、份数、每份数", "答语不完整"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "看到数字就直接相乘或相除",
+        "没有找清总数、份数、每份数",
+        "答语不完整"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "thousand_ten_thousand",
@@ -410,9 +633,19 @@
       "unit": "万以内数的认识",
       "name": "千和万的认识",
       "description": "认识计数单位千和万，理解相邻计数单位之间的十进关系。",
-      "common_mistakes": ["把千和万的大小关系弄反", "数数时满十没有进一", "不知道 10 个一千是一万"],
-      "recommended_question_types": ["填空题", "判断题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "把千和万的大小关系弄反",
+        "数数时满十没有进一",
+        "不知道 10 个一千是一万"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "place_value_composition",
@@ -425,9 +658,19 @@
       "unit": "万以内数的认识",
       "name": "万以内数的组成",
       "description": "会说出一个数由几个千、几个百、几个十和几个一组成。",
-      "common_mistakes": ["数位和计数单位混淆", "中间有 0 的数位漏说", "把个位、十位、百位顺序写反"],
-      "recommended_question_types": ["填空题", "选择题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "数位和计数单位混淆",
+        "中间有 0 的数位漏说",
+        "把个位、十位、百位顺序写反"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "number_reading_writing",
@@ -440,9 +683,19 @@
       "unit": "万以内数的认识",
       "name": "万以内数的读写",
       "description": "会读写万以内的数，能根据数位顺序正确写数。",
-      "common_mistakes": ["中间或末尾的 0 读写错误", "写数时漏写占位 0", "从低位开始写数"],
-      "recommended_question_types": ["填空题", "判断题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "中间或末尾的 0 读写错误",
+        "写数时漏写占位 0",
+        "从低位开始写数"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "zero_in_number",
@@ -455,9 +708,19 @@
       "unit": "万以内数的认识",
       "name": "数中的 0",
       "description": "理解数中间或末尾的 0 在读数、写数中的作用。",
-      "common_mistakes": ["中间连续 0 读多个零", "末尾 0 读出来", "写数时漏掉占位 0"],
-      "recommended_question_types": ["填空题", "判断题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "中间连续 0 读多个零",
+        "末尾 0 读出来",
+        "写数时漏掉占位 0"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "number_compare",
@@ -470,9 +733,20 @@
       "unit": "万以内数的认识",
       "name": "万以内数大小比较",
       "description": "能按位数和从高位到低位比较万以内数的大小。",
-      "common_mistakes": ["只比较某一位数字", "位数不同仍从个位比较", "没有从最高位开始比较"],
-      "recommended_question_types": ["填空题", "选择题", "判断题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "只比较某一位数字",
+        "位数不同仍从个位比较",
+        "没有从最高位开始比较"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "approximate_number",
@@ -485,9 +759,19 @@
       "unit": "万以内数的认识",
       "name": "近似数",
       "description": "能用接近整十、整百或整千的数描述数量大约是多少。",
-      "common_mistakes": ["把准确数和近似数混淆", "不会根据语境选择近似数", "估计结果离原数太远"],
-      "recommended_question_types": ["填空题", "应用题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "把准确数和近似数混淆",
+        "不会根据语境选择近似数",
+        "估计结果离原数太远"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "three_digit_addition",
@@ -500,9 +784,20 @@
       "unit": "万以内的加法和减法",
       "name": "万以内加法",
       "description": "会进行万以内数的加法，理解相同数位对齐。",
-      "common_mistakes": ["相同数位没有对齐", "进位后忘记加 1", "横式和竖式结果不一致"],
-      "recommended_question_types": ["计算题", "填空题", "应用题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "相同数位没有对齐",
+        "进位后忘记加 1",
+        "横式和竖式结果不一致"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "continuous_carry_addition",
@@ -515,9 +810,19 @@
       "unit": "万以内的加法和减法",
       "name": "连续进位加法",
       "description": "会处理个位、十位、百位连续满十进一的加法。",
-      "common_mistakes": ["连续进位只进了一次", "进位写错位置", "计算完不检查结果大小"],
-      "recommended_question_types": ["计算题", "判断题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "连续进位只进了一次",
+        "进位写错位置",
+        "计算完不检查结果大小"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "three_digit_subtraction",
@@ -530,9 +835,20 @@
       "unit": "万以内的加法和减法",
       "name": "万以内减法",
       "description": "会进行万以内数的减法，理解不够减时向前一位退 1。",
-      "common_mistakes": ["退位后原数位没有少 1", "相同数位没有对齐", "被减数和减数位置写反"],
-      "recommended_question_types": ["计算题", "填空题", "应用题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "退位后原数位没有少 1",
+        "相同数位没有对齐",
+        "被减数和减数位置写反"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "continuous_borrow_subtraction",
@@ -545,9 +861,19 @@
       "unit": "万以内的加法和减法",
       "name": "连续退位减法",
       "description": "会处理连续退位以及中间有 0 的减法。",
-      "common_mistakes": ["从 0 退位时处理错误", "连续退位漏退", "差的中间 0 漏写"],
-      "recommended_question_types": ["计算题", "判断题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "从 0 退位时处理错误",
+        "连续退位漏退",
+        "差的中间 0 漏写"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "add_sub_inverse_check",
@@ -560,9 +886,20 @@
       "unit": "万以内的加法和减法",
       "name": "加减法验算",
       "description": "能用加减法互逆关系检查计算结果是否正确。",
-      "common_mistakes": ["验算时仍重复原算式", "没有比较验算结果", "不写验算结论"],
-      "recommended_question_types": ["判断题", "计算题", "变式题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "验算时仍重复原算式",
+        "没有比较验算结果",
+        "不写验算结论"
+      ],
+      "recommended_question_types": [
+        "判断题",
+        "计算题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "add_sub_word_problem",
@@ -575,9 +912,20 @@
       "unit": "万以内的加法和减法",
       "name": "加减法解决实际问题",
       "description": "能在总数、相差、还剩等情境中选择加法或减法解决问题。",
-      "common_mistakes": ["没有分清求总数还是求相差", "单位名称不一致", "只列式不写答语"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["基础", "提高", "拔高"]
+      "common_mistakes": [
+        "没有分清求总数还是求相差",
+        "单位名称不一致",
+        "只列式不写答语"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "comic_sequence_math",
@@ -590,9 +938,19 @@
       "unit": "数学连环画",
       "name": "连环画中的顺序信息",
       "description": "能按图文顺序找出数量变化过程。",
-      "common_mistakes": ["没有按顺序读图", "漏掉中间变化", "把故事信息和问题信息混淆"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "没有按顺序读图",
+        "漏掉中间变化",
+        "把故事信息和问题信息混淆"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "comic_multi_step_problem",
@@ -605,9 +963,19 @@
       "unit": "数学连环画",
       "name": "连环画多步问题",
       "description": "能从连续情境中提取多个数量关系并分步解决。",
-      "common_mistakes": ["只算一步就作答", "没有说明每一步含义", "把增加和减少看反"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "只算一步就作答",
+        "没有说明每一步含义",
+        "把增加和减少看反"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     },
     {
       "id": "review_number_operation",
@@ -620,9 +988,20 @@
       "unit": "复习与关联",
       "name": "数与运算整理",
       "description": "整理万以内数的认识、加减法和乘除关系，形成知识网络。",
-      "common_mistakes": ["知识点混在一起不会分类", "计算和数量关系对应不上", "不会用验算检查"],
-      "recommended_question_types": ["填空题", "计算题", "应用题"],
-      "difficulty_levels": ["基础", "提高"]
+      "common_mistakes": [
+        "知识点混在一起不会分类",
+        "计算和数量关系对应不上",
+        "不会用验算检查"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "计算题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高"
+      ]
     },
     {
       "id": "review_problem_solving",
@@ -635,9 +1014,19 @@
       "unit": "复习与关联",
       "name": "综合解决问题",
       "description": "综合运用时间、除法、乘除关系、万以内数和加减法解决问题。",
-      "common_mistakes": ["没有先分析数量关系", "多步题步骤混乱", "答案不符合生活实际"],
-      "recommended_question_types": ["应用题", "变式题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "common_mistakes": [
+        "没有先分析数量关系",
+        "多步题步骤混乱",
+        "答案不符合生活实际"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "提高",
+        "拔高"
+      ]
     }
   ],
   "templates": [
@@ -816,5 +1205,103 @@
       "answer_rule": "先用总数减去剩下的，再平均分给各班。",
       "difficulty": "拔高"
     }
-  ]
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1971,
+    "selected_files": 80,
+    "categories": {
+      "knowledge": 24,
+      "other": 109,
+      "lesson_plan": 1020,
+      "slides": 90,
+      "practice": 664,
+      "textbook": 4,
+      "student_sheet": 60
+    },
+    "top_terms": [
+      "预设",
+      "提问",
+      "教师活动",
+      "学生活动",
+      "活动意图",
+      "二次备课",
+      "课堂小结",
+      "做一做",
+      "课时",
+      "难点",
+      "重点",
+      "课题",
+      "知识与技能",
+      "学情分析",
+      "核心素养目标",
+      "情境与问题",
+      "思维与表达",
+      "交流与反思",
+      "余数",
+      "教学准备",
+      "课件",
+      "回答",
+      "教学环节四",
+      "除数",
+      "板书设计",
+      "课时教学设计",
+      "课型",
+      "新授课",
+      "一课时",
+      "授课时间",
+      "教材分析",
+      "学习重点难点",
+      "学习活动设计",
+      "教学环节一",
+      "教学环节二",
+      "教学环节三",
+      "作业设计",
+      "基础性作业",
+      "提升性作业",
+      "拓展性作业",
+      "教学反思与改进",
+      "成功之处",
+      "不足之处",
+      "改进措施",
+      "强调",
+      "你有什么收获",
+      "读作",
+      "求一个数的几倍是多少",
+      "学习目标",
+      "因此"
+    ],
+    "top_headings": [
+      "1.教材分析",
+      "2.学情分析",
+      "3.核心素养目标",
+      "4.学习重点难点",
+      "5.教学准备",
+      "6.学习活动设计",
+      "7.作业设计",
+      "9.教学反思与改进",
+      "8.板书设计",
+      "1. 提问：“通过本节课的学习，你有什么收获？”",
+      "1. 出示本节课的学习目标",
+      "1. 提问：“通过这节课的学习，你有什么收获？”",
+      "1. 积极发言分享收获",
+      "1. 提问：“学习完本节课，你有什么收获？”",
+      "第2单元 表内除法（一）",
+      "1. 阅读题目，理解题意",
+      "第7单元 万以内数的认识",
+      "8. 板书设计",
+      "1. 主动举手发言，分享自己的学习收获",
+      "3. 系统归纳",
+      "2. 引导学生回顾",
+      "2. 明确告知学生本节课的学习任务",
+      "1. 提问：通过本节课的学习，你有什么收获？",
+      "1. 积极举手发言，分享自己的学习收获",
+      "1. 独立完成填空",
+      "3. 归纳总结",
+      "4. 回答问题",
+      "1. 观察表格数据，理解题意",
+      "1. 提问：“学习完本节课，你有什么收获？”引导学生从知识、方法、",
+      "第一单元"
+    ]
+  }
 }

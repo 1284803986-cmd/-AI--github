@@ -1,0 +1,1863 @@
+{
+  "package_id": "g4_math_up_rj_2026",
+  "package_name": "四年级数学上册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "四年级",
+    "semester": "上册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g4_math_up_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\4上-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g4_math_up_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1506 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "large_numbers",
+      "name": "大数的认识",
+      "lessons": [
+        {
+          "id": "large_numbers_lesson_1",
+          "name": "亿以内数的读写",
+          "knowledge_point_ids": [
+            "large_numbers_1"
+          ]
+        },
+        {
+          "id": "large_numbers_lesson_2",
+          "name": "数位顺序表",
+          "knowledge_point_ids": [
+            "large_numbers_2"
+          ]
+        },
+        {
+          "id": "large_numbers_lesson_3",
+          "name": "大数比较",
+          "knowledge_point_ids": [
+            "large_numbers_3"
+          ]
+        },
+        {
+          "id": "large_numbers_lesson_4",
+          "name": "改写和近似数",
+          "knowledge_point_ids": [
+            "large_numbers_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hectare_square_km",
+      "name": "公顷和平方千米",
+      "lessons": [
+        {
+          "id": "hectare_square_km_lesson_1",
+          "name": "公顷的认识",
+          "knowledge_point_ids": [
+            "hectare_square_km_1"
+          ]
+        },
+        {
+          "id": "hectare_square_km_lesson_2",
+          "name": "平方千米的认识",
+          "knowledge_point_ids": [
+            "hectare_square_km_2"
+          ]
+        },
+        {
+          "id": "hectare_square_km_lesson_3",
+          "name": "面积单位换算",
+          "knowledge_point_ids": [
+            "hectare_square_km_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "angle",
+      "name": "角的度量",
+      "lessons": [
+        {
+          "id": "angle_lesson_1",
+          "name": "线段直线射线",
+          "knowledge_point_ids": [
+            "angle_1"
+          ]
+        },
+        {
+          "id": "angle_lesson_2",
+          "name": "角的认识",
+          "knowledge_point_ids": [
+            "angle_2"
+          ]
+        },
+        {
+          "id": "angle_lesson_3",
+          "name": "量角和画角",
+          "knowledge_point_ids": [
+            "angle_3"
+          ]
+        },
+        {
+          "id": "angle_lesson_4",
+          "name": "角的分类",
+          "knowledge_point_ids": [
+            "angle_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multiply_three_digit",
+      "name": "三位数乘两位数",
+      "lessons": [
+        {
+          "id": "multiply_three_digit_lesson_1",
+          "name": "笔算乘法",
+          "knowledge_point_ids": [
+            "multiply_three_digit_1"
+          ]
+        },
+        {
+          "id": "multiply_three_digit_lesson_2",
+          "name": "积的变化规律",
+          "knowledge_point_ids": [
+            "multiply_three_digit_2"
+          ]
+        },
+        {
+          "id": "multiply_three_digit_lesson_3",
+          "name": "乘法估算",
+          "knowledge_point_ids": [
+            "multiply_three_digit_3"
+          ]
+        },
+        {
+          "id": "multiply_three_digit_lesson_4",
+          "name": "速度时间路程",
+          "knowledge_point_ids": [
+            "multiply_three_digit_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parallel_perpendicular",
+      "name": "平行四边形和梯形",
+      "lessons": [
+        {
+          "id": "parallel_perpendicular_lesson_1",
+          "name": "垂直与平行",
+          "knowledge_point_ids": [
+            "parallel_perpendicular_1"
+          ]
+        },
+        {
+          "id": "parallel_perpendicular_lesson_2",
+          "name": "平行四边形",
+          "knowledge_point_ids": [
+            "parallel_perpendicular_2"
+          ]
+        },
+        {
+          "id": "parallel_perpendicular_lesson_3",
+          "name": "梯形",
+          "knowledge_point_ids": [
+            "parallel_perpendicular_3"
+          ]
+        },
+        {
+          "id": "parallel_perpendicular_lesson_4",
+          "name": "画高",
+          "knowledge_point_ids": [
+            "parallel_perpendicular_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "divide_two_digit",
+      "name": "除数是两位数的除法",
+      "lessons": [
+        {
+          "id": "divide_two_digit_lesson_1",
+          "name": "口算除法",
+          "knowledge_point_ids": [
+            "divide_two_digit_1"
+          ]
+        },
+        {
+          "id": "divide_two_digit_lesson_2",
+          "name": "笔算除法",
+          "knowledge_point_ids": [
+            "divide_two_digit_2"
+          ]
+        },
+        {
+          "id": "divide_two_digit_lesson_3",
+          "name": "商的变化规律",
+          "knowledge_point_ids": [
+            "divide_two_digit_3"
+          ]
+        },
+        {
+          "id": "divide_two_digit_lesson_4",
+          "name": "除法应用",
+          "knowledge_point_ids": [
+            "divide_two_digit_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "条形统计图",
+      "lessons": [
+        {
+          "id": "statistics_lesson_1",
+          "name": "一格表示多个单位",
+          "knowledge_point_ids": [
+            "statistics_1"
+          ]
+        },
+        {
+          "id": "statistics_lesson_2",
+          "name": "读统计图",
+          "knowledge_point_ids": [
+            "statistics_2"
+          ]
+        },
+        {
+          "id": "statistics_lesson_3",
+          "name": "绘制统计图",
+          "knowledge_point_ids": [
+            "statistics_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--优化",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "合理安排",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "烙饼问题",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_3",
+          "name": "田忌赛马",
+          "knowledge_point_ids": [
+            "math_wide_3"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "large_numbers_1",
+      "unit_id": "large_numbers",
+      "lesson_id": "large_numbers_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "大数的认识",
+      "name": "亿以内数的读写",
+      "description": "围绕“大数的认识”中“亿以内数的读写”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "亿以内数的读写：没有看清题目要求",
+        "亿以内数的读写：答语单位写错或漏写",
+        "亿以内数的读写：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "large_numbers_2",
+      "unit_id": "large_numbers",
+      "lesson_id": "large_numbers_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "大数的认识",
+      "name": "数位顺序表",
+      "description": "围绕“大数的认识”中“数位顺序表”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "数位顺序表：没有看清题目要求",
+        "数位顺序表：答语单位写错或漏写",
+        "数位顺序表：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "large_numbers_3",
+      "unit_id": "large_numbers",
+      "lesson_id": "large_numbers_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "大数的认识",
+      "name": "大数比较",
+      "description": "围绕“大数的认识”中“大数比较”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "大数比较：没有看清题目要求",
+        "大数比较：答语单位写错或漏写",
+        "大数比较：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "large_numbers_4",
+      "unit_id": "large_numbers",
+      "lesson_id": "large_numbers_lesson_4",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "大数的认识",
+      "name": "改写和近似数",
+      "description": "围绕“大数的认识”中“改写和近似数”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "改写和近似数：没有看清题目要求",
+        "改写和近似数：答语单位写错或漏写",
+        "改写和近似数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "hectare_square_km_1",
+      "unit_id": "hectare_square_km",
+      "lesson_id": "hectare_square_km_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "公顷和平方千米",
+      "name": "公顷的认识",
+      "description": "围绕“公顷和平方千米”中“公顷的认识”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "公顷的认识：没有看清题目要求",
+        "公顷的认识：答语单位写错或漏写",
+        "公顷的认识：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "hectare_square_km_2",
+      "unit_id": "hectare_square_km",
+      "lesson_id": "hectare_square_km_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "公顷和平方千米",
+      "name": "平方千米的认识",
+      "description": "围绕“公顷和平方千米”中“平方千米的认识”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "平方千米的认识：没有看清题目要求",
+        "平方千米的认识：答语单位写错或漏写",
+        "平方千米的认识：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "hectare_square_km_3",
+      "unit_id": "hectare_square_km",
+      "lesson_id": "hectare_square_km_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "公顷和平方千米",
+      "name": "面积单位换算",
+      "description": "围绕“公顷和平方千米”中“面积单位换算”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "面积单位换算：把图形名称或单位混淆",
+        "面积单位换算：周长、面积、体积公式用错",
+        "面积单位换算：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "angle_1",
+      "unit_id": "angle",
+      "lesson_id": "angle_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "角的度量",
+      "name": "线段直线射线",
+      "description": "围绕“角的度量”中“线段直线射线”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "线段直线射线：把图形名称或单位混淆",
+        "线段直线射线：周长、面积、体积公式用错",
+        "线段直线射线：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "angle_2",
+      "unit_id": "angle",
+      "lesson_id": "angle_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "角的度量",
+      "name": "角的认识",
+      "description": "围绕“角的度量”中“角的认识”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "角的认识：把图形名称或单位混淆",
+        "角的认识：周长、面积、体积公式用错",
+        "角的认识：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "angle_3",
+      "unit_id": "angle",
+      "lesson_id": "angle_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "角的度量",
+      "name": "量角和画角",
+      "description": "围绕“角的度量”中“量角和画角”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "量角和画角：把图形名称或单位混淆",
+        "量角和画角：周长、面积、体积公式用错",
+        "量角和画角：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "angle_4",
+      "unit_id": "angle",
+      "lesson_id": "angle_lesson_4",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "角的度量",
+      "name": "角的分类",
+      "description": "围绕“角的度量”中“角的分类”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "角的分类：把图形名称或单位混淆",
+        "角的分类：周长、面积、体积公式用错",
+        "角的分类：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_three_digit_1",
+      "unit_id": "multiply_three_digit",
+      "lesson_id": "multiply_three_digit_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三位数乘两位数",
+      "name": "笔算乘法",
+      "description": "围绕“三位数乘两位数”中“笔算乘法”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "笔算乘法：相同数位没有对齐",
+        "笔算乘法：进位、退位或约分步骤遗漏",
+        "笔算乘法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_three_digit_2",
+      "unit_id": "multiply_three_digit",
+      "lesson_id": "multiply_three_digit_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三位数乘两位数",
+      "name": "积的变化规律",
+      "description": "围绕“三位数乘两位数”中“积的变化规律”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "积的变化规律：相同数位没有对齐",
+        "积的变化规律：进位、退位或约分步骤遗漏",
+        "积的变化规律：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_three_digit_3",
+      "unit_id": "multiply_three_digit",
+      "lesson_id": "multiply_three_digit_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三位数乘两位数",
+      "name": "乘法估算",
+      "description": "围绕“三位数乘两位数”中“乘法估算”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘法估算：相同数位没有对齐",
+        "乘法估算：进位、退位或约分步骤遗漏",
+        "乘法估算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_three_digit_4",
+      "unit_id": "multiply_three_digit",
+      "lesson_id": "multiply_three_digit_lesson_4",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三位数乘两位数",
+      "name": "速度时间路程",
+      "description": "围绕“三位数乘两位数”中“速度时间路程”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "速度时间路程：相同数位没有对齐",
+        "速度时间路程：进位、退位或约分步骤遗漏",
+        "速度时间路程：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "parallel_perpendicular_1",
+      "unit_id": "parallel_perpendicular",
+      "lesson_id": "parallel_perpendicular_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "平行四边形和梯形",
+      "name": "垂直与平行",
+      "description": "围绕“平行四边形和梯形”中“垂直与平行”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "垂直与平行：把图形名称或单位混淆",
+        "垂直与平行：周长、面积、体积公式用错",
+        "垂直与平行：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "parallel_perpendicular_2",
+      "unit_id": "parallel_perpendicular",
+      "lesson_id": "parallel_perpendicular_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "平行四边形和梯形",
+      "name": "平行四边形",
+      "description": "围绕“平行四边形和梯形”中“平行四边形”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "平行四边形：把图形名称或单位混淆",
+        "平行四边形：周长、面积、体积公式用错",
+        "平行四边形：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "parallel_perpendicular_3",
+      "unit_id": "parallel_perpendicular",
+      "lesson_id": "parallel_perpendicular_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "平行四边形和梯形",
+      "name": "梯形",
+      "description": "围绕“平行四边形和梯形”中“梯形”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "梯形：把图形名称或单位混淆",
+        "梯形：周长、面积、体积公式用错",
+        "梯形：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "parallel_perpendicular_4",
+      "unit_id": "parallel_perpendicular",
+      "lesson_id": "parallel_perpendicular_lesson_4",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "平行四边形和梯形",
+      "name": "画高",
+      "description": "围绕“平行四边形和梯形”中“画高”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "画高：把图形名称或单位混淆",
+        "画高：周长、面积、体积公式用错",
+        "画高：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_two_digit_1",
+      "unit_id": "divide_two_digit",
+      "lesson_id": "divide_two_digit_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是两位数的除法",
+      "name": "口算除法",
+      "description": "围绕“除数是两位数的除法”中“口算除法”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "口算除法：相同数位没有对齐",
+        "口算除法：进位、退位或约分步骤遗漏",
+        "口算除法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_two_digit_2",
+      "unit_id": "divide_two_digit",
+      "lesson_id": "divide_two_digit_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是两位数的除法",
+      "name": "笔算除法",
+      "description": "围绕“除数是两位数的除法”中“笔算除法”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "笔算除法：相同数位没有对齐",
+        "笔算除法：进位、退位或约分步骤遗漏",
+        "笔算除法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_two_digit_3",
+      "unit_id": "divide_two_digit",
+      "lesson_id": "divide_two_digit_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是两位数的除法",
+      "name": "商的变化规律",
+      "description": "围绕“除数是两位数的除法”中“商的变化规律”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "商的变化规律：相同数位没有对齐",
+        "商的变化规律：进位、退位或约分步骤遗漏",
+        "商的变化规律：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "divide_two_digit_4",
+      "unit_id": "divide_two_digit",
+      "lesson_id": "divide_two_digit_lesson_4",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是两位数的除法",
+      "name": "除法应用",
+      "description": "围绕“除数是两位数的除法”中“除法应用”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "除法应用：没有先找清数量关系",
+        "除法应用：只列式不写答语",
+        "除法应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_1",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "条形统计图",
+      "name": "一格表示多个单位",
+      "description": "围绕“条形统计图”中“一格表示多个单位”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "一格表示多个单位：没有看清题目要求",
+        "一格表示多个单位：答语单位写错或漏写",
+        "一格表示多个单位：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_2",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "条形统计图",
+      "name": "读统计图",
+      "description": "围绕“条形统计图”中“读统计图”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "读统计图：没有看清题目要求",
+        "读统计图：答语单位写错或漏写",
+        "读统计图：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_3",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "条形统计图",
+      "name": "绘制统计图",
+      "description": "围绕“条形统计图”中“绘制统计图”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "绘制统计图：没有看清题目要求",
+        "绘制统计图：答语单位写错或漏写",
+        "绘制统计图：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--优化",
+      "name": "合理安排",
+      "description": "围绕“数学广角--优化”中“合理安排”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "合理安排：把图形名称或单位混淆",
+        "合理安排：周长、面积、体积公式用错",
+        "合理安排：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--优化",
+      "name": "烙饼问题",
+      "description": "围绕“数学广角--优化”中“烙饼问题”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "烙饼问题：把图形名称或单位混淆",
+        "烙饼问题：周长、面积、体积公式用错",
+        "烙饼问题：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_3",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_3",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--优化",
+      "name": "田忌赛马",
+      "description": "围绕“数学广角--优化”中“田忌赛马”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "田忌赛马：把图形名称或单位混淆",
+        "田忌赛马：周长、面积、体积公式用错",
+        "田忌赛马：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "large_numbers_1",
+      "question_type": "填空题",
+      "template": "围绕“亿以内数的读写”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“亿以内数的读写”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“亿以内数的读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_1",
+      "question_type": "选择题",
+      "template": "围绕“亿以内数的读写”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“亿以内数的读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_1",
+      "question_type": "判断题",
+      "template": "围绕“亿以内数的读写”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“亿以内数的读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_2",
+      "question_type": "填空题",
+      "template": "围绕“数位顺序表”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“数位顺序表”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数位顺序表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_2",
+      "question_type": "选择题",
+      "template": "围绕“数位顺序表”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数位顺序表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_2",
+      "question_type": "判断题",
+      "template": "围绕“数位顺序表”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数位顺序表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_3",
+      "question_type": "填空题",
+      "template": "围绕“大数比较”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“大数比较”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“大数比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_3",
+      "question_type": "选择题",
+      "template": "围绕“大数比较”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“大数比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_3",
+      "question_type": "判断题",
+      "template": "围绕“大数比较”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“大数比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_4",
+      "question_type": "填空题",
+      "template": "围绕“改写和近似数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“改写和近似数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“改写和近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_4",
+      "question_type": "选择题",
+      "template": "围绕“改写和近似数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“改写和近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "large_numbers_4",
+      "question_type": "判断题",
+      "template": "围绕“改写和近似数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“改写和近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_1",
+      "question_type": "填空题",
+      "template": "围绕“公顷的认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“公顷的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“公顷的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_1",
+      "question_type": "选择题",
+      "template": "围绕“公顷的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“公顷的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_1",
+      "question_type": "判断题",
+      "template": "围绕“公顷的认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“公顷的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_2",
+      "question_type": "填空题",
+      "template": "围绕“平方千米的认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“平方千米的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平方千米的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_2",
+      "question_type": "选择题",
+      "template": "围绕“平方千米的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平方千米的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_2",
+      "question_type": "判断题",
+      "template": "围绕“平方千米的认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平方千米的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_3",
+      "question_type": "填空题",
+      "template": "围绕“面积单位换算”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“面积单位换算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_3",
+      "question_type": "选择题",
+      "template": "围绕“面积单位换算”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“面积单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "hectare_square_km_3",
+      "question_type": "应用题",
+      "template": "围绕“面积单位换算”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“面积单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_1",
+      "question_type": "填空题",
+      "template": "围绕“线段直线射线”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“线段直线射线”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“线段直线射线”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_1",
+      "question_type": "选择题",
+      "template": "围绕“线段直线射线”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“线段直线射线”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_1",
+      "question_type": "应用题",
+      "template": "围绕“线段直线射线”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“线段直线射线”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_2",
+      "question_type": "填空题",
+      "template": "围绕“角的认识”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“角的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“角的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_2",
+      "question_type": "选择题",
+      "template": "围绕“角的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“角的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_2",
+      "question_type": "应用题",
+      "template": "围绕“角的认识”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“角的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_3",
+      "question_type": "填空题",
+      "template": "围绕“量角和画角”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“量角和画角”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“量角和画角”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_3",
+      "question_type": "选择题",
+      "template": "围绕“量角和画角”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“量角和画角”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_3",
+      "question_type": "应用题",
+      "template": "围绕“量角和画角”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“量角和画角”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_4",
+      "question_type": "填空题",
+      "template": "围绕“角的分类”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“角的分类”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“角的分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_4",
+      "question_type": "选择题",
+      "template": "围绕“角的分类”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“角的分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "angle_4",
+      "question_type": "应用题",
+      "template": "围绕“角的分类”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“角的分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_1",
+      "question_type": "计算题",
+      "template": "围绕“笔算乘法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_1",
+      "question_type": "填空题",
+      "template": "围绕“笔算乘法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“笔算乘法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_1",
+      "question_type": "判断题",
+      "template": "围绕“笔算乘法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_2",
+      "question_type": "计算题",
+      "template": "围绕“积的变化规律”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“积的变化规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_2",
+      "question_type": "填空题",
+      "template": "围绕“积的变化规律”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“积的变化规律”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“积的变化规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_2",
+      "question_type": "判断题",
+      "template": "围绕“积的变化规律”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“积的变化规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_3",
+      "question_type": "计算题",
+      "template": "围绕“乘法估算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_3",
+      "question_type": "填空题",
+      "template": "围绕“乘法估算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘法估算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_3",
+      "question_type": "判断题",
+      "template": "围绕“乘法估算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_4",
+      "question_type": "计算题",
+      "template": "围绕“速度时间路程”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“速度时间路程”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_4",
+      "question_type": "填空题",
+      "template": "围绕“速度时间路程”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“速度时间路程”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“速度时间路程”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_three_digit_4",
+      "question_type": "判断题",
+      "template": "围绕“速度时间路程”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“速度时间路程”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_1",
+      "question_type": "填空题",
+      "template": "围绕“垂直与平行”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“垂直与平行”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“垂直与平行”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_1",
+      "question_type": "选择题",
+      "template": "围绕“垂直与平行”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“垂直与平行”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_1",
+      "question_type": "应用题",
+      "template": "围绕“垂直与平行”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“垂直与平行”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_2",
+      "question_type": "填空题",
+      "template": "围绕“平行四边形”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“平行四边形”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平行四边形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_2",
+      "question_type": "选择题",
+      "template": "围绕“平行四边形”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平行四边形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_2",
+      "question_type": "应用题",
+      "template": "围绕“平行四边形”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“平行四边形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_3",
+      "question_type": "填空题",
+      "template": "围绕“梯形”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“梯形”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“梯形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_3",
+      "question_type": "选择题",
+      "template": "围绕“梯形”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“梯形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_3",
+      "question_type": "应用题",
+      "template": "围绕“梯形”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“梯形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_4",
+      "question_type": "填空题",
+      "template": "围绕“画高”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“画高”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“画高”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_4",
+      "question_type": "选择题",
+      "template": "围绕“画高”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“画高”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "parallel_perpendicular_4",
+      "question_type": "应用题",
+      "template": "围绕“画高”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“画高”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_1",
+      "question_type": "计算题",
+      "template": "围绕“口算除法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_1",
+      "question_type": "填空题",
+      "template": "围绕“口算除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“口算除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_1",
+      "question_type": "判断题",
+      "template": "围绕“口算除法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_2",
+      "question_type": "计算题",
+      "template": "围绕“笔算除法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_2",
+      "question_type": "填空题",
+      "template": "围绕“笔算除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“笔算除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_2",
+      "question_type": "判断题",
+      "template": "围绕“笔算除法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_3",
+      "question_type": "计算题",
+      "template": "围绕“商的变化规律”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“商的变化规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_3",
+      "question_type": "填空题",
+      "template": "围绕“商的变化规律”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“商的变化规律”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“商的变化规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_3",
+      "question_type": "判断题",
+      "template": "围绕“商的变化规律”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“商的变化规律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_4",
+      "question_type": "应用题",
+      "template": "围绕“除法应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_4",
+      "question_type": "填空题",
+      "template": "围绕“除法应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“除法应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "divide_two_digit_4",
+      "question_type": "变式题",
+      "template": "围绕“除法应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“除法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "填空题",
+      "template": "围绕“一格表示多个单位”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“一格表示多个单位”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一格表示多个单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "选择题",
+      "template": "围绕“一格表示多个单位”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一格表示多个单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "判断题",
+      "template": "围绕“一格表示多个单位”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一格表示多个单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "填空题",
+      "template": "围绕“读统计图”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“读统计图”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“读统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "选择题",
+      "template": "围绕“读统计图”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“读统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "判断题",
+      "template": "围绕“读统计图”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“读统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "填空题",
+      "template": "围绕“绘制统计图”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“绘制统计图”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“绘制统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "选择题",
+      "template": "围绕“绘制统计图”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“绘制统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "判断题",
+      "template": "围绕“绘制统计图”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“绘制统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“合理安排”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“合理安排”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“合理安排”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“合理安排”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“合理安排”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“合理安排”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“合理安排”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“烙饼问题”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“烙饼问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“烙饼问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“烙饼问题”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“烙饼问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“烙饼问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“烙饼问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "填空题",
+      "template": "围绕“田忌赛马”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“田忌赛马”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“田忌赛马”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "选择题",
+      "template": "围绕“田忌赛马”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“田忌赛马”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "应用题",
+      "template": "围绕“田忌赛马”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“田忌赛马”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1506,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 982,
+      "knowledge": 18,
+      "practice": 256,
+      "student_sheet": 124,
+      "other": 126
+    },
+    "top_terms": [
+      "教材",
+      "课时",
+      "教学目标",
+      "解析",
+      "课件出示",
+      "学习目标",
+      "教学过程",
+      "设计意图",
+      "教学重点",
+      "课件",
+      "四舍五入",
+      "教学难点",
+      "总第",
+      "教学内容",
+      "难点",
+      "厘米",
+      "合作探究",
+      "自主学习",
+      "板书课题",
+      "重点",
+      "361教学法",
+      "四年级",
+      "主备教师",
+      "预习提纲",
+      "导学过程",
+      "导入揭题",
+      "明确目标",
+      "预习反馈",
+      "师生活动",
+      "活动要求",
+      "出示学习活动要求",
+      "明确学习要求",
+      "学生自主学习",
+      "展示分享",
+      "教师点拨",
+      "当堂训练",
+      "总结提升",
+      "板书设计",
+      "教案设计",
+      "活动过程",
+      "课后要求",
+      "射线",
+      "直线",
+      "写作",
+      "教具",
+      "教科书第",
+      "平行四边形",
+      "页第",
+      "练习七",
+      "教学准备"
+    ],
+    "top_headings": [
+      "2.合作探究",
+      "1.自主学习：出示学习活动要求，明确学习要求，学生自主学习",
+      "3.展示分享",
+      "4.教师点拨",
+      "4.教师点拨（预设）",
+      "6. 你能用三角尺画出下面的角吗？",
+      "2. 从课时练中选取",
+      "2、笔算",
+      "2、指名学生解读目标",
+      "12. 按要求在 里填上一个适当的数字，再计算",
+      "2、培养学生的迁移能力和抽象概括能力",
+      "9、10",
+      "1、自主学习",
+      "2、合作探究",
+      "3. 你能用三角尺画出下面的角吗？",
+      "5. 计算下面各题，并且验算",
+      "1、口算",
+      "3、展示分享",
+      "4、教师点拨（预设",
+      "2、指明学生解读目标",
+      "3、在学习活动中感受数学与生活的密切联系",
+      "1、（ ）里面最大能填几？",
+      "2、说一说，商多少？",
+      "2.使学生认识到解决问题策略的多样性，形成解决问题最优方案的意识",
+      "3. style.visibility",
+      "7. 用竖式",
+      "第一单元《大数的认识》",
+      "第1课时：大数的认识",
+      "第2课时：大数的认识",
+      "第3课时：大数的认识"
+    ]
+  }
+}

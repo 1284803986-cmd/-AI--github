@@ -1,6 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { getExtractedTypeMap } from "./extractedBank.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const contentDir = join(__dirname, "..", "..", "content");
@@ -26,15 +27,16 @@ export async function loadContentCatalog() {
   const templates = JSON.parse(templatesRaw);
   const sources = JSON.parse(sourcesRaw);
   const packageFiles = await readPackageFiles();
+  const extractedTypeMap = await getExtractedTypeMap();
   const packages = [
-    normalizePackage({ ...knowledge, templates: templates.templates, sources: sources.sources || [] }),
-    ...packageFiles.map(normalizePackage)
-  ];
+    normalizePackage({ ...knowledge, templates: templates.templates, sources: sources.sources || [] }, extractedTypeMap),
+    ...packageFiles.map((item) => normalizePackage(item, extractedTypeMap))
+  ].filter((item) => (item.options?.knowledgePoints || []).length);
 
   cache = {
     packages,
-    options: buildCatalogOptions(packages),
-    ...packages[0]
+    ...packages[0],
+    options: buildCatalogOptions(packages)
   };
   return cache;
 }
@@ -100,17 +102,29 @@ async function readPackageFiles() {
   }
 }
 
-function normalizePackage(contentPackage) {
+function normalizePackage(contentPackage, extractedTypeMap = new Map()) {
+  const knowledgePoints = (contentPackage.knowledge_points || []).map((point) => {
+    const key = `${contentPackage.package_id}::${point.id}`;
+    const extractedTypes = [...(extractedTypeMap.get(key) || [])];
+    return {
+      ...point,
+      recommended_question_types: extractedTypes
+    };
+  });
+  const normalized = { ...contentPackage, knowledge_points: knowledgePoints };
   return {
-    ...contentPackage,
-    options: buildOptions(contentPackage, contentPackage.templates || [])
+    ...normalized,
+    options: buildOptions(normalized, normalized.templates || [])
   };
 }
 
 function selectPackage(packages, input = {}) {
   if (!packages.length) return { knowledge_points: [], templates: [], options: buildOptions({}, []) };
   const knowledgePackage = input.knowledgePoint
-    ? packages.find((item) => findExactKnowledgePoint(item, input.knowledgePoint))
+    ? packages
+      .filter((item) => findExactKnowledgePoint(item, input.knowledgePoint))
+      .map((item) => ({ item, score: packageScore(item, input) }))
+      .sort((a, b) => b.score - a.score)[0]?.item
     : null;
   if (knowledgePackage) return knowledgePackage;
 
@@ -157,24 +171,30 @@ function findLessonForPoint(unit, knowledgePoint) {
 }
 
 function buildOptions(knowledge, templates) {
-  const points = knowledge.knowledge_points || [];
+  const allPoints = knowledge.knowledge_points || [];
+  const points = allPoints.filter((item) => (item.recommended_question_types || []).length);
+  const visiblePointIds = new Set(points.map((item) => item.id));
   const unique = (items) => [...new Set(items.filter(Boolean))];
   return {
     grades: unique(points.map((item) => item.grade)),
     semesters: unique(points.map((item) => item.semester)),
     subjects: unique(points.map((item) => item.subject)),
     textbooks: unique(points.map((item) => item.textbook)),
-    units: (knowledge.units || []).map((unit) => ({
-      id: unit.id,
-      name: unit.name,
-      lessons: (unit.lessons || []).map((lesson) => ({
-        id: lesson.id,
-        name: lesson.name,
-        knowledgePoints: points
-          .filter((point) => (lesson.knowledge_point_ids || []).includes(point.id))
-          .map((point) => ({ id: point.id, name: point.name }))
+    units: (knowledge.units || [])
+      .map((unit) => ({
+        id: unit.id,
+        name: unit.name,
+        lessons: (unit.lessons || [])
+          .map((lesson) => ({
+            id: lesson.id,
+            name: lesson.name,
+            knowledgePoints: points
+              .filter((point) => (lesson.knowledge_point_ids || []).includes(point.id))
+              .map((point) => ({ id: point.id, name: point.name }))
+          }))
+          .filter((lesson) => lesson.knowledgePoints.length)
       }))
-    })),
+      .filter((unit) => unit.lessons.length || points.some((point) => point.unit_id === unit.id && visiblePointIds.has(point.id))),
     knowledgePoints: points.map((item) => ({
       id: item.id,
       name: item.name,
@@ -183,7 +203,7 @@ function buildOptions(knowledge, templates) {
       recommendedQuestionTypes: item.recommended_question_types || [],
       difficultyLevels: item.difficulty_levels || []
     })),
-    questionTypes: unique(templates.map((item) => item.question_type)),
+    questionTypes: unique(points.flatMap((item) => item.recommended_question_types || [])),
     difficulties: unique(points.flatMap((item) => item.difficulty_levels || []))
   };
 }

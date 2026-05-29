@@ -3,6 +3,7 @@ import { normalizeQuestionType } from "./question";
 
 const SESSIONS_KEY = "practice_sessions";
 const LATEST_KEY = "latest_practice_session_id";
+const SESSION_CONTENT_VERSION = 4;
 
 export function getPracticeSessions() {
   try {
@@ -15,7 +16,12 @@ export function getPracticeSessions() {
 
 export function getPracticeSession(sessionId) {
   if (!sessionId) return null;
-  return getPracticeSessions()[sessionId] || null;
+  const session = getPracticeSessions()[sessionId] || null;
+  if (session && !isCurrentContentSession(session)) {
+    removePracticeSession(sessionId);
+    return null;
+  }
+  return session;
 }
 
 export function removePracticeSession(sessionId) {
@@ -29,7 +35,7 @@ export function removePracticeSession(sessionId) {
 }
 
 export function getLatestDoingPracticeSession() {
-  const sessions = Object.values(getPracticeSessions()).filter((item) => item?.status === "doing");
+  const sessions = Object.values(getPracticeSessions()).filter((item) => item?.status === "doing" && isCurrentContentSession(item));
   return sessions.sort((a, b) => Number(b.updatedAt || 0) - Number(a.updatedAt || 0))[0] || null;
 }
 
@@ -37,6 +43,7 @@ export function findDoingPracticeSession(meta) {
   const normalizedType = normalizeQuestionType(meta.typeId || meta.type);
   return Object.values(getPracticeSessions()).find((item) =>
     item?.status === "doing" &&
+    isCurrentContentSession(item) &&
     item.grade === meta.grade &&
     item.subject === meta.subject &&
     item.semester === meta.semester &&
@@ -100,6 +107,7 @@ export function createPracticeSession(meta, questions) {
     totalCount: safeQuestions.length,
     questions: safeQuestions,
     currentIndex: 0,
+    contentVersion: SESSION_CONTENT_VERSION,
     answers: safeQuestions.map(() => ""),
     checks: safeQuestions.map(() => undefined),
     submittedMap: {},
@@ -111,6 +119,10 @@ export function createPracticeSession(meta, questions) {
   };
   savePracticeSession(session);
   return session;
+}
+
+function isCurrentContentSession(session) {
+  return Number(session?.contentVersion || 0) >= SESSION_CONTENT_VERSION;
 }
 
 export function savePracticeSession(session) {

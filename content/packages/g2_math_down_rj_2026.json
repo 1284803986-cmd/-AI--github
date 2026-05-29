@@ -1,0 +1,1279 @@
+{
+  "package_id": "g2_math_down_rj_2026",
+  "package_name": "二年级数学下册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "二年级",
+    "semester": "下册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g2_math_down_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\2下-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g2_math_down_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1971 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "time",
+      "name": "时间在哪里",
+      "lessons": [
+        {
+          "id": "time_lesson_1",
+          "name": "认识一天和钟表",
+          "knowledge_point_ids": [
+            "time_1"
+          ]
+        },
+        {
+          "id": "time_lesson_2",
+          "name": "经过时间",
+          "knowledge_point_ids": [
+            "time_2"
+          ]
+        },
+        {
+          "id": "time_lesson_3",
+          "name": "时间安排问题",
+          "knowledge_point_ids": [
+            "time_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "division_remainder",
+      "name": "有余数的除法",
+      "lessons": [
+        {
+          "id": "division_remainder_lesson_1",
+          "name": "认识余数",
+          "knowledge_point_ids": [
+            "division_remainder_1"
+          ]
+        },
+        {
+          "id": "division_remainder_lesson_2",
+          "name": "有余数除法计算",
+          "knowledge_point_ids": [
+            "division_remainder_2"
+          ]
+        },
+        {
+          "id": "division_remainder_lesson_3",
+          "name": "余数应用",
+          "knowledge_point_ids": [
+            "division_remainder_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multiply_divide_relation",
+      "name": "数量间的乘除关系",
+      "lessons": [
+        {
+          "id": "multiply_divide_relation_lesson_1",
+          "name": "几个几与乘法",
+          "knowledge_point_ids": [
+            "multiply_divide_relation_1"
+          ]
+        },
+        {
+          "id": "multiply_divide_relation_lesson_2",
+          "name": "平均分与除法",
+          "knowledge_point_ids": [
+            "multiply_divide_relation_2"
+          ]
+        },
+        {
+          "id": "multiply_divide_relation_lesson_3",
+          "name": "乘除关系应用",
+          "knowledge_point_ids": [
+            "multiply_divide_relation_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numbers_10000",
+      "name": "万以内数的认识",
+      "lessons": [
+        {
+          "id": "numbers_10000_lesson_1",
+          "name": "千和万的认识",
+          "knowledge_point_ids": [
+            "numbers_10000_1"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_2",
+          "name": "万以内数的读写",
+          "knowledge_point_ids": [
+            "numbers_10000_2"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_3",
+          "name": "大小比较与近似数",
+          "knowledge_point_ids": [
+            "numbers_10000_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "add_sub_10000",
+      "name": "万以内的加法和减法",
+      "lessons": [
+        {
+          "id": "add_sub_10000_lesson_1",
+          "name": "万以内加法",
+          "knowledge_point_ids": [
+            "add_sub_10000_1"
+          ]
+        },
+        {
+          "id": "add_sub_10000_lesson_2",
+          "name": "万以内减法",
+          "knowledge_point_ids": [
+            "add_sub_10000_2"
+          ]
+        },
+        {
+          "id": "add_sub_10000_lesson_3",
+          "name": "加减法应用",
+          "knowledge_point_ids": [
+            "add_sub_10000_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_comic",
+      "name": "数学连环画",
+      "lessons": [
+        {
+          "id": "math_comic_lesson_1",
+          "name": "图文顺序中的数量关系",
+          "knowledge_point_ids": [
+            "math_comic_1"
+          ]
+        },
+        {
+          "id": "math_comic_lesson_2",
+          "name": "多步故事问题",
+          "knowledge_point_ids": [
+            "math_comic_2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "name": "复习与关联",
+      "lessons": [
+        {
+          "id": "review_lesson_1",
+          "name": "数与运算整理",
+          "knowledge_point_ids": [
+            "review_1"
+          ]
+        },
+        {
+          "id": "review_lesson_2",
+          "name": "综合解决问题",
+          "knowledge_point_ids": [
+            "review_2"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "time_1",
+      "unit_id": "time",
+      "lesson_id": "time_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时间在哪里",
+      "name": "认识一天和钟表",
+      "description": "围绕“时间在哪里”中“认识一天和钟表”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "认识一天和钟表：没有看清题目要求",
+        "认识一天和钟表：答语单位写错或漏写",
+        "认识一天和钟表：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "time_2",
+      "unit_id": "time",
+      "lesson_id": "time_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时间在哪里",
+      "name": "经过时间",
+      "description": "围绕“时间在哪里”中“经过时间”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "经过时间：没有看清题目要求",
+        "经过时间：答语单位写错或漏写",
+        "经过时间：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "time_3",
+      "unit_id": "time",
+      "lesson_id": "time_lesson_3",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时间在哪里",
+      "name": "时间安排问题",
+      "description": "围绕“时间在哪里”中“时间安排问题”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "时间安排问题：没有先找清数量关系",
+        "时间安排问题：只列式不写答语",
+        "时间安排问题：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_remainder_1",
+      "unit_id": "division_remainder",
+      "lesson_id": "division_remainder_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "认识余数",
+      "description": "围绕“有余数的除法”中“认识余数”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "认识余数：相同数位没有对齐",
+        "认识余数：进位、退位或约分步骤遗漏",
+        "认识余数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_remainder_2",
+      "unit_id": "division_remainder",
+      "lesson_id": "division_remainder_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "有余数除法计算",
+      "description": "围绕“有余数的除法”中“有余数除法计算”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "有余数除法计算：相同数位没有对齐",
+        "有余数除法计算：进位、退位或约分步骤遗漏",
+        "有余数除法计算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_remainder_3",
+      "unit_id": "division_remainder",
+      "lesson_id": "division_remainder_lesson_3",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "有余数的除法",
+      "name": "余数应用",
+      "description": "围绕“有余数的除法”中“余数应用”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "余数应用：没有先找清数量关系",
+        "余数应用：只列式不写答语",
+        "余数应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_divide_relation_1",
+      "unit_id": "multiply_divide_relation",
+      "lesson_id": "multiply_divide_relation_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "几个几与乘法",
+      "description": "围绕“数量间的乘除关系”中“几个几与乘法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "几个几与乘法：没有先找清数量关系",
+        "几个几与乘法：只列式不写答语",
+        "几个几与乘法：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_divide_relation_2",
+      "unit_id": "multiply_divide_relation",
+      "lesson_id": "multiply_divide_relation_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "平均分与除法",
+      "description": "围绕“数量间的乘除关系”中“平均分与除法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "平均分与除法：没有先找清数量关系",
+        "平均分与除法：只列式不写答语",
+        "平均分与除法：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_divide_relation_3",
+      "unit_id": "multiply_divide_relation",
+      "lesson_id": "multiply_divide_relation_lesson_3",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的乘除关系",
+      "name": "乘除关系应用",
+      "description": "围绕“数量间的乘除关系”中“乘除关系应用”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘除关系应用：没有先找清数量关系",
+        "乘除关系应用：只列式不写答语",
+        "乘除关系应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_1",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "千和万的认识",
+      "description": "围绕“万以内数的认识”中“千和万的认识”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "千和万的认识：没有看清题目要求",
+        "千和万的认识：答语单位写错或漏写",
+        "千和万的认识：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_2",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "万以内数的读写",
+      "description": "围绕“万以内数的认识”中“万以内数的读写”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "万以内数的读写：没有看清题目要求",
+        "万以内数的读写：答语单位写错或漏写",
+        "万以内数的读写：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_3",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_3",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "大小比较与近似数",
+      "description": "围绕“万以内数的认识”中“大小比较与近似数”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "大小比较与近似数：没有看清题目要求",
+        "大小比较与近似数：答语单位写错或漏写",
+        "大小比较与近似数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "add_sub_10000_1",
+      "unit_id": "add_sub_10000",
+      "lesson_id": "add_sub_10000_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "万以内加法",
+      "description": "围绕“万以内的加法和减法”中“万以内加法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "万以内加法：相同数位没有对齐",
+        "万以内加法：进位、退位或约分步骤遗漏",
+        "万以内加法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "add_sub_10000_2",
+      "unit_id": "add_sub_10000",
+      "lesson_id": "add_sub_10000_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "万以内减法",
+      "description": "围绕“万以内的加法和减法”中“万以内减法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "万以内减法：相同数位没有对齐",
+        "万以内减法：进位、退位或约分步骤遗漏",
+        "万以内减法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "add_sub_10000_3",
+      "unit_id": "add_sub_10000",
+      "lesson_id": "add_sub_10000_lesson_3",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "加减法应用",
+      "description": "围绕“万以内的加法和减法”中“加减法应用”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "加减法应用：没有先找清数量关系",
+        "加减法应用：只列式不写答语",
+        "加减法应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_comic_1",
+      "unit_id": "math_comic",
+      "lesson_id": "math_comic_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学连环画",
+      "name": "图文顺序中的数量关系",
+      "description": "围绕“数学连环画”中“图文顺序中的数量关系”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "图文顺序中的数量关系：没有先找清数量关系",
+        "图文顺序中的数量关系：只列式不写答语",
+        "图文顺序中的数量关系：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_comic_2",
+      "unit_id": "math_comic",
+      "lesson_id": "math_comic_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学连环画",
+      "name": "多步故事问题",
+      "description": "围绕“数学连环画”中“多步故事问题”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "多步故事问题：没有先找清数量关系",
+        "多步故事问题：只列式不写答语",
+        "多步故事问题：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_1",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复习与关联",
+      "name": "数与运算整理",
+      "description": "围绕“复习与关联”中“数与运算整理”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "数与运算整理：相同数位没有对齐",
+        "数与运算整理：进位、退位或约分步骤遗漏",
+        "数与运算整理：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_2",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "复习与关联",
+      "name": "综合解决问题",
+      "description": "围绕“复习与关联”中“综合解决问题”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "综合解决问题：没有先找清数量关系",
+        "综合解决问题：只列式不写答语",
+        "综合解决问题：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "time_1",
+      "question_type": "填空题",
+      "template": "围绕“认识一天和钟表”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“认识一天和钟表”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识一天和钟表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_1",
+      "question_type": "选择题",
+      "template": "围绕“认识一天和钟表”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识一天和钟表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_1",
+      "question_type": "判断题",
+      "template": "围绕“认识一天和钟表”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识一天和钟表”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_2",
+      "question_type": "填空题",
+      "template": "围绕“经过时间”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“经过时间”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过时间”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_2",
+      "question_type": "选择题",
+      "template": "围绕“经过时间”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过时间”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_2",
+      "question_type": "判断题",
+      "template": "围绕“经过时间”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过时间”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_3",
+      "question_type": "应用题",
+      "template": "围绕“时间安排问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“时间安排问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_3",
+      "question_type": "填空题",
+      "template": "围绕“时间安排问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“时间安排问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“时间安排问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_3",
+      "question_type": "变式题",
+      "template": "围绕“时间安排问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“时间安排问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_1",
+      "question_type": "计算题",
+      "template": "围绕“认识余数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识余数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_1",
+      "question_type": "填空题",
+      "template": "围绕“认识余数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“认识余数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识余数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_1",
+      "question_type": "判断题",
+      "template": "围绕“认识余数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“认识余数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_2",
+      "question_type": "计算题",
+      "template": "围绕“有余数除法计算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有余数除法计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_2",
+      "question_type": "填空题",
+      "template": "围绕“有余数除法计算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“有余数除法计算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有余数除法计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_2",
+      "question_type": "判断题",
+      "template": "围绕“有余数除法计算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有余数除法计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_3",
+      "question_type": "应用题",
+      "template": "围绕“余数应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“余数应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_3",
+      "question_type": "填空题",
+      "template": "围绕“余数应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“余数应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“余数应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "division_remainder_3",
+      "question_type": "变式题",
+      "template": "围绕“余数应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“余数应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_1",
+      "question_type": "应用题",
+      "template": "围绕“几个几与乘法”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“几个几与乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_1",
+      "question_type": "填空题",
+      "template": "围绕“几个几与乘法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“几个几与乘法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“几个几与乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_1",
+      "question_type": "变式题",
+      "template": "围绕“几个几与乘法”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“几个几与乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_2",
+      "question_type": "应用题",
+      "template": "围绕“平均分与除法”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“平均分与除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_2",
+      "question_type": "填空题",
+      "template": "围绕“平均分与除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“平均分与除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平均分与除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_2",
+      "question_type": "变式题",
+      "template": "围绕“平均分与除法”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“平均分与除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_3",
+      "question_type": "应用题",
+      "template": "围绕“乘除关系应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“乘除关系应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_3",
+      "question_type": "填空题",
+      "template": "围绕“乘除关系应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘除关系应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘除关系应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_divide_relation_3",
+      "question_type": "变式题",
+      "template": "围绕“乘除关系应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“乘除关系应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_1",
+      "question_type": "填空题",
+      "template": "围绕“千和万的认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“千和万的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“千和万的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_1",
+      "question_type": "选择题",
+      "template": "围绕“千和万的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“千和万的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_1",
+      "question_type": "判断题",
+      "template": "围绕“千和万的认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“千和万的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_2",
+      "question_type": "填空题",
+      "template": "围绕“万以内数的读写”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“万以内数的读写”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内数的读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_2",
+      "question_type": "选择题",
+      "template": "围绕“万以内数的读写”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内数的读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_2",
+      "question_type": "判断题",
+      "template": "围绕“万以内数的读写”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内数的读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_3",
+      "question_type": "填空题",
+      "template": "围绕“大小比较与近似数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“大小比较与近似数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“大小比较与近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_3",
+      "question_type": "选择题",
+      "template": "围绕“大小比较与近似数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“大小比较与近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_10000_3",
+      "question_type": "判断题",
+      "template": "围绕“大小比较与近似数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“大小比较与近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_1",
+      "question_type": "计算题",
+      "template": "围绕“万以内加法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_1",
+      "question_type": "填空题",
+      "template": "围绕“万以内加法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“万以内加法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_1",
+      "question_type": "判断题",
+      "template": "围绕“万以内加法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_2",
+      "question_type": "计算题",
+      "template": "围绕“万以内减法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_2",
+      "question_type": "填空题",
+      "template": "围绕“万以内减法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“万以内减法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_2",
+      "question_type": "判断题",
+      "template": "围绕“万以内减法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“万以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_3",
+      "question_type": "应用题",
+      "template": "围绕“加减法应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“加减法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_3",
+      "question_type": "填空题",
+      "template": "围绕“加减法应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“加减法应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加减法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "add_sub_10000_3",
+      "question_type": "变式题",
+      "template": "围绕“加减法应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“加减法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_comic_1",
+      "question_type": "应用题",
+      "template": "围绕“图文顺序中的数量关系”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“图文顺序中的数量关系”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_comic_1",
+      "question_type": "填空题",
+      "template": "围绕“图文顺序中的数量关系”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“图文顺序中的数量关系”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“图文顺序中的数量关系”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_comic_1",
+      "question_type": "变式题",
+      "template": "围绕“图文顺序中的数量关系”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“图文顺序中的数量关系”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_comic_2",
+      "question_type": "应用题",
+      "template": "围绕“多步故事问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“多步故事问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_comic_2",
+      "question_type": "填空题",
+      "template": "围绕“多步故事问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“多步故事问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“多步故事问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_comic_2",
+      "question_type": "变式题",
+      "template": "围绕“多步故事问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“多步故事问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "计算题",
+      "template": "围绕“数与运算整理”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数与运算整理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "填空题",
+      "template": "围绕“数与运算整理”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“数与运算整理”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数与运算整理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_1",
+      "question_type": "判断题",
+      "template": "围绕“数与运算整理”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数与运算整理”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "应用题",
+      "template": "围绕“综合解决问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“综合解决问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "填空题",
+      "template": "围绕“综合解决问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“综合解决问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“综合解决问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "review_2",
+      "question_type": "变式题",
+      "template": "围绕“综合解决问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“综合解决问题”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1971,
+    "selected_files": 80,
+    "categories": {
+      "knowledge": 24,
+      "other": 109,
+      "lesson_plan": 1020,
+      "slides": 90,
+      "practice": 664,
+      "textbook": 4,
+      "student_sheet": 60
+    },
+    "top_terms": [
+      "预设",
+      "提问",
+      "教师活动",
+      "学生活动",
+      "活动意图",
+      "二次备课",
+      "课堂小结",
+      "做一做",
+      "课时",
+      "难点",
+      "重点",
+      "课题",
+      "知识与技能",
+      "学情分析",
+      "核心素养目标",
+      "情境与问题",
+      "思维与表达",
+      "交流与反思",
+      "余数",
+      "教学准备",
+      "课件",
+      "回答",
+      "教学环节四",
+      "除数",
+      "板书设计",
+      "课时教学设计",
+      "课型",
+      "新授课",
+      "一课时",
+      "授课时间",
+      "教材分析",
+      "学习重点难点",
+      "学习活动设计",
+      "教学环节一",
+      "教学环节二",
+      "教学环节三",
+      "作业设计",
+      "基础性作业",
+      "提升性作业",
+      "拓展性作业",
+      "教学反思与改进",
+      "成功之处",
+      "不足之处",
+      "改进措施",
+      "强调",
+      "你有什么收获",
+      "读作",
+      "求一个数的几倍是多少",
+      "学习目标",
+      "因此"
+    ],
+    "top_headings": [
+      "1.教材分析",
+      "2.学情分析",
+      "3.核心素养目标",
+      "4.学习重点难点",
+      "5.教学准备",
+      "6.学习活动设计",
+      "7.作业设计",
+      "9.教学反思与改进",
+      "8.板书设计",
+      "1. 提问：“通过本节课的学习，你有什么收获？”",
+      "1. 出示本节课的学习目标",
+      "1. 提问：“通过这节课的学习，你有什么收获？”",
+      "1. 积极发言分享收获",
+      "1. 提问：“学习完本节课，你有什么收获？”",
+      "第2单元 表内除法（一）",
+      "1. 阅读题目，理解题意",
+      "第7单元 万以内数的认识",
+      "8. 板书设计",
+      "1. 主动举手发言，分享自己的学习收获",
+      "3. 系统归纳",
+      "2. 引导学生回顾",
+      "2. 明确告知学生本节课的学习任务",
+      "1. 提问：通过本节课的学习，你有什么收获？",
+      "1. 积极举手发言，分享自己的学习收获",
+      "1. 独立完成填空",
+      "3. 归纳总结",
+      "4. 回答问题",
+      "1. 观察表格数据，理解题意",
+      "1. 提问：“学习完本节课，你有什么收获？”引导学生从知识、方法、",
+      "第一单元"
+    ]
+  }
+}

@@ -1,0 +1,1742 @@
+{
+  "package_id": "g1_math_up_rj_2026",
+  "package_name": "一年级数学上册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "一年级",
+    "semester": "上册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g1_math_up_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\1上-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g1_math_up_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 2560 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "math_game",
+      "name": "数学游戏",
+      "lessons": [
+        {
+          "id": "math_game_lesson_1",
+          "name": "校园中的数与形",
+          "knowledge_point_ids": [
+            "math_game_1"
+          ]
+        },
+        {
+          "id": "math_game_lesson_2",
+          "name": "教室中的位置",
+          "knowledge_point_ids": [
+            "math_game_2"
+          ]
+        },
+        {
+          "id": "math_game_lesson_3",
+          "name": "操场中的比较",
+          "knowledge_point_ids": [
+            "math_game_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numbers_1_5",
+      "name": "1-5的认识和加减法",
+      "lessons": [
+        {
+          "id": "numbers_1_5_lesson_1",
+          "name": "1-5的数数与认读",
+          "knowledge_point_ids": [
+            "numbers_1_5_1"
+          ]
+        },
+        {
+          "id": "numbers_1_5_lesson_2",
+          "name": "比多少",
+          "knowledge_point_ids": [
+            "numbers_1_5_2"
+          ]
+        },
+        {
+          "id": "numbers_1_5_lesson_3",
+          "name": "第几和几",
+          "knowledge_point_ids": [
+            "numbers_1_5_3"
+          ]
+        },
+        {
+          "id": "numbers_1_5_lesson_4",
+          "name": "5以内加法",
+          "knowledge_point_ids": [
+            "numbers_1_5_4"
+          ]
+        },
+        {
+          "id": "numbers_1_5_lesson_5",
+          "name": "5以内减法",
+          "knowledge_point_ids": [
+            "numbers_1_5_5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "position",
+      "name": "位置",
+      "lessons": [
+        {
+          "id": "position_lesson_1",
+          "name": "上下前后",
+          "knowledge_point_ids": [
+            "position_1"
+          ]
+        },
+        {
+          "id": "position_lesson_2",
+          "name": "左右",
+          "knowledge_point_ids": [
+            "position_2"
+          ]
+        },
+        {
+          "id": "position_lesson_3",
+          "name": "位置描述",
+          "knowledge_point_ids": [
+            "position_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numbers_6_10",
+      "name": "6-10的认识和加减法",
+      "lessons": [
+        {
+          "id": "numbers_6_10_lesson_1",
+          "name": "6-10的组成",
+          "knowledge_point_ids": [
+            "numbers_6_10_1"
+          ]
+        },
+        {
+          "id": "numbers_6_10_lesson_2",
+          "name": "10以内加法",
+          "knowledge_point_ids": [
+            "numbers_6_10_2"
+          ]
+        },
+        {
+          "id": "numbers_6_10_lesson_3",
+          "name": "10以内减法",
+          "knowledge_point_ids": [
+            "numbers_6_10_3"
+          ]
+        },
+        {
+          "id": "numbers_6_10_lesson_4",
+          "name": "连加连减",
+          "knowledge_point_ids": [
+            "numbers_6_10_4"
+          ]
+        },
+        {
+          "id": "numbers_6_10_lesson_5",
+          "name": "加减混合",
+          "knowledge_point_ids": [
+            "numbers_6_10_5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shapes",
+      "name": "认识图形（一）",
+      "lessons": [
+        {
+          "id": "shapes_lesson_1",
+          "name": "长方体正方体圆柱球",
+          "knowledge_point_ids": [
+            "shapes_1"
+          ]
+        },
+        {
+          "id": "shapes_lesson_2",
+          "name": "立体图形分类",
+          "knowledge_point_ids": [
+            "shapes_2"
+          ]
+        },
+        {
+          "id": "shapes_lesson_3",
+          "name": "拼搭中的图形",
+          "knowledge_point_ids": [
+            "shapes_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numbers_11_20",
+      "name": "11-20各数的认识",
+      "lessons": [
+        {
+          "id": "numbers_11_20_lesson_1",
+          "name": "11-20的数数",
+          "knowledge_point_ids": [
+            "numbers_11_20_1"
+          ]
+        },
+        {
+          "id": "numbers_11_20_lesson_2",
+          "name": "十和几的组成",
+          "knowledge_point_ids": [
+            "numbers_11_20_2"
+          ]
+        },
+        {
+          "id": "numbers_11_20_lesson_3",
+          "name": "20以内不进位加减",
+          "knowledge_point_ids": [
+            "numbers_11_20_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "carry_add_20",
+      "name": "20以内的进位加法",
+      "lessons": [
+        {
+          "id": "carry_add_20_lesson_1",
+          "name": "凑十法",
+          "knowledge_point_ids": [
+            "carry_add_20_1"
+          ]
+        },
+        {
+          "id": "carry_add_20_lesson_2",
+          "name": "9加几",
+          "knowledge_point_ids": [
+            "carry_add_20_2"
+          ]
+        },
+        {
+          "id": "carry_add_20_lesson_3",
+          "name": "8、7、6加几",
+          "knowledge_point_ids": [
+            "carry_add_20_3"
+          ]
+        },
+        {
+          "id": "carry_add_20_lesson_4",
+          "name": "5、4、3、2加几",
+          "knowledge_point_ids": [
+            "carry_add_20_4"
+          ]
+        },
+        {
+          "id": "carry_add_20_lesson_5",
+          "name": "解决进位加法问题",
+          "knowledge_point_ids": [
+            "carry_add_20_5"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "math_game_1",
+      "unit_id": "math_game",
+      "lesson_id": "math_game_lesson_1",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学游戏",
+      "name": "校园中的数与形",
+      "description": "围绕“数学游戏”中“校园中的数与形”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "校园中的数与形：没有看清题目要求",
+        "校园中的数与形：答语单位写错或漏写",
+        "校园中的数与形：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_game_2",
+      "unit_id": "math_game",
+      "lesson_id": "math_game_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学游戏",
+      "name": "教室中的位置",
+      "description": "围绕“数学游戏”中“教室中的位置”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "教室中的位置：把图形名称或单位混淆",
+        "教室中的位置：周长、面积、体积公式用错",
+        "教室中的位置：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_game_3",
+      "unit_id": "math_game",
+      "lesson_id": "math_game_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学游戏",
+      "name": "操场中的比较",
+      "description": "围绕“数学游戏”中“操场中的比较”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "操场中的比较：没有看清题目要求",
+        "操场中的比较：答语单位写错或漏写",
+        "操场中的比较：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_1_5_1",
+      "unit_id": "numbers_1_5",
+      "lesson_id": "numbers_1_5_lesson_1",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-5的认识和加减法",
+      "name": "1-5的数数与认读",
+      "description": "围绕“1-5的认识和加减法”中“1-5的数数与认读”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "1-5的数数与认读：相同数位没有对齐",
+        "1-5的数数与认读：进位、退位或约分步骤遗漏",
+        "1-5的数数与认读：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_1_5_2",
+      "unit_id": "numbers_1_5",
+      "lesson_id": "numbers_1_5_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-5的认识和加减法",
+      "name": "比多少",
+      "description": "围绕“1-5的认识和加减法”中“比多少”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "比多少：相同数位没有对齐",
+        "比多少：进位、退位或约分步骤遗漏",
+        "比多少：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_1_5_3",
+      "unit_id": "numbers_1_5",
+      "lesson_id": "numbers_1_5_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-5的认识和加减法",
+      "name": "第几和几",
+      "description": "围绕“1-5的认识和加减法”中“第几和几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "第几和几：相同数位没有对齐",
+        "第几和几：进位、退位或约分步骤遗漏",
+        "第几和几：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_1_5_4",
+      "unit_id": "numbers_1_5",
+      "lesson_id": "numbers_1_5_lesson_4",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-5的认识和加减法",
+      "name": "5以内加法",
+      "description": "围绕“1-5的认识和加减法”中“5以内加法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "5以内加法：相同数位没有对齐",
+        "5以内加法：进位、退位或约分步骤遗漏",
+        "5以内加法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_1_5_5",
+      "unit_id": "numbers_1_5",
+      "lesson_id": "numbers_1_5_lesson_5",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "1-5的认识和加减法",
+      "name": "5以内减法",
+      "description": "围绕“1-5的认识和加减法”中“5以内减法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "5以内减法：相同数位没有对齐",
+        "5以内减法：进位、退位或约分步骤遗漏",
+        "5以内减法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_1",
+      "unit_id": "position",
+      "lesson_id": "position_lesson_1",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置",
+      "name": "上下前后",
+      "description": "围绕“位置”中“上下前后”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "上下前后：把图形名称或单位混淆",
+        "上下前后：周长、面积、体积公式用错",
+        "上下前后：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_2",
+      "unit_id": "position",
+      "lesson_id": "position_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置",
+      "name": "左右",
+      "description": "围绕“位置”中“左右”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "左右：把图形名称或单位混淆",
+        "左右：周长、面积、体积公式用错",
+        "左右：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_3",
+      "unit_id": "position",
+      "lesson_id": "position_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置",
+      "name": "位置描述",
+      "description": "围绕“位置”中“位置描述”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "位置描述：把图形名称或单位混淆",
+        "位置描述：周长、面积、体积公式用错",
+        "位置描述：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_6_10_1",
+      "unit_id": "numbers_6_10",
+      "lesson_id": "numbers_6_10_lesson_1",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "6-10的认识和加减法",
+      "name": "6-10的组成",
+      "description": "围绕“6-10的认识和加减法”中“6-10的组成”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "6-10的组成：相同数位没有对齐",
+        "6-10的组成：进位、退位或约分步骤遗漏",
+        "6-10的组成：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_6_10_2",
+      "unit_id": "numbers_6_10",
+      "lesson_id": "numbers_6_10_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "6-10的认识和加减法",
+      "name": "10以内加法",
+      "description": "围绕“6-10的认识和加减法”中“10以内加法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "10以内加法：相同数位没有对齐",
+        "10以内加法：进位、退位或约分步骤遗漏",
+        "10以内加法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_6_10_3",
+      "unit_id": "numbers_6_10",
+      "lesson_id": "numbers_6_10_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "6-10的认识和加减法",
+      "name": "10以内减法",
+      "description": "围绕“6-10的认识和加减法”中“10以内减法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "10以内减法：相同数位没有对齐",
+        "10以内减法：进位、退位或约分步骤遗漏",
+        "10以内减法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_6_10_4",
+      "unit_id": "numbers_6_10",
+      "lesson_id": "numbers_6_10_lesson_4",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "6-10的认识和加减法",
+      "name": "连加连减",
+      "description": "围绕“6-10的认识和加减法”中“连加连减”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "连加连减：相同数位没有对齐",
+        "连加连减：进位、退位或约分步骤遗漏",
+        "连加连减：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_6_10_5",
+      "unit_id": "numbers_6_10",
+      "lesson_id": "numbers_6_10_lesson_5",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "6-10的认识和加减法",
+      "name": "加减混合",
+      "description": "围绕“6-10的认识和加减法”中“加减混合”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "加减混合：相同数位没有对齐",
+        "加减混合：进位、退位或约分步骤遗漏",
+        "加减混合：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "shapes_1",
+      "unit_id": "shapes",
+      "lesson_id": "shapes_lesson_1",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "认识图形（一）",
+      "name": "长方体正方体圆柱球",
+      "description": "围绕“认识图形（一）”中“长方体正方体圆柱球”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "长方体正方体圆柱球：把图形名称或单位混淆",
+        "长方体正方体圆柱球：周长、面积、体积公式用错",
+        "长方体正方体圆柱球：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "shapes_2",
+      "unit_id": "shapes",
+      "lesson_id": "shapes_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "认识图形（一）",
+      "name": "立体图形分类",
+      "description": "围绕“认识图形（一）”中“立体图形分类”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "立体图形分类：把图形名称或单位混淆",
+        "立体图形分类：周长、面积、体积公式用错",
+        "立体图形分类：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "shapes_3",
+      "unit_id": "shapes",
+      "lesson_id": "shapes_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "认识图形（一）",
+      "name": "拼搭中的图形",
+      "description": "围绕“认识图形（一）”中“拼搭中的图形”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "拼搭中的图形：把图形名称或单位混淆",
+        "拼搭中的图形：周长、面积、体积公式用错",
+        "拼搭中的图形：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_11_20_1",
+      "unit_id": "numbers_11_20",
+      "lesson_id": "numbers_11_20_lesson_1",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "11-20各数的认识",
+      "name": "11-20的数数",
+      "description": "围绕“11-20各数的认识”中“11-20的数数”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "11-20的数数：没有看清题目要求",
+        "11-20的数数：答语单位写错或漏写",
+        "11-20的数数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_11_20_2",
+      "unit_id": "numbers_11_20",
+      "lesson_id": "numbers_11_20_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "11-20各数的认识",
+      "name": "十和几的组成",
+      "description": "围绕“11-20各数的认识”中“十和几的组成”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "十和几的组成：没有看清题目要求",
+        "十和几的组成：答语单位写错或漏写",
+        "十和几的组成：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_11_20_3",
+      "unit_id": "numbers_11_20",
+      "lesson_id": "numbers_11_20_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "11-20各数的认识",
+      "name": "20以内不进位加减",
+      "description": "围绕“11-20各数的认识”中“20以内不进位加减”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "20以内不进位加减：相同数位没有对齐",
+        "20以内不进位加减：进位、退位或约分步骤遗漏",
+        "20以内不进位加减：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "carry_add_20_1",
+      "unit_id": "carry_add_20",
+      "lesson_id": "carry_add_20_lesson_1",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "20以内的进位加法",
+      "name": "凑十法",
+      "description": "围绕“20以内的进位加法”中“凑十法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "凑十法：相同数位没有对齐",
+        "凑十法：进位、退位或约分步骤遗漏",
+        "凑十法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "carry_add_20_2",
+      "unit_id": "carry_add_20",
+      "lesson_id": "carry_add_20_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "20以内的进位加法",
+      "name": "9加几",
+      "description": "围绕“20以内的进位加法”中“9加几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "9加几：相同数位没有对齐",
+        "9加几：进位、退位或约分步骤遗漏",
+        "9加几：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "carry_add_20_3",
+      "unit_id": "carry_add_20",
+      "lesson_id": "carry_add_20_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "20以内的进位加法",
+      "name": "8、7、6加几",
+      "description": "围绕“20以内的进位加法”中“8、7、6加几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "8、7、6加几：相同数位没有对齐",
+        "8、7、6加几：进位、退位或约分步骤遗漏",
+        "8、7、6加几：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "carry_add_20_4",
+      "unit_id": "carry_add_20",
+      "lesson_id": "carry_add_20_lesson_4",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "20以内的进位加法",
+      "name": "5、4、3、2加几",
+      "description": "围绕“20以内的进位加法”中“5、4、3、2加几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "5、4、3、2加几：相同数位没有对齐",
+        "5、4、3、2加几：进位、退位或约分步骤遗漏",
+        "5、4、3、2加几：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "carry_add_20_5",
+      "unit_id": "carry_add_20",
+      "lesson_id": "carry_add_20_lesson_5",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "20以内的进位加法",
+      "name": "解决进位加法问题",
+      "description": "围绕“20以内的进位加法”中“解决进位加法问题”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "解决进位加法问题：没有先找清数量关系",
+        "解决进位加法问题：只列式不写答语",
+        "解决进位加法问题：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "math_game_1",
+      "question_type": "填空题",
+      "template": "围绕“校园中的数与形”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“校园中的数与形”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“校园中的数与形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_1",
+      "question_type": "选择题",
+      "template": "围绕“校园中的数与形”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“校园中的数与形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_1",
+      "question_type": "判断题",
+      "template": "围绕“校园中的数与形”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“校园中的数与形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_2",
+      "question_type": "填空题",
+      "template": "围绕“教室中的位置”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“教室中的位置”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“教室中的位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_2",
+      "question_type": "选择题",
+      "template": "围绕“教室中的位置”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“教室中的位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_2",
+      "question_type": "应用题",
+      "template": "围绕“教室中的位置”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“教室中的位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_3",
+      "question_type": "填空题",
+      "template": "围绕“操场中的比较”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“操场中的比较”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“操场中的比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_3",
+      "question_type": "选择题",
+      "template": "围绕“操场中的比较”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“操场中的比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_game_3",
+      "question_type": "判断题",
+      "template": "围绕“操场中的比较”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“操场中的比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_1",
+      "question_type": "计算题",
+      "template": "围绕“1-5的数数与认读”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“1-5的数数与认读”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_1",
+      "question_type": "填空题",
+      "template": "围绕“1-5的数数与认读”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“1-5的数数与认读”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“1-5的数数与认读”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_1",
+      "question_type": "判断题",
+      "template": "围绕“1-5的数数与认读”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“1-5的数数与认读”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_2",
+      "question_type": "计算题",
+      "template": "围绕“比多少”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比多少”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_2",
+      "question_type": "填空题",
+      "template": "围绕“比多少”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“比多少”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比多少”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_2",
+      "question_type": "判断题",
+      "template": "围绕“比多少”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“比多少”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_3",
+      "question_type": "计算题",
+      "template": "围绕“第几和几”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“第几和几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_3",
+      "question_type": "填空题",
+      "template": "围绕“第几和几”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“第几和几”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“第几和几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_3",
+      "question_type": "判断题",
+      "template": "围绕“第几和几”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“第几和几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_4",
+      "question_type": "计算题",
+      "template": "围绕“5以内加法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_4",
+      "question_type": "填空题",
+      "template": "围绕“5以内加法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“5以内加法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_4",
+      "question_type": "判断题",
+      "template": "围绕“5以内加法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_5",
+      "question_type": "计算题",
+      "template": "围绕“5以内减法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_5",
+      "question_type": "填空题",
+      "template": "围绕“5以内减法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“5以内减法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_1_5_5",
+      "question_type": "判断题",
+      "template": "围绕“5以内减法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_1",
+      "question_type": "填空题",
+      "template": "围绕“上下前后”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“上下前后”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“上下前后”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_1",
+      "question_type": "选择题",
+      "template": "围绕“上下前后”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“上下前后”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_1",
+      "question_type": "应用题",
+      "template": "围绕“上下前后”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“上下前后”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_2",
+      "question_type": "填空题",
+      "template": "围绕“左右”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“左右”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“左右”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_2",
+      "question_type": "选择题",
+      "template": "围绕“左右”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“左右”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_2",
+      "question_type": "应用题",
+      "template": "围绕“左右”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“左右”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_3",
+      "question_type": "填空题",
+      "template": "围绕“位置描述”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“位置描述”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“位置描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_3",
+      "question_type": "选择题",
+      "template": "围绕“位置描述”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“位置描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_3",
+      "question_type": "应用题",
+      "template": "围绕“位置描述”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“位置描述”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_1",
+      "question_type": "计算题",
+      "template": "围绕“6-10的组成”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“6-10的组成”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_1",
+      "question_type": "填空题",
+      "template": "围绕“6-10的组成”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“6-10的组成”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“6-10的组成”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_1",
+      "question_type": "判断题",
+      "template": "围绕“6-10的组成”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“6-10的组成”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_2",
+      "question_type": "计算题",
+      "template": "围绕“10以内加法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“10以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_2",
+      "question_type": "填空题",
+      "template": "围绕“10以内加法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“10以内加法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“10以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_2",
+      "question_type": "判断题",
+      "template": "围绕“10以内加法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“10以内加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_3",
+      "question_type": "计算题",
+      "template": "围绕“10以内减法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“10以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_3",
+      "question_type": "填空题",
+      "template": "围绕“10以内减法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“10以内减法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“10以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_3",
+      "question_type": "判断题",
+      "template": "围绕“10以内减法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“10以内减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_4",
+      "question_type": "计算题",
+      "template": "围绕“连加连减”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连加连减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_4",
+      "question_type": "填空题",
+      "template": "围绕“连加连减”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“连加连减”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连加连减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_4",
+      "question_type": "判断题",
+      "template": "围绕“连加连减”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连加连减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_5",
+      "question_type": "计算题",
+      "template": "围绕“加减混合”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_5",
+      "question_type": "填空题",
+      "template": "围绕“加减混合”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“加减混合”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_6_10_5",
+      "question_type": "判断题",
+      "template": "围绕“加减混合”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_1",
+      "question_type": "填空题",
+      "template": "围绕“长方体正方体圆柱球”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“长方体正方体圆柱球”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方体正方体圆柱球”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_1",
+      "question_type": "选择题",
+      "template": "围绕“长方体正方体圆柱球”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方体正方体圆柱球”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_1",
+      "question_type": "应用题",
+      "template": "围绕“长方体正方体圆柱球”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“长方体正方体圆柱球”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_2",
+      "question_type": "填空题",
+      "template": "围绕“立体图形分类”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“立体图形分类”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“立体图形分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_2",
+      "question_type": "选择题",
+      "template": "围绕“立体图形分类”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“立体图形分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_2",
+      "question_type": "应用题",
+      "template": "围绕“立体图形分类”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“立体图形分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_3",
+      "question_type": "填空题",
+      "template": "围绕“拼搭中的图形”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“拼搭中的图形”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“拼搭中的图形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_3",
+      "question_type": "选择题",
+      "template": "围绕“拼搭中的图形”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“拼搭中的图形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "shapes_3",
+      "question_type": "应用题",
+      "template": "围绕“拼搭中的图形”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“拼搭中的图形”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_1",
+      "question_type": "填空题",
+      "template": "围绕“11-20的数数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“11-20的数数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“11-20的数数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_1",
+      "question_type": "选择题",
+      "template": "围绕“11-20的数数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“11-20的数数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_1",
+      "question_type": "判断题",
+      "template": "围绕“11-20的数数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“11-20的数数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_2",
+      "question_type": "填空题",
+      "template": "围绕“十和几的组成”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“十和几的组成”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“十和几的组成”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_2",
+      "question_type": "选择题",
+      "template": "围绕“十和几的组成”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“十和几的组成”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_2",
+      "question_type": "判断题",
+      "template": "围绕“十和几的组成”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“十和几的组成”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_3",
+      "question_type": "计算题",
+      "template": "围绕“20以内不进位加减”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“20以内不进位加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_3",
+      "question_type": "填空题",
+      "template": "围绕“20以内不进位加减”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“20以内不进位加减”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“20以内不进位加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "numbers_11_20_3",
+      "question_type": "判断题",
+      "template": "围绕“20以内不进位加减”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“20以内不进位加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_1",
+      "question_type": "计算题",
+      "template": "围绕“凑十法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“凑十法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_1",
+      "question_type": "填空题",
+      "template": "围绕“凑十法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“凑十法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“凑十法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_1",
+      "question_type": "判断题",
+      "template": "围绕“凑十法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“凑十法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_2",
+      "question_type": "计算题",
+      "template": "围绕“9加几”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“9加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_2",
+      "question_type": "填空题",
+      "template": "围绕“9加几”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“9加几”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“9加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_2",
+      "question_type": "判断题",
+      "template": "围绕“9加几”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“9加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_3",
+      "question_type": "计算题",
+      "template": "围绕“8、7、6加几”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“8、7、6加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_3",
+      "question_type": "填空题",
+      "template": "围绕“8、7、6加几”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“8、7、6加几”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“8、7、6加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_3",
+      "question_type": "判断题",
+      "template": "围绕“8、7、6加几”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“8、7、6加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_4",
+      "question_type": "计算题",
+      "template": "围绕“5、4、3、2加几”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5、4、3、2加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_4",
+      "question_type": "填空题",
+      "template": "围绕“5、4、3、2加几”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“5、4、3、2加几”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5、4、3、2加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_4",
+      "question_type": "判断题",
+      "template": "围绕“5、4、3、2加几”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“5、4、3、2加几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_5",
+      "question_type": "应用题",
+      "template": "围绕“解决进位加法问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“解决进位加法问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_5",
+      "question_type": "填空题",
+      "template": "围绕“解决进位加法问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“解决进位加法问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解决进位加法问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "carry_add_20_5",
+      "question_type": "变式题",
+      "template": "围绕“解决进位加法问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“解决进位加法问题”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 2560,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 1896,
+      "student_sheet": 150,
+      "practice": 342,
+      "textbook": 2,
+      "other": 152,
+      "knowledge": 18
+    },
+    "top_terms": [
+      "预设",
+      "教师活动",
+      "学生活动",
+      "二次备课",
+      "中小学教育资源及组卷应用",
+      "平台",
+      "减法",
+      "续表",
+      "提问",
+      "目标落实",
+      "活动意图",
+      "教学准备",
+      "重点",
+      "难点",
+      "单元板块",
+      "教师主要问题链",
+      "学生主要活动",
+      "评价目标",
+      "板书设计",
+      "基础练习",
+      "变式练习",
+      "提升练习",
+      "解决问题",
+      "凑十法",
+      "知识与技能",
+      "主要任务",
+      "表示",
+      "同学们",
+      "计算",
+      "的认识",
+      "的认识和加",
+      "的组成",
+      "做一做",
+      "作业设计",
+      "基础性作业",
+      "第几",
+      "课题",
+      "课型",
+      "课时",
+      "一课时",
+      "核心素养目标",
+      "情境与问题",
+      "思维与表达",
+      "交流与反思",
+      "学习重点难点",
+      "学习活动设计",
+      "教学反思与改进",
+      "拓展性作业",
+      "第二单元",
+      "教学目标"
+    ],
+    "top_headings": [
+      "1. 基础练习",
+      "2. 变式练习",
+      "3. 提升练习",
+      "第二单元",
+      "第一单元",
+      "1. 活动一",
+      "1.核心素养目标",
+      "7.教学反思与改进",
+      "2. 活动二",
+      "3. 活动三",
+      "4. 活动四",
+      "2、学习重点难点",
+      "4.学习活动设计",
+      "5、作业设计",
+      "1. 核心素养目标",
+      "7. 教学反思与改进",
+      "1. 知识与技能",
+      "2. 过程与素养",
+      "3. 情感与品格",
+      "第五单元",
+      "5. 活动五",
+      "6.板书设计",
+      "4. 学习活动设计",
+      "6. 板书设计",
+      "1. 课堂总结：今天你学会了什么？是怎么学会的？",
+      "《分层作业》",
+      "0383.png\" \\* MERGEFORMATINET",
+      "2. 素养评价",
+      "3. 课后作业",
+      "1. 通过观察"
+    ]
+  }
+}

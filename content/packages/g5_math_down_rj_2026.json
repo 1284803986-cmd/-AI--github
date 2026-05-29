@@ -1,0 +1,1626 @@
+{
+  "package_id": "g5_math_down_rj_2026",
+  "package_name": "五年级数学下册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "五年级",
+    "semester": "下册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g5_math_down_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\5下-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g5_math_down_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1070 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "observe_objects",
+      "name": "观察物体（三）",
+      "lessons": [
+        {
+          "id": "observe_objects_lesson_1",
+          "name": "根据三个方向视图摆物体",
+          "knowledge_point_ids": [
+            "observe_objects_1"
+          ]
+        },
+        {
+          "id": "observe_objects_lesson_2",
+          "name": "立体图形还原",
+          "knowledge_point_ids": [
+            "observe_objects_2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "factor_multiple",
+      "name": "因数与倍数",
+      "lessons": [
+        {
+          "id": "factor_multiple_lesson_1",
+          "name": "因数和倍数",
+          "knowledge_point_ids": [
+            "factor_multiple_1"
+          ]
+        },
+        {
+          "id": "factor_multiple_lesson_2",
+          "name": "2、5、3的倍数特征",
+          "knowledge_point_ids": [
+            "factor_multiple_2"
+          ]
+        },
+        {
+          "id": "factor_multiple_lesson_3",
+          "name": "质数和合数",
+          "knowledge_point_ids": [
+            "factor_multiple_3"
+          ]
+        },
+        {
+          "id": "factor_multiple_lesson_4",
+          "name": "最大公因数和最小公倍数",
+          "knowledge_point_ids": [
+            "factor_multiple_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cuboid_cube",
+      "name": "长方体和正方体",
+      "lessons": [
+        {
+          "id": "cuboid_cube_lesson_1",
+          "name": "长方体正方体特征",
+          "knowledge_point_ids": [
+            "cuboid_cube_1"
+          ]
+        },
+        {
+          "id": "cuboid_cube_lesson_2",
+          "name": "表面积",
+          "knowledge_point_ids": [
+            "cuboid_cube_2"
+          ]
+        },
+        {
+          "id": "cuboid_cube_lesson_3",
+          "name": "体积和体积单位",
+          "knowledge_point_ids": [
+            "cuboid_cube_3"
+          ]
+        },
+        {
+          "id": "cuboid_cube_lesson_4",
+          "name": "容积",
+          "knowledge_point_ids": [
+            "cuboid_cube_4"
+          ]
+        },
+        {
+          "id": "cuboid_cube_lesson_5",
+          "name": "体积计算",
+          "knowledge_point_ids": [
+            "cuboid_cube_5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction_meaning",
+      "name": "分数的意义和性质",
+      "lessons": [
+        {
+          "id": "fraction_meaning_lesson_1",
+          "name": "分数意义",
+          "knowledge_point_ids": [
+            "fraction_meaning_1"
+          ]
+        },
+        {
+          "id": "fraction_meaning_lesson_2",
+          "name": "分数与除法",
+          "knowledge_point_ids": [
+            "fraction_meaning_2"
+          ]
+        },
+        {
+          "id": "fraction_meaning_lesson_3",
+          "name": "真分数假分数",
+          "knowledge_point_ids": [
+            "fraction_meaning_3"
+          ]
+        },
+        {
+          "id": "fraction_meaning_lesson_4",
+          "name": "分数基本性质",
+          "knowledge_point_ids": [
+            "fraction_meaning_4"
+          ]
+        },
+        {
+          "id": "fraction_meaning_lesson_5",
+          "name": "约分和通分",
+          "knowledge_point_ids": [
+            "fraction_meaning_5"
+          ]
+        },
+        {
+          "id": "fraction_meaning_lesson_6",
+          "name": "分数大小比较",
+          "knowledge_point_ids": [
+            "fraction_meaning_6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction_add_sub",
+      "name": "分数的加法和减法",
+      "lessons": [
+        {
+          "id": "fraction_add_sub_lesson_1",
+          "name": "同分母分数加减",
+          "knowledge_point_ids": [
+            "fraction_add_sub_1"
+          ]
+        },
+        {
+          "id": "fraction_add_sub_lesson_2",
+          "name": "异分母分数加减",
+          "knowledge_point_ids": [
+            "fraction_add_sub_2"
+          ]
+        },
+        {
+          "id": "fraction_add_sub_lesson_3",
+          "name": "分数加减混合",
+          "knowledge_point_ids": [
+            "fraction_add_sub_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "折线统计图",
+      "lessons": [
+        {
+          "id": "statistics_lesson_1",
+          "name": "单式折线统计图",
+          "knowledge_point_ids": [
+            "statistics_1"
+          ]
+        },
+        {
+          "id": "statistics_lesson_2",
+          "name": "复式折线统计图",
+          "knowledge_point_ids": [
+            "statistics_2"
+          ]
+        },
+        {
+          "id": "statistics_lesson_3",
+          "name": "趋势分析",
+          "knowledge_point_ids": [
+            "statistics_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--找次品",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "天平找次品",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "分组策略",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "observe_objects_1",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "观察物体（三）",
+      "name": "根据三个方向视图摆物体",
+      "description": "围绕“观察物体（三）”中“根据三个方向视图摆物体”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "根据三个方向视图摆物体：把图形名称或单位混淆",
+        "根据三个方向视图摆物体：周长、面积、体积公式用错",
+        "根据三个方向视图摆物体：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "observe_objects_2",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "观察物体（三）",
+      "name": "立体图形还原",
+      "description": "围绕“观察物体（三）”中“立体图形还原”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "立体图形还原：把图形名称或单位混淆",
+        "立体图形还原：周长、面积、体积公式用错",
+        "立体图形还原：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "factor_multiple_1",
+      "unit_id": "factor_multiple",
+      "lesson_id": "factor_multiple_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "因数与倍数",
+      "name": "因数和倍数",
+      "description": "围绕“因数与倍数”中“因数和倍数”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "因数和倍数：没有看清题目要求",
+        "因数和倍数：答语单位写错或漏写",
+        "因数和倍数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "factor_multiple_2",
+      "unit_id": "factor_multiple",
+      "lesson_id": "factor_multiple_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "因数与倍数",
+      "name": "2、5、3的倍数特征",
+      "description": "围绕“因数与倍数”中“2、5、3的倍数特征”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "2、5、3的倍数特征：没有看清题目要求",
+        "2、5、3的倍数特征：答语单位写错或漏写",
+        "2、5、3的倍数特征：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "factor_multiple_3",
+      "unit_id": "factor_multiple",
+      "lesson_id": "factor_multiple_lesson_3",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "因数与倍数",
+      "name": "质数和合数",
+      "description": "围绕“因数与倍数”中“质数和合数”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "质数和合数：没有看清题目要求",
+        "质数和合数：答语单位写错或漏写",
+        "质数和合数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "factor_multiple_4",
+      "unit_id": "factor_multiple",
+      "lesson_id": "factor_multiple_lesson_4",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "因数与倍数",
+      "name": "最大公因数和最小公倍数",
+      "description": "围绕“因数与倍数”中“最大公因数和最小公倍数”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "最大公因数和最小公倍数：没有看清题目要求",
+        "最大公因数和最小公倍数：答语单位写错或漏写",
+        "最大公因数和最小公倍数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cuboid_cube_1",
+      "unit_id": "cuboid_cube",
+      "lesson_id": "cuboid_cube_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方体和正方体",
+      "name": "长方体正方体特征",
+      "description": "围绕“长方体和正方体”中“长方体正方体特征”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "长方体正方体特征：把图形名称或单位混淆",
+        "长方体正方体特征：周长、面积、体积公式用错",
+        "长方体正方体特征：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cuboid_cube_2",
+      "unit_id": "cuboid_cube",
+      "lesson_id": "cuboid_cube_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方体和正方体",
+      "name": "表面积",
+      "description": "围绕“长方体和正方体”中“表面积”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "表面积：把图形名称或单位混淆",
+        "表面积：周长、面积、体积公式用错",
+        "表面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cuboid_cube_3",
+      "unit_id": "cuboid_cube",
+      "lesson_id": "cuboid_cube_lesson_3",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方体和正方体",
+      "name": "体积和体积单位",
+      "description": "围绕“长方体和正方体”中“体积和体积单位”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "体积和体积单位：把图形名称或单位混淆",
+        "体积和体积单位：周长、面积、体积公式用错",
+        "体积和体积单位：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cuboid_cube_4",
+      "unit_id": "cuboid_cube",
+      "lesson_id": "cuboid_cube_lesson_4",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方体和正方体",
+      "name": "容积",
+      "description": "围绕“长方体和正方体”中“容积”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "容积：把图形名称或单位混淆",
+        "容积：周长、面积、体积公式用错",
+        "容积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "cuboid_cube_5",
+      "unit_id": "cuboid_cube",
+      "lesson_id": "cuboid_cube_lesson_5",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方体和正方体",
+      "name": "体积计算",
+      "description": "围绕“长方体和正方体”中“体积计算”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "体积计算：把图形名称或单位混淆",
+        "体积计算：周长、面积、体积公式用错",
+        "体积计算：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_meaning_1",
+      "unit_id": "fraction_meaning",
+      "lesson_id": "fraction_meaning_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的意义和性质",
+      "name": "分数意义",
+      "description": "围绕“分数的意义和性质”中“分数意义”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数意义：相同数位没有对齐",
+        "分数意义：进位、退位或约分步骤遗漏",
+        "分数意义：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_meaning_2",
+      "unit_id": "fraction_meaning",
+      "lesson_id": "fraction_meaning_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的意义和性质",
+      "name": "分数与除法",
+      "description": "围绕“分数的意义和性质”中“分数与除法”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数与除法：相同数位没有对齐",
+        "分数与除法：进位、退位或约分步骤遗漏",
+        "分数与除法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_meaning_3",
+      "unit_id": "fraction_meaning",
+      "lesson_id": "fraction_meaning_lesson_3",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的意义和性质",
+      "name": "真分数假分数",
+      "description": "围绕“分数的意义和性质”中“真分数假分数”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "真分数假分数：相同数位没有对齐",
+        "真分数假分数：进位、退位或约分步骤遗漏",
+        "真分数假分数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_meaning_4",
+      "unit_id": "fraction_meaning",
+      "lesson_id": "fraction_meaning_lesson_4",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的意义和性质",
+      "name": "分数基本性质",
+      "description": "围绕“分数的意义和性质”中“分数基本性质”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数基本性质：相同数位没有对齐",
+        "分数基本性质：进位、退位或约分步骤遗漏",
+        "分数基本性质：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_meaning_5",
+      "unit_id": "fraction_meaning",
+      "lesson_id": "fraction_meaning_lesson_5",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的意义和性质",
+      "name": "约分和通分",
+      "description": "围绕“分数的意义和性质”中“约分和通分”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "约分和通分：相同数位没有对齐",
+        "约分和通分：进位、退位或约分步骤遗漏",
+        "约分和通分：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_meaning_6",
+      "unit_id": "fraction_meaning",
+      "lesson_id": "fraction_meaning_lesson_6",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的意义和性质",
+      "name": "分数大小比较",
+      "description": "围绕“分数的意义和性质”中“分数大小比较”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数大小比较：相同数位没有对齐",
+        "分数大小比较：进位、退位或约分步骤遗漏",
+        "分数大小比较：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_add_sub_1",
+      "unit_id": "fraction_add_sub",
+      "lesson_id": "fraction_add_sub_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的加法和减法",
+      "name": "同分母分数加减",
+      "description": "围绕“分数的加法和减法”中“同分母分数加减”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "同分母分数加减：相同数位没有对齐",
+        "同分母分数加减：进位、退位或约分步骤遗漏",
+        "同分母分数加减：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_add_sub_2",
+      "unit_id": "fraction_add_sub",
+      "lesson_id": "fraction_add_sub_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的加法和减法",
+      "name": "异分母分数加减",
+      "description": "围绕“分数的加法和减法”中“异分母分数加减”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "异分母分数加减：相同数位没有对齐",
+        "异分母分数加减：进位、退位或约分步骤遗漏",
+        "异分母分数加减：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_add_sub_3",
+      "unit_id": "fraction_add_sub",
+      "lesson_id": "fraction_add_sub_lesson_3",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的加法和减法",
+      "name": "分数加减混合",
+      "description": "围绕“分数的加法和减法”中“分数加减混合”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "分数加减混合：相同数位没有对齐",
+        "分数加减混合：进位、退位或约分步骤遗漏",
+        "分数加减混合：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_1",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "折线统计图",
+      "name": "单式折线统计图",
+      "description": "围绕“折线统计图”中“单式折线统计图”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "单式折线统计图：没有看清题目要求",
+        "单式折线统计图：答语单位写错或漏写",
+        "单式折线统计图：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_2",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "折线统计图",
+      "name": "复式折线统计图",
+      "description": "围绕“折线统计图”中“复式折线统计图”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "复式折线统计图：没有看清题目要求",
+        "复式折线统计图：答语单位写错或漏写",
+        "复式折线统计图：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_3",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_3",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "折线统计图",
+      "name": "趋势分析",
+      "description": "围绕“折线统计图”中“趋势分析”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "趋势分析：没有看清题目要求",
+        "趋势分析：答语单位写错或漏写",
+        "趋势分析：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--找次品",
+      "name": "天平找次品",
+      "description": "围绕“数学广角--找次品”中“天平找次品”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "天平找次品：把图形名称或单位混淆",
+        "天平找次品：周长、面积、体积公式用错",
+        "天平找次品：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--找次品",
+      "name": "分组策略",
+      "description": "围绕“数学广角--找次品”中“分组策略”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "分组策略：把图形名称或单位混淆",
+        "分组策略：周长、面积、体积公式用错",
+        "分组策略：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "填空题",
+      "template": "围绕“根据三个方向视图摆物体”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“根据三个方向视图摆物体”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“根据三个方向视图摆物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "选择题",
+      "template": "围绕“根据三个方向视图摆物体”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“根据三个方向视图摆物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "应用题",
+      "template": "围绕“根据三个方向视图摆物体”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“根据三个方向视图摆物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "填空题",
+      "template": "围绕“立体图形还原”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“立体图形还原”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“立体图形还原”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "选择题",
+      "template": "围绕“立体图形还原”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“立体图形还原”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "应用题",
+      "template": "围绕“立体图形还原”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“立体图形还原”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_1",
+      "question_type": "填空题",
+      "template": "围绕“因数和倍数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“因数和倍数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“因数和倍数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_1",
+      "question_type": "选择题",
+      "template": "围绕“因数和倍数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“因数和倍数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_1",
+      "question_type": "判断题",
+      "template": "围绕“因数和倍数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“因数和倍数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_2",
+      "question_type": "填空题",
+      "template": "围绕“2、5、3的倍数特征”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“2、5、3的倍数特征”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“2、5、3的倍数特征”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_2",
+      "question_type": "选择题",
+      "template": "围绕“2、5、3的倍数特征”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“2、5、3的倍数特征”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_2",
+      "question_type": "判断题",
+      "template": "围绕“2、5、3的倍数特征”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“2、5、3的倍数特征”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_3",
+      "question_type": "填空题",
+      "template": "围绕“质数和合数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“质数和合数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“质数和合数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_3",
+      "question_type": "选择题",
+      "template": "围绕“质数和合数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“质数和合数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_3",
+      "question_type": "判断题",
+      "template": "围绕“质数和合数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“质数和合数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_4",
+      "question_type": "填空题",
+      "template": "围绕“最大公因数和最小公倍数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“最大公因数和最小公倍数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“最大公因数和最小公倍数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_4",
+      "question_type": "选择题",
+      "template": "围绕“最大公因数和最小公倍数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“最大公因数和最小公倍数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "factor_multiple_4",
+      "question_type": "判断题",
+      "template": "围绕“最大公因数和最小公倍数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“最大公因数和最小公倍数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_1",
+      "question_type": "填空题",
+      "template": "围绕“长方体正方体特征”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“长方体正方体特征”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方体正方体特征”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_1",
+      "question_type": "选择题",
+      "template": "围绕“长方体正方体特征”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方体正方体特征”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_1",
+      "question_type": "应用题",
+      "template": "围绕“长方体正方体特征”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“长方体正方体特征”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_2",
+      "question_type": "填空题",
+      "template": "围绕“表面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“表面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“表面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_2",
+      "question_type": "选择题",
+      "template": "围绕“表面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“表面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_2",
+      "question_type": "应用题",
+      "template": "围绕“表面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“表面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_3",
+      "question_type": "填空题",
+      "template": "围绕“体积和体积单位”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“体积和体积单位”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“体积和体积单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_3",
+      "question_type": "选择题",
+      "template": "围绕“体积和体积单位”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“体积和体积单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_3",
+      "question_type": "应用题",
+      "template": "围绕“体积和体积单位”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“体积和体积单位”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_4",
+      "question_type": "填空题",
+      "template": "围绕“容积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“容积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“容积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_4",
+      "question_type": "选择题",
+      "template": "围绕“容积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“容积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_4",
+      "question_type": "应用题",
+      "template": "围绕“容积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“容积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_5",
+      "question_type": "填空题",
+      "template": "围绕“体积计算”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“体积计算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“体积计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_5",
+      "question_type": "选择题",
+      "template": "围绕“体积计算”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“体积计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "cuboid_cube_5",
+      "question_type": "应用题",
+      "template": "围绕“体积计算”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“体积计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_1",
+      "question_type": "计算题",
+      "template": "围绕“分数意义”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_1",
+      "question_type": "填空题",
+      "template": "围绕“分数意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数意义”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_1",
+      "question_type": "判断题",
+      "template": "围绕“分数意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_2",
+      "question_type": "计算题",
+      "template": "围绕“分数与除法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数与除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_2",
+      "question_type": "填空题",
+      "template": "围绕“分数与除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数与除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数与除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_2",
+      "question_type": "判断题",
+      "template": "围绕“分数与除法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数与除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_3",
+      "question_type": "计算题",
+      "template": "围绕“真分数假分数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“真分数假分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_3",
+      "question_type": "填空题",
+      "template": "围绕“真分数假分数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“真分数假分数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“真分数假分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_3",
+      "question_type": "判断题",
+      "template": "围绕“真分数假分数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“真分数假分数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_4",
+      "question_type": "计算题",
+      "template": "围绕“分数基本性质”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数基本性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_4",
+      "question_type": "填空题",
+      "template": "围绕“分数基本性质”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数基本性质”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数基本性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_4",
+      "question_type": "判断题",
+      "template": "围绕“分数基本性质”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数基本性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_5",
+      "question_type": "计算题",
+      "template": "围绕“约分和通分”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“约分和通分”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_5",
+      "question_type": "填空题",
+      "template": "围绕“约分和通分”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“约分和通分”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“约分和通分”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_5",
+      "question_type": "判断题",
+      "template": "围绕“约分和通分”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“约分和通分”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_6",
+      "question_type": "计算题",
+      "template": "围绕“分数大小比较”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_6",
+      "question_type": "填空题",
+      "template": "围绕“分数大小比较”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数大小比较”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_meaning_6",
+      "question_type": "判断题",
+      "template": "围绕“分数大小比较”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_1",
+      "question_type": "计算题",
+      "template": "围绕“同分母分数加减”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_1",
+      "question_type": "填空题",
+      "template": "围绕“同分母分数加减”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“同分母分数加减”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_1",
+      "question_type": "判断题",
+      "template": "围绕“同分母分数加减”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_2",
+      "question_type": "计算题",
+      "template": "围绕“异分母分数加减”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“异分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_2",
+      "question_type": "填空题",
+      "template": "围绕“异分母分数加减”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“异分母分数加减”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“异分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_2",
+      "question_type": "判断题",
+      "template": "围绕“异分母分数加减”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“异分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_3",
+      "question_type": "计算题",
+      "template": "围绕“分数加减混合”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_3",
+      "question_type": "填空题",
+      "template": "围绕“分数加减混合”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“分数加减混合”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_add_sub_3",
+      "question_type": "判断题",
+      "template": "围绕“分数加减混合”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分数加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "填空题",
+      "template": "围绕“单式折线统计图”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“单式折线统计图”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“单式折线统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "选择题",
+      "template": "围绕“单式折线统计图”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“单式折线统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "判断题",
+      "template": "围绕“单式折线统计图”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“单式折线统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "填空题",
+      "template": "围绕“复式折线统计图”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“复式折线统计图”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“复式折线统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "选择题",
+      "template": "围绕“复式折线统计图”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“复式折线统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "判断题",
+      "template": "围绕“复式折线统计图”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“复式折线统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "填空题",
+      "template": "围绕“趋势分析”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“趋势分析”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“趋势分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "选择题",
+      "template": "围绕“趋势分析”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“趋势分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "判断题",
+      "template": "围绕“趋势分析”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“趋势分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“天平找次品”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“天平找次品”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“天平找次品”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“天平找次品”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“天平找次品”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“天平找次品”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“天平找次品”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“分组策略”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“分组策略”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分组策略”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“分组策略”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“分组策略”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“分组策略”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“分组策略”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1070,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 358,
+      "practice": 480,
+      "student_sheet": 60,
+      "knowledge": 16,
+      "textbook": 2,
+      "other": 154
+    },
+    "top_terms": [
+      "的倍数",
+      "偶数",
+      "教材",
+      "奇数",
+      "做一做",
+      "教学目标",
+      "提问",
+      "课堂小结",
+      "的因数",
+      "学情分析",
+      "教材分析",
+      "教学重点",
+      "教学难点",
+      "学生活动",
+      "拟用学法",
+      "教学过程设计",
+      "教师指导",
+      "学习效果与检测",
+      "教学后记",
+      "棱长",
+      "新授课",
+      "媒体资源或教具",
+      "教学过程",
+      "减法",
+      "板书课题",
+      "板书",
+      "教学内容",
+      "板书设计",
+      "长方体",
+      "课堂总结",
+      "教学反思",
+      "你有什么收获",
+      "引入新课",
+      "想一想",
+      "巩固练习",
+      "体积",
+      "PPT课件",
+      "填空",
+      "重点",
+      "难点",
+      "正方体",
+      "通过本节课的学习",
+      "教学重难点",
+      "所以",
+      "教具准备",
+      "复习导入",
+      "课堂作业",
+      "明确本节课的学习内容",
+      "为什么",
+      "分数"
+    ],
+    "top_headings": [
+      "《 。 》",
+      "1.填空",
+      "3.明确本节课的学习内容",
+      "2.明确本节课的学习内容",
+      "2.布置课后学习内容",
+      "1.填一填",
+      "1.com",
+      "2.引入新课",
+      "2.填空",
+      "1.com/\"",
+      "1.通过这节课的学习，你有什么收获？",
+      "2.布置作业",
+      "2.判断",
+      "1.总结本节课的学习内容",
+      "1、2题",
+      "《数学课程标准》",
+      "第4单元 分数的意义和性质",
+      "888666.taobao.com/",
+      "2.布置课后作业",
+      "1.通过本节课的学习，你有什么收获？",
+      "1.c O m",
+      "4、8、12、16、20、24、28、36……",
+      "6、12、18、24、28、32、36……",
+      "12、24、36……",
+      "第4单元",
+      "0.75",
+      "2. 下面",
+      "2.5 m",
+      "2、5的倍数的特征",
+      "3.揭示课题"
+    ]
+  }
+}

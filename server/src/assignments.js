@@ -25,6 +25,7 @@ export async function createAssignment(payload) {
     difficulty: payload.difficulty,
     questionCount: payload.questionCount || payload.questions?.length || 0,
     questions: payload.questions || [],
+    ownerUserId: payload.ownerUserId || "",
     createdAt: now,
     status: payload.status || "published"
   };
@@ -32,12 +33,14 @@ export async function createAssignment(payload) {
   return assignment;
 }
 
-export async function getAssignments() {
-  return readJson(assignmentsPath, []);
+export async function getAssignments(userId = "") {
+  const assignments = await readJson(assignmentsPath, []);
+  if (!userId) return assignments.filter((item) => !item.ownerUserId);
+  return assignments.filter((item) => item.ownerUserId === userId || !item.ownerUserId);
 }
 
 export async function getAssignmentById(id) {
-  const assignments = await getAssignments();
+  const assignments = await readJson(assignmentsPath, []);
   return assignments.find((item) => item.id === id);
 }
 
@@ -73,6 +76,7 @@ export async function createSubmission(assignmentId, payload) {
     submitType: payload.submitType || (imagePaths.length ? "图片上传" : "在线答题"),
     answers: payload.answers || [],
     imagePaths,
+    submitterUserId: payload.submitterUserId || "",
     submittedAt: new Date().toISOString(),
     status: "待批改",
     teacherComment: payload.teacherComment || ""

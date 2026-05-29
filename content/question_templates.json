@@ -1,109 +1,677 @@
 {
-  "package_id": "g4_math_down_decimal_add_sub",
+  "package_id": "g4_math_down_rj_2026",
   "templates": [
     {
-      "knowledge_point_id": "decimal_add_same_digits",
+      "knowledge_point_id": "four_operations_1",
       "question_type": "计算题",
-      "template": "计算：{a} + {b} = ____",
-      "answer_rule": "按小数点对齐，相同数位相加。",
+      "template": "围绕“加减法的意义”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
       "difficulty": "基础",
-      "generation_note": "数字位数相同，重点考查小数点对齐和进位。"
+      "generation_note": "围绕“加减法的意义”原创生成，不引用教材原题。"
     },
     {
-      "knowledge_point_id": "decimal_add_same_digits",
+      "knowledge_point_id": "four_operations_1",
       "question_type": "填空题",
-      "template": "{a} + {b} 的和是 ____。",
-      "answer_rule": "先对齐小数点，再从低位加起。",
+      "template": "围绕“加减法的意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“加减法的意义”的核心知识点，并说明一步关键理由。",
       "difficulty": "基础",
-      "generation_note": "适合口算或横式填空，答案保留必要小数位。"
+      "generation_note": "围绕“加减法的意义”原创生成，不引用教材原题。"
     },
     {
-      "knowledge_point_id": "decimal_add_different_digits",
+      "knowledge_point_id": "four_operations_1",
+      "question_type": "判断题",
+      "template": "围绕“加减法的意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加减法的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "four_operations_2",
       "question_type": "计算题",
-      "template": "计算：{a} + {b2} = ____",
-      "answer_rule": "把位数少的小数末尾补 0，再按相同数位相加。",
+      "template": "围绕“乘除法的意义”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
       "difficulty": "基础",
-      "generation_note": "一个数为一位小数，另一个数为两位小数，避免直接末位对齐。"
+      "generation_note": "围绕“乘除法的意义”原创生成，不引用教材原题。"
     },
     {
-      "knowledge_point_id": "decimal_add_different_digits",
+      "knowledge_point_id": "four_operations_2",
+      "question_type": "填空题",
+      "template": "围绕“乘除法的意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘除法的意义”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘除法的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "four_operations_2",
+      "question_type": "判断题",
+      "template": "围绕“乘除法的意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘除法的意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "four_operations_3",
+      "question_type": "计算题",
+      "template": "围绕“含括号四则运算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“含括号四则运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "four_operations_3",
+      "question_type": "填空题",
+      "template": "围绕“含括号四则运算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“含括号四则运算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“含括号四则运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "four_operations_3",
+      "question_type": "判断题",
+      "template": "围绕“含括号四则运算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“含括号四则运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "four_operations_4",
       "question_type": "应用题",
-      "template": "一条彩带长 {a} 米，另一条彩带长 {b2} 米，两条彩带一共长多少米？",
-      "answer_rule": "求两段长度合起来，用小数加法计算。",
+      "template": "围绕“租船等优化问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
       "difficulty": "提高",
-      "generation_note": "生活情境只作为原创场景，不引用教材原文。"
+      "generation_note": "围绕“租船等优化问题”原创生成，不引用教材原题。"
     },
     {
-      "knowledge_point_id": "decimal_sub_same_digits",
-      "question_type": "计算题",
-      "template": "计算：{a} - {b} = ____",
-      "answer_rule": "按小数点对齐，相同数位相减，不够减时向前一位退 1。",
+      "knowledge_point_id": "four_operations_4",
+      "question_type": "填空题",
+      "template": "围绕“租船等优化问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“租船等优化问题”的核心知识点，并说明一步关键理由。",
       "difficulty": "基础",
-      "generation_note": "被减数大于减数，重点考查退位。"
+      "generation_note": "围绕“租船等优化问题”原创生成，不引用教材原题。"
     },
     {
-      "knowledge_point_id": "decimal_sub_different_digits",
-      "question_type": "计算题",
-      "template": "计算：{a2} - {b} = ____",
-      "answer_rule": "位数不同先补 0，再按相同数位相减。",
-      "difficulty": "基础",
-      "generation_note": "被减数为两位小数，减数为一位小数，突出补 0。"
-    },
-    {
-      "knowledge_point_id": "decimal_sub_different_digits",
-      "question_type": "判断题",
-      "template": "判断：7.30 - 2.4 可以看成 7.30 - 2.40 来计算。____",
-      "answer_rule": "正确。小数末尾添 0，大小不变，便于相同数位相减。",
-      "difficulty": "基础",
-      "generation_note": "判断题用于强化补 0 的数学意义。"
-    },
-    {
-      "knowledge_point_id": "decimal_add_sub_different_digits",
-      "question_type": "计算题",
-      "template": "计算：{a} + {b} = ____",
-      "answer_rule": "位数不同先补 0，再按相同数位相加。",
-      "difficulty": "提高",
-      "generation_note": "可混合一位小数和两位小数，题干不直接提示补 0。"
-    },
-    {
-      "knowledge_point_id": "decimal_add_sub_different_digits",
-      "question_type": "判断题",
-      "template": "判断：计算小数加减法时，只要把数字末尾对齐就可以。____",
-      "answer_rule": "错误。应把小数点对齐，也就是相同数位对齐。",
-      "difficulty": "基础",
-      "generation_note": "针对常见错误设计，不引用教材原题。"
-    },
-    {
-      "knowledge_point_id": "decimal_add_sub_word_problem",
-      "question_type": "应用题",
-      "template": "小明买文具花了 {a} 元，买练习本花了 {b} 元，一共花了多少元？",
-      "answer_rule": "求一共用加法，把两个小数相加。",
-      "difficulty": "基础",
-      "generation_note": "购物情境，考查求总数。"
-    },
-    {
-      "knowledge_point_id": "decimal_add_sub_word_problem",
+      "knowledge_point_id": "four_operations_4",
       "question_type": "变式题",
-      "template": "一根彩带长 {a} 米，用去 {b} 米后，又接上 {c} 米，现在长多少米？",
-      "answer_rule": "先减去用去的长度，再加上接上的长度。",
-      "difficulty": "提高",
-      "generation_note": "两步小数加减混合，适合提高题。"
-    },
-    {
-      "knowledge_point_id": "decimal_add_sub_checking",
-      "question_type": "判断题",
-      "template": "判断：如果 8.6 - 3.2 = 5.4，那么可以用 5.4 + 3.2 = 8.6 来验算。____",
-      "answer_rule": "正确。减法可以用差加减数等于被减数进行验算。",
-      "difficulty": "提高",
-      "generation_note": "考查加减互逆关系。"
-    },
-    {
-      "knowledge_point_id": "decimal_add_sub_checking",
-      "question_type": "变式题",
-      "template": "小红计算 12.5 - 4.8 = 8.7，请你判断是否正确，并写出验算方法。",
-      "answer_rule": "不正确。可用 8.7 + 4.8 = 13.5 验算，不等于 12.5。",
+      "template": "围绕“租船等优化问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
       "difficulty": "拔高",
-      "generation_note": "要求判断结果并说明验算过程。"
+      "generation_note": "围绕“租船等优化问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "填空题",
+      "template": "围绕“从前面上面左面观察”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“从前面上面左面观察”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“从前面上面左面观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "选择题",
+      "template": "围绕“从前面上面左面观察”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“从前面上面左面观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "应用题",
+      "template": "围绕“从前面上面左面观察”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“从前面上面左面观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "填空题",
+      "template": "围绕“根据视图搭物体”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“根据视图搭物体”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“根据视图搭物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "选择题",
+      "template": "围绕“根据视图搭物体”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“根据视图搭物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "应用题",
+      "template": "围绕“根据视图搭物体”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“根据视图搭物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_1",
+      "question_type": "计算题",
+      "template": "围绕“加法运算律”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加法运算律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_1",
+      "question_type": "填空题",
+      "template": "围绕“加法运算律”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“加法运算律”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加法运算律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_1",
+      "question_type": "判断题",
+      "template": "围绕“加法运算律”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“加法运算律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_2",
+      "question_type": "计算题",
+      "template": "围绕“乘法运算律”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法运算律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_2",
+      "question_type": "填空题",
+      "template": "围绕“乘法运算律”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘法运算律”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法运算律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_2",
+      "question_type": "判断题",
+      "template": "围绕“乘法运算律”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法运算律”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_3",
+      "question_type": "计算题",
+      "template": "围绕“简便计算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简便计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_3",
+      "question_type": "填空题",
+      "template": "围绕“简便计算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“简便计算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简便计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_3",
+      "question_type": "判断题",
+      "template": "围绕“简便计算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简便计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_4",
+      "question_type": "计算题",
+      "template": "围绕“连除简算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连除简算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_4",
+      "question_type": "填空题",
+      "template": "围绕“连除简算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“连除简算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连除简算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "operation_laws_4",
+      "question_type": "判断题",
+      "template": "围绕“连除简算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连除简算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_1",
+      "question_type": "计算题",
+      "template": "围绕“小数意义”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_1",
+      "question_type": "填空题",
+      "template": "围绕“小数意义”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数意义”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_1",
+      "question_type": "判断题",
+      "template": "围绕“小数意义”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数意义”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_2",
+      "question_type": "计算题",
+      "template": "围绕“小数读写”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_2",
+      "question_type": "填空题",
+      "template": "围绕“小数读写”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数读写”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_2",
+      "question_type": "判断题",
+      "template": "围绕“小数读写”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数读写”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_3",
+      "question_type": "计算题",
+      "template": "围绕“小数性质”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_3",
+      "question_type": "填空题",
+      "template": "围绕“小数性质”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数性质”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_3",
+      "question_type": "判断题",
+      "template": "围绕“小数性质”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_4",
+      "question_type": "计算题",
+      "template": "围绕“小数大小比较”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_4",
+      "question_type": "填空题",
+      "template": "围绕“小数大小比较”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数大小比较”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_4",
+      "question_type": "判断题",
+      "template": "围绕“小数大小比较”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数大小比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_5",
+      "question_type": "计算题",
+      "template": "围绕“小数点移动”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数点移动”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_5",
+      "question_type": "填空题",
+      "template": "围绕“小数点移动”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数点移动”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数点移动”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_meaning_5",
+      "question_type": "判断题",
+      "template": "围绕“小数点移动”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数点移动”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_1",
+      "question_type": "填空题",
+      "template": "围绕“三角形特性”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“三角形特性”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形特性”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_1",
+      "question_type": "选择题",
+      "template": "围绕“三角形特性”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形特性”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_1",
+      "question_type": "应用题",
+      "template": "围绕“三角形特性”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“三角形特性”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_2",
+      "question_type": "填空题",
+      "template": "围绕“三角形分类”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“三角形分类”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_2",
+      "question_type": "选择题",
+      "template": "围绕“三角形分类”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_2",
+      "question_type": "应用题",
+      "template": "围绕“三角形分类”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“三角形分类”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_3",
+      "question_type": "填空题",
+      "template": "围绕“三角形内角和”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“三角形内角和”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形内角和”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_3",
+      "question_type": "选择题",
+      "template": "围绕“三角形内角和”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形内角和”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "triangle_3",
+      "question_type": "应用题",
+      "template": "围绕“三角形内角和”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“三角形内角和”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_1",
+      "question_type": "计算题",
+      "template": "围绕“小数加法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_1",
+      "question_type": "填空题",
+      "template": "围绕“小数加法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数加法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_1",
+      "question_type": "判断题",
+      "template": "围绕“小数加法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数加法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_2",
+      "question_type": "计算题",
+      "template": "围绕“小数减法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_2",
+      "question_type": "填空题",
+      "template": "围绕“小数减法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数减法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_2",
+      "question_type": "判断题",
+      "template": "围绕“小数减法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数减法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_3",
+      "question_type": "计算题",
+      "template": "围绕“小数加减混合”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_3",
+      "question_type": "填空题",
+      "template": "围绕“小数加减混合”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数加减混合”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_3",
+      "question_type": "判断题",
+      "template": "围绕“小数加减混合”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数加减混合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_4",
+      "question_type": "应用题",
+      "template": "围绕“小数加减应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“小数加减应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_4",
+      "question_type": "填空题",
+      "template": "围绕“小数加减应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数加减应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数加减应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_add_sub_4",
+      "question_type": "变式题",
+      "template": "围绕“小数加减应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“小数加减应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "填空题",
+      "template": "围绕“平均数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“平均数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平均数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "选择题",
+      "template": "围绕“平均数”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平均数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_1",
+      "question_type": "判断题",
+      "template": "围绕“平均数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平均数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "填空题",
+      "template": "围绕“复式条形统计图”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“复式条形统计图”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“复式条形统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "选择题",
+      "template": "围绕“复式条形统计图”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“复式条形统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_2",
+      "question_type": "判断题",
+      "template": "围绕“复式条形统计图”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“复式条形统计图”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "填空题",
+      "template": "围绕“数据分析”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“数据分析”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数据分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "选择题",
+      "template": "围绕“数据分析”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数据分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "statistics_3",
+      "question_type": "判断题",
+      "template": "围绕“数据分析”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“数据分析”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“列表法”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“列表法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“列表法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“列表法”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“列表法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“列表法”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“列表法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“假设法”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“假设法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“假设法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“假设法”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“假设法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“假设法”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“假设法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "填空题",
+      "template": "围绕“鸡兔同笼应用”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“鸡兔同笼应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“鸡兔同笼应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "选择题",
+      "template": "围绕“鸡兔同笼应用”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“鸡兔同笼应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "应用题",
+      "template": "围绕“鸡兔同笼应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“鸡兔同笼应用”原创生成，不引用教材原题。"
     }
   ]
 }

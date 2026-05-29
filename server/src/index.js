@@ -14,6 +14,8 @@ import {
   updateAssignmentStatus
 } from "./assignments.js";
 import { ensureInPackage, findKnowledgePoint, loadContentCatalog, loadContentPackage, templatesFor } from "./content.js";
+import { getExtractedPaper, getExtractedQuestions } from "./extractedBank.js";
+import { getBearerToken, getUserByToken, loginWithWechatCode, logoutByToken } from "./auth.js";
 import { mockPaper, mockTextbookQuestions, mockWrongQuestion } from "./mock.js";
 import { generateWithAI } from "./openai.js";
 import { paperPrompt, textbookPrompt, wrongQuestionPrompt } from "./prompts.js";
@@ -53,6 +55,32 @@ app.get("/api/content-package", async (_request, response, next) => {
   }
 });
 
+app.post("/api/auth/wechat-login", async (request, response, next) => {
+  try {
+    const input = requireFields(request.body, ["code"]);
+    response.json(await loginWithWechatCode({ code: input.code, profile: request.body.profile || {} }));
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/api/auth/me", async (request, response, next) => {
+  try {
+    const user = await getUserByToken(getBearerToken(request));
+    response.json({ loggedIn: Boolean(user), user });
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post("/api/auth/logout", async (request, response, next) => {
+  try {
+    response.json(await logoutByToken(getBearerToken(request)));
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.post("/api/generate/textbook", async (request, response, next) => {
   try {
     const input = requireFields(request.body, ["grade", "semester", "subject", "textbook", "unit", "knowledgePoint", "type", "difficulty", "count"]);
@@ -62,7 +90,8 @@ app.post("/api/generate/textbook", async (request, response, next) => {
     const knowledgePoint = findKnowledgePoint(contentPackage, scopedInput.knowledgePoint);
     const templates = templatesFor(contentPackage, knowledgePoint, scopedInput.type);
     const context = { contentPackage, knowledgePoint, templates };
-    response.json(await generateOrMock(textbookPrompt(scopedInput, context), () => mockTextbookQuestions(scopedInput, context)));
+    const extracted = await getExtractedQuestions(scopedInput, contentPackage, knowledgePoint);
+    response.json(extracted.questions.length ? extracted : emptyExtractedResult(scopedInput));
   } catch (error) {
     next(error);
   }
@@ -87,16 +116,17 @@ app.post("/api/generate/paper", async (request, response, next) => {
     input.totalScore = clampNumber(input.totalScore, 1, 300);
     const contentPackage = await loadContentPackage(input);
     const scopedInput = ensureInPackage({ ...input, unit: input.unitRange, knowledgePoint: input.unitRange }, contentPackage);
-    const context = { contentPackage };
-    response.json(await generateOrMock(paperPrompt(scopedInput, context), () => mockPaper(scopedInput, context)));
+    const extracted = await getExtractedPaper(scopedInput, contentPackage);
+    response.json(extracted.questions.length ? extracted : { ...extracted, questions: [] });
   } catch (error) {
     next(error);
   }
 });
 
-app.get("/api/history", async (_request, response, next) => {
+app.get("/api/history", async (request, response, next) => {
   try {
-    response.json({ items: await getHistory() });
+    const user = await optionalUser(request);
+    response.json({ items: await getHistory(user?.id || "") });
   } catch (error) {
     next(error);
   }
@@ -105,7 +135,8 @@ app.get("/api/history", async (_request, response, next) => {
 app.post("/api/history", async (request, response, next) => {
   try {
     const input = requireFields(request.body, ["type", "payload"]);
-    response.json(await appendHistory(input.type, input.payload));
+    const user = await optionalUser(request);
+    response.json(await appendHistory(input.type, input.payload, user?.id || ""));
   } catch (error) {
     next(error);
   }
@@ -113,7 +144,8 @@ app.post("/api/history", async (request, response, next) => {
 
 app.delete("/api/history/:id", async (request, response, next) => {
   try {
-    response.json(await deleteHistory(request.params.id));
+    const user = await optionalUser(request);
+    response.json(await deleteHistory(request.params.id, user?.id || ""));
   } catch (error) {
     next(error);
   }
@@ -131,6 +163,7 @@ app.post("/api/export", async (request, response, next) => {
 
 app.post("/api/assignments", async (request, response, next) => {
   try {
+    const user = await optionalUser(request);
     const input = requireFields(request.body, ["grade", "semester", "subject", "textbook", "knowledgePoint", "difficulty", "count"]);
     input.unit = request.body.unit || input.knowledgePoint;
     input.lesson = request.body.lesson || "";
@@ -141,12 +174,13 @@ app.post("/api/assignments", async (request, response, next) => {
     const knowledgePoint = findKnowledgePoint(contentPackage, scopedInput.knowledgePoint);
     const templates = templatesFor(contentPackage, knowledgePoint, scopedInput.type);
     const context = { contentPackage, knowledgePoint, templates };
-    const result = await generateOrMock(textbookPrompt(scopedInput, context), () => mockTextbookQuestions(scopedInput, context));
+    const result = await getExtractedQuestions(scopedInput, contentPackage, knowledgePoint);
     const assignment = await createAssignment({
       ...scopedInput,
       title: result.title || `${scopedInput.grade}${scopedInput.subject}${scopedInput.knowledgePoint}作业`,
       questions: result.questions || [],
       questionCount: result.questions?.length || scopedInput.count,
+      ownerUserId: user?.id || "",
       status: "published"
     });
     response.json({ assignment });
@@ -158,7 +192,8 @@ app.post("/api/assignments", async (request, response, next) => {
 app.get("/api/assignments", async (_request, response, next) => {
   try {
     const status = _request.query.status === "archived" ? "archived" : "published";
-    const assignments = await getAssignments();
+    const user = await optionalUser(_request);
+    const assignments = await getAssignments(user?.id || "");
     const items = assignments
       .filter((item) => status === "archived" ? item.status === "archived" : item.status !== "archived")
       .slice()
@@ -216,7 +251,8 @@ app.get("/api/assignments/:id", async (request, response, next) => {
 app.post("/api/assignments/:id/submissions", async (request, response, next) => {
   try {
     const input = requireFields(request.body, ["studentName"]);
-    const submission = await createSubmission(request.params.id, { ...request.body, studentName: input.studentName });
+    const user = await optionalUser(request);
+    const submission = await createSubmission(request.params.id, { ...request.body, studentName: input.studentName, submitterUserId: user?.id || "" });
     if (!submission) return response.status(404).json({ message: "未找到作业" });
     response.json({ submission });
   } catch (error) {
@@ -226,10 +262,12 @@ app.post("/api/assignments/:id/submissions", async (request, response, next) => 
 
 app.post("/api/assignments/:id/upload", async (request, response, next) => {
   try {
+    const user = await optionalUser(request);
     const submission = await createSubmission(request.params.id, {
       studentName: request.body.studentName || "未填写",
       submitType: "图片上传",
-      images: request.body.images || []
+      images: request.body.images || [],
+      submitterUserId: user?.id || ""
     });
     if (!submission) return response.status(404).json({ message: "未找到作业" });
     response.json({ submission });
@@ -296,6 +334,24 @@ async function generateOrMock(prompt, mockFactory) {
     console.warn("OpenAI 调用失败，已降级为本地 mock：", error.message);
     return mockFactory();
   }
+}
+
+async function optionalUser(request) {
+  return getUserByToken(getBearerToken(request));
+}
+
+function emptyExtractedResult(input) {
+  return {
+    title: `${input.grade}${input.subject}${input.knowledgePoint}摘录练习`,
+    grade: input.grade,
+    semester: input.semester,
+    subject: input.subject,
+    textbook: input.textbook,
+    unit: input.unit,
+    source: "extracted_question_bank",
+    questions: [],
+    message: "当前板块还没有可直接做的文字摘录题。"
+  };
 }
 
 function requireFields(body, fields) {

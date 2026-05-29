@@ -1,0 +1,1567 @@
+{
+  "package_id": "g5_math_up_rj_2026",
+  "package_name": "五年级数学上册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "五年级",
+    "semester": "上册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g5_math_up_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\5上-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g5_math_up_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1132 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "decimal_multiply",
+      "name": "小数乘法",
+      "lessons": [
+        {
+          "id": "decimal_multiply_lesson_1",
+          "name": "小数乘整数",
+          "knowledge_point_ids": [
+            "decimal_multiply_1"
+          ]
+        },
+        {
+          "id": "decimal_multiply_lesson_2",
+          "name": "小数乘小数",
+          "knowledge_point_ids": [
+            "decimal_multiply_2"
+          ]
+        },
+        {
+          "id": "decimal_multiply_lesson_3",
+          "name": "积的近似数",
+          "knowledge_point_ids": [
+            "decimal_multiply_3"
+          ]
+        },
+        {
+          "id": "decimal_multiply_lesson_4",
+          "name": "小数乘法应用",
+          "knowledge_point_ids": [
+            "decimal_multiply_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "position",
+      "name": "位置",
+      "lessons": [
+        {
+          "id": "position_lesson_1",
+          "name": "用数对表示位置",
+          "knowledge_point_ids": [
+            "position_1"
+          ]
+        },
+        {
+          "id": "position_lesson_2",
+          "name": "在方格纸上确定位置",
+          "knowledge_point_ids": [
+            "position_2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decimal_divide",
+      "name": "小数除法",
+      "lessons": [
+        {
+          "id": "decimal_divide_lesson_1",
+          "name": "除数是整数的小数除法",
+          "knowledge_point_ids": [
+            "decimal_divide_1"
+          ]
+        },
+        {
+          "id": "decimal_divide_lesson_2",
+          "name": "一个数除以小数",
+          "knowledge_point_ids": [
+            "decimal_divide_2"
+          ]
+        },
+        {
+          "id": "decimal_divide_lesson_3",
+          "name": "商的近似数",
+          "knowledge_point_ids": [
+            "decimal_divide_3"
+          ]
+        },
+        {
+          "id": "decimal_divide_lesson_4",
+          "name": "循环小数",
+          "knowledge_point_ids": [
+            "decimal_divide_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "possibility",
+      "name": "可能性",
+      "lessons": [
+        {
+          "id": "possibility_lesson_1",
+          "name": "确定事件和不确定事件",
+          "knowledge_point_ids": [
+            "possibility_1"
+          ]
+        },
+        {
+          "id": "possibility_lesson_2",
+          "name": "可能性大小",
+          "knowledge_point_ids": [
+            "possibility_2"
+          ]
+        },
+        {
+          "id": "possibility_lesson_3",
+          "name": "公平性",
+          "knowledge_point_ids": [
+            "possibility_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equation",
+      "name": "简易方程",
+      "lessons": [
+        {
+          "id": "equation_lesson_1",
+          "name": "用字母表示数",
+          "knowledge_point_ids": [
+            "equation_1"
+          ]
+        },
+        {
+          "id": "equation_lesson_2",
+          "name": "等式性质",
+          "knowledge_point_ids": [
+            "equation_2"
+          ]
+        },
+        {
+          "id": "equation_lesson_3",
+          "name": "解简易方程",
+          "knowledge_point_ids": [
+            "equation_3"
+          ]
+        },
+        {
+          "id": "equation_lesson_4",
+          "name": "列方程解决问题",
+          "knowledge_point_ids": [
+            "equation_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "polygon_area",
+      "name": "多边形的面积",
+      "lessons": [
+        {
+          "id": "polygon_area_lesson_1",
+          "name": "平行四边形面积",
+          "knowledge_point_ids": [
+            "polygon_area_1"
+          ]
+        },
+        {
+          "id": "polygon_area_lesson_2",
+          "name": "三角形面积",
+          "knowledge_point_ids": [
+            "polygon_area_2"
+          ]
+        },
+        {
+          "id": "polygon_area_lesson_3",
+          "name": "梯形面积",
+          "knowledge_point_ids": [
+            "polygon_area_3"
+          ]
+        },
+        {
+          "id": "polygon_area_lesson_4",
+          "name": "组合图形面积",
+          "knowledge_point_ids": [
+            "polygon_area_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--植树问题",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "两端都栽",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "一端栽一端不栽",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_3",
+          "name": "封闭路线植树",
+          "knowledge_point_ids": [
+            "math_wide_3"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "decimal_multiply_1",
+      "unit_id": "decimal_multiply",
+      "lesson_id": "decimal_multiply_lesson_1",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数乘法",
+      "name": "小数乘整数",
+      "description": "围绕“小数乘法”中“小数乘整数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数乘整数：相同数位没有对齐",
+        "小数乘整数：进位、退位或约分步骤遗漏",
+        "小数乘整数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_multiply_2",
+      "unit_id": "decimal_multiply",
+      "lesson_id": "decimal_multiply_lesson_2",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数乘法",
+      "name": "小数乘小数",
+      "description": "围绕“小数乘法”中“小数乘小数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数乘小数：相同数位没有对齐",
+        "小数乘小数：进位、退位或约分步骤遗漏",
+        "小数乘小数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_multiply_3",
+      "unit_id": "decimal_multiply",
+      "lesson_id": "decimal_multiply_lesson_3",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数乘法",
+      "name": "积的近似数",
+      "description": "围绕“小数乘法”中“积的近似数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "积的近似数：相同数位没有对齐",
+        "积的近似数：进位、退位或约分步骤遗漏",
+        "积的近似数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_multiply_4",
+      "unit_id": "decimal_multiply",
+      "lesson_id": "decimal_multiply_lesson_4",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数乘法",
+      "name": "小数乘法应用",
+      "description": "围绕“小数乘法”中“小数乘法应用”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数乘法应用：没有先找清数量关系",
+        "小数乘法应用：只列式不写答语",
+        "小数乘法应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_1",
+      "unit_id": "position",
+      "lesson_id": "position_lesson_1",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置",
+      "name": "用数对表示位置",
+      "description": "围绕“位置”中“用数对表示位置”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "用数对表示位置：把图形名称或单位混淆",
+        "用数对表示位置：周长、面积、体积公式用错",
+        "用数对表示位置：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_2",
+      "unit_id": "position",
+      "lesson_id": "position_lesson_2",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "位置",
+      "name": "在方格纸上确定位置",
+      "description": "围绕“位置”中“在方格纸上确定位置”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "在方格纸上确定位置：把图形名称或单位混淆",
+        "在方格纸上确定位置：周长、面积、体积公式用错",
+        "在方格纸上确定位置：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_divide_1",
+      "unit_id": "decimal_divide",
+      "lesson_id": "decimal_divide_lesson_1",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数除法",
+      "name": "除数是整数的小数除法",
+      "description": "围绕“小数除法”中“除数是整数的小数除法”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "除数是整数的小数除法：相同数位没有对齐",
+        "除数是整数的小数除法：进位、退位或约分步骤遗漏",
+        "除数是整数的小数除法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_divide_2",
+      "unit_id": "decimal_divide",
+      "lesson_id": "decimal_divide_lesson_2",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数除法",
+      "name": "一个数除以小数",
+      "description": "围绕“小数除法”中“一个数除以小数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "一个数除以小数：相同数位没有对齐",
+        "一个数除以小数：进位、退位或约分步骤遗漏",
+        "一个数除以小数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_divide_3",
+      "unit_id": "decimal_divide",
+      "lesson_id": "decimal_divide_lesson_3",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数除法",
+      "name": "商的近似数",
+      "description": "围绕“小数除法”中“商的近似数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "商的近似数：相同数位没有对齐",
+        "商的近似数：进位、退位或约分步骤遗漏",
+        "商的近似数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_divide_4",
+      "unit_id": "decimal_divide",
+      "lesson_id": "decimal_divide_lesson_4",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数除法",
+      "name": "循环小数",
+      "description": "围绕“小数除法”中“循环小数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "循环小数：相同数位没有对齐",
+        "循环小数：进位、退位或约分步骤遗漏",
+        "循环小数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "possibility_1",
+      "unit_id": "possibility",
+      "lesson_id": "possibility_lesson_1",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "可能性",
+      "name": "确定事件和不确定事件",
+      "description": "围绕“可能性”中“确定事件和不确定事件”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "确定事件和不确定事件：没有看清题目要求",
+        "确定事件和不确定事件：答语单位写错或漏写",
+        "确定事件和不确定事件：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "possibility_2",
+      "unit_id": "possibility",
+      "lesson_id": "possibility_lesson_2",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "可能性",
+      "name": "可能性大小",
+      "description": "围绕“可能性”中“可能性大小”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "可能性大小：没有看清题目要求",
+        "可能性大小：答语单位写错或漏写",
+        "可能性大小：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "possibility_3",
+      "unit_id": "possibility",
+      "lesson_id": "possibility_lesson_3",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "可能性",
+      "name": "公平性",
+      "description": "围绕“可能性”中“公平性”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "公平性：没有看清题目要求",
+        "公平性：答语单位写错或漏写",
+        "公平性：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "equation_1",
+      "unit_id": "equation",
+      "lesson_id": "equation_lesson_1",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "简易方程",
+      "name": "用字母表示数",
+      "description": "围绕“简易方程”中“用字母表示数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "用字母表示数：相同数位没有对齐",
+        "用字母表示数：进位、退位或约分步骤遗漏",
+        "用字母表示数：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "equation_2",
+      "unit_id": "equation",
+      "lesson_id": "equation_lesson_2",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "简易方程",
+      "name": "等式性质",
+      "description": "围绕“简易方程”中“等式性质”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "等式性质：相同数位没有对齐",
+        "等式性质：进位、退位或约分步骤遗漏",
+        "等式性质：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "equation_3",
+      "unit_id": "equation",
+      "lesson_id": "equation_lesson_3",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "简易方程",
+      "name": "解简易方程",
+      "description": "围绕“简易方程”中“解简易方程”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "解简易方程：相同数位没有对齐",
+        "解简易方程：进位、退位或约分步骤遗漏",
+        "解简易方程：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "equation_4",
+      "unit_id": "equation",
+      "lesson_id": "equation_lesson_4",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "简易方程",
+      "name": "列方程解决问题",
+      "description": "围绕“简易方程”中“列方程解决问题”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "列方程解决问题：没有先找清数量关系",
+        "列方程解决问题：只列式不写答语",
+        "列方程解决问题：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "polygon_area_1",
+      "unit_id": "polygon_area",
+      "lesson_id": "polygon_area_lesson_1",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多边形的面积",
+      "name": "平行四边形面积",
+      "description": "围绕“多边形的面积”中“平行四边形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "平行四边形面积：把图形名称或单位混淆",
+        "平行四边形面积：周长、面积、体积公式用错",
+        "平行四边形面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "polygon_area_2",
+      "unit_id": "polygon_area",
+      "lesson_id": "polygon_area_lesson_2",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多边形的面积",
+      "name": "三角形面积",
+      "description": "围绕“多边形的面积”中“三角形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "三角形面积：把图形名称或单位混淆",
+        "三角形面积：周长、面积、体积公式用错",
+        "三角形面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "polygon_area_3",
+      "unit_id": "polygon_area",
+      "lesson_id": "polygon_area_lesson_3",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多边形的面积",
+      "name": "梯形面积",
+      "description": "围绕“多边形的面积”中“梯形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "梯形面积：把图形名称或单位混淆",
+        "梯形面积：周长、面积、体积公式用错",
+        "梯形面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "polygon_area_4",
+      "unit_id": "polygon_area",
+      "lesson_id": "polygon_area_lesson_4",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多边形的面积",
+      "name": "组合图形面积",
+      "description": "围绕“多边形的面积”中“组合图形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "组合图形面积：把图形名称或单位混淆",
+        "组合图形面积：周长、面积、体积公式用错",
+        "组合图形面积：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--植树问题",
+      "name": "两端都栽",
+      "description": "围绕“数学广角--植树问题”中“两端都栽”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "两端都栽：把图形名称或单位混淆",
+        "两端都栽：周长、面积、体积公式用错",
+        "两端都栽：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--植树问题",
+      "name": "一端栽一端不栽",
+      "description": "围绕“数学广角--植树问题”中“一端栽一端不栽”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "一端栽一端不栽：把图形名称或单位混淆",
+        "一端栽一端不栽：周长、面积、体积公式用错",
+        "一端栽一端不栽：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_3",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_3",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--植树问题",
+      "name": "封闭路线植树",
+      "description": "围绕“数学广角--植树问题”中“封闭路线植树”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "封闭路线植树：把图形名称或单位混淆",
+        "封闭路线植树：周长、面积、体积公式用错",
+        "封闭路线植树：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "decimal_multiply_1",
+      "question_type": "计算题",
+      "template": "围绕“小数乘整数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数乘整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_1",
+      "question_type": "填空题",
+      "template": "围绕“小数乘整数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数乘整数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数乘整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_1",
+      "question_type": "判断题",
+      "template": "围绕“小数乘整数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数乘整数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_2",
+      "question_type": "计算题",
+      "template": "围绕“小数乘小数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数乘小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_2",
+      "question_type": "填空题",
+      "template": "围绕“小数乘小数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数乘小数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数乘小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_2",
+      "question_type": "判断题",
+      "template": "围绕“小数乘小数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数乘小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_3",
+      "question_type": "计算题",
+      "template": "围绕“积的近似数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“积的近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_3",
+      "question_type": "填空题",
+      "template": "围绕“积的近似数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“积的近似数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“积的近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_3",
+      "question_type": "判断题",
+      "template": "围绕“积的近似数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“积的近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_4",
+      "question_type": "应用题",
+      "template": "围绕“小数乘法应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“小数乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_4",
+      "question_type": "填空题",
+      "template": "围绕“小数乘法应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“小数乘法应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“小数乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_multiply_4",
+      "question_type": "变式题",
+      "template": "围绕“小数乘法应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“小数乘法应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_1",
+      "question_type": "填空题",
+      "template": "围绕“用数对表示位置”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“用数对表示位置”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用数对表示位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_1",
+      "question_type": "选择题",
+      "template": "围绕“用数对表示位置”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用数对表示位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_1",
+      "question_type": "应用题",
+      "template": "围绕“用数对表示位置”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“用数对表示位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_2",
+      "question_type": "填空题",
+      "template": "围绕“在方格纸上确定位置”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“在方格纸上确定位置”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“在方格纸上确定位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_2",
+      "question_type": "选择题",
+      "template": "围绕“在方格纸上确定位置”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“在方格纸上确定位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "position_2",
+      "question_type": "应用题",
+      "template": "围绕“在方格纸上确定位置”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“在方格纸上确定位置”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_1",
+      "question_type": "计算题",
+      "template": "围绕“除数是整数的小数除法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除数是整数的小数除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_1",
+      "question_type": "填空题",
+      "template": "围绕“除数是整数的小数除法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“除数是整数的小数除法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除数是整数的小数除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_1",
+      "question_type": "判断题",
+      "template": "围绕“除数是整数的小数除法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“除数是整数的小数除法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_2",
+      "question_type": "计算题",
+      "template": "围绕“一个数除以小数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一个数除以小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_2",
+      "question_type": "填空题",
+      "template": "围绕“一个数除以小数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“一个数除以小数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一个数除以小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_2",
+      "question_type": "判断题",
+      "template": "围绕“一个数除以小数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一个数除以小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_3",
+      "question_type": "计算题",
+      "template": "围绕“商的近似数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“商的近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_3",
+      "question_type": "填空题",
+      "template": "围绕“商的近似数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“商的近似数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“商的近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_3",
+      "question_type": "判断题",
+      "template": "围绕“商的近似数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“商的近似数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_4",
+      "question_type": "计算题",
+      "template": "围绕“循环小数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“循环小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_4",
+      "question_type": "填空题",
+      "template": "围绕“循环小数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“循环小数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“循环小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "decimal_divide_4",
+      "question_type": "判断题",
+      "template": "围绕“循环小数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“循环小数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_1",
+      "question_type": "填空题",
+      "template": "围绕“确定事件和不确定事件”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“确定事件和不确定事件”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“确定事件和不确定事件”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_1",
+      "question_type": "选择题",
+      "template": "围绕“确定事件和不确定事件”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“确定事件和不确定事件”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_1",
+      "question_type": "判断题",
+      "template": "围绕“确定事件和不确定事件”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“确定事件和不确定事件”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_2",
+      "question_type": "填空题",
+      "template": "围绕“可能性大小”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“可能性大小”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“可能性大小”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_2",
+      "question_type": "选择题",
+      "template": "围绕“可能性大小”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“可能性大小”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_2",
+      "question_type": "判断题",
+      "template": "围绕“可能性大小”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“可能性大小”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_3",
+      "question_type": "填空题",
+      "template": "围绕“公平性”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“公平性”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“公平性”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_3",
+      "question_type": "选择题",
+      "template": "围绕“公平性”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“公平性”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "possibility_3",
+      "question_type": "判断题",
+      "template": "围绕“公平性”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“公平性”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_1",
+      "question_type": "计算题",
+      "template": "围绕“用字母表示数”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用字母表示数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_1",
+      "question_type": "填空题",
+      "template": "围绕“用字母表示数”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“用字母表示数”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用字母表示数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_1",
+      "question_type": "判断题",
+      "template": "围绕“用字母表示数”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“用字母表示数”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_2",
+      "question_type": "计算题",
+      "template": "围绕“等式性质”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“等式性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_2",
+      "question_type": "填空题",
+      "template": "围绕“等式性质”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“等式性质”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“等式性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_2",
+      "question_type": "判断题",
+      "template": "围绕“等式性质”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“等式性质”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_3",
+      "question_type": "计算题",
+      "template": "围绕“解简易方程”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解简易方程”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_3",
+      "question_type": "填空题",
+      "template": "围绕“解简易方程”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“解简易方程”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解简易方程”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_3",
+      "question_type": "判断题",
+      "template": "围绕“解简易方程”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“解简易方程”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_4",
+      "question_type": "应用题",
+      "template": "围绕“列方程解决问题”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“列方程解决问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_4",
+      "question_type": "填空题",
+      "template": "围绕“列方程解决问题”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“列方程解决问题”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“列方程解决问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "equation_4",
+      "question_type": "变式题",
+      "template": "围绕“列方程解决问题”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“列方程解决问题”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_1",
+      "question_type": "填空题",
+      "template": "围绕“平行四边形面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“平行四边形面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平行四边形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_1",
+      "question_type": "选择题",
+      "template": "围绕“平行四边形面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“平行四边形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_1",
+      "question_type": "应用题",
+      "template": "围绕“平行四边形面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“平行四边形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_2",
+      "question_type": "填空题",
+      "template": "围绕“三角形面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“三角形面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_2",
+      "question_type": "选择题",
+      "template": "围绕“三角形面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“三角形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_2",
+      "question_type": "应用题",
+      "template": "围绕“三角形面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“三角形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_3",
+      "question_type": "填空题",
+      "template": "围绕“梯形面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“梯形面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“梯形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_3",
+      "question_type": "选择题",
+      "template": "围绕“梯形面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“梯形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_3",
+      "question_type": "应用题",
+      "template": "围绕“梯形面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“梯形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_4",
+      "question_type": "填空题",
+      "template": "围绕“组合图形面积”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“组合图形面积”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“组合图形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_4",
+      "question_type": "选择题",
+      "template": "围绕“组合图形面积”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“组合图形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "polygon_area_4",
+      "question_type": "应用题",
+      "template": "围绕“组合图形面积”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“组合图形面积”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“两端都栽”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“两端都栽”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“两端都栽”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“两端都栽”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“两端都栽”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“两端都栽”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“两端都栽”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“一端栽一端不栽”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“一端栽一端不栽”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一端栽一端不栽”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“一端栽一端不栽”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“一端栽一端不栽”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“一端栽一端不栽”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“一端栽一端不栽”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "填空题",
+      "template": "围绕“封闭路线植树”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“封闭路线植树”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“封闭路线植树”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "选择题",
+      "template": "围绕“封闭路线植树”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“封闭路线植树”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "应用题",
+      "template": "围绕“封闭路线植树”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“封闭路线植树”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1132,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 728,
+      "practice": 144,
+      "student_sheet": 122,
+      "other": 124,
+      "knowledge": 14
+    },
+    "top_terms": [
+      "合作",
+      "共学",
+      "为什么错",
+      "做一做",
+      "当堂",
+      "检测",
+      "小结",
+      "自学指导",
+      "看一看",
+      "导入",
+      "为什么",
+      "探究",
+      "思考",
+      "作业",
+      "板书课题",
+      "做对检测题",
+      "课时",
+      "拓展",
+      "小学",
+      "学科",
+      "学案",
+      "总第",
+      "教学内容",
+      "共备教师",
+      "重点",
+      "难点",
+      "准备",
+      "教师活动",
+      "学生活动",
+      "个性化",
+      "板书设计",
+      "主备",
+      "教学环节",
+      "探究新知",
+      "布置",
+      "PPT课件",
+      "教学时间",
+      "生回答",
+      "回答",
+      "课堂",
+      "同学们",
+      "总结",
+      "自主",
+      "提问",
+      "教具准备",
+      "过渡",
+      "教材第",
+      "学习目标",
+      "填一填",
+      "解方程"
+    ],
+    "top_headings": [
+      "1. 提问",
+      "2. 书面检测",
+      "1. 交换练习纸。书面检测一结束，同桌交换练习纸",
+      "2. 公布答案",
+      "3. 评定对错。对照公布的答案，同桌相互同步逐题判定，打出对（√）",
+      "4. 表扬全对同学。教师问“全对的同学请举手”，教师统计、公布全对",
+      "5. 讨论纠错",
+      "2.明确本节课的学习任务",
+      "4.15",
+      "1.25",
+      "0.45",
+      "1、2题",
+      "1.通过今天的学习，你有什么收获？",
+      "2.进一步体会用方程法解决问题的优越性，提高分析问题和解决问题的",
+      "1.说一说本节课的收获",
+      "3.明确本节课的学习任务",
+      "0.0909…",
+      "0.2727…",
+      "0.3636…",
+      "0.4545…",
+      "1. 今天这节课你学到了什么真本领？",
+      "2. 交流自己本节课的收获",
+      "《同步 练习 》",
+      "第一单元",
+      "0.85",
+      "0.8×0.5",
+      "0.4 0.8×",
+      "0.5×0.4",
+      "1. 自学",
+      "0.06=4.21"
+    ]
+  }
+}

@@ -21,6 +21,9 @@ export function isAnswerCorrect(userAnswer, rightAnswer) {
 export function evaluateAnswer(userAnswer, rightAnswer, question = {}) {
   const user = normalizeAnswer(userAnswer);
   const right = normalizeAnswer(rightAnswer);
+  if (question?.source_mode === "extracted" && !right) {
+    return { status: user ? "completed" : "wrong", correct: Boolean(user), formatWarning: true };
+  }
   if (!user || !right) return { status: "wrong", correct: false, formatWarning: false };
   if (user === right) return { status: "correct", correct: true, formatWarning: false };
 

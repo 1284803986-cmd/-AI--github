@@ -1,175 +1,1126 @@
 {
-  "package_id": "g4_math_down_decimal_add_sub",
-  "package_name": "四年级数学下册小数加减法内容包",
-  "version": "2026-05-18",
+  "package_id": "g4_math_down_rj_2026",
+  "package_name": "四年级数学下册人教版内容包",
+  "version": "2026-05-29",
   "usage_policy": {
     "mode": "original_practice_generation",
-    "copyright_note": "本内容包只记录教材章节、知识点、题型结构和原创出题模板，不保存或复刻整本教材课后题。",
-    "source_rule": "网上教材链接仅用于人工确认范围和目录，不自动爬取、不绕过登录、不抓取收费内容。"
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
   },
   "scope": {
     "grade": "四年级",
     "semester": "下册",
     "subject": "数学",
     "textbook": "人教版",
-    "unit": "小数加减法"
+    "unit": "全册"
   },
   "units": [
+    {
+      "id": "four_operations",
+      "name": "四则运算",
+      "lessons": [
+        {
+          "id": "four_operations_lesson_1",
+          "name": "加减法的意义",
+          "knowledge_point_ids": [
+            "four_operations_1"
+          ]
+        },
+        {
+          "id": "four_operations_lesson_2",
+          "name": "乘除法的意义",
+          "knowledge_point_ids": [
+            "four_operations_2"
+          ]
+        },
+        {
+          "id": "four_operations_lesson_3",
+          "name": "含括号四则运算",
+          "knowledge_point_ids": [
+            "four_operations_3"
+          ]
+        },
+        {
+          "id": "four_operations_lesson_4",
+          "name": "租船等优化问题",
+          "knowledge_point_ids": [
+            "four_operations_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observe_objects",
+      "name": "观察物体（二）",
+      "lessons": [
+        {
+          "id": "observe_objects_lesson_1",
+          "name": "从前面上面左面观察",
+          "knowledge_point_ids": [
+            "observe_objects_1"
+          ]
+        },
+        {
+          "id": "observe_objects_lesson_2",
+          "name": "根据视图搭物体",
+          "knowledge_point_ids": [
+            "observe_objects_2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operation_laws",
+      "name": "运算律",
+      "lessons": [
+        {
+          "id": "operation_laws_lesson_1",
+          "name": "加法运算律",
+          "knowledge_point_ids": [
+            "operation_laws_1"
+          ]
+        },
+        {
+          "id": "operation_laws_lesson_2",
+          "name": "乘法运算律",
+          "knowledge_point_ids": [
+            "operation_laws_2"
+          ]
+        },
+        {
+          "id": "operation_laws_lesson_3",
+          "name": "简便计算",
+          "knowledge_point_ids": [
+            "operation_laws_3"
+          ]
+        },
+        {
+          "id": "operation_laws_lesson_4",
+          "name": "连除简算",
+          "knowledge_point_ids": [
+            "operation_laws_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decimal_meaning",
+      "name": "小数的意义和性质",
+      "lessons": [
+        {
+          "id": "decimal_meaning_lesson_1",
+          "name": "小数意义",
+          "knowledge_point_ids": [
+            "decimal_meaning_1"
+          ]
+        },
+        {
+          "id": "decimal_meaning_lesson_2",
+          "name": "小数读写",
+          "knowledge_point_ids": [
+            "decimal_meaning_2"
+          ]
+        },
+        {
+          "id": "decimal_meaning_lesson_3",
+          "name": "小数性质",
+          "knowledge_point_ids": [
+            "decimal_meaning_3"
+          ]
+        },
+        {
+          "id": "decimal_meaning_lesson_4",
+          "name": "小数大小比较",
+          "knowledge_point_ids": [
+            "decimal_meaning_4"
+          ]
+        },
+        {
+          "id": "decimal_meaning_lesson_5",
+          "name": "小数点移动",
+          "knowledge_point_ids": [
+            "decimal_meaning_5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "triangle",
+      "name": "三角形",
+      "lessons": [
+        {
+          "id": "triangle_lesson_1",
+          "name": "三角形特性",
+          "knowledge_point_ids": [
+            "triangle_1"
+          ]
+        },
+        {
+          "id": "triangle_lesson_2",
+          "name": "三角形分类",
+          "knowledge_point_ids": [
+            "triangle_2"
+          ]
+        },
+        {
+          "id": "triangle_lesson_3",
+          "name": "三角形内角和",
+          "knowledge_point_ids": [
+            "triangle_3"
+          ]
+        }
+      ]
+    },
     {
       "id": "decimal_add_sub",
       "name": "小数加减法",
       "lessons": [
         {
-          "id": "lesson_decimal_add",
+          "id": "decimal_add_sub_lesson_1",
           "name": "小数加法",
-          "knowledge_point_ids": ["decimal_add_same_digits", "decimal_add_different_digits"]
+          "knowledge_point_ids": [
+            "decimal_add_sub_1"
+          ]
         },
         {
-          "id": "lesson_decimal_sub",
+          "id": "decimal_add_sub_lesson_2",
           "name": "小数减法",
-          "knowledge_point_ids": ["decimal_sub_same_digits", "decimal_sub_different_digits"]
+          "knowledge_point_ids": [
+            "decimal_add_sub_2"
+          ]
         },
         {
-          "id": "lesson_decimal_mix",
-          "name": "小数加减混合与解决问题",
-          "knowledge_point_ids": ["decimal_add_sub_different_digits", "decimal_add_sub_word_problem", "decimal_add_sub_checking"]
+          "id": "decimal_add_sub_lesson_3",
+          "name": "小数加减混合",
+          "knowledge_point_ids": [
+            "decimal_add_sub_3"
+          ]
+        },
+        {
+          "id": "decimal_add_sub_lesson_4",
+          "name": "小数加减应用",
+          "knowledge_point_ids": [
+            "decimal_add_sub_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "平均数与条形统计图",
+      "lessons": [
+        {
+          "id": "statistics_lesson_1",
+          "name": "平均数",
+          "knowledge_point_ids": [
+            "statistics_1"
+          ]
+        },
+        {
+          "id": "statistics_lesson_2",
+          "name": "复式条形统计图",
+          "knowledge_point_ids": [
+            "statistics_2"
+          ]
+        },
+        {
+          "id": "statistics_lesson_3",
+          "name": "数据分析",
+          "knowledge_point_ids": [
+            "statistics_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--鸡兔同笼",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "列表法",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "假设法",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_3",
+          "name": "鸡兔同笼应用",
+          "knowledge_point_ids": [
+            "math_wide_3"
+          ]
         }
       ]
     }
   ],
   "knowledge_points": [
     {
-      "id": "decimal_add_same_digits",
-      "unit_id": "decimal_add_sub",
-      "lesson_id": "lesson_decimal_add",
+      "id": "four_operations_1",
+      "unit_id": "four_operations",
+      "lesson_id": "four_operations_lesson_1",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "小数加减法",
-      "name": "小数位数相同的小数加法",
-      "description": "理解小数点对齐的意义，掌握十分位、百分位等相同数位相加的方法。",
+      "unit": "四则运算",
+      "name": "加减法的意义",
+      "description": "围绕“四则运算”中“加减法的意义”这一知识点，生成符合四年级下册学生水平的原创练习。",
       "common_mistakes": [
-        "只把末尾数字对齐，没有把小数点对齐",
-        "进位后忘记加到前一位",
-        "结果末尾多写或少写 0"
+        "加减法的意义：相同数位没有对齐",
+        "加减法的意义：进位、退位或约分步骤遗漏",
+        "加减法的意义：把运算顺序看错"
       ],
-      "recommended_question_types": ["计算题", "填空题", "判断题"],
-      "difficulty_levels": ["基础", "提高"]
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
-      "id": "decimal_add_different_digits",
-      "unit_id": "decimal_add_sub",
-      "lesson_id": "lesson_decimal_add",
+      "id": "four_operations_2",
+      "unit_id": "four_operations",
+      "lesson_id": "four_operations_lesson_2",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "小数加减法",
-      "name": "小数位数不同的小数加法",
-      "description": "会在小数末尾补 0，使相同数位对齐后进行加法计算。",
+      "unit": "四则运算",
+      "name": "乘除法的意义",
+      "description": "围绕“四则运算”中“乘除法的意义”这一知识点，生成符合四年级下册学生水平的原创练习。",
       "common_mistakes": [
-        "没有补 0 就直接把末位相加",
-        "小数点没有和加数的小数点对齐",
-        "进位后整数部分没有正确处理"
+        "乘除法的意义：相同数位没有对齐",
+        "乘除法的意义：进位、退位或约分步骤遗漏",
+        "乘除法的意义：把运算顺序看错"
       ],
-      "recommended_question_types": ["计算题", "填空题", "应用题"],
-      "difficulty_levels": ["基础", "提高"]
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
-      "id": "decimal_sub_same_digits",
-      "unit_id": "decimal_add_sub",
-      "lesson_id": "lesson_decimal_sub",
+      "id": "four_operations_3",
+      "unit_id": "four_operations",
+      "lesson_id": "four_operations_lesson_3",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "小数加减法",
-      "name": "小数位数相同的小数减法",
-      "description": "掌握小数减法的竖式计算，能在相同数位上相减并正确处理退位。",
+      "unit": "四则运算",
+      "name": "含括号四则运算",
+      "description": "围绕“四则运算”中“含括号四则运算”这一知识点，生成符合四年级下册学生水平的原创练习。",
       "common_mistakes": [
-        "退位后被减数原数位没有少 1",
-        "把小数点位置写错",
-        "减法顺序颠倒"
+        "含括号四则运算：相同数位没有对齐",
+        "含括号四则运算：进位、退位或约分步骤遗漏",
+        "含括号四则运算：把运算顺序看错"
       ],
-      "recommended_question_types": ["计算题", "填空题", "判断题"],
-      "difficulty_levels": ["基础", "提高"]
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
-      "id": "decimal_sub_different_digits",
-      "unit_id": "decimal_add_sub",
-      "lesson_id": "lesson_decimal_sub",
+      "id": "four_operations_4",
+      "unit_id": "four_operations",
+      "lesson_id": "four_operations_lesson_4",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "小数加减法",
-      "name": "小数位数不同的小数减法",
-      "description": "会用补 0 和退位的方法完成位数不同的小数减法。",
+      "unit": "四则运算",
+      "name": "租船等优化问题",
+      "description": "围绕“四则运算”中“租船等优化问题”这一知识点，生成符合四年级下册学生水平的原创练习。",
       "common_mistakes": [
-        "被减数小数位不够时没有补 0",
-        "退位后相邻数位没有少 1",
-        "把减数和被减数顺序写反"
+        "租船等优化问题：没有先找清数量关系",
+        "租船等优化问题：只列式不写答语",
+        "租船等优化问题：多步问题少算一步"
       ],
-      "recommended_question_types": ["计算题", "填空题", "判断题"],
-      "difficulty_levels": ["基础", "提高"]
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
-      "id": "decimal_add_sub_different_digits",
-      "unit_id": "decimal_add_sub",
-      "lesson_id": "lesson_decimal_mix",
+      "id": "observe_objects_1",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_1",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "小数加减法",
-      "name": "小数位数不同的小数加减法",
-      "description": "会用补 0 的方法把小数位数补齐，再按相同数位进行加减。",
+      "unit": "观察物体（二）",
+      "name": "从前面上面左面观察",
+      "description": "围绕“观察物体（二）”中“从前面上面左面观察”这一知识点，生成符合四年级下册学生水平的原创练习。",
       "common_mistakes": [
-        "没有补 0 就直接计算",
-        "把整数位和小数位混在一起算",
-        "结果小数点没有和原竖式对齐"
+        "从前面上面左面观察：把图形名称或单位混淆",
+        "从前面上面左面观察：周长、面积、体积公式用错",
+        "从前面上面左面观察：没有结合图形条件分析"
       ],
-      "recommended_question_types": ["计算题", "填空题", "应用题", "变式题"],
-      "difficulty_levels": ["基础", "提高", "拔高"]
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
-      "id": "decimal_add_sub_word_problem",
-      "unit_id": "decimal_add_sub",
-      "lesson_id": "lesson_decimal_mix",
+      "id": "observe_objects_2",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_2",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "小数加减法",
-      "name": "小数加减法解决实际问题",
-      "description": "能从购物、长度、质量等生活情境中提取数量关系，选择加法或减法解决问题。",
+      "unit": "观察物体（二）",
+      "name": "根据视图搭物体",
+      "description": "围绕“观察物体（二）”中“根据视图搭物体”这一知识点，生成符合四年级下册学生水平的原创练习。",
       "common_mistakes": [
-        "没有分清求总数还是求相差",
-        "单位不统一就直接计算",
-        "只写算式没有写答语"
+        "根据视图搭物体：把图形名称或单位混淆",
+        "根据视图搭物体：周长、面积、体积公式用错",
+        "根据视图搭物体：没有结合图形条件分析"
       ],
-      "recommended_question_types": ["应用题", "变式题", "填空题"],
-      "difficulty_levels": ["基础", "提高", "拔高"]
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
     },
     {
-      "id": "decimal_add_sub_checking",
+      "id": "operation_laws_1",
+      "unit_id": "operation_laws",
+      "lesson_id": "operation_laws_lesson_1",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "运算律",
+      "name": "加法运算律",
+      "description": "围绕“运算律”中“加法运算律”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "加法运算律：相同数位没有对齐",
+        "加法运算律：进位、退位或约分步骤遗漏",
+        "加法运算律：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "operation_laws_2",
+      "unit_id": "operation_laws",
+      "lesson_id": "operation_laws_lesson_2",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "运算律",
+      "name": "乘法运算律",
+      "description": "围绕“运算律”中“乘法运算律”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘法运算律：相同数位没有对齐",
+        "乘法运算律：进位、退位或约分步骤遗漏",
+        "乘法运算律：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "operation_laws_3",
+      "unit_id": "operation_laws",
+      "lesson_id": "operation_laws_lesson_3",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "运算律",
+      "name": "简便计算",
+      "description": "围绕“运算律”中“简便计算”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "简便计算：相同数位没有对齐",
+        "简便计算：进位、退位或约分步骤遗漏",
+        "简便计算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "operation_laws_4",
+      "unit_id": "operation_laws",
+      "lesson_id": "operation_laws_lesson_4",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "运算律",
+      "name": "连除简算",
+      "description": "围绕“运算律”中“连除简算”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "连除简算：相同数位没有对齐",
+        "连除简算：进位、退位或约分步骤遗漏",
+        "连除简算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_meaning_1",
+      "unit_id": "decimal_meaning",
+      "lesson_id": "decimal_meaning_lesson_1",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的意义和性质",
+      "name": "小数意义",
+      "description": "围绕“小数的意义和性质”中“小数意义”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数意义：相同数位没有对齐",
+        "小数意义：进位、退位或约分步骤遗漏",
+        "小数意义：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_meaning_2",
+      "unit_id": "decimal_meaning",
+      "lesson_id": "decimal_meaning_lesson_2",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的意义和性质",
+      "name": "小数读写",
+      "description": "围绕“小数的意义和性质”中“小数读写”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数读写：相同数位没有对齐",
+        "小数读写：进位、退位或约分步骤遗漏",
+        "小数读写：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_meaning_3",
+      "unit_id": "decimal_meaning",
+      "lesson_id": "decimal_meaning_lesson_3",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的意义和性质",
+      "name": "小数性质",
+      "description": "围绕“小数的意义和性质”中“小数性质”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数性质：相同数位没有对齐",
+        "小数性质：进位、退位或约分步骤遗漏",
+        "小数性质：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_meaning_4",
+      "unit_id": "decimal_meaning",
+      "lesson_id": "decimal_meaning_lesson_4",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的意义和性质",
+      "name": "小数大小比较",
+      "description": "围绕“小数的意义和性质”中“小数大小比较”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数大小比较：相同数位没有对齐",
+        "小数大小比较：进位、退位或约分步骤遗漏",
+        "小数大小比较：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_meaning_5",
+      "unit_id": "decimal_meaning",
+      "lesson_id": "decimal_meaning_lesson_5",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数的意义和性质",
+      "name": "小数点移动",
+      "description": "围绕“小数的意义和性质”中“小数点移动”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数点移动：相同数位没有对齐",
+        "小数点移动：进位、退位或约分步骤遗漏",
+        "小数点移动：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "triangle_1",
+      "unit_id": "triangle",
+      "lesson_id": "triangle_lesson_1",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三角形",
+      "name": "三角形特性",
+      "description": "围绕“三角形”中“三角形特性”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "三角形特性：把图形名称或单位混淆",
+        "三角形特性：周长、面积、体积公式用错",
+        "三角形特性：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "triangle_2",
+      "unit_id": "triangle",
+      "lesson_id": "triangle_lesson_2",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三角形",
+      "name": "三角形分类",
+      "description": "围绕“三角形”中“三角形分类”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "三角形分类：把图形名称或单位混淆",
+        "三角形分类：周长、面积、体积公式用错",
+        "三角形分类：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "triangle_3",
+      "unit_id": "triangle",
+      "lesson_id": "triangle_lesson_3",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三角形",
+      "name": "三角形内角和",
+      "description": "围绕“三角形”中“三角形内角和”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "三角形内角和：把图形名称或单位混淆",
+        "三角形内角和：周长、面积、体积公式用错",
+        "三角形内角和：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_add_sub_1",
       "unit_id": "decimal_add_sub",
-      "lesson_id": "lesson_decimal_mix",
+      "lesson_id": "decimal_add_sub_lesson_1",
       "grade": "四年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数加减法",
-      "name": "小数加减法验算",
-      "description": "会用加减法互逆关系进行验算，判断计算结果是否合理。",
+      "name": "小数加法",
+      "description": "围绕“小数加减法”中“小数加法”这一知识点，生成符合四年级下册学生水平的原创练习。",
       "common_mistakes": [
-        "验算时仍按原算式重复计算",
-        "没有估算结果大小是否合理",
-        "漏写验算过程"
+        "小数加法：相同数位没有对齐",
+        "小数加法：进位、退位或约分步骤遗漏",
+        "小数加法：把运算顺序看错"
       ],
-      "recommended_question_types": ["判断题", "计算题", "变式题"],
-      "difficulty_levels": ["提高", "拔高"]
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_add_sub_2",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "decimal_add_sub_lesson_2",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数减法",
+      "description": "围绕“小数加减法”中“小数减法”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数减法：相同数位没有对齐",
+        "小数减法：进位、退位或约分步骤遗漏",
+        "小数减法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_add_sub_3",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "decimal_add_sub_lesson_3",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数加减混合",
+      "description": "围绕“小数加减法”中“小数加减混合”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数加减混合：相同数位没有对齐",
+        "小数加减混合：进位、退位或约分步骤遗漏",
+        "小数加减混合：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_add_sub_4",
+      "unit_id": "decimal_add_sub",
+      "lesson_id": "decimal_add_sub_lesson_4",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数加减法",
+      "name": "小数加减应用",
+      "description": "围绕“小数加减法”中“小数加减应用”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "小数加减应用：没有先找清数量关系",
+        "小数加减应用：只列式不写答语",
+        "小数加减应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_1",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_1",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "平均数与条形统计图",
+      "name": "平均数",
+      "description": "围绕“平均数与条形统计图”中“平均数”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "平均数：没有看清题目要求",
+        "平均数：答语单位写错或漏写",
+        "平均数：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_2",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_2",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "平均数与条形统计图",
+      "name": "复式条形统计图",
+      "description": "围绕“平均数与条形统计图”中“复式条形统计图”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "复式条形统计图：没有看清题目要求",
+        "复式条形统计图：答语单位写错或漏写",
+        "复式条形统计图：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "statistics_3",
+      "unit_id": "statistics",
+      "lesson_id": "statistics_lesson_3",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "平均数与条形统计图",
+      "name": "数据分析",
+      "description": "围绕“平均数与条形统计图”中“数据分析”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "数据分析：没有看清题目要求",
+        "数据分析：答语单位写错或漏写",
+        "数据分析：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--鸡兔同笼",
+      "name": "列表法",
+      "description": "围绕“数学广角--鸡兔同笼”中“列表法”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "列表法：把图形名称或单位混淆",
+        "列表法：周长、面积、体积公式用错",
+        "列表法：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--鸡兔同笼",
+      "name": "假设法",
+      "description": "围绕“数学广角--鸡兔同笼”中“假设法”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "假设法：把图形名称或单位混淆",
+        "假设法：周长、面积、体积公式用错",
+        "假设法：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_3",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_3",
+      "grade": "四年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--鸡兔同笼",
+      "name": "鸡兔同笼应用",
+      "description": "围绕“数学广角--鸡兔同笼”中“鸡兔同笼应用”这一知识点，生成符合四年级下册学生水平的原创练习。",
+      "common_mistakes": [
+        "鸡兔同笼应用：把图形名称或单位混淆",
+        "鸡兔同笼应用：周长、面积、体积公式用错",
+        "鸡兔同笼应用：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 1040,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 408,
+      "knowledge": 20,
+      "practice": 422,
+      "student_sheet": 60,
+      "other": 128,
+      "textbook": 2
+    },
+    "top_terms": [
+      "教学目标",
+      "做一做",
+      "难点",
+      "课堂小结",
+      "重点",
+      "板书",
+      "小结",
+      "教学内容",
+      "知识与技能",
+      "过程与方法",
+      "环节",
+      "情感态度与价值观",
+      "鸡兔同笼",
+      "课堂练习",
+      "教学课题",
+      "教学课时",
+      "主备教师",
+      "教学重点与难点",
+      "教学准备及手段",
+      "课型",
+      "教学流程",
+      "后记",
+      "典型知识点梳理",
+      "多媒体课件",
+      "教学重点",
+      "教学难点",
+      "教案",
+      "解决问题",
+      "教学准备",
+      "多媒体",
+      "课后练习",
+      "加数",
+      "课时",
+      "板书课题",
+      "被除数",
+      "除数",
+      "巩固练习",
+      "教材第",
+      "被减数",
+      "减数",
+      "学生活动",
+      "完成",
+      "新授课",
+      "教学重难点",
+      "新知",
+      "计算下面各题",
+      "三角形",
+      "问题情境与",
+      "教师活动",
+      "设计意图"
+    ],
+    "top_headings": [
+      "《 。 》",
+      "0.01",
+      "0.001",
+      "第4单元 小数的意义和性质",
+      "4.69",
+      "1、 巩固知识",
+      "2、师生共同小结",
+      "4.29",
+      "16.45",
+      "30.74",
+      "0.8m",
+      "0.04",
+      "第3单元 运算定律",
+      "6.45",
+      "17.94",
+      "0.6+7.91+3.4+0.09",
+      "0.25",
+      "14.29",
+      "0.1m",
+      "1. 填空",
+      "2. 理解减法的意义",
+      "第1单元 四则运算",
+      "3.05",
+      "0.80米＝0.8米",
+      "第5单元 三角形",
+      "《数学家的故事》",
+      "《新领程》",
+      "《孙子算经》",
+      "2. 难点： 运用所学知识解决实际问题",
+      "8.32"
+    ]
+  },
+  "sources": [
+    {
+      "id": "g4_math_down_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 1040 份可读资料，用于细化知识点、常见易错点和原创题模板。"
     }
   ]
 }

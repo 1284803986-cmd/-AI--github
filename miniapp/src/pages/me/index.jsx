@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro, { useDidShow } from "@tarojs/taro";
-import { Button, Text, View } from "@tarojs/components";
+import { Button, Image, Text, View } from "@tarojs/components";
+import { getCurrentUser, loginWithWechat, logout } from "../../utils/api";
 import { navigateToPage } from "../../utils/navigation";
 import { getLearningStats } from "../../utils/practiceStats";
 import "../../styles/common.scss";
@@ -9,13 +10,17 @@ export default function MePage() {
   const [role, setRole] = useState("学生");
   const [grade, setGrade] = useState("一年级");
   const [stats, setStats] = useState(() => getLearningStats());
+  const [user, setUser] = useState(() => Taro.getStorageSync("authUser") || null);
+  const [loggingIn, setLoggingIn] = useState(false);
 
   useEffect(() => {
     refreshProfile();
+    refreshUser();
   }, []);
 
   useDidShow(() => {
     refreshProfile();
+    refreshUser(false);
   });
 
   function refreshProfile() {
@@ -24,6 +29,53 @@ export default function MePage() {
     setRole(savedRole === "teacher" ? "老师" : "学生");
     if (savedGrade) setGrade(savedGrade);
     setStats(getLearningStats());
+  }
+
+  async function refreshUser(showError = false) {
+    if (!Taro.getStorageSync("authToken")) {
+      setUser(Taro.getStorageSync("authUser") || null);
+      return;
+    }
+    try {
+      const result = await getCurrentUser();
+      setUser(result.user || null);
+    } catch (error) {
+      if (showError) Taro.showToast({ title: error.message, icon: "none" });
+    }
+  }
+
+  async function handleLogin() {
+    if (loggingIn) return;
+    setLoggingIn(true);
+    try {
+      let profile = {};
+      try {
+        const info = await Taro.getUserProfile({ desc: "用于展示登录头像和昵称" });
+        profile = {
+          nickname: info.userInfo?.nickName || "",
+          avatarUrl: info.userInfo?.avatarUrl || ""
+        };
+      } catch {
+        profile = {};
+      }
+      const result = await loginWithWechat({
+        ...profile,
+        role: role === "老师" ? "teacher" : "student",
+        grade
+      });
+      setUser(result.user || null);
+      Taro.showToast({ title: "登录成功", icon: "success" });
+    } catch (error) {
+      Taro.showToast({ title: error.message || "登录失败", icon: "none" });
+    } finally {
+      setLoggingIn(false);
+    }
+  }
+
+  async function handleLogout() {
+    await logout();
+    setUser(null);
+    Taro.showToast({ title: "已退出登录", icon: "none" });
   }
 
   function switchRole() {
@@ -35,20 +87,21 @@ export default function MePage() {
 
   const summary = stats.summary || {};
   const accuracyText = summary.total ? `${summary.accuracy || 0}%` : "--";
+  const displayName = user?.nickname || "未登录";
 
   return (
     <View className="page me-page page-shell safe-bottom-space">
       <View className="hero hero-card hero-card--blue me-hero">
         <View className="me-hero-copy">
           <Text className="hero-title">我的</Text>
-          <Text className="hero-subtitle">管理身份、年级和学习记录。</Text>
+          <Text className="hero-subtitle">管理登录、身份、年级和学习记录。</Text>
           <View className="me-hero-badges">
             <Text className="me-hero-badge">学习档案</Text>
             <Text className="me-hero-badge">成长记录</Text>
           </View>
         </View>
         <View className="me-avatar-illus">
-          <Text className="me-avatar-face">学</Text>
+          {user?.avatarUrl ? <Image className="me-avatar-image" src={user.avatarUrl} mode="aspectFill" /> : <Text className="me-avatar-face">学</Text>}
           <View className="me-avatar-book" />
           <View className="me-avatar-star" />
         </View>
@@ -57,16 +110,16 @@ export default function MePage() {
       <View className="card study-card profile-center-card">
         <View className="card-title-row">
           <View>
-            <Text className="section-title">当前信息</Text>
-            <Text className="section-subtitle">学习身份和首页年级会影响默认学习入口。</Text>
+            <Text className="section-title">账号信息</Text>
+            <Text className="section-subtitle">{user ? "已接入微信登录，学习数据可以绑定到当前账号。" : "登录后可以把学习记录绑定到账号。"}</Text>
           </View>
         </View>
         <View className="profile-info-grid">
           <View className="profile-info-item">
             <Text className="profile-info-icon">👤</Text>
             <View>
-              <Text className="profile-label">身份</Text>
-              <Text className="profile-value">{role}</Text>
+              <Text className="profile-label">账号</Text>
+              <Text className="profile-value">{displayName}</Text>
             </View>
           </View>
           <View className="profile-info-item">
@@ -76,7 +129,19 @@ export default function MePage() {
               <Text className="profile-value">{grade}</Text>
             </View>
           </View>
+          <View className="profile-info-item">
+            <Text className="profile-info-icon">🧑</Text>
+            <View>
+              <Text className="profile-label">身份</Text>
+              <Text className="profile-value">{role}</Text>
+            </View>
+          </View>
         </View>
+        {user ? (
+          <Button className="secondary-button btn-secondary full-button profile-switch-button" onClick={handleLogout}>退出登录</Button>
+        ) : (
+          <Button className="primary-button btn-primary full-button profile-switch-button" loading={loggingIn} onClick={handleLogin}>微信一键登录</Button>
+        )}
         <Button className="secondary-button btn-secondary full-button profile-switch-button" onClick={switchRole}>切换身份</Button>
       </View>
 

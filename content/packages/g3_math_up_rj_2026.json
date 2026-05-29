@@ -1,0 +1,1806 @@
+{
+  "package_id": "g3_math_up_rj_2026",
+  "package_name": "三年级数学上册人教版内容包",
+  "version": "2026-05-29",
+  "usage_policy": {
+    "mode": "original_practice_generation",
+    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
+    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+  },
+  "scope": {
+    "grade": "三年级",
+    "semester": "上册",
+    "subject": "数学",
+    "textbook": "人教版",
+    "unit": "全册"
+  },
+  "sources": [
+    {
+      "id": "g3_math_up_rj_2026_local_materials",
+      "source_type": "user_provided_local_folder",
+      "name": "D:\\教材\\3上-小学数学人教版",
+      "use": "确认人教版小学数学对应年级上下册章节和知识点范围"
+    },
+    {
+      "id": "g3_math_up_rj_2026_extracted_summary",
+      "source_type": "local_material_text_extraction",
+      "name": "D:\\教材 自动抽取摘要",
+      "use": "已抽取 2844 份可读资料，用于细化知识点、常见易错点和原创题模板。"
+    }
+  ],
+  "units": [
+    {
+      "id": "observe_objects",
+      "name": "观察物体",
+      "lessons": [
+        {
+          "id": "observe_objects_lesson_1",
+          "name": "从不同位置观察",
+          "knowledge_point_ids": [
+            "observe_objects_1"
+          ]
+        },
+        {
+          "id": "observe_objects_lesson_2",
+          "name": "根据视图判断物体",
+          "knowledge_point_ids": [
+            "observe_objects_2"
+          ]
+        },
+        {
+          "id": "observe_objects_lesson_3",
+          "name": "搭拼与观察",
+          "knowledge_point_ids": [
+            "observe_objects_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mixed_operations",
+      "name": "混合运算",
+      "lessons": [
+        {
+          "id": "mixed_operations_lesson_1",
+          "name": "同级混合运算",
+          "knowledge_point_ids": [
+            "mixed_operations_1"
+          ]
+        },
+        {
+          "id": "mixed_operations_lesson_2",
+          "name": "含括号混合运算",
+          "knowledge_point_ids": [
+            "mixed_operations_2"
+          ]
+        },
+        {
+          "id": "mixed_operations_lesson_3",
+          "name": "两步计算应用",
+          "knowledge_point_ids": [
+            "mixed_operations_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "length_mass",
+      "name": "测量",
+      "lessons": [
+        {
+          "id": "length_mass_lesson_1",
+          "name": "毫米和分米",
+          "knowledge_point_ids": [
+            "length_mass_1"
+          ]
+        },
+        {
+          "id": "length_mass_lesson_2",
+          "name": "千米的认识",
+          "knowledge_point_ids": [
+            "length_mass_2"
+          ]
+        },
+        {
+          "id": "length_mass_lesson_3",
+          "name": "吨的认识",
+          "knowledge_point_ids": [
+            "length_mass_3"
+          ]
+        },
+        {
+          "id": "length_mass_lesson_4",
+          "name": "单位换算",
+          "knowledge_point_ids": [
+            "length_mass_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multiply_multi_digit",
+      "name": "多位数乘一位数",
+      "lessons": [
+        {
+          "id": "multiply_multi_digit_lesson_1",
+          "name": "口算乘法",
+          "knowledge_point_ids": [
+            "multiply_multi_digit_1"
+          ]
+        },
+        {
+          "id": "multiply_multi_digit_lesson_2",
+          "name": "笔算乘法",
+          "knowledge_point_ids": [
+            "multiply_multi_digit_2"
+          ]
+        },
+        {
+          "id": "multiply_multi_digit_lesson_3",
+          "name": "连续进位乘法",
+          "knowledge_point_ids": [
+            "multiply_multi_digit_3"
+          ]
+        },
+        {
+          "id": "multiply_multi_digit_lesson_4",
+          "name": "乘法估算",
+          "knowledge_point_ids": [
+            "multiply_multi_digit_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "name": "时、分、秒",
+      "lessons": [
+        {
+          "id": "time_lesson_1",
+          "name": "秒的认识",
+          "knowledge_point_ids": [
+            "time_1"
+          ]
+        },
+        {
+          "id": "time_lesson_2",
+          "name": "时间单位换算",
+          "knowledge_point_ids": [
+            "time_2"
+          ]
+        },
+        {
+          "id": "time_lesson_3",
+          "name": "经过时间计算",
+          "knowledge_point_ids": [
+            "time_3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rectangle_square",
+      "name": "长方形和正方形",
+      "lessons": [
+        {
+          "id": "rectangle_square_lesson_1",
+          "name": "周长的认识",
+          "knowledge_point_ids": [
+            "rectangle_square_1"
+          ]
+        },
+        {
+          "id": "rectangle_square_lesson_2",
+          "name": "长方形周长",
+          "knowledge_point_ids": [
+            "rectangle_square_2"
+          ]
+        },
+        {
+          "id": "rectangle_square_lesson_3",
+          "name": "正方形周长",
+          "knowledge_point_ids": [
+            "rectangle_square_3"
+          ]
+        },
+        {
+          "id": "rectangle_square_lesson_4",
+          "name": "周长应用",
+          "knowledge_point_ids": [
+            "rectangle_square_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction_intro",
+      "name": "分数的初步认识",
+      "lessons": [
+        {
+          "id": "fraction_intro_lesson_1",
+          "name": "几分之一",
+          "knowledge_point_ids": [
+            "fraction_intro_1"
+          ]
+        },
+        {
+          "id": "fraction_intro_lesson_2",
+          "name": "几分之几",
+          "knowledge_point_ids": [
+            "fraction_intro_2"
+          ]
+        },
+        {
+          "id": "fraction_intro_lesson_3",
+          "name": "简单分数比较",
+          "knowledge_point_ids": [
+            "fraction_intro_3"
+          ]
+        },
+        {
+          "id": "fraction_intro_lesson_4",
+          "name": "同分母分数加减",
+          "knowledge_point_ids": [
+            "fraction_intro_4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math_wide",
+      "name": "数学广角--搭配问题",
+      "lessons": [
+        {
+          "id": "math_wide_lesson_1",
+          "name": "有序搭配",
+          "knowledge_point_ids": [
+            "math_wide_1"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_2",
+          "name": "简单排列",
+          "knowledge_point_ids": [
+            "math_wide_2"
+          ]
+        },
+        {
+          "id": "math_wide_lesson_3",
+          "name": "简单组合",
+          "knowledge_point_ids": [
+            "math_wide_3"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_points": [
+    {
+      "id": "observe_objects_1",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "观察物体",
+      "name": "从不同位置观察",
+      "description": "围绕“观察物体”中“从不同位置观察”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "从不同位置观察：把图形名称或单位混淆",
+        "从不同位置观察：周长、面积、体积公式用错",
+        "从不同位置观察：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "observe_objects_2",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "观察物体",
+      "name": "根据视图判断物体",
+      "description": "围绕“观察物体”中“根据视图判断物体”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "根据视图判断物体：把图形名称或单位混淆",
+        "根据视图判断物体：周长、面积、体积公式用错",
+        "根据视图判断物体：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "observe_objects_3",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "观察物体",
+      "name": "搭拼与观察",
+      "description": "围绕“观察物体”中“搭拼与观察”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "搭拼与观察：把图形名称或单位混淆",
+        "搭拼与观察：周长、面积、体积公式用错",
+        "搭拼与观察：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "mixed_operations_1",
+      "unit_id": "mixed_operations",
+      "lesson_id": "mixed_operations_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "混合运算",
+      "name": "同级混合运算",
+      "description": "围绕“混合运算”中“同级混合运算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "同级混合运算：相同数位没有对齐",
+        "同级混合运算：进位、退位或约分步骤遗漏",
+        "同级混合运算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "mixed_operations_2",
+      "unit_id": "mixed_operations",
+      "lesson_id": "mixed_operations_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "混合运算",
+      "name": "含括号混合运算",
+      "description": "围绕“混合运算”中“含括号混合运算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "含括号混合运算：相同数位没有对齐",
+        "含括号混合运算：进位、退位或约分步骤遗漏",
+        "含括号混合运算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "mixed_operations_3",
+      "unit_id": "mixed_operations",
+      "lesson_id": "mixed_operations_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "混合运算",
+      "name": "两步计算应用",
+      "description": "围绕“混合运算”中“两步计算应用”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "两步计算应用：没有先找清数量关系",
+        "两步计算应用：只列式不写答语",
+        "两步计算应用：多步问题少算一步"
+      ],
+      "recommended_question_types": [
+        "应用题",
+        "填空题",
+        "变式题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_mass_1",
+      "unit_id": "length_mass",
+      "lesson_id": "length_mass_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "测量",
+      "name": "毫米和分米",
+      "description": "围绕“测量”中“毫米和分米”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "毫米和分米：没有看清题目要求",
+        "毫米和分米：答语单位写错或漏写",
+        "毫米和分米：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_mass_2",
+      "unit_id": "length_mass",
+      "lesson_id": "length_mass_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "测量",
+      "name": "千米的认识",
+      "description": "围绕“测量”中“千米的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "千米的认识：没有看清题目要求",
+        "千米的认识：答语单位写错或漏写",
+        "千米的认识：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_mass_3",
+      "unit_id": "length_mass",
+      "lesson_id": "length_mass_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "测量",
+      "name": "吨的认识",
+      "description": "围绕“测量”中“吨的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "吨的认识：没有看清题目要求",
+        "吨的认识：答语单位写错或漏写",
+        "吨的认识：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "length_mass_4",
+      "unit_id": "length_mass",
+      "lesson_id": "length_mass_lesson_4",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "测量",
+      "name": "单位换算",
+      "description": "围绕“测量”中“单位换算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "单位换算：没有看清题目要求",
+        "单位换算：答语单位写错或漏写",
+        "单位换算：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_multi_digit_1",
+      "unit_id": "multiply_multi_digit",
+      "lesson_id": "multiply_multi_digit_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多位数乘一位数",
+      "name": "口算乘法",
+      "description": "围绕“多位数乘一位数”中“口算乘法”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "口算乘法：相同数位没有对齐",
+        "口算乘法：进位、退位或约分步骤遗漏",
+        "口算乘法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_multi_digit_2",
+      "unit_id": "multiply_multi_digit",
+      "lesson_id": "multiply_multi_digit_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多位数乘一位数",
+      "name": "笔算乘法",
+      "description": "围绕“多位数乘一位数”中“笔算乘法”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "笔算乘法：相同数位没有对齐",
+        "笔算乘法：进位、退位或约分步骤遗漏",
+        "笔算乘法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_multi_digit_3",
+      "unit_id": "multiply_multi_digit",
+      "lesson_id": "multiply_multi_digit_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多位数乘一位数",
+      "name": "连续进位乘法",
+      "description": "围绕“多位数乘一位数”中“连续进位乘法”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "连续进位乘法：相同数位没有对齐",
+        "连续进位乘法：进位、退位或约分步骤遗漏",
+        "连续进位乘法：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multiply_multi_digit_4",
+      "unit_id": "multiply_multi_digit",
+      "lesson_id": "multiply_multi_digit_lesson_4",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多位数乘一位数",
+      "name": "乘法估算",
+      "description": "围绕“多位数乘一位数”中“乘法估算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "乘法估算：相同数位没有对齐",
+        "乘法估算：进位、退位或约分步骤遗漏",
+        "乘法估算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "time_1",
+      "unit_id": "time",
+      "lesson_id": "time_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时、分、秒",
+      "name": "秒的认识",
+      "description": "围绕“时、分、秒”中“秒的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "秒的认识：没有看清题目要求",
+        "秒的认识：答语单位写错或漏写",
+        "秒的认识：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "time_2",
+      "unit_id": "time",
+      "lesson_id": "time_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时、分、秒",
+      "name": "时间单位换算",
+      "description": "围绕“时、分、秒”中“时间单位换算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "时间单位换算：没有看清题目要求",
+        "时间单位换算：答语单位写错或漏写",
+        "时间单位换算：计算后没有检查结果是否合理"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "time_3",
+      "unit_id": "time",
+      "lesson_id": "time_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "时、分、秒",
+      "name": "经过时间计算",
+      "description": "围绕“时、分、秒”中“经过时间计算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "经过时间计算：相同数位没有对齐",
+        "经过时间计算：进位、退位或约分步骤遗漏",
+        "经过时间计算：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "rectangle_square_1",
+      "unit_id": "rectangle_square",
+      "lesson_id": "rectangle_square_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形",
+      "name": "周长的认识",
+      "description": "围绕“长方形和正方形”中“周长的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "周长的认识：把图形名称或单位混淆",
+        "周长的认识：周长、面积、体积公式用错",
+        "周长的认识：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "rectangle_square_2",
+      "unit_id": "rectangle_square",
+      "lesson_id": "rectangle_square_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形",
+      "name": "长方形周长",
+      "description": "围绕“长方形和正方形”中“长方形周长”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "长方形周长：把图形名称或单位混淆",
+        "长方形周长：周长、面积、体积公式用错",
+        "长方形周长：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "rectangle_square_3",
+      "unit_id": "rectangle_square",
+      "lesson_id": "rectangle_square_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形",
+      "name": "正方形周长",
+      "description": "围绕“长方形和正方形”中“正方形周长”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "正方形周长：把图形名称或单位混淆",
+        "正方形周长：周长、面积、体积公式用错",
+        "正方形周长：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "rectangle_square_4",
+      "unit_id": "rectangle_square",
+      "lesson_id": "rectangle_square_lesson_4",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形",
+      "name": "周长应用",
+      "description": "围绕“长方形和正方形”中“周长应用”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "周长应用：把图形名称或单位混淆",
+        "周长应用：周长、面积、体积公式用错",
+        "周长应用：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_intro_1",
+      "unit_id": "fraction_intro",
+      "lesson_id": "fraction_intro_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的初步认识",
+      "name": "几分之一",
+      "description": "围绕“分数的初步认识”中“几分之一”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "几分之一：相同数位没有对齐",
+        "几分之一：进位、退位或约分步骤遗漏",
+        "几分之一：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_intro_2",
+      "unit_id": "fraction_intro",
+      "lesson_id": "fraction_intro_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的初步认识",
+      "name": "几分之几",
+      "description": "围绕“分数的初步认识”中“几分之几”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "几分之几：相同数位没有对齐",
+        "几分之几：进位、退位或约分步骤遗漏",
+        "几分之几：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_intro_3",
+      "unit_id": "fraction_intro",
+      "lesson_id": "fraction_intro_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的初步认识",
+      "name": "简单分数比较",
+      "description": "围绕“分数的初步认识”中“简单分数比较”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "简单分数比较：相同数位没有对齐",
+        "简单分数比较：进位、退位或约分步骤遗漏",
+        "简单分数比较：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_intro_4",
+      "unit_id": "fraction_intro",
+      "lesson_id": "fraction_intro_lesson_4",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数的初步认识",
+      "name": "同分母分数加减",
+      "description": "围绕“分数的初步认识”中“同分母分数加减”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "同分母分数加减：相同数位没有对齐",
+        "同分母分数加减：进位、退位或约分步骤遗漏",
+        "同分母分数加减：把运算顺序看错"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "判断题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_1",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_1",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--搭配问题",
+      "name": "有序搭配",
+      "description": "围绕“数学广角--搭配问题”中“有序搭配”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "有序搭配：把图形名称或单位混淆",
+        "有序搭配：周长、面积、体积公式用错",
+        "有序搭配：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_2",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_2",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--搭配问题",
+      "name": "简单排列",
+      "description": "围绕“数学广角--搭配问题”中“简单排列”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "简单排列：把图形名称或单位混淆",
+        "简单排列：周长、面积、体积公式用错",
+        "简单排列：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_wide_3",
+      "unit_id": "math_wide",
+      "lesson_id": "math_wide_lesson_3",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学广角--搭配问题",
+      "name": "简单组合",
+      "description": "围绕“数学广角--搭配问题”中“简单组合”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "common_mistakes": [
+        "简单组合：把图形名称或单位混淆",
+        "简单组合：周长、面积、体积公式用错",
+        "简单组合：没有结合图形条件分析"
+      ],
+      "recommended_question_types": [
+        "填空题",
+        "选择题",
+        "应用题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "填空题",
+      "template": "围绕“从不同位置观察”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“从不同位置观察”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“从不同位置观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "选择题",
+      "template": "围绕“从不同位置观察”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“从不同位置观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_1",
+      "question_type": "应用题",
+      "template": "围绕“从不同位置观察”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“从不同位置观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "填空题",
+      "template": "围绕“根据视图判断物体”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“根据视图判断物体”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“根据视图判断物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "选择题",
+      "template": "围绕“根据视图判断物体”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“根据视图判断物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_2",
+      "question_type": "应用题",
+      "template": "围绕“根据视图判断物体”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“根据视图判断物体”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_3",
+      "question_type": "填空题",
+      "template": "围绕“搭拼与观察”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“搭拼与观察”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“搭拼与观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_3",
+      "question_type": "选择题",
+      "template": "围绕“搭拼与观察”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“搭拼与观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "observe_objects_3",
+      "question_type": "应用题",
+      "template": "围绕“搭拼与观察”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“搭拼与观察”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_1",
+      "question_type": "计算题",
+      "template": "围绕“同级混合运算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同级混合运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_1",
+      "question_type": "填空题",
+      "template": "围绕“同级混合运算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“同级混合运算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同级混合运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_1",
+      "question_type": "判断题",
+      "template": "围绕“同级混合运算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同级混合运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_2",
+      "question_type": "计算题",
+      "template": "围绕“含括号混合运算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“含括号混合运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_2",
+      "question_type": "填空题",
+      "template": "围绕“含括号混合运算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“含括号混合运算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“含括号混合运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_2",
+      "question_type": "判断题",
+      "template": "围绕“含括号混合运算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“含括号混合运算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_3",
+      "question_type": "应用题",
+      "template": "围绕“两步计算应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“两步计算应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_3",
+      "question_type": "填空题",
+      "template": "围绕“两步计算应用”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“两步计算应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“两步计算应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "mixed_operations_3",
+      "question_type": "变式题",
+      "template": "围绕“两步计算应用”设计一道稍有变化的综合题，要求学生先分析再作答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "拔高",
+      "generation_note": "围绕“两步计算应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_1",
+      "question_type": "填空题",
+      "template": "围绕“毫米和分米”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“毫米和分米”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“毫米和分米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_1",
+      "question_type": "选择题",
+      "template": "围绕“毫米和分米”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“毫米和分米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_1",
+      "question_type": "判断题",
+      "template": "围绕“毫米和分米”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“毫米和分米”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_2",
+      "question_type": "填空题",
+      "template": "围绕“千米的认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“千米的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“千米的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_2",
+      "question_type": "选择题",
+      "template": "围绕“千米的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“千米的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_2",
+      "question_type": "判断题",
+      "template": "围绕“千米的认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“千米的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_3",
+      "question_type": "填空题",
+      "template": "围绕“吨的认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“吨的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“吨的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_3",
+      "question_type": "选择题",
+      "template": "围绕“吨的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“吨的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_3",
+      "question_type": "判断题",
+      "template": "围绕“吨的认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“吨的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_4",
+      "question_type": "填空题",
+      "template": "围绕“单位换算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“单位换算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_4",
+      "question_type": "选择题",
+      "template": "围绕“单位换算”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "length_mass_4",
+      "question_type": "判断题",
+      "template": "围绕“单位换算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_1",
+      "question_type": "计算题",
+      "template": "围绕“口算乘法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_1",
+      "question_type": "填空题",
+      "template": "围绕“口算乘法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“口算乘法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_1",
+      "question_type": "判断题",
+      "template": "围绕“口算乘法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“口算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_2",
+      "question_type": "计算题",
+      "template": "围绕“笔算乘法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_2",
+      "question_type": "填空题",
+      "template": "围绕“笔算乘法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“笔算乘法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_2",
+      "question_type": "判断题",
+      "template": "围绕“笔算乘法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“笔算乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_3",
+      "question_type": "计算题",
+      "template": "围绕“连续进位乘法”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连续进位乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_3",
+      "question_type": "填空题",
+      "template": "围绕“连续进位乘法”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“连续进位乘法”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连续进位乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_3",
+      "question_type": "判断题",
+      "template": "围绕“连续进位乘法”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“连续进位乘法”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_4",
+      "question_type": "计算题",
+      "template": "围绕“乘法估算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_4",
+      "question_type": "填空题",
+      "template": "围绕“乘法估算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“乘法估算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "multiply_multi_digit_4",
+      "question_type": "判断题",
+      "template": "围绕“乘法估算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“乘法估算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_1",
+      "question_type": "填空题",
+      "template": "围绕“秒的认识”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“秒的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“秒的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_1",
+      "question_type": "选择题",
+      "template": "围绕“秒的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“秒的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_1",
+      "question_type": "判断题",
+      "template": "围绕“秒的认识”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“秒的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_2",
+      "question_type": "填空题",
+      "template": "围绕“时间单位换算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“时间单位换算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“时间单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_2",
+      "question_type": "选择题",
+      "template": "围绕“时间单位换算”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“时间单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_2",
+      "question_type": "判断题",
+      "template": "围绕“时间单位换算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“时间单位换算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_3",
+      "question_type": "计算题",
+      "template": "围绕“经过时间计算”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过时间计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_3",
+      "question_type": "填空题",
+      "template": "围绕“经过时间计算”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“经过时间计算”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过时间计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "time_3",
+      "question_type": "判断题",
+      "template": "围绕“经过时间计算”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“经过时间计算”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_1",
+      "question_type": "填空题",
+      "template": "围绕“周长的认识”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“周长的认识”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“周长的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_1",
+      "question_type": "选择题",
+      "template": "围绕“周长的认识”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“周长的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_1",
+      "question_type": "应用题",
+      "template": "围绕“周长的认识”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“周长的认识”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_2",
+      "question_type": "填空题",
+      "template": "围绕“长方形周长”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“长方形周长”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方形周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_2",
+      "question_type": "选择题",
+      "template": "围绕“长方形周长”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“长方形周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_2",
+      "question_type": "应用题",
+      "template": "围绕“长方形周长”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“长方形周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_3",
+      "question_type": "填空题",
+      "template": "围绕“正方形周长”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“正方形周长”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正方形周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_3",
+      "question_type": "选择题",
+      "template": "围绕“正方形周长”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“正方形周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_3",
+      "question_type": "应用题",
+      "template": "围绕“正方形周长”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“正方形周长”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_4",
+      "question_type": "填空题",
+      "template": "围绕“周长应用”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“周长应用”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“周长应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_4",
+      "question_type": "选择题",
+      "template": "围绕“周长应用”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“周长应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "rectangle_square_4",
+      "question_type": "应用题",
+      "template": "围绕“周长应用”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“周长应用”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_1",
+      "question_type": "计算题",
+      "template": "围绕“几分之一”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“几分之一”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_1",
+      "question_type": "填空题",
+      "template": "围绕“几分之一”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“几分之一”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“几分之一”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_1",
+      "question_type": "判断题",
+      "template": "围绕“几分之一”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“几分之一”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_2",
+      "question_type": "计算题",
+      "template": "围绕“几分之几”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“几分之几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_2",
+      "question_type": "填空题",
+      "template": "围绕“几分之几”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“几分之几”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“几分之几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_2",
+      "question_type": "判断题",
+      "template": "围绕“几分之几”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“几分之几”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_3",
+      "question_type": "计算题",
+      "template": "围绕“简单分数比较”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单分数比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_3",
+      "question_type": "填空题",
+      "template": "围绕“简单分数比较”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“简单分数比较”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单分数比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_3",
+      "question_type": "判断题",
+      "template": "围绕“简单分数比较”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单分数比较”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_4",
+      "question_type": "计算题",
+      "template": "围绕“同分母分数加减”设计一道适合本年级的计算题，题干给出清晰数字，要求学生写出结果。",
+      "answer_rule": "写出规范计算结果，必要时保留单位或最简形式。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_4",
+      "question_type": "填空题",
+      "template": "围绕“同分母分数加减”设计一道基础填空题，考查概念、数量关系或方法。",
+      "answer_rule": "答案要直接对应“同分母分数加减”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "fraction_intro_4",
+      "question_type": "判断题",
+      "template": "围绕“同分母分数加减”设计一道判断题，让学生判断说法是否正确并说明原因。",
+      "answer_rule": "先写正确或错误，再说明关键判断依据。",
+      "difficulty": "基础",
+      "generation_note": "围绕“同分母分数加减”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "填空题",
+      "template": "围绕“有序搭配”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“有序搭配”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有序搭配”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "选择题",
+      "template": "围绕“有序搭配”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“有序搭配”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_1",
+      "question_type": "应用题",
+      "template": "围绕“有序搭配”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“有序搭配”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "填空题",
+      "template": "围绕“简单排列”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“简单排列”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单排列”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "选择题",
+      "template": "围绕“简单排列”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单排列”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_2",
+      "question_type": "应用题",
+      "template": "围绕“简单排列”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“简单排列”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "填空题",
+      "template": "围绕“简单组合”设计一道看图形信息即可作答的填空题，用文字描述图形条件。",
+      "answer_rule": "答案要直接对应“简单组合”的核心知识点，并说明一步关键理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单组合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "选择题",
+      "template": "围绕“简单组合”设计一道四选一选择题，选项要有一个常见易错项。",
+      "answer_rule": "只给出正确选项，并用一句话说明理由。",
+      "difficulty": "基础",
+      "generation_note": "围绕“简单组合”原创生成，不引用教材原题。"
+    },
+    {
+      "knowledge_point_id": "math_wide_3",
+      "question_type": "应用题",
+      "template": "围绕“简单组合”设计一个生活情境问题，包含必要数量关系，要求列式解答。",
+      "answer_rule": "先分析数量关系，再列式计算，最后写答语。",
+      "difficulty": "提高",
+      "generation_note": "围绕“简单组合”原创生成，不引用教材原题。"
+    }
+  ],
+  "extraction_summary": {
+    "source": "D:\\教材",
+    "extracted_files": 2844,
+    "selected_files": 80,
+    "categories": {
+      "lesson_plan": 1758,
+      "slides": 234,
+      "practice": 584,
+      "knowledge": 10,
+      "student_sheet": 132,
+      "other": 126
+    },
+    "top_terms": [
+      "学生活动",
+      "教师活动",
+      "活动意图",
+      "课时",
+      "分米",
+      "提问",
+      "厘米",
+      "教学重点",
+      "课题",
+      "教学难点",
+      "教学过程",
+      "教学准备",
+      "多媒体课件",
+      "二次备课",
+      "毫米",
+      "思维与表达",
+      "交流与反思",
+      "知识与技能",
+      "情境与问题",
+      "总序第",
+      "环节一",
+      "个教案",
+      "执行时间",
+      "编写时间",
+      "环节二",
+      "作业设计",
+      "环节三",
+      "课堂练习",
+      "基础作业",
+      "巩固作业",
+      "提升作业",
+      "千米",
+      "板书",
+      "射线",
+      "线段",
+      "任务一",
+      "课程基本信息",
+      "学科",
+      "版本",
+      "授课班级",
+      "授课教师",
+      "任务二",
+      "单元",
+      "情境导入",
+      "做一做",
+      "列式",
+      "学习任务单",
+      "知识点",
+      "1分米",
+      "先算"
+    ],
+    "top_headings": [
+      "1.情境与问题",
+      "2.知识与技能",
+      "3.思维与表达",
+      "4.交流与反思",
+      "1.学生口答，集体纠正",
+      "2.学生在题纸上独立练习",
+      "3.请学生板演，交流，集体订正",
+      "第一单元",
+      "2.小组合作",
+      "第二单元",
+      "第三单元",
+      "第四单元",
+      "第五单元",
+      "第六单元",
+      "2.组织学生相互检测，交流问题",
+      "3.教师巡视，对学生较集中的问题进行适当点拨",
+      "4.教师根据学生汇报归纳总结",
+      "3.复习解决问题",
+      "1.口算练习",
+      "1.解题策略口诀",
+      "2.核心步骤",
+      "2.引导学生思考",
+      "1. 绘制本节课知识的思维导图；",
+      "2. 完成",
+      "《 分层作业 》",
+      "1. 认识钟表上的秒针",
+      "3. 感受",
+      "1.填一填",
+      "2.明确本节课的学习内容",
+      "3.解决问题，"
+    ]
+  }
+}
