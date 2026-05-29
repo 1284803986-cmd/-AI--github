@@ -15,7 +15,7 @@ import {
 } from "./assignments.js";
 import { ensureInPackage, findKnowledgePoint, loadContentCatalog, loadContentPackage, templatesFor } from "./content.js";
 import { getExtractedPaper, getExtractedQuestions } from "./extractedBank.js";
-import { getBearerToken, getUserByToken, loginWithWechatCode, logoutByToken } from "./auth.js";
+import { getBearerToken, getUserByToken, loginWithPhoneNumber, loginWithWechatCode, logoutByToken } from "./auth.js";
 import { mockPaper, mockTextbookQuestions, mockWrongQuestion } from "./mock.js";
 import { generateWithAI } from "./openai.js";
 import { paperPrompt, textbookPrompt, wrongQuestionPrompt } from "./prompts.js";
@@ -59,6 +59,19 @@ app.post("/api/auth/wechat-login", async (request, response, next) => {
   try {
     const input = requireFields(request.body, ["code"]);
     response.json(await loginWithWechatCode({ code: input.code, profile: request.body.profile || {} }));
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post("/api/auth/phone-login", async (request, response, next) => {
+  try {
+    const input = requireFields(request.body, ["phoneCode"]);
+    response.json(await loginWithPhoneNumber({
+      phoneCode: input.phoneCode,
+      wxCode: request.body.wxCode || "",
+      profile: request.body.profile || {}
+    }));
   } catch (error) {
     next(error);
   }

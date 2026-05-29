@@ -3,9 +3,8 @@
   "package_name": "六年级数学上册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "六年级",
@@ -30,89 +29,144 @@
   ],
   "units": [
     {
-      "id": "fraction_multiply",
+      "id": "fraction_mul",
       "name": "分数乘法",
       "lessons": [
         {
-          "id": "fraction_multiply_lesson_1",
+          "id": "fraction_mul_lesson_1",
           "name": "分数乘整数",
           "knowledge_point_ids": [
-            "fraction_multiply_1"
+            "fraction_mul_1"
           ]
         },
         {
-          "id": "fraction_multiply_lesson_2",
+          "id": "fraction_mul_lesson_2",
+          "name": "一个数乘分数",
+          "knowledge_point_ids": [
+            "fraction_mul_2"
+          ]
+        },
+        {
+          "id": "fraction_mul_lesson_3",
           "name": "分数乘分数",
           "knowledge_point_ids": [
-            "fraction_multiply_2"
+            "fraction_mul_3"
           ]
         },
         {
-          "id": "fraction_multiply_lesson_3",
-          "name": "分数乘法应用",
+          "id": "fraction_mul_lesson_4",
+          "name": "分数混合运算",
           "knowledge_point_ids": [
-            "fraction_multiply_3"
+            "fraction_mul_4"
           ]
         },
         {
-          "id": "fraction_multiply_lesson_4",
-          "name": "倒数",
+          "id": "fraction_mul_lesson_5",
+          "name": "分数乘法解决问题",
           "knowledge_point_ids": [
-            "fraction_multiply_4"
+            "fraction_mul_5"
           ]
         }
       ]
     },
     {
-      "id": "position_direction",
+      "id": "position_direction_2",
       "name": "位置与方向（二）",
       "lessons": [
         {
-          "id": "position_direction_lesson_1",
+          "id": "position_direction_2_lesson_1",
           "name": "用方向和距离确定位置",
           "knowledge_point_ids": [
-            "position_direction_1"
+            "position_direction_2_1"
           ]
         },
         {
-          "id": "position_direction_lesson_2",
+          "id": "position_direction_2_lesson_2",
           "name": "描述路线图",
           "knowledge_point_ids": [
-            "position_direction_2"
+            "position_direction_2_2"
           ]
         }
       ]
     },
     {
-      "id": "fraction_divide",
+      "id": "fraction_div",
       "name": "分数除法",
       "lessons": [
         {
-          "id": "fraction_divide_lesson_1",
+          "id": "fraction_div_lesson_1",
+          "name": "倒数的认识",
+          "knowledge_point_ids": [
+            "fraction_div_1"
+          ]
+        },
+        {
+          "id": "fraction_div_lesson_2",
           "name": "分数除以整数",
           "knowledge_point_ids": [
-            "fraction_divide_1"
+            "fraction_div_2"
           ]
         },
         {
-          "id": "fraction_divide_lesson_2",
+          "id": "fraction_div_lesson_3",
           "name": "一个数除以分数",
           "knowledge_point_ids": [
-            "fraction_divide_2"
+            "fraction_div_3"
           ]
         },
         {
-          "id": "fraction_divide_lesson_3",
-          "name": "分数除法应用",
+          "id": "fraction_div_lesson_4",
+          "name": "分数混合运算",
           "knowledge_point_ids": [
-            "fraction_divide_3"
+            "fraction_div_4"
           ]
         },
         {
-          "id": "fraction_divide_lesson_4",
+          "id": "fraction_div_lesson_5",
+          "name": "列方程解决分数除法问题",
+          "knowledge_point_ids": [
+            "fraction_div_5"
+          ]
+        },
+        {
+          "id": "fraction_div_lesson_6",
+          "name": "工程问题",
+          "knowledge_point_ids": [
+            "fraction_div_6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ratio",
+      "name": "比",
+      "lessons": [
+        {
+          "id": "ratio_lesson_1",
           "name": "比的意义",
           "knowledge_point_ids": [
-            "fraction_divide_4"
+            "ratio_1"
+          ]
+        },
+        {
+          "id": "ratio_lesson_2",
+          "name": "比的基本性质",
+          "knowledge_point_ids": [
+            "ratio_2"
+          ]
+        },
+        {
+          "id": "ratio_lesson_3",
+          "name": "化简比",
+          "knowledge_point_ids": [
+            "ratio_3"
+          ]
+        },
+        {
+          "id": "ratio_lesson_4",
+          "name": "按比分配",
+          "knowledge_point_ids": [
+            "ratio_4"
           ]
         }
       ]
@@ -152,82 +206,68 @@
       ]
     },
     {
-      "id": "percent",
+      "id": "percent_1",
       "name": "百分数（一）",
       "lessons": [
         {
-          "id": "percent_lesson_1",
-          "name": "百分数意义",
+          "id": "percent_1_lesson_1",
+          "name": "百分数认识",
           "knowledge_point_ids": [
-            "percent_1"
+            "percent_1_1"
           ]
         },
         {
-          "id": "percent_lesson_2",
-          "name": "百分数与分数小数互化",
-          "knowledge_point_ids": [
-            "percent_2"
-          ]
-        },
-        {
-          "id": "percent_lesson_3",
+          "id": "percent_1_lesson_2",
           "name": "百分率",
           "knowledge_point_ids": [
-            "percent_3"
+            "percent_1_2"
           ]
         },
         {
-          "id": "percent_lesson_4",
+          "id": "percent_1_lesson_3",
           "name": "求一个数的百分之几",
           "knowledge_point_ids": [
-            "percent_4"
+            "percent_1_3"
+          ]
+        },
+        {
+          "id": "percent_1_lesson_4",
+          "name": "百分数解决问题",
+          "knowledge_point_ids": [
+            "percent_1_4"
           ]
         }
       ]
     },
     {
-      "id": "statistics",
+      "id": "sector_chart",
       "name": "扇形统计图",
       "lessons": [
         {
-          "id": "statistics_lesson_1",
+          "id": "sector_chart_lesson_1",
           "name": "认识扇形统计图",
           "knowledge_point_ids": [
-            "statistics_1"
+            "sector_chart_1"
           ]
         },
         {
-          "id": "statistics_lesson_2",
+          "id": "sector_chart_lesson_2",
           "name": "统计图选择",
           "knowledge_point_ids": [
-            "statistics_2"
-          ]
-        },
-        {
-          "id": "statistics_lesson_3",
-          "name": "数据解释",
-          "knowledge_point_ids": [
-            "statistics_3"
+            "sector_chart_2"
           ]
         }
       ]
     },
     {
-      "id": "math_wide",
+      "id": "number_shape",
       "name": "数学广角--数与形",
       "lessons": [
         {
-          "id": "math_wide_lesson_1",
-          "name": "图形规律",
-          "knowledge_point_ids": [
-            "math_wide_1"
-          ]
-        },
-        {
-          "id": "math_wide_lesson_2",
+          "id": "number_shape_lesson_1",
           "name": "数形结合",
           "knowledge_point_ids": [
-            "math_wide_2"
+            "number_shape_1"
           ]
         }
       ]
@@ -235,25 +275,27 @@
   ],
   "knowledge_points": [
     {
-      "id": "fraction_multiply_1",
-      "unit_id": "fraction_multiply",
-      "lesson_id": "fraction_multiply_lesson_1",
+      "id": "fraction_mul_1",
+      "unit_id": "fraction_mul",
+      "lesson_id": "fraction_mul_lesson_1",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数乘法",
       "name": "分数乘整数",
-      "description": "围绕“分数乘法”中“分数乘整数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“分数乘法”中“分数乘整数”相关练习。",
       "common_mistakes": [
-        "分数乘整数：相同数位没有对齐",
-        "分数乘整数：进位、退位或约分步骤遗漏",
-        "分数乘整数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -262,52 +304,56 @@
       ]
     },
     {
-      "id": "fraction_multiply_2",
-      "unit_id": "fraction_multiply",
-      "lesson_id": "fraction_multiply_lesson_2",
+      "id": "fraction_mul_2",
+      "unit_id": "fraction_mul",
+      "lesson_id": "fraction_mul_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数乘法",
+      "name": "一个数乘分数",
+      "description": "六年级上册人教版数学“分数乘法”中“一个数乘分数”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_mul_3",
+      "unit_id": "fraction_mul",
+      "lesson_id": "fraction_mul_lesson_3",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数乘法",
       "name": "分数乘分数",
-      "description": "围绕“分数乘法”中“分数乘分数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“分数乘法”中“分数乘分数”相关练习。",
       "common_mistakes": [
-        "分数乘分数：相同数位没有对齐",
-        "分数乘分数：进位、退位或约分步骤遗漏",
-        "分数乘分数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "fraction_multiply_3",
-      "unit_id": "fraction_multiply",
-      "lesson_id": "fraction_multiply_lesson_3",
-      "grade": "六年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "分数乘法",
-      "name": "分数乘法应用",
-      "description": "围绕“分数乘法”中“分数乘法应用”这一知识点，生成符合六年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "分数乘法应用：没有先找清数量关系",
-        "分数乘法应用：只列式不写答语",
-        "分数乘法应用：多步问题少算一步"
-      ],
-      "recommended_question_types": [
+        "选择题",
         "应用题",
-        "填空题",
-        "变式题"
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -316,25 +362,27 @@
       ]
     },
     {
-      "id": "fraction_multiply_4",
-      "unit_id": "fraction_multiply",
-      "lesson_id": "fraction_multiply_lesson_4",
+      "id": "fraction_mul_4",
+      "unit_id": "fraction_mul",
+      "lesson_id": "fraction_mul_lesson_4",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数乘法",
-      "name": "倒数",
-      "description": "围绕“分数乘法”中“倒数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "name": "分数混合运算",
+      "description": "六年级上册人教版数学“分数乘法”中“分数混合运算”相关练习。",
       "common_mistakes": [
-        "倒数：相同数位没有对齐",
-        "倒数：进位、退位或约分步骤遗漏",
-        "倒数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -343,25 +391,56 @@
       ]
     },
     {
-      "id": "position_direction_1",
-      "unit_id": "position_direction",
-      "lesson_id": "position_direction_lesson_1",
+      "id": "fraction_mul_5",
+      "unit_id": "fraction_mul",
+      "lesson_id": "fraction_mul_lesson_5",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数乘法",
+      "name": "分数乘法解决问题",
+      "description": "六年级上册人教版数学“分数乘法”中“分数乘法解决问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "position_direction_2_1",
+      "unit_id": "position_direction_2",
+      "lesson_id": "position_direction_2_lesson_1",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "位置与方向（二）",
       "name": "用方向和距离确定位置",
-      "description": "围绕“位置与方向（二）”中“用方向和距离确定位置”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“位置与方向（二）”中“用方向和距离确定位置”相关练习。",
       "common_mistakes": [
-        "用方向和距离确定位置：把图形名称或单位混淆",
-        "用方向和距离确定位置：周长、面积、体积公式用错",
-        "用方向和距离确定位置：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -370,25 +449,27 @@
       ]
     },
     {
-      "id": "position_direction_2",
-      "unit_id": "position_direction",
-      "lesson_id": "position_direction_lesson_2",
+      "id": "position_direction_2_2",
+      "unit_id": "position_direction_2",
+      "lesson_id": "position_direction_2_lesson_2",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "位置与方向（二）",
       "name": "描述路线图",
-      "description": "围绕“位置与方向（二）”中“描述路线图”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“位置与方向（二）”中“描述路线图”相关练习。",
       "common_mistakes": [
-        "描述路线图：把图形名称或单位混淆",
-        "描述路线图：周长、面积、体积公式用错",
-        "描述路线图：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -397,25 +478,56 @@
       ]
     },
     {
-      "id": "fraction_divide_1",
-      "unit_id": "fraction_divide",
-      "lesson_id": "fraction_divide_lesson_1",
+      "id": "fraction_div_1",
+      "unit_id": "fraction_div",
+      "lesson_id": "fraction_div_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数除法",
+      "name": "倒数的认识",
+      "description": "六年级上册人教版数学“分数除法”中“倒数的认识”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_div_2",
+      "unit_id": "fraction_div",
+      "lesson_id": "fraction_div_lesson_2",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数除法",
       "name": "分数除以整数",
-      "description": "围绕“分数除法”中“分数除以整数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“分数除法”中“分数除以整数”相关练习。",
       "common_mistakes": [
-        "分数除以整数：相同数位没有对齐",
-        "分数除以整数：进位、退位或约分步骤遗漏",
-        "分数除以整数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -424,52 +536,27 @@
       ]
     },
     {
-      "id": "fraction_divide_2",
-      "unit_id": "fraction_divide",
-      "lesson_id": "fraction_divide_lesson_2",
+      "id": "fraction_div_3",
+      "unit_id": "fraction_div",
+      "lesson_id": "fraction_div_lesson_3",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数除法",
       "name": "一个数除以分数",
-      "description": "围绕“分数除法”中“一个数除以分数”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“分数除法”中“一个数除以分数”相关练习。",
       "common_mistakes": [
-        "一个数除以分数：相同数位没有对齐",
-        "一个数除以分数：进位、退位或约分步骤遗漏",
-        "一个数除以分数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "fraction_divide_3",
-      "unit_id": "fraction_divide",
-      "lesson_id": "fraction_divide_lesson_3",
-      "grade": "六年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "分数除法",
-      "name": "分数除法应用",
-      "description": "围绕“分数除法”中“分数除法应用”这一知识点，生成符合六年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "分数除法应用：没有先找清数量关系",
-        "分数除法应用：只列式不写答语",
-        "分数除法应用：多步问题少算一步"
-      ],
-      "recommended_question_types": [
+        "选择题",
         "应用题",
-        "填空题",
-        "变式题"
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -478,25 +565,201 @@
       ]
     },
     {
-      "id": "fraction_divide_4",
-      "unit_id": "fraction_divide",
-      "lesson_id": "fraction_divide_lesson_4",
+      "id": "fraction_div_4",
+      "unit_id": "fraction_div",
+      "lesson_id": "fraction_div_lesson_4",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数除法",
-      "name": "比的意义",
-      "description": "围绕“分数除法”中“比的意义”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "name": "分数混合运算",
+      "description": "六年级上册人教版数学“分数除法”中“分数混合运算”相关练习。",
       "common_mistakes": [
-        "比的意义：相同数位没有对齐",
-        "比的意义：进位、退位或约分步骤遗漏",
-        "比的意义：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_div_5",
+      "unit_id": "fraction_div",
+      "lesson_id": "fraction_div_lesson_5",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数除法",
+      "name": "列方程解决分数除法问题",
+      "description": "六年级上册人教版数学“分数除法”中“列方程解决分数除法问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "fraction_div_6",
+      "unit_id": "fraction_div",
+      "lesson_id": "fraction_div_lesson_6",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "分数除法",
+      "name": "工程问题",
+      "description": "六年级上册人教版数学“分数除法”中“工程问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "ratio_1",
+      "unit_id": "ratio",
+      "lesson_id": "ratio_lesson_1",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比",
+      "name": "比的意义",
+      "description": "六年级上册人教版数学“比”中“比的意义”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "ratio_2",
+      "unit_id": "ratio",
+      "lesson_id": "ratio_lesson_2",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比",
+      "name": "比的基本性质",
+      "description": "六年级上册人教版数学“比”中“比的基本性质”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "ratio_3",
+      "unit_id": "ratio",
+      "lesson_id": "ratio_lesson_3",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比",
+      "name": "化简比",
+      "description": "六年级上册人教版数学“比”中“化简比”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "ratio_4",
+      "unit_id": "ratio",
+      "lesson_id": "ratio_lesson_4",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "比",
+      "name": "按比分配",
+      "description": "六年级上册人教版数学“比”中“按比分配”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -514,16 +777,18 @@
       "textbook": "人教版",
       "unit": "圆",
       "name": "圆的认识",
-      "description": "围绕“圆”中“圆的认识”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“圆”中“圆的认识”相关练习。",
       "common_mistakes": [
-        "圆的认识：把图形名称或单位混淆",
-        "圆的认识：周长、面积、体积公式用错",
-        "圆的认识：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -541,16 +806,18 @@
       "textbook": "人教版",
       "unit": "圆",
       "name": "圆的周长",
-      "description": "围绕“圆”中“圆的周长”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“圆”中“圆的周长”相关练习。",
       "common_mistakes": [
-        "圆的周长：把图形名称或单位混淆",
-        "圆的周长：周长、面积、体积公式用错",
-        "圆的周长：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -568,16 +835,18 @@
       "textbook": "人教版",
       "unit": "圆",
       "name": "圆的面积",
-      "description": "围绕“圆”中“圆的面积”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“圆”中“圆的面积”相关练习。",
       "common_mistakes": [
-        "圆的面积：把图形名称或单位混淆",
-        "圆的面积：周长、面积、体积公式用错",
-        "圆的面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -595,16 +864,18 @@
       "textbook": "人教版",
       "unit": "圆",
       "name": "扇形",
-      "description": "围绕“圆”中“扇形”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“圆”中“扇形”相关练习。",
       "common_mistakes": [
-        "扇形：把图形名称或单位混淆",
-        "扇形：周长、面积、体积公式用错",
-        "扇形：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -613,25 +884,27 @@
       ]
     },
     {
-      "id": "percent_1",
-      "unit_id": "percent",
-      "lesson_id": "percent_lesson_1",
+      "id": "percent_1_1",
+      "unit_id": "percent_1",
+      "lesson_id": "percent_1_lesson_1",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "百分数（一）",
-      "name": "百分数意义",
-      "description": "围绕“百分数（一）”中“百分数意义”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "name": "百分数认识",
+      "description": "六年级上册人教版数学“百分数（一）”中“百分数认识”相关练习。",
       "common_mistakes": [
-        "百分数意义：相同数位没有对齐",
-        "百分数意义：进位、退位或约分步骤遗漏",
-        "百分数意义：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -640,52 +913,27 @@
       ]
     },
     {
-      "id": "percent_2",
-      "unit_id": "percent",
-      "lesson_id": "percent_lesson_2",
-      "grade": "六年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "百分数（一）",
-      "name": "百分数与分数小数互化",
-      "description": "围绕“百分数（一）”中“百分数与分数小数互化”这一知识点，生成符合六年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "百分数与分数小数互化：相同数位没有对齐",
-        "百分数与分数小数互化：进位、退位或约分步骤遗漏",
-        "百分数与分数小数互化：把运算顺序看错"
-      ],
-      "recommended_question_types": [
-        "计算题",
-        "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "percent_3",
-      "unit_id": "percent",
-      "lesson_id": "percent_lesson_3",
+      "id": "percent_1_2",
+      "unit_id": "percent_1",
+      "lesson_id": "percent_1_lesson_2",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "百分数（一）",
       "name": "百分率",
-      "description": "围绕“百分数（一）”中“百分率”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“百分数（一）”中“百分率”相关练习。",
       "common_mistakes": [
-        "百分率：相同数位没有对齐",
-        "百分率：进位、退位或约分步骤遗漏",
-        "百分率：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -694,25 +942,27 @@
       ]
     },
     {
-      "id": "percent_4",
-      "unit_id": "percent",
-      "lesson_id": "percent_lesson_4",
+      "id": "percent_1_3",
+      "unit_id": "percent_1",
+      "lesson_id": "percent_1_lesson_3",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "百分数（一）",
       "name": "求一个数的百分之几",
-      "description": "围绕“百分数（一）”中“求一个数的百分之几”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“百分数（一）”中“求一个数的百分之几”相关练习。",
       "common_mistakes": [
-        "求一个数的百分之几：相同数位没有对齐",
-        "求一个数的百分之几：进位、退位或约分步骤遗漏",
-        "求一个数的百分之几：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -721,25 +971,56 @@
       ]
     },
     {
-      "id": "statistics_1",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_1",
+      "id": "percent_1_4",
+      "unit_id": "percent_1",
+      "lesson_id": "percent_1_lesson_4",
+      "grade": "六年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "百分数（一）",
+      "name": "百分数解决问题",
+      "description": "六年级上册人教版数学“百分数（一）”中“百分数解决问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "sector_chart_1",
+      "unit_id": "sector_chart",
+      "lesson_id": "sector_chart_lesson_1",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "扇形统计图",
       "name": "认识扇形统计图",
-      "description": "围绕“扇形统计图”中“认识扇形统计图”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“扇形统计图”中“认识扇形统计图”相关练习。",
       "common_mistakes": [
-        "认识扇形统计图：没有看清题目要求",
-        "认识扇形统计图：答语单位写错或漏写",
-        "认识扇形统计图：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -748,25 +1029,27 @@
       ]
     },
     {
-      "id": "statistics_2",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_2",
+      "id": "sector_chart_2",
+      "unit_id": "sector_chart",
+      "lesson_id": "sector_chart_lesson_2",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "扇形统计图",
       "name": "统计图选择",
-      "description": "围绕“扇形统计图”中“统计图选择”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“扇形统计图”中“统计图选择”相关练习。",
       "common_mistakes": [
-        "统计图选择：没有看清题目要求",
-        "统计图选择：答语单位写错或漏写",
-        "统计图选择：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -775,79 +1058,27 @@
       ]
     },
     {
-      "id": "statistics_3",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_3",
-      "grade": "六年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "扇形统计图",
-      "name": "数据解释",
-      "description": "围绕“扇形统计图”中“数据解释”这一知识点，生成符合六年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "数据解释：没有看清题目要求",
-        "数据解释：答语单位写错或漏写",
-        "数据解释：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_1",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_1",
-      "grade": "六年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "数学广角--数与形",
-      "name": "图形规律",
-      "description": "围绕“数学广角--数与形”中“图形规律”这一知识点，生成符合六年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "图形规律：把图形名称或单位混淆",
-        "图形规律：周长、面积、体积公式用错",
-        "图形规律：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_2",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_2",
+      "id": "number_shape_1",
+      "unit_id": "number_shape",
+      "lesson_id": "number_shape_lesson_1",
       "grade": "六年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--数与形",
       "name": "数形结合",
-      "description": "围绕“数学广角--数与形”中“数形结合”这一知识点，生成符合六年级上册学生水平的原创练习。",
+      "description": "六年级上册人教版数学“数学广角--数与形”中“数形结合”相关练习。",
       "common_mistakes": [
-        "数形结合：把图形名称或单位混淆",
-        "数形结合：周长、面积、体积公式用错",
-        "数形结合：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

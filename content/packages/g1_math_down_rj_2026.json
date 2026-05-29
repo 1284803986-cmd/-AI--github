@@ -3,9 +3,8 @@
   "package_name": "一年级数学下册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "一年级",
@@ -35,21 +34,21 @@
       "lessons": [
         {
           "id": "plane_shapes_lesson_1",
-          "name": "长方形正方形三角形圆",
+          "name": "认识平面图形",
           "knowledge_point_ids": [
             "plane_shapes_1"
           ]
         },
         {
           "id": "plane_shapes_lesson_2",
-          "name": "平面图形分类",
+          "name": "平面图形的拼组",
           "knowledge_point_ids": [
             "plane_shapes_2"
           ]
         },
         {
           "id": "plane_shapes_lesson_3",
-          "name": "图形拼组",
+          "name": "七巧板",
           "knowledge_point_ids": [
             "plane_shapes_3"
           ]
@@ -83,7 +82,7 @@
         },
         {
           "id": "sub_20_lesson_4",
-          "name": "退位减法应用",
+          "name": "退位减法解决问题",
           "knowledge_point_ids": [
             "sub_20_4"
           ]
@@ -103,7 +102,7 @@
         },
         {
           "id": "numbers_100_lesson_2",
-          "name": "读数写数",
+          "name": "认识100",
           "knowledge_point_ids": [
             "numbers_100_2"
           ]
@@ -124,7 +123,7 @@
         },
         {
           "id": "numbers_100_lesson_5",
-          "name": "整十数加一位数",
+          "name": "简单加减法",
           "knowledge_point_ids": [
             "numbers_100_5"
           ]
@@ -132,35 +131,35 @@
       ]
     },
     {
-      "id": "mental_add_sub_100",
+      "id": "oral_add_sub_100",
       "name": "100以内的口算加、减法",
       "lessons": [
         {
-          "id": "mental_add_sub_100_lesson_1",
-          "name": "整十数加减整十数",
+          "id": "oral_add_sub_100_lesson_1",
+          "name": "口算加法",
           "knowledge_point_ids": [
-            "mental_add_sub_100_1"
+            "oral_add_sub_100_1"
           ]
         },
         {
-          "id": "mental_add_sub_100_lesson_2",
+          "id": "oral_add_sub_100_lesson_2",
+          "name": "口算减法",
+          "knowledge_point_ids": [
+            "oral_add_sub_100_2"
+          ]
+        },
+        {
+          "id": "oral_add_sub_100_lesson_3",
           "name": "两位数加一位数",
           "knowledge_point_ids": [
-            "mental_add_sub_100_2"
+            "oral_add_sub_100_3"
           ]
         },
         {
-          "id": "mental_add_sub_100_lesson_3",
+          "id": "oral_add_sub_100_lesson_4",
           "name": "两位数减一位数",
           "knowledge_point_ids": [
-            "mental_add_sub_100_3"
-          ]
-        },
-        {
-          "id": "mental_add_sub_100_lesson_4",
-          "name": "两位数加减整十数",
-          "knowledge_point_ids": [
-            "mental_add_sub_100_4"
+            "oral_add_sub_100_4"
           ]
         }
       ]
@@ -171,30 +170,23 @@
       "lessons": [
         {
           "id": "written_add_sub_100_lesson_1",
-          "name": "两位数加两位数",
+          "name": "不进位加法",
           "knowledge_point_ids": [
             "written_add_sub_100_1"
           ]
         },
         {
           "id": "written_add_sub_100_lesson_2",
-          "name": "两位数减两位数",
+          "name": "进位加法",
           "knowledge_point_ids": [
             "written_add_sub_100_2"
           ]
         },
         {
           "id": "written_add_sub_100_lesson_3",
-          "name": "进位加法",
-          "knowledge_point_ids": [
-            "written_add_sub_100_3"
-          ]
-        },
-        {
-          "id": "written_add_sub_100_lesson_4",
           "name": "退位减法",
           "knowledge_point_ids": [
-            "written_add_sub_100_4"
+            "written_add_sub_100_3"
           ]
         }
       ]
@@ -212,43 +204,23 @@
         },
         {
           "id": "add_sub_relation_lesson_2",
-          "name": "求部分数",
+          "name": "求剩余",
           "knowledge_point_ids": [
             "add_sub_relation_2"
           ]
         },
         {
           "id": "add_sub_relation_lesson_3",
-          "name": "求相差数",
+          "name": "比多比少",
           "knowledge_point_ids": [
             "add_sub_relation_3"
           ]
         },
         {
           "id": "add_sub_relation_lesson_4",
-          "name": "连续变化问题",
+          "name": "多步加减问题",
           "knowledge_point_ids": [
             "add_sub_relation_4"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "review",
-      "name": "复习与关联",
-      "lessons": [
-        {
-          "id": "review_lesson_1",
-          "name": "数与运算整理",
-          "knowledge_point_ids": [
-            "review_1"
-          ]
-        },
-        {
-          "id": "review_lesson_2",
-          "name": "图形与解决问题",
-          "knowledge_point_ids": [
-            "review_2"
           ]
         }
       ]
@@ -264,17 +236,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "认识平面图形",
-      "name": "长方形正方形三角形圆",
-      "description": "围绕“认识平面图形”中“长方形正方形三角形圆”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "认识平面图形",
+      "description": "一年级下册人教版数学“认识平面图形”中“认识平面图形”相关练习。",
       "common_mistakes": [
-        "长方形正方形三角形圆：把图形名称或单位混淆",
-        "长方形正方形三角形圆：周长、面积、体积公式用错",
-        "长方形正方形三角形圆：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -291,17 +265,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "认识平面图形",
-      "name": "平面图形分类",
-      "description": "围绕“认识平面图形”中“平面图形分类”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "平面图形的拼组",
+      "description": "一年级下册人教版数学“认识平面图形”中“平面图形的拼组”相关练习。",
       "common_mistakes": [
-        "平面图形分类：把图形名称或单位混淆",
-        "平面图形分类：周长、面积、体积公式用错",
-        "平面图形分类：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -318,17 +294,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "认识平面图形",
-      "name": "图形拼组",
-      "description": "围绕“认识平面图形”中“图形拼组”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "七巧板",
+      "description": "一年级下册人教版数学“认识平面图形”中“七巧板”相关练习。",
       "common_mistakes": [
-        "图形拼组：把图形名称或单位混淆",
-        "图形拼组：周长、面积、体积公式用错",
-        "图形拼组：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -346,16 +324,18 @@
       "textbook": "人教版",
       "unit": "20以内的退位减法",
       "name": "十几减9",
-      "description": "围绕“20以内的退位减法”中“十几减9”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“20以内的退位减法”中“十几减9”相关练习。",
       "common_mistakes": [
-        "十几减9：相同数位没有对齐",
-        "十几减9：进位、退位或约分步骤遗漏",
-        "十几减9：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -373,16 +353,18 @@
       "textbook": "人教版",
       "unit": "20以内的退位减法",
       "name": "十几减8、7、6",
-      "description": "围绕“20以内的退位减法”中“十几减8、7、6”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“20以内的退位减法”中“十几减8、7、6”相关练习。",
       "common_mistakes": [
-        "十几减8、7、6：相同数位没有对齐",
-        "十几减8、7、6：进位、退位或约分步骤遗漏",
-        "十几减8、7、6：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -400,16 +382,18 @@
       "textbook": "人教版",
       "unit": "20以内的退位减法",
       "name": "十几减5、4、3、2",
-      "description": "围绕“20以内的退位减法”中“十几减5、4、3、2”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“20以内的退位减法”中“十几减5、4、3、2”相关练习。",
       "common_mistakes": [
-        "十几减5、4、3、2：相同数位没有对齐",
-        "十几减5、4、3、2：进位、退位或约分步骤遗漏",
-        "十几减5、4、3、2：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -426,17 +410,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "20以内的退位减法",
-      "name": "退位减法应用",
-      "description": "围绕“20以内的退位减法”中“退位减法应用”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "退位减法解决问题",
+      "description": "一年级下册人教版数学“20以内的退位减法”中“退位减法解决问题”相关练习。",
       "common_mistakes": [
-        "退位减法应用：没有先找清数量关系",
-        "退位减法应用：只列式不写答语",
-        "退位减法应用：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -454,16 +440,18 @@
       "textbook": "人教版",
       "unit": "100以内数的认识",
       "name": "数数和数的组成",
-      "description": "围绕“100以内数的认识”中“数数和数的组成”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“100以内数的认识”中“数数和数的组成”相关练习。",
       "common_mistakes": [
-        "数数和数的组成：没有看清题目要求",
-        "数数和数的组成：答语单位写错或漏写",
-        "数数和数的组成：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -480,17 +468,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内数的认识",
-      "name": "读数写数",
-      "description": "围绕“100以内数的认识”中“读数写数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "认识100",
+      "description": "一年级下册人教版数学“100以内数的认识”中“认识100”相关练习。",
       "common_mistakes": [
-        "读数写数：没有看清题目要求",
-        "读数写数：答语单位写错或漏写",
-        "读数写数：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -508,16 +498,18 @@
       "textbook": "人教版",
       "unit": "100以内数的认识",
       "name": "数的顺序",
-      "description": "围绕“100以内数的认识”中“数的顺序”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“100以内数的认识”中“数的顺序”相关练习。",
       "common_mistakes": [
-        "数的顺序：没有看清题目要求",
-        "数的顺序：答语单位写错或漏写",
-        "数的顺序：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -535,16 +527,18 @@
       "textbook": "人教版",
       "unit": "100以内数的认识",
       "name": "比较大小",
-      "description": "围绕“100以内数的认识”中“比较大小”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“100以内数的认识”中“比较大小”相关练习。",
       "common_mistakes": [
-        "比较大小：没有看清题目要求",
-        "比较大小：答语单位写错或漏写",
-        "比较大小：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -561,17 +555,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内数的认识",
-      "name": "整十数加一位数",
-      "description": "围绕“100以内数的认识”中“整十数加一位数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "简单加减法",
+      "description": "一年级下册人教版数学“100以内数的认识”中“简单加减法”相关练习。",
       "common_mistakes": [
-        "整十数加一位数：相同数位没有对齐",
-        "整十数加一位数：进位、退位或约分步骤遗漏",
-        "整十数加一位数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -580,25 +576,27 @@
       ]
     },
     {
-      "id": "mental_add_sub_100_1",
-      "unit_id": "mental_add_sub_100",
-      "lesson_id": "mental_add_sub_100_lesson_1",
+      "id": "oral_add_sub_100_1",
+      "unit_id": "oral_add_sub_100",
+      "lesson_id": "oral_add_sub_100_lesson_1",
       "grade": "一年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内的口算加、减法",
-      "name": "整十数加减整十数",
-      "description": "围绕“100以内的口算加、减法”中“整十数加减整十数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "口算加法",
+      "description": "一年级下册人教版数学“100以内的口算加、减法”中“口算加法”相关练习。",
       "common_mistakes": [
-        "整十数加减整十数：相同数位没有对齐",
-        "整十数加减整十数：进位、退位或约分步骤遗漏",
-        "整十数加减整十数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -607,25 +605,56 @@
       ]
     },
     {
-      "id": "mental_add_sub_100_2",
-      "unit_id": "mental_add_sub_100",
-      "lesson_id": "mental_add_sub_100_lesson_2",
+      "id": "oral_add_sub_100_2",
+      "unit_id": "oral_add_sub_100",
+      "lesson_id": "oral_add_sub_100_lesson_2",
+      "grade": "一年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "100以内的口算加、减法",
+      "name": "口算减法",
+      "description": "一年级下册人教版数学“100以内的口算加、减法”中“口算减法”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "oral_add_sub_100_3",
+      "unit_id": "oral_add_sub_100",
+      "lesson_id": "oral_add_sub_100_lesson_3",
       "grade": "一年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内的口算加、减法",
       "name": "两位数加一位数",
-      "description": "围绕“100以内的口算加、减法”中“两位数加一位数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“100以内的口算加、减法”中“两位数加一位数”相关练习。",
       "common_mistakes": [
-        "两位数加一位数：相同数位没有对齐",
-        "两位数加一位数：进位、退位或约分步骤遗漏",
-        "两位数加一位数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -634,52 +663,27 @@
       ]
     },
     {
-      "id": "mental_add_sub_100_3",
-      "unit_id": "mental_add_sub_100",
-      "lesson_id": "mental_add_sub_100_lesson_3",
+      "id": "oral_add_sub_100_4",
+      "unit_id": "oral_add_sub_100",
+      "lesson_id": "oral_add_sub_100_lesson_4",
       "grade": "一年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内的口算加、减法",
       "name": "两位数减一位数",
-      "description": "围绕“100以内的口算加、减法”中“两位数减一位数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“100以内的口算加、减法”中“两位数减一位数”相关练习。",
       "common_mistakes": [
-        "两位数减一位数：相同数位没有对齐",
-        "两位数减一位数：进位、退位或约分步骤遗漏",
-        "两位数减一位数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "mental_add_sub_100_4",
-      "unit_id": "mental_add_sub_100",
-      "lesson_id": "mental_add_sub_100_lesson_4",
-      "grade": "一年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "100以内的口算加、减法",
-      "name": "两位数加减整十数",
-      "description": "围绕“100以内的口算加、减法”中“两位数加减整十数”这一知识点，生成符合一年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "两位数加减整十数：相同数位没有对齐",
-        "两位数加减整十数：进位、退位或约分步骤遗漏",
-        "两位数加减整十数：把运算顺序看错"
-      ],
-      "recommended_question_types": [
-        "计算题",
-        "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -696,17 +700,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内的笔算加、减法",
-      "name": "两位数加两位数",
-      "description": "围绕“100以内的笔算加、减法”中“两位数加两位数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "不进位加法",
+      "description": "一年级下册人教版数学“100以内的笔算加、减法”中“不进位加法”相关练习。",
       "common_mistakes": [
-        "两位数加两位数：相同数位没有对齐",
-        "两位数加两位数：进位、退位或约分步骤遗漏",
-        "两位数加两位数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -723,17 +729,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内的笔算加、减法",
-      "name": "两位数减两位数",
-      "description": "围绕“100以内的笔算加、减法”中“两位数减两位数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "进位加法",
+      "description": "一年级下册人教版数学“100以内的笔算加、减法”中“进位加法”相关练习。",
       "common_mistakes": [
-        "两位数减两位数：相同数位没有对齐",
-        "两位数减两位数：进位、退位或约分步骤遗漏",
-        "两位数减两位数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -750,44 +758,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "100以内的笔算加、减法",
-      "name": "进位加法",
-      "description": "围绕“100以内的笔算加、减法”中“进位加法”这一知识点，生成符合一年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "进位加法：相同数位没有对齐",
-        "进位加法：进位、退位或约分步骤遗漏",
-        "进位加法：把运算顺序看错"
-      ],
-      "recommended_question_types": [
-        "计算题",
-        "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "written_add_sub_100_4",
-      "unit_id": "written_add_sub_100",
-      "lesson_id": "written_add_sub_100_lesson_4",
-      "grade": "一年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "100以内的笔算加、减法",
       "name": "退位减法",
-      "description": "围绕“100以内的笔算加、减法”中“退位减法”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“100以内的笔算加、减法”中“退位减法”相关练习。",
       "common_mistakes": [
-        "退位减法：相同数位没有对齐",
-        "退位减法：进位、退位或约分步骤遗漏",
-        "退位减法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -805,16 +788,18 @@
       "textbook": "人教版",
       "unit": "数量间的加减关系",
       "name": "求总数",
-      "description": "围绕“数量间的加减关系”中“求总数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "description": "一年级下册人教版数学“数量间的加减关系”中“求总数”相关练习。",
       "common_mistakes": [
-        "求总数：没有先找清数量关系",
-        "求总数：只列式不写答语",
-        "求总数：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -831,17 +816,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数量间的加减关系",
-      "name": "求部分数",
-      "description": "围绕“数量间的加减关系”中“求部分数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "求剩余",
+      "description": "一年级下册人教版数学“数量间的加减关系”中“求剩余”相关练习。",
       "common_mistakes": [
-        "求部分数：没有先找清数量关系",
-        "求部分数：只列式不写答语",
-        "求部分数：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -858,17 +845,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数量间的加减关系",
-      "name": "求相差数",
-      "description": "围绕“数量间的加减关系”中“求相差数”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "比多比少",
+      "description": "一年级下册人教版数学“数量间的加减关系”中“比多比少”相关练习。",
       "common_mistakes": [
-        "求相差数：没有先找清数量关系",
-        "求相差数：只列式不写答语",
-        "求相差数：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -885,71 +874,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数量间的加减关系",
-      "name": "连续变化问题",
-      "description": "围绕“数量间的加减关系”中“连续变化问题”这一知识点，生成符合一年级下册学生水平的原创练习。",
+      "name": "多步加减问题",
+      "description": "一年级下册人教版数学“数量间的加减关系”中“多步加减问题”相关练习。",
       "common_mistakes": [
-        "连续变化问题：没有先找清数量关系",
-        "连续变化问题：只列式不写答语",
-        "连续变化问题：多步问题少算一步"
-      ],
-      "recommended_question_types": [
-        "应用题",
-        "填空题",
-        "变式题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "review_1",
-      "unit_id": "review",
-      "lesson_id": "review_lesson_1",
-      "grade": "一年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "复习与关联",
-      "name": "数与运算整理",
-      "description": "围绕“复习与关联”中“数与运算整理”这一知识点，生成符合一年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "数与运算整理：相同数位没有对齐",
-        "数与运算整理：进位、退位或约分步骤遗漏",
-        "数与运算整理：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "review_2",
-      "unit_id": "review",
-      "lesson_id": "review_lesson_2",
-      "grade": "一年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "复习与关联",
-      "name": "图形与解决问题",
-      "description": "围绕“复习与关联”中“图形与解决问题”这一知识点，生成符合一年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "图形与解决问题：把图形名称或单位混淆",
-        "图形与解决问题：周长、面积、体积公式用错",
-        "图形与解决问题：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

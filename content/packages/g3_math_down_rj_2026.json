@@ -3,9 +3,8 @@
   "package_name": "三年级数学下册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "三年级",
@@ -30,123 +29,124 @@
   ],
   "units": [
     {
-      "id": "position_direction",
-      "name": "位置与方向",
+      "id": "motion",
+      "name": "生活中的运动现象",
       "lessons": [
         {
-          "id": "position_direction_lesson_1",
-          "name": "东南西北",
+          "id": "motion_lesson_1",
+          "name": "轴对称图形",
           "knowledge_point_ids": [
-            "position_direction_1"
+            "motion_1"
           ]
         },
         {
-          "id": "position_direction_lesson_2",
-          "name": "东北东南西北方向",
+          "id": "motion_lesson_2",
+          "name": "平移和旋转",
           "knowledge_point_ids": [
-            "position_direction_2"
+            "motion_2"
           ]
         },
         {
-          "id": "position_direction_lesson_3",
-          "name": "路线描述",
+          "id": "motion_lesson_3",
+          "name": "剪纸问题",
           "knowledge_point_ids": [
-            "position_direction_3"
+            "motion_3"
           ]
         }
       ]
     },
     {
-      "id": "division_multi_digit",
+      "id": "division_one_digit",
       "name": "除数是一位数的除法",
       "lessons": [
         {
-          "id": "division_multi_digit_lesson_1",
+          "id": "division_one_digit_lesson_1",
           "name": "口算除法",
           "knowledge_point_ids": [
-            "division_multi_digit_1"
+            "division_one_digit_1"
           ]
         },
         {
-          "id": "division_multi_digit_lesson_2",
-          "name": "笔算除法",
+          "id": "division_one_digit_lesson_2",
+          "name": "除法估算",
           "knowledge_point_ids": [
-            "division_multi_digit_2"
+            "division_one_digit_2"
           ]
         },
         {
-          "id": "division_multi_digit_lesson_3",
+          "id": "division_one_digit_lesson_3",
+          "name": "一位数除两位数三位数",
+          "knowledge_point_ids": [
+            "division_one_digit_3"
+          ]
+        },
+        {
+          "id": "division_one_digit_lesson_4",
           "name": "有余数除法",
           "knowledge_point_ids": [
-            "division_multi_digit_3"
+            "division_one_digit_4"
           ]
         },
         {
-          "id": "division_multi_digit_lesson_4",
-          "name": "除法验算",
+          "id": "division_one_digit_lesson_5",
+          "name": "商中间有0",
           "knowledge_point_ids": [
-            "division_multi_digit_4"
+            "division_one_digit_5"
+          ]
+        },
+        {
+          "id": "division_one_digit_lesson_6",
+          "name": "商末尾有0",
+          "knowledge_point_ids": [
+            "division_one_digit_6"
+          ]
+        },
+        {
+          "id": "division_one_digit_lesson_7",
+          "name": "连乘连除问题",
+          "knowledge_point_ids": [
+            "division_one_digit_7"
+          ]
+        },
+        {
+          "id": "division_one_digit_lesson_8",
+          "name": "归一归总问题",
+          "knowledge_point_ids": [
+            "division_one_digit_8"
           ]
         }
       ]
     },
     {
-      "id": "statistics",
-      "name": "复式统计表",
+      "id": "perimeter",
+      "name": "长方形和正方形的周长",
       "lessons": [
         {
-          "id": "statistics_lesson_1",
-          "name": "读取统计表",
+          "id": "perimeter_lesson_1",
+          "name": "认识多边形",
           "knowledge_point_ids": [
-            "statistics_1"
+            "perimeter_1"
           ]
         },
         {
-          "id": "statistics_lesson_2",
-          "name": "整理数据",
+          "id": "perimeter_lesson_2",
+          "name": "认识周长",
           "knowledge_point_ids": [
-            "statistics_2"
+            "perimeter_2"
           ]
         },
         {
-          "id": "statistics_lesson_3",
-          "name": "比较与分析",
+          "id": "perimeter_lesson_3",
+          "name": "长方形和正方形周长",
           "knowledge_point_ids": [
-            "statistics_3"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "multiply_two_digit",
-      "name": "两位数乘两位数",
-      "lessons": [
-        {
-          "id": "multiply_two_digit_lesson_1",
-          "name": "口算乘法",
-          "knowledge_point_ids": [
-            "multiply_two_digit_1"
+            "perimeter_3"
           ]
         },
         {
-          "id": "multiply_two_digit_lesson_2",
-          "name": "笔算乘法",
+          "id": "perimeter_lesson_4",
+          "name": "拼图游戏",
           "knowledge_point_ids": [
-            "multiply_two_digit_2"
-          ]
-        },
-        {
-          "id": "multiply_two_digit_lesson_3",
-          "name": "乘法估算",
-          "knowledge_point_ids": [
-            "multiply_two_digit_3"
-          ]
-        },
-        {
-          "id": "multiply_two_digit_lesson_4",
-          "name": "解决乘法问题",
-          "knowledge_point_ids": [
-            "multiply_two_digit_4"
+            "perimeter_4"
           ]
         }
       ]
@@ -157,71 +157,57 @@
       "lessons": [
         {
           "id": "area_lesson_1",
-          "name": "面积的认识",
+          "name": "认识面积和面积单位",
           "knowledge_point_ids": [
             "area_1"
           ]
         },
         {
           "id": "area_lesson_2",
-          "name": "面积单位",
+          "name": "常见面积单位",
           "knowledge_point_ids": [
             "area_2"
           ]
         },
         {
           "id": "area_lesson_3",
-          "name": "长方形面积",
+          "name": "长方形和正方形面积",
           "knowledge_point_ids": [
             "area_3"
           ]
         },
         {
           "id": "area_lesson_4",
-          "name": "正方形面积",
+          "name": "面积单位进率",
           "knowledge_point_ids": [
             "area_4"
-          ]
-        },
-        {
-          "id": "area_lesson_5",
-          "name": "面积单位换算",
-          "knowledge_point_ids": [
-            "area_5"
           ]
         }
       ]
     },
     {
-      "id": "year_month_day",
-      "name": "年、月、日",
+      "id": "statistics_table",
+      "name": "复式统计表",
       "lessons": [
         {
-          "id": "year_month_day_lesson_1",
-          "name": "年月日认识",
+          "id": "statistics_table_lesson_1",
+          "name": "调查收集数据",
           "knowledge_point_ids": [
-            "year_month_day_1"
+            "statistics_table_1"
           ]
         },
         {
-          "id": "year_month_day_lesson_2",
-          "name": "平年闰年",
+          "id": "statistics_table_lesson_2",
+          "name": "读取统计表",
           "knowledge_point_ids": [
-            "year_month_day_2"
+            "statistics_table_2"
           ]
         },
         {
-          "id": "year_month_day_lesson_3",
-          "name": "24时计时法",
+          "id": "statistics_table_lesson_3",
+          "name": "比较与分析",
           "knowledge_point_ids": [
-            "year_month_day_3"
-          ]
-        },
-        {
-          "id": "year_month_day_lesson_4",
-          "name": "经过天数",
-          "knowledge_point_ids": [
-            "year_month_day_4"
+            "statistics_table_3"
           ]
         }
       ]
@@ -246,29 +232,9 @@
         },
         {
           "id": "decimal_intro_lesson_3",
-          "name": "简单小数加减",
+          "name": "简单小数加减法",
           "knowledge_point_ids": [
             "decimal_intro_3"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "math_wide",
-      "name": "数学广角--搭配（二）",
-      "lessons": [
-        {
-          "id": "math_wide_lesson_1",
-          "name": "排列组合",
-          "knowledge_point_ids": [
-            "math_wide_1"
-          ]
-        },
-        {
-          "id": "math_wide_lesson_2",
-          "name": "列表解决问题",
-          "knowledge_point_ids": [
-            "math_wide_2"
           ]
         }
       ]
@@ -276,25 +242,27 @@
   ],
   "knowledge_points": [
     {
-      "id": "position_direction_1",
-      "unit_id": "position_direction",
-      "lesson_id": "position_direction_lesson_1",
+      "id": "motion_1",
+      "unit_id": "motion",
+      "lesson_id": "motion_lesson_1",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "位置与方向",
-      "name": "东南西北",
-      "description": "围绕“位置与方向”中“东南西北”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "unit": "生活中的运动现象",
+      "name": "轴对称图形",
+      "description": "三年级下册人教版数学“生活中的运动现象”中“轴对称图形”相关练习。",
       "common_mistakes": [
-        "东南西北：把图形名称或单位混淆",
-        "东南西北：周长、面积、体积公式用错",
-        "东南西北：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -303,25 +271,27 @@
       ]
     },
     {
-      "id": "position_direction_2",
-      "unit_id": "position_direction",
-      "lesson_id": "position_direction_lesson_2",
+      "id": "motion_2",
+      "unit_id": "motion",
+      "lesson_id": "motion_lesson_2",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "位置与方向",
-      "name": "东北东南西北方向",
-      "description": "围绕“位置与方向”中“东北东南西北方向”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "unit": "生活中的运动现象",
+      "name": "平移和旋转",
+      "description": "三年级下册人教版数学“生活中的运动现象”中“平移和旋转”相关练习。",
       "common_mistakes": [
-        "东北东南西北方向：把图形名称或单位混淆",
-        "东北东南西北方向：周长、面积、体积公式用错",
-        "东北东南西北方向：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -330,25 +300,27 @@
       ]
     },
     {
-      "id": "position_direction_3",
-      "unit_id": "position_direction",
-      "lesson_id": "position_direction_lesson_3",
+      "id": "motion_3",
+      "unit_id": "motion",
+      "lesson_id": "motion_lesson_3",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "位置与方向",
-      "name": "路线描述",
-      "description": "围绕“位置与方向”中“路线描述”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "unit": "生活中的运动现象",
+      "name": "剪纸问题",
+      "description": "三年级下册人教版数学“生活中的运动现象”中“剪纸问题”相关练习。",
       "common_mistakes": [
-        "路线描述：把图形名称或单位混淆",
-        "路线描述：周长、面积、体积公式用错",
-        "路线描述：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -357,25 +329,27 @@
       ]
     },
     {
-      "id": "division_multi_digit_1",
-      "unit_id": "division_multi_digit",
-      "lesson_id": "division_multi_digit_lesson_1",
+      "id": "division_one_digit_1",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_1",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "除数是一位数的除法",
       "name": "口算除法",
-      "description": "围绕“除数是一位数的除法”中“口算除法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“口算除法”相关练习。",
       "common_mistakes": [
-        "口算除法：相同数位没有对齐",
-        "口算除法：进位、退位或约分步骤遗漏",
-        "口算除法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -384,25 +358,27 @@
       ]
     },
     {
-      "id": "division_multi_digit_2",
-      "unit_id": "division_multi_digit",
-      "lesson_id": "division_multi_digit_lesson_2",
+      "id": "division_one_digit_2",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_2",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "除数是一位数的除法",
-      "name": "笔算除法",
-      "description": "围绕“除数是一位数的除法”中“笔算除法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "name": "除法估算",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“除法估算”相关练习。",
       "common_mistakes": [
-        "笔算除法：相同数位没有对齐",
-        "笔算除法：进位、退位或约分步骤遗漏",
-        "笔算除法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -411,25 +387,56 @@
       ]
     },
     {
-      "id": "division_multi_digit_3",
-      "unit_id": "division_multi_digit",
-      "lesson_id": "division_multi_digit_lesson_3",
+      "id": "division_one_digit_3",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是一位数的除法",
+      "name": "一位数除两位数三位数",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“一位数除两位数三位数”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_one_digit_4",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_4",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "除数是一位数的除法",
       "name": "有余数除法",
-      "description": "围绕“除数是一位数的除法”中“有余数除法”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“有余数除法”相关练习。",
       "common_mistakes": [
-        "有余数除法：相同数位没有对齐",
-        "有余数除法：进位、退位或约分步骤遗漏",
-        "有余数除法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -438,52 +445,27 @@
       ]
     },
     {
-      "id": "division_multi_digit_4",
-      "unit_id": "division_multi_digit",
-      "lesson_id": "division_multi_digit_lesson_4",
+      "id": "division_one_digit_5",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_5",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "除数是一位数的除法",
-      "name": "除法验算",
-      "description": "围绕“除数是一位数的除法”中“除法验算”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "name": "商中间有0",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“商中间有0”相关练习。",
       "common_mistakes": [
-        "除法验算：相同数位没有对齐",
-        "除法验算：进位、退位或约分步骤遗漏",
-        "除法验算：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
-        "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "statistics_1",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_1",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "复式统计表",
-      "name": "读取统计表",
-      "description": "围绕“复式统计表”中“读取统计表”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "读取统计表：没有看清题目要求",
-        "读取统计表：答语单位写错或漏写",
-        "读取统计表：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -492,160 +474,201 @@
       ]
     },
     {
-      "id": "statistics_2",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_2",
+      "id": "division_one_digit_6",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_6",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "复式统计表",
-      "name": "整理数据",
-      "description": "围绕“复式统计表”中“整理数据”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "unit": "除数是一位数的除法",
+      "name": "商末尾有0",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“商末尾有0”相关练习。",
       "common_mistakes": [
-        "整理数据：知识点混在一起不分类",
-        "整理数据：步骤顺序混乱",
-        "整理数据：结果不符合生活实际"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
-        "应用题",
-        "变式题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "statistics_3",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_3",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "复式统计表",
-      "name": "比较与分析",
-      "description": "围绕“复式统计表”中“比较与分析”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "比较与分析：没有看清题目要求",
-        "比较与分析：答语单位写错或漏写",
-        "比较与分析：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
         "填空题",
         "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "multiply_two_digit_1",
-      "unit_id": "multiply_two_digit",
-      "lesson_id": "multiply_two_digit_lesson_1",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "两位数乘两位数",
-      "name": "口算乘法",
-      "description": "围绕“两位数乘两位数”中“口算乘法”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "口算乘法：相同数位没有对齐",
-        "口算乘法：进位、退位或约分步骤遗漏",
-        "口算乘法：把运算顺序看错"
-      ],
-      "recommended_question_types": [
-        "计算题",
-        "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "multiply_two_digit_2",
-      "unit_id": "multiply_two_digit",
-      "lesson_id": "multiply_two_digit_lesson_2",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "两位数乘两位数",
-      "name": "笔算乘法",
-      "description": "围绕“两位数乘两位数”中“笔算乘法”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "笔算乘法：相同数位没有对齐",
-        "笔算乘法：进位、退位或约分步骤遗漏",
-        "笔算乘法：把运算顺序看错"
-      ],
-      "recommended_question_types": [
-        "计算题",
-        "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "multiply_two_digit_3",
-      "unit_id": "multiply_two_digit",
-      "lesson_id": "multiply_two_digit_lesson_3",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "两位数乘两位数",
-      "name": "乘法估算",
-      "description": "围绕“两位数乘两位数”中“乘法估算”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "乘法估算：相同数位没有对齐",
-        "乘法估算：进位、退位或约分步骤遗漏",
-        "乘法估算：把运算顺序看错"
-      ],
-      "recommended_question_types": [
-        "计算题",
-        "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "multiply_two_digit_4",
-      "unit_id": "multiply_two_digit",
-      "lesson_id": "multiply_two_digit_lesson_4",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "两位数乘两位数",
-      "name": "解决乘法问题",
-      "description": "围绕“两位数乘两位数”中“解决乘法问题”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "解决乘法问题：没有先找清数量关系",
-        "解决乘法问题：只列式不写答语",
-        "解决乘法问题：多步问题少算一步"
-      ],
-      "recommended_question_types": [
         "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_one_digit_7",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_7",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是一位数的除法",
+      "name": "连乘连除问题",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“连乘连除问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "division_one_digit_8",
+      "unit_id": "division_one_digit",
+      "lesson_id": "division_one_digit_lesson_8",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "除数是一位数的除法",
+      "name": "归一归总问题",
+      "description": "三年级下册人教版数学“除数是一位数的除法”中“归一归总问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "perimeter_1",
+      "unit_id": "perimeter",
+      "lesson_id": "perimeter_lesson_1",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形的周长",
+      "name": "认识多边形",
+      "description": "三年级下册人教版数学“长方形和正方形的周长”中“认识多边形”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "perimeter_2",
+      "unit_id": "perimeter",
+      "lesson_id": "perimeter_lesson_2",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形的周长",
+      "name": "认识周长",
+      "description": "三年级下册人教版数学“长方形和正方形的周长”中“认识周长”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "perimeter_3",
+      "unit_id": "perimeter",
+      "lesson_id": "perimeter_lesson_3",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形的周长",
+      "name": "长方形和正方形周长",
+      "description": "三年级下册人教版数学“长方形和正方形的周长”中“长方形和正方形周长”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "perimeter_4",
+      "unit_id": "perimeter",
+      "lesson_id": "perimeter_lesson_4",
+      "grade": "三年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "长方形和正方形的周长",
+      "name": "拼图游戏",
+      "description": "三年级下册人教版数学“长方形和正方形的周长”中“拼图游戏”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -662,17 +685,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "面积",
-      "name": "面积的认识",
-      "description": "围绕“面积”中“面积的认识”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "name": "认识面积和面积单位",
+      "description": "三年级下册人教版数学“面积”中“认识面积和面积单位”相关练习。",
       "common_mistakes": [
-        "面积的认识：把图形名称或单位混淆",
-        "面积的认识：周长、面积、体积公式用错",
-        "面积的认识：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -689,17 +714,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "面积",
-      "name": "面积单位",
-      "description": "围绕“面积”中“面积单位”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "name": "常见面积单位",
+      "description": "三年级下册人教版数学“面积”中“常见面积单位”相关练习。",
       "common_mistakes": [
-        "面积单位：把图形名称或单位混淆",
-        "面积单位：周长、面积、体积公式用错",
-        "面积单位：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -716,17 +743,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "面积",
-      "name": "长方形面积",
-      "description": "围绕“面积”中“长方形面积”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "name": "长方形和正方形面积",
+      "description": "三年级下册人教版数学“面积”中“长方形和正方形面积”相关练习。",
       "common_mistakes": [
-        "长方形面积：把图形名称或单位混淆",
-        "长方形面积：周长、面积、体积公式用错",
-        "长方形面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -743,17 +772,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "面积",
-      "name": "正方形面积",
-      "description": "围绕“面积”中“正方形面积”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "name": "面积单位进率",
+      "description": "三年级下册人教版数学“面积”中“面积单位进率”相关练习。",
       "common_mistakes": [
-        "正方形面积：把图形名称或单位混淆",
-        "正方形面积：周长、面积、体积公式用错",
-        "正方形面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -762,25 +793,27 @@
       ]
     },
     {
-      "id": "area_5",
-      "unit_id": "area",
-      "lesson_id": "area_lesson_5",
+      "id": "statistics_table_1",
+      "unit_id": "statistics_table",
+      "lesson_id": "statistics_table_lesson_1",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "面积",
-      "name": "面积单位换算",
-      "description": "围绕“面积”中“面积单位换算”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "unit": "复式统计表",
+      "name": "调查收集数据",
+      "description": "三年级下册人教版数学“复式统计表”中“调查收集数据”相关练习。",
       "common_mistakes": [
-        "面积单位换算：把图形名称或单位混淆",
-        "面积单位换算：周长、面积、体积公式用错",
-        "面积单位换算：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -789,25 +822,27 @@
       ]
     },
     {
-      "id": "year_month_day_1",
-      "unit_id": "year_month_day",
-      "lesson_id": "year_month_day_lesson_1",
+      "id": "statistics_table_2",
+      "unit_id": "statistics_table",
+      "lesson_id": "statistics_table_lesson_2",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "年、月、日",
-      "name": "年月日认识",
-      "description": "围绕“年、月、日”中“年月日认识”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "unit": "复式统计表",
+      "name": "读取统计表",
+      "description": "三年级下册人教版数学“复式统计表”中“读取统计表”相关练习。",
       "common_mistakes": [
-        "年月日认识：没有看清题目要求",
-        "年月日认识：答语单位写错或漏写",
-        "年月日认识：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -816,79 +851,27 @@
       ]
     },
     {
-      "id": "year_month_day_2",
-      "unit_id": "year_month_day",
-      "lesson_id": "year_month_day_lesson_2",
+      "id": "statistics_table_3",
+      "unit_id": "statistics_table",
+      "lesson_id": "statistics_table_lesson_3",
       "grade": "三年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "年、月、日",
-      "name": "平年闰年",
-      "description": "围绕“年、月、日”中“平年闰年”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "unit": "复式统计表",
+      "name": "比较与分析",
+      "description": "三年级下册人教版数学“复式统计表”中“比较与分析”相关练习。",
       "common_mistakes": [
-        "平年闰年：没有看清题目要求",
-        "平年闰年：答语单位写错或漏写",
-        "平年闰年：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "year_month_day_3",
-      "unit_id": "year_month_day",
-      "lesson_id": "year_month_day_lesson_3",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "年、月、日",
-      "name": "24时计时法",
-      "description": "围绕“年、月、日”中“24时计时法”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "24时计时法：没有看清题目要求",
-        "24时计时法：答语单位写错或漏写",
-        "24时计时法：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "year_month_day_4",
-      "unit_id": "year_month_day",
-      "lesson_id": "year_month_day_lesson_4",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "年、月、日",
-      "name": "经过天数",
-      "description": "围绕“年、月、日”中“经过天数”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "经过天数：没有看清题目要求",
-        "经过天数：答语单位写错或漏写",
-        "经过天数：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -906,16 +889,18 @@
       "textbook": "人教版",
       "unit": "小数的初步认识",
       "name": "认识小数",
-      "description": "围绕“小数的初步认识”中“认识小数”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "description": "三年级下册人教版数学“小数的初步认识”中“认识小数”相关练习。",
       "common_mistakes": [
-        "认识小数：相同数位没有对齐",
-        "认识小数：进位、退位或约分步骤遗漏",
-        "认识小数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -933,16 +918,18 @@
       "textbook": "人教版",
       "unit": "小数的初步认识",
       "name": "小数大小比较",
-      "description": "围绕“小数的初步认识”中“小数大小比较”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "description": "三年级下册人教版数学“小数的初步认识”中“小数大小比较”相关练习。",
       "common_mistakes": [
-        "小数大小比较：相同数位没有对齐",
-        "小数大小比较：进位、退位或约分步骤遗漏",
-        "小数大小比较：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -959,71 +946,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数的初步认识",
-      "name": "简单小数加减",
-      "description": "围绕“小数的初步认识”中“简单小数加减”这一知识点，生成符合三年级下册学生水平的原创练习。",
+      "name": "简单小数加减法",
+      "description": "三年级下册人教版数学“小数的初步认识”中“简单小数加减法”相关练习。",
       "common_mistakes": [
-        "简单小数加减：相同数位没有对齐",
-        "简单小数加减：进位、退位或约分步骤遗漏",
-        "简单小数加减：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_1",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_1",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "数学广角--搭配（二）",
-      "name": "排列组合",
-      "description": "围绕“数学广角--搭配（二）”中“排列组合”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "排列组合：把图形名称或单位混淆",
-        "排列组合：周长、面积、体积公式用错",
-        "排列组合：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
         "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_2",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_2",
-      "grade": "三年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "数学广角--搭配（二）",
-      "name": "列表解决问题",
-      "description": "围绕“数学广角--搭配（二）”中“列表解决问题”这一知识点，生成符合三年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "列表解决问题：把图形名称或单位混淆",
-        "列表解决问题：周长、面积、体积公式用错",
-        "列表解决问题：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

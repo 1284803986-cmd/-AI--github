@@ -3,9 +3,8 @@
   "package_name": "一年级数学上册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "一年级",
@@ -35,186 +34,194 @@
       "lessons": [
         {
           "id": "math_game_lesson_1",
-          "name": "校园中的数与形",
+          "name": "在校园里找一找",
           "knowledge_point_ids": [
             "math_game_1"
           ]
         },
         {
           "id": "math_game_lesson_2",
-          "name": "教室中的位置",
+          "name": "在操场上玩一玩",
           "knowledge_point_ids": [
             "math_game_2"
           ]
         },
         {
           "id": "math_game_lesson_3",
-          "name": "操场中的比较",
+          "name": "在教室里认一认",
           "knowledge_point_ids": [
             "math_game_3"
+          ]
+        },
+        {
+          "id": "math_game_lesson_4",
+          "name": "在教室里玩一玩",
+          "knowledge_point_ids": [
+            "math_game_4"
           ]
         }
       ]
     },
     {
       "id": "numbers_1_5",
-      "name": "1-5的认识和加减法",
+      "name": "5以内数的认识和加、减法",
       "lessons": [
         {
           "id": "numbers_1_5_lesson_1",
-          "name": "1-5的数数与认读",
+          "name": "1-5的认识",
           "knowledge_point_ids": [
             "numbers_1_5_1"
           ]
         },
         {
           "id": "numbers_1_5_lesson_2",
-          "name": "比多少",
+          "name": "比大小",
           "knowledge_point_ids": [
             "numbers_1_5_2"
           ]
         },
         {
           "id": "numbers_1_5_lesson_3",
-          "name": "第几和几",
+          "name": "第几",
           "knowledge_point_ids": [
             "numbers_1_5_3"
           ]
         },
         {
           "id": "numbers_1_5_lesson_4",
-          "name": "5以内加法",
+          "name": "分与合",
           "knowledge_point_ids": [
             "numbers_1_5_4"
           ]
         },
         {
           "id": "numbers_1_5_lesson_5",
-          "name": "5以内减法",
+          "name": "加法的认识",
           "knowledge_point_ids": [
             "numbers_1_5_5"
           ]
-        }
-      ]
-    },
-    {
-      "id": "position",
-      "name": "位置",
-      "lessons": [
+        },
         {
-          "id": "position_lesson_1",
-          "name": "上下前后",
+          "id": "numbers_1_5_lesson_6",
+          "name": "减法的认识",
           "knowledge_point_ids": [
-            "position_1"
+            "numbers_1_5_6"
           ]
         },
         {
-          "id": "position_lesson_2",
-          "name": "左右",
+          "id": "numbers_1_5_lesson_7",
+          "name": "0的认识和加减法",
           "knowledge_point_ids": [
-            "position_2"
-          ]
-        },
-        {
-          "id": "position_lesson_3",
-          "name": "位置描述",
-          "knowledge_point_ids": [
-            "position_3"
+            "numbers_1_5_7"
           ]
         }
       ]
     },
     {
       "id": "numbers_6_10",
-      "name": "6-10的认识和加减法",
+      "name": "6-10的认识和加、减法",
       "lessons": [
         {
           "id": "numbers_6_10_lesson_1",
-          "name": "6-10的组成",
+          "name": "6-9的认识",
           "knowledge_point_ids": [
             "numbers_6_10_1"
           ]
         },
         {
           "id": "numbers_6_10_lesson_2",
-          "name": "10以内加法",
+          "name": "10的认识",
           "knowledge_point_ids": [
             "numbers_6_10_2"
           ]
         },
         {
           "id": "numbers_6_10_lesson_3",
-          "name": "10以内减法",
+          "name": "6、7的加减法",
           "knowledge_point_ids": [
             "numbers_6_10_3"
           ]
         },
         {
           "id": "numbers_6_10_lesson_4",
-          "name": "连加连减",
+          "name": "8、9的加减法",
           "knowledge_point_ids": [
             "numbers_6_10_4"
           ]
         },
         {
           "id": "numbers_6_10_lesson_5",
-          "name": "加减混合",
+          "name": "10的加减法",
           "knowledge_point_ids": [
             "numbers_6_10_5"
+          ]
+        },
+        {
+          "id": "numbers_6_10_lesson_6",
+          "name": "连加连减",
+          "knowledge_point_ids": [
+            "numbers_6_10_6"
+          ]
+        },
+        {
+          "id": "numbers_6_10_lesson_7",
+          "name": "加减混合",
+          "knowledge_point_ids": [
+            "numbers_6_10_7"
           ]
         }
       ]
     },
     {
-      "id": "shapes",
-      "name": "认识图形（一）",
+      "id": "solid_shapes",
+      "name": "认识立体图形",
       "lessons": [
         {
-          "id": "shapes_lesson_1",
-          "name": "长方体正方体圆柱球",
+          "id": "solid_shapes_lesson_1",
+          "name": "认识立体图形",
           "knowledge_point_ids": [
-            "shapes_1"
+            "solid_shapes_1"
           ]
         },
         {
-          "id": "shapes_lesson_2",
-          "name": "立体图形分类",
+          "id": "solid_shapes_lesson_2",
+          "name": "立体图形拼搭",
           "knowledge_point_ids": [
-            "shapes_2"
-          ]
-        },
-        {
-          "id": "shapes_lesson_3",
-          "name": "拼搭中的图形",
-          "knowledge_point_ids": [
-            "shapes_3"
+            "solid_shapes_2"
           ]
         }
       ]
     },
     {
       "id": "numbers_11_20",
-      "name": "11-20各数的认识",
+      "name": "11-20的认识",
       "lessons": [
         {
           "id": "numbers_11_20_lesson_1",
-          "name": "11-20的数数",
+          "name": "10的再认识",
           "knowledge_point_ids": [
             "numbers_11_20_1"
           ]
         },
         {
           "id": "numbers_11_20_lesson_2",
-          "name": "十和几的组成",
+          "name": "11-20的认识",
           "knowledge_point_ids": [
             "numbers_11_20_2"
           ]
         },
         {
           "id": "numbers_11_20_lesson_3",
-          "name": "20以内不进位加减",
+          "name": "简单加减法",
           "knowledge_point_ids": [
             "numbers_11_20_3"
+          ]
+        },
+        {
+          "id": "numbers_11_20_lesson_4",
+          "name": "解决问题",
+          "knowledge_point_ids": [
+            "numbers_11_20_4"
           ]
         }
       ]
@@ -225,37 +232,64 @@
       "lessons": [
         {
           "id": "carry_add_20_lesson_1",
-          "name": "凑十法",
+          "name": "9加几",
           "knowledge_point_ids": [
             "carry_add_20_1"
           ]
         },
         {
           "id": "carry_add_20_lesson_2",
-          "name": "9加几",
+          "name": "8、7、6加几",
           "knowledge_point_ids": [
             "carry_add_20_2"
           ]
         },
         {
           "id": "carry_add_20_lesson_3",
-          "name": "8、7、6加几",
+          "name": "5、4、3、2加几",
           "knowledge_point_ids": [
             "carry_add_20_3"
           ]
         },
         {
           "id": "carry_add_20_lesson_4",
-          "name": "5、4、3、2加几",
+          "name": "解决进位加法问题",
           "knowledge_point_ids": [
             "carry_add_20_4"
           ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "name": "总复习",
+      "lessons": [
+        {
+          "id": "review_lesson_1",
+          "name": "数与运算整理",
+          "knowledge_point_ids": [
+            "review_1"
+          ]
         },
         {
-          "id": "carry_add_20_lesson_5",
-          "name": "解决进位加法问题",
+          "id": "review_lesson_2",
+          "name": "数量关系整理",
           "knowledge_point_ids": [
-            "carry_add_20_5"
+            "review_2"
+          ]
+        },
+        {
+          "id": "review_lesson_3",
+          "name": "图形的认识整理",
+          "knowledge_point_ids": [
+            "review_3"
+          ]
+        },
+        {
+          "id": "review_lesson_4",
+          "name": "应用提升",
+          "knowledge_point_ids": [
+            "review_4"
           ]
         }
       ]
@@ -271,17 +305,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学游戏",
-      "name": "校园中的数与形",
-      "description": "围绕“数学游戏”中“校园中的数与形”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "name": "在校园里找一找",
+      "description": "一年级上册人教版数学“数学游戏”中“在校园里找一找”相关练习。",
       "common_mistakes": [
-        "校园中的数与形：没有看清题目要求",
-        "校园中的数与形：答语单位写错或漏写",
-        "校园中的数与形：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -298,17 +334,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学游戏",
-      "name": "教室中的位置",
-      "description": "围绕“数学游戏”中“教室中的位置”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "name": "在操场上玩一玩",
+      "description": "一年级上册人教版数学“数学游戏”中“在操场上玩一玩”相关练习。",
       "common_mistakes": [
-        "教室中的位置：把图形名称或单位混淆",
-        "教室中的位置：周长、面积、体积公式用错",
-        "教室中的位置：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -325,17 +363,48 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学游戏",
-      "name": "操场中的比较",
-      "description": "围绕“数学游戏”中“操场中的比较”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "name": "在教室里认一认",
+      "description": "一年级上册人教版数学“数学游戏”中“在教室里认一认”相关练习。",
       "common_mistakes": [
-        "操场中的比较：没有看清题目要求",
-        "操场中的比较：答语单位写错或漏写",
-        "操场中的比较：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "math_game_4",
+      "unit_id": "math_game",
+      "lesson_id": "math_game_lesson_4",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数学游戏",
+      "name": "在教室里玩一玩",
+      "description": "一年级上册人教版数学“数学游戏”中“在教室里玩一玩”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -351,18 +420,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "1-5的认识和加减法",
-      "name": "1-5的数数与认读",
-      "description": "围绕“1-5的认识和加减法”中“1-5的数数与认读”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "5以内数的认识和加、减法",
+      "name": "1-5的认识",
+      "description": "一年级上册人教版数学“5以内数的认识和加、减法”中“1-5的认识”相关练习。",
       "common_mistakes": [
-        "1-5的数数与认读：相同数位没有对齐",
-        "1-5的数数与认读：进位、退位或约分步骤遗漏",
-        "1-5的数数与认读：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -378,18 +449,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "1-5的认识和加减法",
-      "name": "比多少",
-      "description": "围绕“1-5的认识和加减法”中“比多少”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "5以内数的认识和加、减法",
+      "name": "比大小",
+      "description": "一年级上册人教版数学“5以内数的认识和加、减法”中“比大小”相关练习。",
       "common_mistakes": [
-        "比多少：相同数位没有对齐",
-        "比多少：进位、退位或约分步骤遗漏",
-        "比多少：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -405,18 +478,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "1-5的认识和加减法",
-      "name": "第几和几",
-      "description": "围绕“1-5的认识和加减法”中“第几和几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "5以内数的认识和加、减法",
+      "name": "第几",
+      "description": "一年级上册人教版数学“5以内数的认识和加、减法”中“第几”相关练习。",
       "common_mistakes": [
-        "第几和几：相同数位没有对齐",
-        "第几和几：进位、退位或约分步骤遗漏",
-        "第几和几：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -432,18 +507,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "1-5的认识和加减法",
-      "name": "5以内加法",
-      "description": "围绕“1-5的认识和加减法”中“5以内加法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "5以内数的认识和加、减法",
+      "name": "分与合",
+      "description": "一年级上册人教版数学“5以内数的认识和加、减法”中“分与合”相关练习。",
       "common_mistakes": [
-        "5以内加法：相同数位没有对齐",
-        "5以内加法：进位、退位或约分步骤遗漏",
-        "5以内加法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -459,18 +536,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "1-5的认识和加减法",
-      "name": "5以内减法",
-      "description": "围绕“1-5的认识和加减法”中“5以内减法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "5以内数的认识和加、减法",
+      "name": "加法的认识",
+      "description": "一年级上册人教版数学“5以内数的认识和加、减法”中“加法的认识”相关练习。",
       "common_mistakes": [
-        "5以内减法：相同数位没有对齐",
-        "5以内减法：进位、退位或约分步骤遗漏",
-        "5以内减法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -479,25 +558,27 @@
       ]
     },
     {
-      "id": "position_1",
-      "unit_id": "position",
-      "lesson_id": "position_lesson_1",
+      "id": "numbers_1_5_6",
+      "unit_id": "numbers_1_5",
+      "lesson_id": "numbers_1_5_lesson_6",
       "grade": "一年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "位置",
-      "name": "上下前后",
-      "description": "围绕“位置”中“上下前后”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "5以内数的认识和加、减法",
+      "name": "减法的认识",
+      "description": "一年级上册人教版数学“5以内数的认识和加、减法”中“减法的认识”相关练习。",
       "common_mistakes": [
-        "上下前后：把图形名称或单位混淆",
-        "上下前后：周长、面积、体积公式用错",
-        "上下前后：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -506,52 +587,27 @@
       ]
     },
     {
-      "id": "position_2",
-      "unit_id": "position",
-      "lesson_id": "position_lesson_2",
+      "id": "numbers_1_5_7",
+      "unit_id": "numbers_1_5",
+      "lesson_id": "numbers_1_5_lesson_7",
       "grade": "一年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "位置",
-      "name": "左右",
-      "description": "围绕“位置”中“左右”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "5以内数的认识和加、减法",
+      "name": "0的认识和加减法",
+      "description": "一年级上册人教版数学“5以内数的认识和加、减法”中“0的认识和加减法”相关练习。",
       "common_mistakes": [
-        "左右：把图形名称或单位混淆",
-        "左右：周长、面积、体积公式用错",
-        "左右：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "position_3",
-      "unit_id": "position",
-      "lesson_id": "position_lesson_3",
-      "grade": "一年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "位置",
-      "name": "位置描述",
-      "description": "围绕“位置”中“位置描述”这一知识点，生成符合一年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "位置描述：把图形名称或单位混淆",
-        "位置描述：周长、面积、体积公式用错",
-        "位置描述：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -567,18 +623,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "6-10的认识和加减法",
-      "name": "6-10的组成",
-      "description": "围绕“6-10的认识和加减法”中“6-10的组成”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "6-10的认识和加、减法",
+      "name": "6-9的认识",
+      "description": "一年级上册人教版数学“6-10的认识和加、减法”中“6-9的认识”相关练习。",
       "common_mistakes": [
-        "6-10的组成：相同数位没有对齐",
-        "6-10的组成：进位、退位或约分步骤遗漏",
-        "6-10的组成：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -594,18 +652,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "6-10的认识和加减法",
-      "name": "10以内加法",
-      "description": "围绕“6-10的认识和加减法”中“10以内加法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "6-10的认识和加、减法",
+      "name": "10的认识",
+      "description": "一年级上册人教版数学“6-10的认识和加、减法”中“10的认识”相关练习。",
       "common_mistakes": [
-        "10以内加法：相同数位没有对齐",
-        "10以内加法：进位、退位或约分步骤遗漏",
-        "10以内加法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -621,18 +681,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "6-10的认识和加减法",
-      "name": "10以内减法",
-      "description": "围绕“6-10的认识和加减法”中“10以内减法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "6-10的认识和加、减法",
+      "name": "6、7的加减法",
+      "description": "一年级上册人教版数学“6-10的认识和加、减法”中“6、7的加减法”相关练习。",
       "common_mistakes": [
-        "10以内减法：相同数位没有对齐",
-        "10以内减法：进位、退位或约分步骤遗漏",
-        "10以内减法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -648,18 +710,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "6-10的认识和加减法",
-      "name": "连加连减",
-      "description": "围绕“6-10的认识和加减法”中“连加连减”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "6-10的认识和加、减法",
+      "name": "8、9的加减法",
+      "description": "一年级上册人教版数学“6-10的认识和加、减法”中“8、9的加减法”相关练习。",
       "common_mistakes": [
-        "连加连减：相同数位没有对齐",
-        "连加连减：进位、退位或约分步骤遗漏",
-        "连加连减：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -675,18 +739,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "6-10的认识和加减法",
-      "name": "加减混合",
-      "description": "围绕“6-10的认识和加减法”中“加减混合”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "6-10的认识和加、减法",
+      "name": "10的加减法",
+      "description": "一年级上册人教版数学“6-10的认识和加、减法”中“10的加减法”相关练习。",
       "common_mistakes": [
-        "加减混合：相同数位没有对齐",
-        "加减混合：进位、退位或约分步骤遗漏",
-        "加减混合：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -695,25 +761,27 @@
       ]
     },
     {
-      "id": "shapes_1",
-      "unit_id": "shapes",
-      "lesson_id": "shapes_lesson_1",
+      "id": "numbers_6_10_6",
+      "unit_id": "numbers_6_10",
+      "lesson_id": "numbers_6_10_lesson_6",
       "grade": "一年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "认识图形（一）",
-      "name": "长方体正方体圆柱球",
-      "description": "围绕“认识图形（一）”中“长方体正方体圆柱球”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "6-10的认识和加、减法",
+      "name": "连加连减",
+      "description": "一年级上册人教版数学“6-10的认识和加、减法”中“连加连减”相关练习。",
       "common_mistakes": [
-        "长方体正方体圆柱球：把图形名称或单位混淆",
-        "长方体正方体圆柱球：周长、面积、体积公式用错",
-        "长方体正方体圆柱球：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -722,25 +790,27 @@
       ]
     },
     {
-      "id": "shapes_2",
-      "unit_id": "shapes",
-      "lesson_id": "shapes_lesson_2",
+      "id": "numbers_6_10_7",
+      "unit_id": "numbers_6_10",
+      "lesson_id": "numbers_6_10_lesson_7",
       "grade": "一年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "认识图形（一）",
-      "name": "立体图形分类",
-      "description": "围绕“认识图形（一）”中“立体图形分类”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "6-10的认识和加、减法",
+      "name": "加减混合",
+      "description": "一年级上册人教版数学“6-10的认识和加、减法”中“加减混合”相关练习。",
       "common_mistakes": [
-        "立体图形分类：把图形名称或单位混淆",
-        "立体图形分类：周长、面积、体积公式用错",
-        "立体图形分类：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -749,25 +819,56 @@
       ]
     },
     {
-      "id": "shapes_3",
-      "unit_id": "shapes",
-      "lesson_id": "shapes_lesson_3",
+      "id": "solid_shapes_1",
+      "unit_id": "solid_shapes",
+      "lesson_id": "solid_shapes_lesson_1",
       "grade": "一年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "认识图形（一）",
-      "name": "拼搭中的图形",
-      "description": "围绕“认识图形（一）”中“拼搭中的图形”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "认识立体图形",
+      "name": "认识立体图形",
+      "description": "一年级上册人教版数学“认识立体图形”中“认识立体图形”相关练习。",
       "common_mistakes": [
-        "拼搭中的图形：把图形名称或单位混淆",
-        "拼搭中的图形：周长、面积、体积公式用错",
-        "拼搭中的图形：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "solid_shapes_2",
+      "unit_id": "solid_shapes",
+      "lesson_id": "solid_shapes_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "认识立体图形",
+      "name": "立体图形拼搭",
+      "description": "一年级上册人教版数学“认识立体图形”中“立体图形拼搭”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -783,18 +884,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "11-20各数的认识",
-      "name": "11-20的数数",
-      "description": "围绕“11-20各数的认识”中“11-20的数数”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "11-20的认识",
+      "name": "10的再认识",
+      "description": "一年级上册人教版数学“11-20的认识”中“10的再认识”相关练习。",
       "common_mistakes": [
-        "11-20的数数：没有看清题目要求",
-        "11-20的数数：答语单位写错或漏写",
-        "11-20的数数：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -810,18 +913,20 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "11-20各数的认识",
-      "name": "十和几的组成",
-      "description": "围绕“11-20各数的认识”中“十和几的组成”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "11-20的认识",
+      "name": "11-20的认识",
+      "description": "一年级上册人教版数学“11-20的认识”中“11-20的认识”相关练习。",
       "common_mistakes": [
-        "十和几的组成：没有看清题目要求",
-        "十和几的组成：答语单位写错或漏写",
-        "十和几的组成：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -837,18 +942,49 @@
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "11-20各数的认识",
-      "name": "20以内不进位加减",
-      "description": "围绕“11-20各数的认识”中“20以内不进位加减”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "11-20的认识",
+      "name": "简单加减法",
+      "description": "一年级上册人教版数学“11-20的认识”中“简单加减法”相关练习。",
       "common_mistakes": [
-        "20以内不进位加减：相同数位没有对齐",
-        "20以内不进位加减：进位、退位或约分步骤遗漏",
-        "20以内不进位加减：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_11_20_4",
+      "unit_id": "numbers_11_20",
+      "lesson_id": "numbers_11_20_lesson_4",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "11-20的认识",
+      "name": "解决问题",
+      "description": "一年级上册人教版数学“11-20的认识”中“解决问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -865,17 +1001,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "20以内的进位加法",
-      "name": "凑十法",
-      "description": "围绕“20以内的进位加法”中“凑十法”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "name": "9加几",
+      "description": "一年级上册人教版数学“20以内的进位加法”中“9加几”相关练习。",
       "common_mistakes": [
-        "凑十法：相同数位没有对齐",
-        "凑十法：进位、退位或约分步骤遗漏",
-        "凑十法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -892,17 +1030,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "20以内的进位加法",
-      "name": "9加几",
-      "description": "围绕“20以内的进位加法”中“9加几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "name": "8、7、6加几",
+      "description": "一年级上册人教版数学“20以内的进位加法”中“8、7、6加几”相关练习。",
       "common_mistakes": [
-        "9加几：相同数位没有对齐",
-        "9加几：进位、退位或约分步骤遗漏",
-        "9加几：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -919,17 +1059,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "20以内的进位加法",
-      "name": "8、7、6加几",
-      "description": "围绕“20以内的进位加法”中“8、7、6加几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "name": "5、4、3、2加几",
+      "description": "一年级上册人教版数学“20以内的进位加法”中“5、4、3、2加几”相关练习。",
       "common_mistakes": [
-        "8、7、6加几：相同数位没有对齐",
-        "8、7、6加几：进位、退位或约分步骤遗漏",
-        "8、7、6加几：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -946,17 +1088,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "20以内的进位加法",
-      "name": "5、4、3、2加几",
-      "description": "围绕“20以内的进位加法”中“5、4、3、2加几”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "name": "解决进位加法问题",
+      "description": "一年级上册人教版数学“20以内的进位加法”中“解决进位加法问题”相关练习。",
       "common_mistakes": [
-        "5、4、3、2加几：相同数位没有对齐",
-        "5、4、3、2加几：进位、退位或约分步骤遗漏",
-        "5、4、3、2加几：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -965,25 +1109,114 @@
       ]
     },
     {
-      "id": "carry_add_20_5",
-      "unit_id": "carry_add_20",
-      "lesson_id": "carry_add_20_lesson_5",
+      "id": "review_1",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_1",
       "grade": "一年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "20以内的进位加法",
-      "name": "解决进位加法问题",
-      "description": "围绕“20以内的进位加法”中“解决进位加法问题”这一知识点，生成符合一年级上册学生水平的原创练习。",
+      "unit": "总复习",
+      "name": "数与运算整理",
+      "description": "一年级上册人教版数学“总复习”中“数与运算整理”相关练习。",
       "common_mistakes": [
-        "解决进位加法问题：没有先找清数量关系",
-        "解决进位加法问题：只列式不写答语",
-        "解决进位加法问题：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_2",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_2",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "总复习",
+      "name": "数量关系整理",
+      "description": "一年级上册人教版数学“总复习”中“数量关系整理”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_3",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_3",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "总复习",
+      "name": "图形的认识整理",
+      "description": "一年级上册人教版数学“总复习”中“图形的认识整理”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "review_4",
+      "unit_id": "review",
+      "lesson_id": "review_lesson_4",
+      "grade": "一年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "总复习",
+      "name": "应用提升",
+      "description": "一年级上册人教版数学“总复习”中“应用提升”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

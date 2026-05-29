@@ -36,6 +36,19 @@ export async function loginWithWechat(profile = {}) {
   return result;
 }
 
+export async function loginWithPhoneNumber(phoneCode, profile = {}) {
+  if (!phoneCode) throw new Error("未获得手机号授权，请重试");
+  const loginResult = await Taro.login().catch(() => ({}));
+  const result = await request("/api/auth/phone-login", "POST", {
+    phoneCode,
+    wxCode: loginResult.code || "",
+    profile
+  });
+  if (result.token) Taro.setStorageSync(AUTH_TOKEN_KEY, result.token);
+  if (result.user) Taro.setStorageSync(AUTH_USER_KEY, result.user);
+  return result;
+}
+
 export async function getCurrentUser() {
   const result = await request("/api/auth/me");
   if (result.user) Taro.setStorageSync(AUTH_USER_KEY, result.user);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Taro, { useDidShow } from "@tarojs/taro";
 import { Button, Image, Text, View } from "@tarojs/components";
-import { getCurrentUser, loginWithWechat, logout } from "../../utils/api";
+import { getCurrentUser, loginWithPhoneNumber, logout } from "../../utils/api";
 import { navigateToPage } from "../../utils/navigation";
 import { getLearningStats } from "../../utils/practiceStats";
 import "../../styles/common.scss";
@@ -44,22 +44,16 @@ export default function MePage() {
     }
   }
 
-  async function handleLogin() {
+  async function handlePhoneLogin(event) {
     if (loggingIn) return;
+    const phoneCode = event?.detail?.code;
+    if (!phoneCode) {
+      Taro.showToast({ title: "需要授权手机号才能登录", icon: "none" });
+      return;
+    }
     setLoggingIn(true);
     try {
-      let profile = {};
-      try {
-        const info = await Taro.getUserProfile({ desc: "用于展示登录头像和昵称" });
-        profile = {
-          nickname: info.userInfo?.nickName || "",
-          avatarUrl: info.userInfo?.avatarUrl || ""
-        };
-      } catch {
-        profile = {};
-      }
-      const result = await loginWithWechat({
-        ...profile,
+      const result = await loginWithPhoneNumber(phoneCode, {
         role: role === "老师" ? "teacher" : "student",
         grade
       });
@@ -87,14 +81,14 @@ export default function MePage() {
 
   const summary = stats.summary || {};
   const accuracyText = summary.total ? `${summary.accuracy || 0}%` : "--";
-  const displayName = user?.nickname || "未登录";
+  const displayName = user?.phoneNumber || user?.nickname || "未登录";
 
   return (
     <View className="page me-page page-shell safe-bottom-space">
       <View className="hero hero-card hero-card--blue me-hero">
         <View className="me-hero-copy">
           <Text className="hero-title">我的</Text>
-          <Text className="hero-subtitle">管理登录、身份、年级和学习记录。</Text>
+          <Text className="hero-subtitle">管理手机号登录、身份、年级和学习记录。</Text>
           <View className="me-hero-badges">
             <Text className="me-hero-badge">学习档案</Text>
             <Text className="me-hero-badge">成长记录</Text>
@@ -111,7 +105,7 @@ export default function MePage() {
         <View className="card-title-row">
           <View>
             <Text className="section-title">账号信息</Text>
-            <Text className="section-subtitle">{user ? "已接入微信登录，学习数据可以绑定到当前账号。" : "登录后可以把学习记录绑定到账号。"}</Text>
+            <Text className="section-subtitle">{user ? "已用手机号登录，学习数据会绑定到当前账号。" : "授权手机号后即可登录并绑定学习记录。"}</Text>
           </View>
         </View>
         <View className="profile-info-grid">
@@ -140,7 +134,7 @@ export default function MePage() {
         {user ? (
           <Button className="secondary-button btn-secondary full-button profile-switch-button" onClick={handleLogout}>退出登录</Button>
         ) : (
-          <Button className="primary-button btn-primary full-button profile-switch-button" loading={loggingIn} onClick={handleLogin}>微信一键登录</Button>
+          <Button className="primary-button btn-primary full-button profile-switch-button" openType="getPhoneNumber" loading={loggingIn} onGetPhoneNumber={handlePhoneLogin}>手机号一键登录</Button>
         )}
         <Button className="secondary-button btn-secondary full-button profile-switch-button" onClick={switchRole}>切换身份</Button>
       </View>

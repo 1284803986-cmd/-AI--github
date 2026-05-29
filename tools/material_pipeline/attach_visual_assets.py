@@ -161,7 +161,7 @@ def attach():
         for key, image in image_map.items():
             is_shape = point == "长方体正方体圆柱球"
             is_clock = "钟面" in text or "时针" in text or "分针" in text
-            if key in text and (is_shape or is_clock):
+            if key in text:
                 question["image"] = image
                 question["image_source"] = "generated_diagram"
                 if "在长方体的下面画" in text:

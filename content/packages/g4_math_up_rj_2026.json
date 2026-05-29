@@ -3,9 +3,8 @@
   "package_name": "四年级数学上册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "四年级",
@@ -30,252 +29,231 @@
   ],
   "units": [
     {
-      "id": "large_numbers",
+      "id": "big_numbers",
       "name": "大数的认识",
       "lessons": [
         {
-          "id": "large_numbers_lesson_1",
-          "name": "亿以内数的读写",
+          "id": "big_numbers_lesson_1",
+          "name": "亿以内数的认识",
           "knowledge_point_ids": [
-            "large_numbers_1"
+            "big_numbers_1"
           ]
         },
         {
-          "id": "large_numbers_lesson_2",
+          "id": "big_numbers_lesson_2",
+          "name": "大数读写",
+          "knowledge_point_ids": [
+            "big_numbers_2"
+          ]
+        },
+        {
+          "id": "big_numbers_lesson_3",
           "name": "数位顺序表",
           "knowledge_point_ids": [
-            "large_numbers_2"
+            "big_numbers_3"
           ]
         },
         {
-          "id": "large_numbers_lesson_3",
-          "name": "大数比较",
-          "knowledge_point_ids": [
-            "large_numbers_3"
-          ]
-        },
-        {
-          "id": "large_numbers_lesson_4",
+          "id": "big_numbers_lesson_4",
           "name": "改写和近似数",
           "knowledge_point_ids": [
-            "large_numbers_4"
+            "big_numbers_4"
           ]
         }
       ]
     },
     {
-      "id": "hectare_square_km",
+      "id": "area_units",
       "name": "公顷和平方千米",
       "lessons": [
         {
-          "id": "hectare_square_km_lesson_1",
-          "name": "公顷的认识",
+          "id": "area_units_lesson_1",
+          "name": "公顷",
           "knowledge_point_ids": [
-            "hectare_square_km_1"
+            "area_units_1"
           ]
         },
         {
-          "id": "hectare_square_km_lesson_2",
-          "name": "平方千米的认识",
+          "id": "area_units_lesson_2",
+          "name": "平方千米",
           "knowledge_point_ids": [
-            "hectare_square_km_2"
+            "area_units_2"
           ]
         },
         {
-          "id": "hectare_square_km_lesson_3",
+          "id": "area_units_lesson_3",
           "name": "面积单位换算",
           "knowledge_point_ids": [
-            "hectare_square_km_3"
+            "area_units_3"
           ]
         }
       ]
     },
     {
-      "id": "angle",
+      "id": "angle_measure",
       "name": "角的度量",
       "lessons": [
         {
-          "id": "angle_lesson_1",
+          "id": "angle_measure_lesson_1",
           "name": "线段直线射线",
           "knowledge_point_ids": [
-            "angle_1"
+            "angle_measure_1"
           ]
         },
         {
-          "id": "angle_lesson_2",
+          "id": "angle_measure_lesson_2",
           "name": "角的认识",
           "knowledge_point_ids": [
-            "angle_2"
+            "angle_measure_2"
           ]
         },
         {
-          "id": "angle_lesson_3",
+          "id": "angle_measure_lesson_3",
           "name": "量角和画角",
           "knowledge_point_ids": [
-            "angle_3"
+            "angle_measure_3"
           ]
         },
         {
-          "id": "angle_lesson_4",
+          "id": "angle_measure_lesson_4",
           "name": "角的分类",
           "knowledge_point_ids": [
-            "angle_4"
+            "angle_measure_4"
           ]
         }
       ]
     },
     {
-      "id": "multiply_three_digit",
+      "id": "three_digit_mul",
       "name": "三位数乘两位数",
       "lessons": [
         {
-          "id": "multiply_three_digit_lesson_1",
+          "id": "three_digit_mul_lesson_1",
+          "name": "口算乘法",
+          "knowledge_point_ids": [
+            "three_digit_mul_1"
+          ]
+        },
+        {
+          "id": "three_digit_mul_lesson_2",
           "name": "笔算乘法",
           "knowledge_point_ids": [
-            "multiply_three_digit_1"
+            "three_digit_mul_2"
           ]
         },
         {
-          "id": "multiply_three_digit_lesson_2",
+          "id": "three_digit_mul_lesson_3",
           "name": "积的变化规律",
           "knowledge_point_ids": [
-            "multiply_three_digit_2"
+            "three_digit_mul_3"
           ]
         },
         {
-          "id": "multiply_three_digit_lesson_3",
-          "name": "乘法估算",
-          "knowledge_point_ids": [
-            "multiply_three_digit_3"
-          ]
-        },
-        {
-          "id": "multiply_three_digit_lesson_4",
+          "id": "three_digit_mul_lesson_4",
           "name": "速度时间路程",
           "knowledge_point_ids": [
-            "multiply_three_digit_4"
+            "three_digit_mul_4"
           ]
         }
       ]
     },
     {
-      "id": "parallel_perpendicular",
+      "id": "parallel_trapezoid",
       "name": "平行四边形和梯形",
       "lessons": [
         {
-          "id": "parallel_perpendicular_lesson_1",
+          "id": "parallel_trapezoid_lesson_1",
           "name": "垂直与平行",
           "knowledge_point_ids": [
-            "parallel_perpendicular_1"
+            "parallel_trapezoid_1"
           ]
         },
         {
-          "id": "parallel_perpendicular_lesson_2",
+          "id": "parallel_trapezoid_lesson_2",
           "name": "平行四边形",
           "knowledge_point_ids": [
-            "parallel_perpendicular_2"
+            "parallel_trapezoid_2"
           ]
         },
         {
-          "id": "parallel_perpendicular_lesson_3",
+          "id": "parallel_trapezoid_lesson_3",
           "name": "梯形",
           "knowledge_point_ids": [
-            "parallel_perpendicular_3"
-          ]
-        },
-        {
-          "id": "parallel_perpendicular_lesson_4",
-          "name": "画高",
-          "knowledge_point_ids": [
-            "parallel_perpendicular_4"
+            "parallel_trapezoid_3"
           ]
         }
       ]
     },
     {
-      "id": "divide_two_digit",
+      "id": "division_two_digit",
       "name": "除数是两位数的除法",
       "lessons": [
         {
-          "id": "divide_two_digit_lesson_1",
+          "id": "division_two_digit_lesson_1",
           "name": "口算除法",
           "knowledge_point_ids": [
-            "divide_two_digit_1"
+            "division_two_digit_1"
           ]
         },
         {
-          "id": "divide_two_digit_lesson_2",
+          "id": "division_two_digit_lesson_2",
           "name": "笔算除法",
           "knowledge_point_ids": [
-            "divide_two_digit_2"
+            "division_two_digit_2"
           ]
         },
         {
-          "id": "divide_two_digit_lesson_3",
+          "id": "division_two_digit_lesson_3",
           "name": "商的变化规律",
           "knowledge_point_ids": [
-            "divide_two_digit_3"
-          ]
-        },
-        {
-          "id": "divide_two_digit_lesson_4",
-          "name": "除法应用",
-          "knowledge_point_ids": [
-            "divide_two_digit_4"
+            "division_two_digit_3"
           ]
         }
       ]
     },
     {
-      "id": "statistics",
+      "id": "bar_chart",
       "name": "条形统计图",
       "lessons": [
         {
-          "id": "statistics_lesson_1",
+          "id": "bar_chart_lesson_1",
+          "name": "认识条形统计图",
+          "knowledge_point_ids": [
+            "bar_chart_1"
+          ]
+        },
+        {
+          "id": "bar_chart_lesson_2",
           "name": "一格表示多个单位",
           "knowledge_point_ids": [
-            "statistics_1"
-          ]
-        },
-        {
-          "id": "statistics_lesson_2",
-          "name": "读统计图",
-          "knowledge_point_ids": [
-            "statistics_2"
-          ]
-        },
-        {
-          "id": "statistics_lesson_3",
-          "name": "绘制统计图",
-          "knowledge_point_ids": [
-            "statistics_3"
+            "bar_chart_2"
           ]
         }
       ]
     },
     {
-      "id": "math_wide",
+      "id": "optimization",
       "name": "数学广角--优化",
       "lessons": [
         {
-          "id": "math_wide_lesson_1",
-          "name": "合理安排",
+          "id": "optimization_lesson_1",
+          "name": "沏茶问题",
           "knowledge_point_ids": [
-            "math_wide_1"
+            "optimization_1"
           ]
         },
         {
-          "id": "math_wide_lesson_2",
+          "id": "optimization_lesson_2",
           "name": "烙饼问题",
           "knowledge_point_ids": [
-            "math_wide_2"
+            "optimization_2"
           ]
         },
         {
-          "id": "math_wide_lesson_3",
+          "id": "optimization_lesson_3",
           "name": "田忌赛马",
           "knowledge_point_ids": [
-            "math_wide_3"
+            "optimization_3"
           ]
         }
       ]
@@ -283,25 +261,27 @@
   ],
   "knowledge_points": [
     {
-      "id": "large_numbers_1",
-      "unit_id": "large_numbers",
-      "lesson_id": "large_numbers_lesson_1",
+      "id": "big_numbers_1",
+      "unit_id": "big_numbers",
+      "lesson_id": "big_numbers_lesson_1",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "大数的认识",
-      "name": "亿以内数的读写",
-      "description": "围绕“大数的认识”中“亿以内数的读写”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "name": "亿以内数的认识",
+      "description": "四年级上册人教版数学“大数的认识”中“亿以内数的认识”相关练习。",
       "common_mistakes": [
-        "亿以内数的读写：没有看清题目要求",
-        "亿以内数的读写：答语单位写错或漏写",
-        "亿以内数的读写：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -310,25 +290,56 @@
       ]
     },
     {
-      "id": "large_numbers_2",
-      "unit_id": "large_numbers",
-      "lesson_id": "large_numbers_lesson_2",
+      "id": "big_numbers_2",
+      "unit_id": "big_numbers",
+      "lesson_id": "big_numbers_lesson_2",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "大数的认识",
+      "name": "大数读写",
+      "description": "四年级上册人教版数学“大数的认识”中“大数读写”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "big_numbers_3",
+      "unit_id": "big_numbers",
+      "lesson_id": "big_numbers_lesson_3",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "大数的认识",
       "name": "数位顺序表",
-      "description": "围绕“大数的认识”中“数位顺序表”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“大数的认识”中“数位顺序表”相关练习。",
       "common_mistakes": [
-        "数位顺序表：没有看清题目要求",
-        "数位顺序表：答语单位写错或漏写",
-        "数位顺序表：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -337,52 +348,27 @@
       ]
     },
     {
-      "id": "large_numbers_3",
-      "unit_id": "large_numbers",
-      "lesson_id": "large_numbers_lesson_3",
-      "grade": "四年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "大数的认识",
-      "name": "大数比较",
-      "description": "围绕“大数的认识”中“大数比较”这一知识点，生成符合四年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "大数比较：没有看清题目要求",
-        "大数比较：答语单位写错或漏写",
-        "大数比较：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "large_numbers_4",
-      "unit_id": "large_numbers",
-      "lesson_id": "large_numbers_lesson_4",
+      "id": "big_numbers_4",
+      "unit_id": "big_numbers",
+      "lesson_id": "big_numbers_lesson_4",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "大数的认识",
       "name": "改写和近似数",
-      "description": "围绕“大数的认识”中“改写和近似数”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“大数的认识”中“改写和近似数”相关练习。",
       "common_mistakes": [
-        "改写和近似数：没有看清题目要求",
-        "改写和近似数：答语单位写错或漏写",
-        "改写和近似数：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -391,25 +377,27 @@
       ]
     },
     {
-      "id": "hectare_square_km_1",
-      "unit_id": "hectare_square_km",
-      "lesson_id": "hectare_square_km_lesson_1",
+      "id": "area_units_1",
+      "unit_id": "area_units",
+      "lesson_id": "area_units_lesson_1",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "公顷和平方千米",
-      "name": "公顷的认识",
-      "description": "围绕“公顷和平方千米”中“公顷的认识”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "name": "公顷",
+      "description": "四年级上册人教版数学“公顷和平方千米”中“公顷”相关练习。",
       "common_mistakes": [
-        "公顷的认识：没有看清题目要求",
-        "公顷的认识：答语单位写错或漏写",
-        "公顷的认识：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -418,25 +406,27 @@
       ]
     },
     {
-      "id": "hectare_square_km_2",
-      "unit_id": "hectare_square_km",
-      "lesson_id": "hectare_square_km_lesson_2",
+      "id": "area_units_2",
+      "unit_id": "area_units",
+      "lesson_id": "area_units_lesson_2",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "公顷和平方千米",
-      "name": "平方千米的认识",
-      "description": "围绕“公顷和平方千米”中“平方千米的认识”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "name": "平方千米",
+      "description": "四年级上册人教版数学“公顷和平方千米”中“平方千米”相关练习。",
       "common_mistakes": [
-        "平方千米的认识：没有看清题目要求",
-        "平方千米的认识：答语单位写错或漏写",
-        "平方千米的认识：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -445,25 +435,27 @@
       ]
     },
     {
-      "id": "hectare_square_km_3",
-      "unit_id": "hectare_square_km",
-      "lesson_id": "hectare_square_km_lesson_3",
+      "id": "area_units_3",
+      "unit_id": "area_units",
+      "lesson_id": "area_units_lesson_3",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "公顷和平方千米",
       "name": "面积单位换算",
-      "description": "围绕“公顷和平方千米”中“面积单位换算”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“公顷和平方千米”中“面积单位换算”相关练习。",
       "common_mistakes": [
-        "面积单位换算：把图形名称或单位混淆",
-        "面积单位换算：周长、面积、体积公式用错",
-        "面积单位换算：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -472,25 +464,27 @@
       ]
     },
     {
-      "id": "angle_1",
-      "unit_id": "angle",
-      "lesson_id": "angle_lesson_1",
+      "id": "angle_measure_1",
+      "unit_id": "angle_measure",
+      "lesson_id": "angle_measure_lesson_1",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "角的度量",
       "name": "线段直线射线",
-      "description": "围绕“角的度量”中“线段直线射线”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“角的度量”中“线段直线射线”相关练习。",
       "common_mistakes": [
-        "线段直线射线：把图形名称或单位混淆",
-        "线段直线射线：周长、面积、体积公式用错",
-        "线段直线射线：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -499,25 +493,27 @@
       ]
     },
     {
-      "id": "angle_2",
-      "unit_id": "angle",
-      "lesson_id": "angle_lesson_2",
+      "id": "angle_measure_2",
+      "unit_id": "angle_measure",
+      "lesson_id": "angle_measure_lesson_2",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "角的度量",
       "name": "角的认识",
-      "description": "围绕“角的度量”中“角的认识”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“角的度量”中“角的认识”相关练习。",
       "common_mistakes": [
-        "角的认识：把图形名称或单位混淆",
-        "角的认识：周长、面积、体积公式用错",
-        "角的认识：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -526,25 +522,27 @@
       ]
     },
     {
-      "id": "angle_3",
-      "unit_id": "angle",
-      "lesson_id": "angle_lesson_3",
+      "id": "angle_measure_3",
+      "unit_id": "angle_measure",
+      "lesson_id": "angle_measure_lesson_3",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "角的度量",
       "name": "量角和画角",
-      "description": "围绕“角的度量”中“量角和画角”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“角的度量”中“量角和画角”相关练习。",
       "common_mistakes": [
-        "量角和画角：把图形名称或单位混淆",
-        "量角和画角：周长、面积、体积公式用错",
-        "量角和画角：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -553,25 +551,27 @@
       ]
     },
     {
-      "id": "angle_4",
-      "unit_id": "angle",
-      "lesson_id": "angle_lesson_4",
+      "id": "angle_measure_4",
+      "unit_id": "angle_measure",
+      "lesson_id": "angle_measure_lesson_4",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "角的度量",
       "name": "角的分类",
-      "description": "围绕“角的度量”中“角的分类”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“角的度量”中“角的分类”相关练习。",
       "common_mistakes": [
-        "角的分类：把图形名称或单位混淆",
-        "角的分类：周长、面积、体积公式用错",
-        "角的分类：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -580,25 +580,56 @@
       ]
     },
     {
-      "id": "multiply_three_digit_1",
-      "unit_id": "multiply_three_digit",
-      "lesson_id": "multiply_three_digit_lesson_1",
+      "id": "three_digit_mul_1",
+      "unit_id": "three_digit_mul",
+      "lesson_id": "three_digit_mul_lesson_1",
+      "grade": "四年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "三位数乘两位数",
+      "name": "口算乘法",
+      "description": "四年级上册人教版数学“三位数乘两位数”中“口算乘法”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "three_digit_mul_2",
+      "unit_id": "three_digit_mul",
+      "lesson_id": "three_digit_mul_lesson_2",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "三位数乘两位数",
       "name": "笔算乘法",
-      "description": "围绕“三位数乘两位数”中“笔算乘法”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“三位数乘两位数”中“笔算乘法”相关练习。",
       "common_mistakes": [
-        "笔算乘法：相同数位没有对齐",
-        "笔算乘法：进位、退位或约分步骤遗漏",
-        "笔算乘法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -607,25 +638,27 @@
       ]
     },
     {
-      "id": "multiply_three_digit_2",
-      "unit_id": "multiply_three_digit",
-      "lesson_id": "multiply_three_digit_lesson_2",
+      "id": "three_digit_mul_3",
+      "unit_id": "three_digit_mul",
+      "lesson_id": "three_digit_mul_lesson_3",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "三位数乘两位数",
       "name": "积的变化规律",
-      "description": "围绕“三位数乘两位数”中“积的变化规律”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“三位数乘两位数”中“积的变化规律”相关练习。",
       "common_mistakes": [
-        "积的变化规律：相同数位没有对齐",
-        "积的变化规律：进位、退位或约分步骤遗漏",
-        "积的变化规律：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -634,52 +667,27 @@
       ]
     },
     {
-      "id": "multiply_three_digit_3",
-      "unit_id": "multiply_three_digit",
-      "lesson_id": "multiply_three_digit_lesson_3",
-      "grade": "四年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "三位数乘两位数",
-      "name": "乘法估算",
-      "description": "围绕“三位数乘两位数”中“乘法估算”这一知识点，生成符合四年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "乘法估算：相同数位没有对齐",
-        "乘法估算：进位、退位或约分步骤遗漏",
-        "乘法估算：把运算顺序看错"
-      ],
-      "recommended_question_types": [
-        "计算题",
-        "填空题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "multiply_three_digit_4",
-      "unit_id": "multiply_three_digit",
-      "lesson_id": "multiply_three_digit_lesson_4",
+      "id": "three_digit_mul_4",
+      "unit_id": "three_digit_mul",
+      "lesson_id": "three_digit_mul_lesson_4",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "三位数乘两位数",
       "name": "速度时间路程",
-      "description": "围绕“三位数乘两位数”中“速度时间路程”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“三位数乘两位数”中“速度时间路程”相关练习。",
       "common_mistakes": [
-        "速度时间路程：相同数位没有对齐",
-        "速度时间路程：进位、退位或约分步骤遗漏",
-        "速度时间路程：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -688,25 +696,27 @@
       ]
     },
     {
-      "id": "parallel_perpendicular_1",
-      "unit_id": "parallel_perpendicular",
-      "lesson_id": "parallel_perpendicular_lesson_1",
+      "id": "parallel_trapezoid_1",
+      "unit_id": "parallel_trapezoid",
+      "lesson_id": "parallel_trapezoid_lesson_1",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "平行四边形和梯形",
       "name": "垂直与平行",
-      "description": "围绕“平行四边形和梯形”中“垂直与平行”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“平行四边形和梯形”中“垂直与平行”相关练习。",
       "common_mistakes": [
-        "垂直与平行：把图形名称或单位混淆",
-        "垂直与平行：周长、面积、体积公式用错",
-        "垂直与平行：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -715,25 +725,27 @@
       ]
     },
     {
-      "id": "parallel_perpendicular_2",
-      "unit_id": "parallel_perpendicular",
-      "lesson_id": "parallel_perpendicular_lesson_2",
+      "id": "parallel_trapezoid_2",
+      "unit_id": "parallel_trapezoid",
+      "lesson_id": "parallel_trapezoid_lesson_2",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "平行四边形和梯形",
       "name": "平行四边形",
-      "description": "围绕“平行四边形和梯形”中“平行四边形”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“平行四边形和梯形”中“平行四边形”相关练习。",
       "common_mistakes": [
-        "平行四边形：把图形名称或单位混淆",
-        "平行四边形：周长、面积、体积公式用错",
-        "平行四边形：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -742,25 +754,27 @@
       ]
     },
     {
-      "id": "parallel_perpendicular_3",
-      "unit_id": "parallel_perpendicular",
-      "lesson_id": "parallel_perpendicular_lesson_3",
+      "id": "parallel_trapezoid_3",
+      "unit_id": "parallel_trapezoid",
+      "lesson_id": "parallel_trapezoid_lesson_3",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "平行四边形和梯形",
       "name": "梯形",
-      "description": "围绕“平行四边形和梯形”中“梯形”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“平行四边形和梯形”中“梯形”相关练习。",
       "common_mistakes": [
-        "梯形：把图形名称或单位混淆",
-        "梯形：周长、面积、体积公式用错",
-        "梯形：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -769,52 +783,27 @@
       ]
     },
     {
-      "id": "parallel_perpendicular_4",
-      "unit_id": "parallel_perpendicular",
-      "lesson_id": "parallel_perpendicular_lesson_4",
-      "grade": "四年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "平行四边形和梯形",
-      "name": "画高",
-      "description": "围绕“平行四边形和梯形”中“画高”这一知识点，生成符合四年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "画高：把图形名称或单位混淆",
-        "画高：周长、面积、体积公式用错",
-        "画高：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "divide_two_digit_1",
-      "unit_id": "divide_two_digit",
-      "lesson_id": "divide_two_digit_lesson_1",
+      "id": "division_two_digit_1",
+      "unit_id": "division_two_digit",
+      "lesson_id": "division_two_digit_lesson_1",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "除数是两位数的除法",
       "name": "口算除法",
-      "description": "围绕“除数是两位数的除法”中“口算除法”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“除数是两位数的除法”中“口算除法”相关练习。",
       "common_mistakes": [
-        "口算除法：相同数位没有对齐",
-        "口算除法：进位、退位或约分步骤遗漏",
-        "口算除法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -823,25 +812,27 @@
       ]
     },
     {
-      "id": "divide_two_digit_2",
-      "unit_id": "divide_two_digit",
-      "lesson_id": "divide_two_digit_lesson_2",
+      "id": "division_two_digit_2",
+      "unit_id": "division_two_digit",
+      "lesson_id": "division_two_digit_lesson_2",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "除数是两位数的除法",
       "name": "笔算除法",
-      "description": "围绕“除数是两位数的除法”中“笔算除法”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“除数是两位数的除法”中“笔算除法”相关练习。",
       "common_mistakes": [
-        "笔算除法：相同数位没有对齐",
-        "笔算除法：进位、退位或约分步骤遗漏",
-        "笔算除法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -850,25 +841,27 @@
       ]
     },
     {
-      "id": "divide_two_digit_3",
-      "unit_id": "divide_two_digit",
-      "lesson_id": "divide_two_digit_lesson_3",
+      "id": "division_two_digit_3",
+      "unit_id": "division_two_digit",
+      "lesson_id": "division_two_digit_lesson_3",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "除数是两位数的除法",
       "name": "商的变化规律",
-      "description": "围绕“除数是两位数的除法”中“商的变化规律”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“除数是两位数的除法”中“商的变化规律”相关练习。",
       "common_mistakes": [
-        "商的变化规律：相同数位没有对齐",
-        "商的变化规律：进位、退位或约分步骤遗漏",
-        "商的变化规律：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -877,25 +870,27 @@
       ]
     },
     {
-      "id": "divide_two_digit_4",
-      "unit_id": "divide_two_digit",
-      "lesson_id": "divide_two_digit_lesson_4",
+      "id": "bar_chart_1",
+      "unit_id": "bar_chart",
+      "lesson_id": "bar_chart_lesson_1",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "除数是两位数的除法",
-      "name": "除法应用",
-      "description": "围绕“除数是两位数的除法”中“除法应用”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "unit": "条形统计图",
+      "name": "认识条形统计图",
+      "description": "四年级上册人教版数学“条形统计图”中“认识条形统计图”相关练习。",
       "common_mistakes": [
-        "除法应用：没有先找清数量关系",
-        "除法应用：只列式不写答语",
-        "除法应用：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -904,25 +899,27 @@
       ]
     },
     {
-      "id": "statistics_1",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_1",
+      "id": "bar_chart_2",
+      "unit_id": "bar_chart",
+      "lesson_id": "bar_chart_lesson_2",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "条形统计图",
       "name": "一格表示多个单位",
-      "description": "围绕“条形统计图”中“一格表示多个单位”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“条形统计图”中“一格表示多个单位”相关练习。",
       "common_mistakes": [
-        "一格表示多个单位：没有看清题目要求",
-        "一格表示多个单位：答语单位写错或漏写",
-        "一格表示多个单位：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -931,79 +928,27 @@
       ]
     },
     {
-      "id": "statistics_2",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_2",
-      "grade": "四年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "条形统计图",
-      "name": "读统计图",
-      "description": "围绕“条形统计图”中“读统计图”这一知识点，生成符合四年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "读统计图：没有看清题目要求",
-        "读统计图：答语单位写错或漏写",
-        "读统计图：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "statistics_3",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_3",
-      "grade": "四年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "条形统计图",
-      "name": "绘制统计图",
-      "description": "围绕“条形统计图”中“绘制统计图”这一知识点，生成符合四年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "绘制统计图：没有看清题目要求",
-        "绘制统计图：答语单位写错或漏写",
-        "绘制统计图：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_1",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_1",
+      "id": "optimization_1",
+      "unit_id": "optimization",
+      "lesson_id": "optimization_lesson_1",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--优化",
-      "name": "合理安排",
-      "description": "围绕“数学广角--优化”中“合理安排”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "name": "沏茶问题",
+      "description": "四年级上册人教版数学“数学广角--优化”中“沏茶问题”相关练习。",
       "common_mistakes": [
-        "合理安排：把图形名称或单位混淆",
-        "合理安排：周长、面积、体积公式用错",
-        "合理安排：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -1012,25 +957,27 @@
       ]
     },
     {
-      "id": "math_wide_2",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_2",
+      "id": "optimization_2",
+      "unit_id": "optimization",
+      "lesson_id": "optimization_lesson_2",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--优化",
       "name": "烙饼问题",
-      "description": "围绕“数学广角--优化”中“烙饼问题”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“数学广角--优化”中“烙饼问题”相关练习。",
       "common_mistakes": [
-        "烙饼问题：把图形名称或单位混淆",
-        "烙饼问题：周长、面积、体积公式用错",
-        "烙饼问题：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -1039,25 +986,27 @@
       ]
     },
     {
-      "id": "math_wide_3",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_3",
+      "id": "optimization_3",
+      "unit_id": "optimization",
+      "lesson_id": "optimization_lesson_3",
       "grade": "四年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--优化",
       "name": "田忌赛马",
-      "description": "围绕“数学广角--优化”中“田忌赛马”这一知识点，生成符合四年级上册学生水平的原创练习。",
+      "description": "四年级上册人教版数学“数学广角--优化”中“田忌赛马”相关练习。",
       "common_mistakes": [
-        "田忌赛马：把图形名称或单位混淆",
-        "田忌赛马：周长、面积、体积公式用错",
-        "田忌赛马：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

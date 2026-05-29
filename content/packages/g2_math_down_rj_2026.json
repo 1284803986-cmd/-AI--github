@@ -3,9 +3,8 @@
   "package_name": "二年级数学下册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "二年级",
@@ -30,82 +29,97 @@
   ],
   "units": [
     {
-      "id": "time",
-      "name": "时间在哪里",
-      "lessons": [
-        {
-          "id": "time_lesson_1",
-          "name": "认识一天和钟表",
-          "knowledge_point_ids": [
-            "time_1"
-          ]
-        },
-        {
-          "id": "time_lesson_2",
-          "name": "经过时间",
-          "knowledge_point_ids": [
-            "time_2"
-          ]
-        },
-        {
-          "id": "time_lesson_3",
-          "name": "时间安排问题",
-          "knowledge_point_ids": [
-            "time_3"
-          ]
-        }
-      ]
-    },
-    {
       "id": "division_remainder",
       "name": "有余数的除法",
       "lessons": [
         {
           "id": "division_remainder_lesson_1",
-          "name": "认识余数",
+          "name": "认识有余数的除法",
           "knowledge_point_ids": [
             "division_remainder_1"
           ]
         },
         {
           "id": "division_remainder_lesson_2",
-          "name": "有余数除法计算",
+          "name": "余数和除数的关系",
           "knowledge_point_ids": [
             "division_remainder_2"
           ]
         },
         {
           "id": "division_remainder_lesson_3",
-          "name": "余数应用",
+          "name": "竖式计算有余数的除法",
           "knowledge_point_ids": [
             "division_remainder_3"
+          ]
+        },
+        {
+          "id": "division_remainder_lesson_4",
+          "name": "有余数除法的试商",
+          "knowledge_point_ids": [
+            "division_remainder_4"
+          ]
+        },
+        {
+          "id": "division_remainder_lesson_5",
+          "name": "有余数除法的实际应用",
+          "knowledge_point_ids": [
+            "division_remainder_5"
+          ]
+        },
+        {
+          "id": "division_remainder_lesson_6",
+          "name": "周期问题",
+          "knowledge_point_ids": [
+            "division_remainder_6"
           ]
         }
       ]
     },
     {
-      "id": "multiply_divide_relation",
-      "name": "数量间的乘除关系",
+      "id": "times_relation",
+      "name": "数量间的倍数关系",
       "lessons": [
         {
-          "id": "multiply_divide_relation_lesson_1",
-          "name": "几个几与乘法",
+          "id": "times_relation_lesson_1",
+          "name": "倍的认识",
           "knowledge_point_ids": [
-            "multiply_divide_relation_1"
+            "times_relation_1"
           ]
         },
         {
-          "id": "multiply_divide_relation_lesson_2",
-          "name": "平均分与除法",
+          "id": "times_relation_lesson_2",
+          "name": "求一个数是另一个数的几倍",
           "knowledge_point_ids": [
-            "multiply_divide_relation_2"
+            "times_relation_2"
           ]
         },
         {
-          "id": "multiply_divide_relation_lesson_3",
-          "name": "乘除关系应用",
+          "id": "times_relation_lesson_3",
+          "name": "求一个数的几倍是多少",
           "knowledge_point_ids": [
-            "multiply_divide_relation_3"
+            "times_relation_3"
+          ]
+        },
+        {
+          "id": "times_relation_lesson_4",
+          "name": "已知几倍是多少求这个数",
+          "knowledge_point_ids": [
+            "times_relation_4"
+          ]
+        },
+        {
+          "id": "times_relation_lesson_5",
+          "name": "连续两问问题",
+          "knowledge_point_ids": [
+            "times_relation_5"
+          ]
+        },
+        {
+          "id": "times_relation_lesson_6",
+          "name": "补充条件和问题",
+          "knowledge_point_ids": [
+            "times_relation_6"
           ]
         }
       ]
@@ -116,23 +130,72 @@
       "lessons": [
         {
           "id": "numbers_10000_lesson_1",
-          "name": "千和万的认识",
+          "name": "千以内数的认识及读写",
           "knowledge_point_ids": [
             "numbers_10000_1"
           ]
         },
         {
           "id": "numbers_10000_lesson_2",
-          "name": "万以内数的读写",
+          "name": "认识计数单位千",
           "knowledge_point_ids": [
             "numbers_10000_2"
           ]
         },
         {
           "id": "numbers_10000_lesson_3",
-          "name": "大小比较与近似数",
+          "name": "万以内数的组成",
           "knowledge_point_ids": [
             "numbers_10000_3"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_4",
+          "name": "算盘表示数",
+          "knowledge_point_ids": [
+            "numbers_10000_4"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_5",
+          "name": "认识计数单位万",
+          "knowledge_point_ids": [
+            "numbers_10000_5"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_6",
+          "name": "万以内数的读法",
+          "knowledge_point_ids": [
+            "numbers_10000_6"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_7",
+          "name": "万以内数的写法",
+          "knowledge_point_ids": [
+            "numbers_10000_7"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_8",
+          "name": "万以内数的大小比较",
+          "knowledge_point_ids": [
+            "numbers_10000_8"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_9",
+          "name": "认识近似数",
+          "knowledge_point_ids": [
+            "numbers_10000_9"
+          ]
+        },
+        {
+          "id": "numbers_10000_lesson_10",
+          "name": "简单加减法",
+          "knowledge_point_ids": [
+            "numbers_10000_10"
           ]
         }
       ]
@@ -143,150 +206,57 @@
       "lessons": [
         {
           "id": "add_sub_10000_lesson_1",
-          "name": "万以内加法",
+          "name": "一次进位加法",
           "knowledge_point_ids": [
             "add_sub_10000_1"
           ]
         },
         {
           "id": "add_sub_10000_lesson_2",
-          "name": "万以内减法",
+          "name": "连续进位加法",
           "knowledge_point_ids": [
             "add_sub_10000_2"
           ]
         },
         {
           "id": "add_sub_10000_lesson_3",
-          "name": "加减法应用",
+          "name": "退位减法",
           "knowledge_point_ids": [
             "add_sub_10000_3"
           ]
-        }
-      ]
-    },
-    {
-      "id": "math_comic",
-      "name": "数学连环画",
-      "lessons": [
+        },
         {
-          "id": "math_comic_lesson_1",
-          "name": "图文顺序中的数量关系",
+          "id": "add_sub_10000_lesson_4",
+          "name": "被减数中间有0的减法",
           "knowledge_point_ids": [
-            "math_comic_1"
+            "add_sub_10000_4"
           ]
         },
         {
-          "id": "math_comic_lesson_2",
-          "name": "多步故事问题",
+          "id": "add_sub_10000_lesson_5",
+          "name": "加减法各部分间的关系",
           "knowledge_point_ids": [
-            "math_comic_2"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "review",
-      "name": "复习与关联",
-      "lessons": [
-        {
-          "id": "review_lesson_1",
-          "name": "数与运算整理",
-          "knowledge_point_ids": [
-            "review_1"
+            "add_sub_10000_5"
           ]
         },
         {
-          "id": "review_lesson_2",
-          "name": "综合解决问题",
+          "id": "add_sub_10000_lesson_6",
+          "name": "估算解决问题",
           "knowledge_point_ids": [
-            "review_2"
+            "add_sub_10000_6"
+          ]
+        },
+        {
+          "id": "add_sub_10000_lesson_7",
+          "name": "数独游戏",
+          "knowledge_point_ids": [
+            "add_sub_10000_7"
           ]
         }
       ]
     }
   ],
   "knowledge_points": [
-    {
-      "id": "time_1",
-      "unit_id": "time",
-      "lesson_id": "time_lesson_1",
-      "grade": "二年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "时间在哪里",
-      "name": "认识一天和钟表",
-      "description": "围绕“时间在哪里”中“认识一天和钟表”这一知识点，生成符合二年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "认识一天和钟表：没有看清题目要求",
-        "认识一天和钟表：答语单位写错或漏写",
-        "认识一天和钟表：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "time_2",
-      "unit_id": "time",
-      "lesson_id": "time_lesson_2",
-      "grade": "二年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "时间在哪里",
-      "name": "经过时间",
-      "description": "围绕“时间在哪里”中“经过时间”这一知识点，生成符合二年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "经过时间：没有看清题目要求",
-        "经过时间：答语单位写错或漏写",
-        "经过时间：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "time_3",
-      "unit_id": "time",
-      "lesson_id": "time_lesson_3",
-      "grade": "二年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "时间在哪里",
-      "name": "时间安排问题",
-      "description": "围绕“时间在哪里”中“时间安排问题”这一知识点，生成符合二年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "时间安排问题：没有先找清数量关系",
-        "时间安排问题：只列式不写答语",
-        "时间安排问题：多步问题少算一步"
-      ],
-      "recommended_question_types": [
-        "应用题",
-        "填空题",
-        "变式题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
     {
       "id": "division_remainder_1",
       "unit_id": "division_remainder",
@@ -296,17 +266,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "有余数的除法",
-      "name": "认识余数",
-      "description": "围绕“有余数的除法”中“认识余数”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "认识有余数的除法",
+      "description": "二年级下册人教版数学“有余数的除法”中“认识有余数的除法”相关练习。",
       "common_mistakes": [
-        "认识余数：相同数位没有对齐",
-        "认识余数：进位、退位或约分步骤遗漏",
-        "认识余数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -323,17 +295,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "有余数的除法",
-      "name": "有余数除法计算",
-      "description": "围绕“有余数的除法”中“有余数除法计算”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "余数和除数的关系",
+      "description": "二年级下册人教版数学“有余数的除法”中“余数和除数的关系”相关练习。",
       "common_mistakes": [
-        "有余数除法计算：相同数位没有对齐",
-        "有余数除法计算：进位、退位或约分步骤遗漏",
-        "有余数除法计算：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -350,17 +324,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "有余数的除法",
-      "name": "余数应用",
-      "description": "围绕“有余数的除法”中“余数应用”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "竖式计算有余数的除法",
+      "description": "二年级下册人教版数学“有余数的除法”中“竖式计算有余数的除法”相关练习。",
       "common_mistakes": [
-        "余数应用：没有先找清数量关系",
-        "余数应用：只列式不写答语",
-        "余数应用：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -369,25 +345,27 @@
       ]
     },
     {
-      "id": "multiply_divide_relation_1",
-      "unit_id": "multiply_divide_relation",
-      "lesson_id": "multiply_divide_relation_lesson_1",
+      "id": "division_remainder_4",
+      "unit_id": "division_remainder",
+      "lesson_id": "division_remainder_lesson_4",
       "grade": "二年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "数量间的乘除关系",
-      "name": "几个几与乘法",
-      "description": "围绕“数量间的乘除关系”中“几个几与乘法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "unit": "有余数的除法",
+      "name": "有余数除法的试商",
+      "description": "二年级下册人教版数学“有余数的除法”中“有余数除法的试商”相关练习。",
       "common_mistakes": [
-        "几个几与乘法：没有先找清数量关系",
-        "几个几与乘法：只列式不写答语",
-        "几个几与乘法：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -396,25 +374,27 @@
       ]
     },
     {
-      "id": "multiply_divide_relation_2",
-      "unit_id": "multiply_divide_relation",
-      "lesson_id": "multiply_divide_relation_lesson_2",
+      "id": "division_remainder_5",
+      "unit_id": "division_remainder",
+      "lesson_id": "division_remainder_lesson_5",
       "grade": "二年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "数量间的乘除关系",
-      "name": "平均分与除法",
-      "description": "围绕“数量间的乘除关系”中“平均分与除法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "unit": "有余数的除法",
+      "name": "有余数除法的实际应用",
+      "description": "二年级下册人教版数学“有余数的除法”中“有余数除法的实际应用”相关练习。",
       "common_mistakes": [
-        "平均分与除法：没有先找清数量关系",
-        "平均分与除法：只列式不写答语",
-        "平均分与除法：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -423,25 +403,201 @@
       ]
     },
     {
-      "id": "multiply_divide_relation_3",
-      "unit_id": "multiply_divide_relation",
-      "lesson_id": "multiply_divide_relation_lesson_3",
+      "id": "division_remainder_6",
+      "unit_id": "division_remainder",
+      "lesson_id": "division_remainder_lesson_6",
       "grade": "二年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "数量间的乘除关系",
-      "name": "乘除关系应用",
-      "description": "围绕“数量间的乘除关系”中“乘除关系应用”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "unit": "有余数的除法",
+      "name": "周期问题",
+      "description": "二年级下册人教版数学“有余数的除法”中“周期问题”相关练习。",
       "common_mistakes": [
-        "乘除关系应用：没有先找清数量关系",
-        "乘除关系应用：只列式不写答语",
-        "乘除关系应用：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "times_relation_1",
+      "unit_id": "times_relation",
+      "lesson_id": "times_relation_lesson_1",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的倍数关系",
+      "name": "倍的认识",
+      "description": "二年级下册人教版数学“数量间的倍数关系”中“倍的认识”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "times_relation_2",
+      "unit_id": "times_relation",
+      "lesson_id": "times_relation_lesson_2",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的倍数关系",
+      "name": "求一个数是另一个数的几倍",
+      "description": "二年级下册人教版数学“数量间的倍数关系”中“求一个数是另一个数的几倍”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "times_relation_3",
+      "unit_id": "times_relation",
+      "lesson_id": "times_relation_lesson_3",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的倍数关系",
+      "name": "求一个数的几倍是多少",
+      "description": "二年级下册人教版数学“数量间的倍数关系”中“求一个数的几倍是多少”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "times_relation_4",
+      "unit_id": "times_relation",
+      "lesson_id": "times_relation_lesson_4",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的倍数关系",
+      "name": "已知几倍是多少求这个数",
+      "description": "二年级下册人教版数学“数量间的倍数关系”中“已知几倍是多少求这个数”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "times_relation_5",
+      "unit_id": "times_relation",
+      "lesson_id": "times_relation_lesson_5",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的倍数关系",
+      "name": "连续两问问题",
+      "description": "二年级下册人教版数学“数量间的倍数关系”中“连续两问问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "times_relation_6",
+      "unit_id": "times_relation",
+      "lesson_id": "times_relation_lesson_6",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "数量间的倍数关系",
+      "name": "补充条件和问题",
+      "description": "二年级下册人教版数学“数量间的倍数关系”中“补充条件和问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -458,17 +614,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "万以内数的认识",
-      "name": "千和万的认识",
-      "description": "围绕“万以内数的认识”中“千和万的认识”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "千以内数的认识及读写",
+      "description": "二年级下册人教版数学“万以内数的认识”中“千以内数的认识及读写”相关练习。",
       "common_mistakes": [
-        "千和万的认识：没有看清题目要求",
-        "千和万的认识：答语单位写错或漏写",
-        "千和万的认识：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -485,17 +643,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "万以内数的认识",
-      "name": "万以内数的读写",
-      "description": "围绕“万以内数的认识”中“万以内数的读写”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "认识计数单位千",
+      "description": "二年级下册人教版数学“万以内数的认识”中“认识计数单位千”相关练习。",
       "common_mistakes": [
-        "万以内数的读写：没有看清题目要求",
-        "万以内数的读写：答语单位写错或漏写",
-        "万以内数的读写：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -512,17 +672,222 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "万以内数的认识",
-      "name": "大小比较与近似数",
-      "description": "围绕“万以内数的认识”中“大小比较与近似数”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "万以内数的组成",
+      "description": "二年级下册人教版数学“万以内数的认识”中“万以内数的组成”相关练习。",
       "common_mistakes": [
-        "大小比较与近似数：没有看清题目要求",
-        "大小比较与近似数：答语单位写错或漏写",
-        "大小比较与近似数：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_4",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_4",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "算盘表示数",
+      "description": "二年级下册人教版数学“万以内数的认识”中“算盘表示数”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_5",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_5",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "认识计数单位万",
+      "description": "二年级下册人教版数学“万以内数的认识”中“认识计数单位万”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_6",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_6",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "万以内数的读法",
+      "description": "二年级下册人教版数学“万以内数的认识”中“万以内数的读法”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_7",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_7",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "万以内数的写法",
+      "description": "二年级下册人教版数学“万以内数的认识”中“万以内数的写法”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_8",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_8",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "万以内数的大小比较",
+      "description": "二年级下册人教版数学“万以内数的认识”中“万以内数的大小比较”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_9",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_9",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "认识近似数",
+      "description": "二年级下册人教版数学“万以内数的认识”中“认识近似数”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "numbers_10000_10",
+      "unit_id": "numbers_10000",
+      "lesson_id": "numbers_10000_lesson_10",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内数的认识",
+      "name": "简单加减法",
+      "description": "二年级下册人教版数学“万以内数的认识”中“简单加减法”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -539,17 +904,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "万以内的加法和减法",
-      "name": "万以内加法",
-      "description": "围绕“万以内的加法和减法”中“万以内加法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "一次进位加法",
+      "description": "二年级下册人教版数学“万以内的加法和减法”中“一次进位加法”相关练习。",
       "common_mistakes": [
-        "万以内加法：相同数位没有对齐",
-        "万以内加法：进位、退位或约分步骤遗漏",
-        "万以内加法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -566,17 +933,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "万以内的加法和减法",
-      "name": "万以内减法",
-      "description": "围绕“万以内的加法和减法”中“万以内减法”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "连续进位加法",
+      "description": "二年级下册人教版数学“万以内的加法和减法”中“连续进位加法”相关练习。",
       "common_mistakes": [
-        "万以内减法：相同数位没有对齐",
-        "万以内减法：进位、退位或约分步骤遗漏",
-        "万以内减法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -593,98 +962,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "万以内的加法和减法",
-      "name": "加减法应用",
-      "description": "围绕“万以内的加法和减法”中“加减法应用”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "name": "退位减法",
+      "description": "二年级下册人教版数学“万以内的加法和减法”中“退位减法”相关练习。",
       "common_mistakes": [
-        "加减法应用：没有先找清数量关系",
-        "加减法应用：只列式不写答语",
-        "加减法应用：多步问题少算一步"
-      ],
-      "recommended_question_types": [
-        "应用题",
-        "填空题",
-        "变式题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_comic_1",
-      "unit_id": "math_comic",
-      "lesson_id": "math_comic_lesson_1",
-      "grade": "二年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "数学连环画",
-      "name": "图文顺序中的数量关系",
-      "description": "围绕“数学连环画”中“图文顺序中的数量关系”这一知识点，生成符合二年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "图文顺序中的数量关系：没有先找清数量关系",
-        "图文顺序中的数量关系：只列式不写答语",
-        "图文顺序中的数量关系：多步问题少算一步"
-      ],
-      "recommended_question_types": [
-        "应用题",
-        "填空题",
-        "变式题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_comic_2",
-      "unit_id": "math_comic",
-      "lesson_id": "math_comic_lesson_2",
-      "grade": "二年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "数学连环画",
-      "name": "多步故事问题",
-      "description": "围绕“数学连环画”中“多步故事问题”这一知识点，生成符合二年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "多步故事问题：没有先找清数量关系",
-        "多步故事问题：只列式不写答语",
-        "多步故事问题：多步问题少算一步"
-      ],
-      "recommended_question_types": [
-        "应用题",
-        "填空题",
-        "变式题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "review_1",
-      "unit_id": "review",
-      "lesson_id": "review_lesson_1",
-      "grade": "二年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "复习与关联",
-      "name": "数与运算整理",
-      "description": "围绕“复习与关联”中“数与运算整理”这一知识点，生成符合二年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "数与运算整理：相同数位没有对齐",
-        "数与运算整理：进位、退位或约分步骤遗漏",
-        "数与运算整理：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -693,25 +983,114 @@
       ]
     },
     {
-      "id": "review_2",
-      "unit_id": "review",
-      "lesson_id": "review_lesson_2",
+      "id": "add_sub_10000_4",
+      "unit_id": "add_sub_10000",
+      "lesson_id": "add_sub_10000_lesson_4",
       "grade": "二年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "复习与关联",
-      "name": "综合解决问题",
-      "description": "围绕“复习与关联”中“综合解决问题”这一知识点，生成符合二年级下册学生水平的原创练习。",
+      "unit": "万以内的加法和减法",
+      "name": "被减数中间有0的减法",
+      "description": "二年级下册人教版数学“万以内的加法和减法”中“被减数中间有0的减法”相关练习。",
       "common_mistakes": [
-        "综合解决问题：没有先找清数量关系",
-        "综合解决问题：只列式不写答语",
-        "综合解决问题：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "add_sub_10000_5",
+      "unit_id": "add_sub_10000",
+      "lesson_id": "add_sub_10000_lesson_5",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "加减法各部分间的关系",
+      "description": "二年级下册人教版数学“万以内的加法和减法”中“加减法各部分间的关系”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "add_sub_10000_6",
+      "unit_id": "add_sub_10000",
+      "lesson_id": "add_sub_10000_lesson_6",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "估算解决问题",
+      "description": "二年级下册人教版数学“万以内的加法和减法”中“估算解决问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "add_sub_10000_7",
+      "unit_id": "add_sub_10000",
+      "lesson_id": "add_sub_10000_lesson_7",
+      "grade": "二年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "万以内的加法和减法",
+      "name": "数独游戏",
+      "description": "二年级下册人教版数学“万以内的加法和减法”中“数独游戏”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

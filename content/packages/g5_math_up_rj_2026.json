@@ -3,9 +3,8 @@
   "package_name": "五年级数学上册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "五年级",
@@ -30,35 +29,35 @@
   ],
   "units": [
     {
-      "id": "decimal_multiply",
+      "id": "decimal_mul",
       "name": "小数乘法",
       "lessons": [
         {
-          "id": "decimal_multiply_lesson_1",
+          "id": "decimal_mul_lesson_1",
           "name": "小数乘整数",
           "knowledge_point_ids": [
-            "decimal_multiply_1"
+            "decimal_mul_1"
           ]
         },
         {
-          "id": "decimal_multiply_lesson_2",
+          "id": "decimal_mul_lesson_2",
           "name": "小数乘小数",
           "knowledge_point_ids": [
-            "decimal_multiply_2"
+            "decimal_mul_2"
           ]
         },
         {
-          "id": "decimal_multiply_lesson_3",
+          "id": "decimal_mul_lesson_3",
           "name": "积的近似数",
           "knowledge_point_ids": [
-            "decimal_multiply_3"
+            "decimal_mul_3"
           ]
         },
         {
-          "id": "decimal_multiply_lesson_4",
+          "id": "decimal_mul_lesson_4",
           "name": "小数乘法应用",
           "knowledge_point_ids": [
-            "decimal_multiply_4"
+            "decimal_mul_4"
           ]
         }
       ]
@@ -73,46 +72,53 @@
           "knowledge_point_ids": [
             "position_1"
           ]
-        },
-        {
-          "id": "position_lesson_2",
-          "name": "在方格纸上确定位置",
-          "knowledge_point_ids": [
-            "position_2"
-          ]
         }
       ]
     },
     {
-      "id": "decimal_divide",
+      "id": "decimal_div",
       "name": "小数除法",
       "lessons": [
         {
-          "id": "decimal_divide_lesson_1",
-          "name": "除数是整数的小数除法",
+          "id": "decimal_div_lesson_1",
+          "name": "小数除以整数",
           "knowledge_point_ids": [
-            "decimal_divide_1"
+            "decimal_div_1"
           ]
         },
         {
-          "id": "decimal_divide_lesson_2",
+          "id": "decimal_div_lesson_2",
           "name": "一个数除以小数",
           "knowledge_point_ids": [
-            "decimal_divide_2"
+            "decimal_div_2"
           ]
         },
         {
-          "id": "decimal_divide_lesson_3",
+          "id": "decimal_div_lesson_3",
           "name": "商的近似数",
           "knowledge_point_ids": [
-            "decimal_divide_3"
+            "decimal_div_3"
           ]
         },
         {
-          "id": "decimal_divide_lesson_4",
+          "id": "decimal_div_lesson_4",
           "name": "循环小数",
           "knowledge_point_ids": [
-            "decimal_divide_4"
+            "decimal_div_4"
+          ]
+        },
+        {
+          "id": "decimal_div_lesson_5",
+          "name": "用计算器探索规律",
+          "knowledge_point_ids": [
+            "decimal_div_5"
+          ]
+        },
+        {
+          "id": "decimal_div_lesson_6",
+          "name": "小数除法应用",
+          "knowledge_point_ids": [
+            "decimal_div_6"
           ]
         }
       ]
@@ -123,7 +129,7 @@
       "lessons": [
         {
           "id": "possibility_lesson_1",
-          "name": "确定事件和不确定事件",
+          "name": "事件可能性",
           "knowledge_point_ids": [
             "possibility_1"
           ]
@@ -133,13 +139,6 @@
           "name": "可能性大小",
           "knowledge_point_ids": [
             "possibility_2"
-          ]
-        },
-        {
-          "id": "possibility_lesson_3",
-          "name": "公平性",
-          "knowledge_point_ids": [
-            "possibility_3"
           ]
         }
       ]
@@ -157,23 +156,30 @@
         },
         {
           "id": "equation_lesson_2",
-          "name": "等式性质",
+          "name": "方程的意义",
           "knowledge_point_ids": [
             "equation_2"
           ]
         },
         {
           "id": "equation_lesson_3",
-          "name": "解简易方程",
+          "name": "等式性质",
           "knowledge_point_ids": [
             "equation_3"
           ]
         },
         {
           "id": "equation_lesson_4",
-          "name": "列方程解决问题",
+          "name": "解简易方程",
           "knowledge_point_ids": [
             "equation_4"
+          ]
+        },
+        {
+          "id": "equation_lesson_5",
+          "name": "实际问题与方程",
+          "knowledge_point_ids": [
+            "equation_5"
           ]
         }
       ]
@@ -213,28 +219,28 @@
       ]
     },
     {
-      "id": "math_wide",
+      "id": "planting",
       "name": "数学广角--植树问题",
       "lessons": [
         {
-          "id": "math_wide_lesson_1",
+          "id": "planting_lesson_1",
           "name": "两端都栽",
           "knowledge_point_ids": [
-            "math_wide_1"
+            "planting_1"
           ]
         },
         {
-          "id": "math_wide_lesson_2",
-          "name": "一端栽一端不栽",
+          "id": "planting_lesson_2",
+          "name": "两端不栽",
           "knowledge_point_ids": [
-            "math_wide_2"
+            "planting_2"
           ]
         },
         {
-          "id": "math_wide_lesson_3",
+          "id": "planting_lesson_3",
           "name": "封闭路线植树",
           "knowledge_point_ids": [
-            "math_wide_3"
+            "planting_3"
           ]
         }
       ]
@@ -242,25 +248,27 @@
   ],
   "knowledge_points": [
     {
-      "id": "decimal_multiply_1",
-      "unit_id": "decimal_multiply",
-      "lesson_id": "decimal_multiply_lesson_1",
+      "id": "decimal_mul_1",
+      "unit_id": "decimal_mul",
+      "lesson_id": "decimal_mul_lesson_1",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数乘法",
       "name": "小数乘整数",
-      "description": "围绕“小数乘法”中“小数乘整数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“小数乘法”中“小数乘整数”相关练习。",
       "common_mistakes": [
-        "小数乘整数：相同数位没有对齐",
-        "小数乘整数：进位、退位或约分步骤遗漏",
-        "小数乘整数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -269,25 +277,27 @@
       ]
     },
     {
-      "id": "decimal_multiply_2",
-      "unit_id": "decimal_multiply",
-      "lesson_id": "decimal_multiply_lesson_2",
+      "id": "decimal_mul_2",
+      "unit_id": "decimal_mul",
+      "lesson_id": "decimal_mul_lesson_2",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数乘法",
       "name": "小数乘小数",
-      "description": "围绕“小数乘法”中“小数乘小数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“小数乘法”中“小数乘小数”相关练习。",
       "common_mistakes": [
-        "小数乘小数：相同数位没有对齐",
-        "小数乘小数：进位、退位或约分步骤遗漏",
-        "小数乘小数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -296,25 +306,27 @@
       ]
     },
     {
-      "id": "decimal_multiply_3",
-      "unit_id": "decimal_multiply",
-      "lesson_id": "decimal_multiply_lesson_3",
+      "id": "decimal_mul_3",
+      "unit_id": "decimal_mul",
+      "lesson_id": "decimal_mul_lesson_3",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数乘法",
       "name": "积的近似数",
-      "description": "围绕“小数乘法”中“积的近似数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“小数乘法”中“积的近似数”相关练习。",
       "common_mistakes": [
-        "积的近似数：相同数位没有对齐",
-        "积的近似数：进位、退位或约分步骤遗漏",
-        "积的近似数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -323,25 +335,27 @@
       ]
     },
     {
-      "id": "decimal_multiply_4",
-      "unit_id": "decimal_multiply",
-      "lesson_id": "decimal_multiply_lesson_4",
+      "id": "decimal_mul_4",
+      "unit_id": "decimal_mul",
+      "lesson_id": "decimal_mul_lesson_4",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数乘法",
       "name": "小数乘法应用",
-      "description": "围绕“小数乘法”中“小数乘法应用”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“小数乘法”中“小数乘法应用”相关练习。",
       "common_mistakes": [
-        "小数乘法应用：没有先找清数量关系",
-        "小数乘法应用：只列式不写答语",
-        "小数乘法应用：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -359,16 +373,18 @@
       "textbook": "人教版",
       "unit": "位置",
       "name": "用数对表示位置",
-      "description": "围绕“位置”中“用数对表示位置”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“位置”中“用数对表示位置”相关练习。",
       "common_mistakes": [
-        "用数对表示位置：把图形名称或单位混淆",
-        "用数对表示位置：周长、面积、体积公式用错",
-        "用数对表示位置：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -377,52 +393,27 @@
       ]
     },
     {
-      "id": "position_2",
-      "unit_id": "position",
-      "lesson_id": "position_lesson_2",
-      "grade": "五年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "位置",
-      "name": "在方格纸上确定位置",
-      "description": "围绕“位置”中“在方格纸上确定位置”这一知识点，生成符合五年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "在方格纸上确定位置：把图形名称或单位混淆",
-        "在方格纸上确定位置：周长、面积、体积公式用错",
-        "在方格纸上确定位置：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "decimal_divide_1",
-      "unit_id": "decimal_divide",
-      "lesson_id": "decimal_divide_lesson_1",
+      "id": "decimal_div_1",
+      "unit_id": "decimal_div",
+      "lesson_id": "decimal_div_lesson_1",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数除法",
-      "name": "除数是整数的小数除法",
-      "description": "围绕“小数除法”中“除数是整数的小数除法”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "name": "小数除以整数",
+      "description": "五年级上册人教版数学“小数除法”中“小数除以整数”相关练习。",
       "common_mistakes": [
-        "除数是整数的小数除法：相同数位没有对齐",
-        "除数是整数的小数除法：进位、退位或约分步骤遗漏",
-        "除数是整数的小数除法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -431,25 +422,27 @@
       ]
     },
     {
-      "id": "decimal_divide_2",
-      "unit_id": "decimal_divide",
-      "lesson_id": "decimal_divide_lesson_2",
+      "id": "decimal_div_2",
+      "unit_id": "decimal_div",
+      "lesson_id": "decimal_div_lesson_2",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数除法",
       "name": "一个数除以小数",
-      "description": "围绕“小数除法”中“一个数除以小数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“小数除法”中“一个数除以小数”相关练习。",
       "common_mistakes": [
-        "一个数除以小数：相同数位没有对齐",
-        "一个数除以小数：进位、退位或约分步骤遗漏",
-        "一个数除以小数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -458,25 +451,27 @@
       ]
     },
     {
-      "id": "decimal_divide_3",
-      "unit_id": "decimal_divide",
-      "lesson_id": "decimal_divide_lesson_3",
+      "id": "decimal_div_3",
+      "unit_id": "decimal_div",
+      "lesson_id": "decimal_div_lesson_3",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数除法",
       "name": "商的近似数",
-      "description": "围绕“小数除法”中“商的近似数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“小数除法”中“商的近似数”相关练习。",
       "common_mistakes": [
-        "商的近似数：相同数位没有对齐",
-        "商的近似数：进位、退位或约分步骤遗漏",
-        "商的近似数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -485,25 +480,85 @@
       ]
     },
     {
-      "id": "decimal_divide_4",
-      "unit_id": "decimal_divide",
-      "lesson_id": "decimal_divide_lesson_4",
+      "id": "decimal_div_4",
+      "unit_id": "decimal_div",
+      "lesson_id": "decimal_div_lesson_4",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "小数除法",
       "name": "循环小数",
-      "description": "围绕“小数除法”中“循环小数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“小数除法”中“循环小数”相关练习。",
       "common_mistakes": [
-        "循环小数：相同数位没有对齐",
-        "循环小数：进位、退位或约分步骤遗漏",
-        "循环小数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_div_5",
+      "unit_id": "decimal_div",
+      "lesson_id": "decimal_div_lesson_5",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数除法",
+      "name": "用计算器探索规律",
+      "description": "五年级上册人教版数学“小数除法”中“用计算器探索规律”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "decimal_div_6",
+      "unit_id": "decimal_div",
+      "lesson_id": "decimal_div_lesson_6",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "小数除法",
+      "name": "小数除法应用",
+      "description": "五年级上册人教版数学“小数除法”中“小数除法应用”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -520,17 +575,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "可能性",
-      "name": "确定事件和不确定事件",
-      "description": "围绕“可能性”中“确定事件和不确定事件”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "name": "事件可能性",
+      "description": "五年级上册人教版数学“可能性”中“事件可能性”相关练习。",
       "common_mistakes": [
-        "确定事件和不确定事件：没有看清题目要求",
-        "确定事件和不确定事件：答语单位写错或漏写",
-        "确定事件和不确定事件：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -548,43 +605,18 @@
       "textbook": "人教版",
       "unit": "可能性",
       "name": "可能性大小",
-      "description": "围绕“可能性”中“可能性大小”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“可能性”中“可能性大小”相关练习。",
       "common_mistakes": [
-        "可能性大小：没有看清题目要求",
-        "可能性大小：答语单位写错或漏写",
-        "可能性大小：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "possibility_3",
-      "unit_id": "possibility",
-      "lesson_id": "possibility_lesson_3",
-      "grade": "五年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "可能性",
-      "name": "公平性",
-      "description": "围绕“可能性”中“公平性”这一知识点，生成符合五年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "公平性：没有看清题目要求",
-        "公平性：答语单位写错或漏写",
-        "公平性：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -602,16 +634,18 @@
       "textbook": "人教版",
       "unit": "简易方程",
       "name": "用字母表示数",
-      "description": "围绕“简易方程”中“用字母表示数”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“简易方程”中“用字母表示数”相关练习。",
       "common_mistakes": [
-        "用字母表示数：相同数位没有对齐",
-        "用字母表示数：进位、退位或约分步骤遗漏",
-        "用字母表示数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -628,17 +662,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "简易方程",
-      "name": "等式性质",
-      "description": "围绕“简易方程”中“等式性质”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "name": "方程的意义",
+      "description": "五年级上册人教版数学“简易方程”中“方程的意义”相关练习。",
       "common_mistakes": [
-        "等式性质：相同数位没有对齐",
-        "等式性质：进位、退位或约分步骤遗漏",
-        "等式性质：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -655,17 +691,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "简易方程",
-      "name": "解简易方程",
-      "description": "围绕“简易方程”中“解简易方程”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "name": "等式性质",
+      "description": "五年级上册人教版数学“简易方程”中“等式性质”相关练习。",
       "common_mistakes": [
-        "解简易方程：相同数位没有对齐",
-        "解简易方程：进位、退位或约分步骤遗漏",
-        "解简易方程：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -682,17 +720,48 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "简易方程",
-      "name": "列方程解决问题",
-      "description": "围绕“简易方程”中“列方程解决问题”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "name": "解简易方程",
+      "description": "五年级上册人教版数学“简易方程”中“解简易方程”相关练习。",
       "common_mistakes": [
-        "列方程解决问题：没有先找清数量关系",
-        "列方程解决问题：只列式不写答语",
-        "列方程解决问题：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "equation_5",
+      "unit_id": "equation",
+      "lesson_id": "equation_lesson_5",
+      "grade": "五年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "简易方程",
+      "name": "实际问题与方程",
+      "description": "五年级上册人教版数学“简易方程”中“实际问题与方程”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -710,16 +779,18 @@
       "textbook": "人教版",
       "unit": "多边形的面积",
       "name": "平行四边形面积",
-      "description": "围绕“多边形的面积”中“平行四边形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“多边形的面积”中“平行四边形面积”相关练习。",
       "common_mistakes": [
-        "平行四边形面积：把图形名称或单位混淆",
-        "平行四边形面积：周长、面积、体积公式用错",
-        "平行四边形面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -737,16 +808,18 @@
       "textbook": "人教版",
       "unit": "多边形的面积",
       "name": "三角形面积",
-      "description": "围绕“多边形的面积”中“三角形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“多边形的面积”中“三角形面积”相关练习。",
       "common_mistakes": [
-        "三角形面积：把图形名称或单位混淆",
-        "三角形面积：周长、面积、体积公式用错",
-        "三角形面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -764,16 +837,18 @@
       "textbook": "人教版",
       "unit": "多边形的面积",
       "name": "梯形面积",
-      "description": "围绕“多边形的面积”中“梯形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“多边形的面积”中“梯形面积”相关练习。",
       "common_mistakes": [
-        "梯形面积：把图形名称或单位混淆",
-        "梯形面积：周长、面积、体积公式用错",
-        "梯形面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -791,16 +866,18 @@
       "textbook": "人教版",
       "unit": "多边形的面积",
       "name": "组合图形面积",
-      "description": "围绕“多边形的面积”中“组合图形面积”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“多边形的面积”中“组合图形面积”相关练习。",
       "common_mistakes": [
-        "组合图形面积：把图形名称或单位混淆",
-        "组合图形面积：周长、面积、体积公式用错",
-        "组合图形面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -809,25 +886,27 @@
       ]
     },
     {
-      "id": "math_wide_1",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_1",
+      "id": "planting_1",
+      "unit_id": "planting",
+      "lesson_id": "planting_lesson_1",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--植树问题",
       "name": "两端都栽",
-      "description": "围绕“数学广角--植树问题”中“两端都栽”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“数学广角--植树问题”中“两端都栽”相关练习。",
       "common_mistakes": [
-        "两端都栽：把图形名称或单位混淆",
-        "两端都栽：周长、面积、体积公式用错",
-        "两端都栽：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -836,25 +915,27 @@
       ]
     },
     {
-      "id": "math_wide_2",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_2",
+      "id": "planting_2",
+      "unit_id": "planting",
+      "lesson_id": "planting_lesson_2",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--植树问题",
-      "name": "一端栽一端不栽",
-      "description": "围绕“数学广角--植树问题”中“一端栽一端不栽”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "name": "两端不栽",
+      "description": "五年级上册人教版数学“数学广角--植树问题”中“两端不栽”相关练习。",
       "common_mistakes": [
-        "一端栽一端不栽：把图形名称或单位混淆",
-        "一端栽一端不栽：周长、面积、体积公式用错",
-        "一端栽一端不栽：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -863,25 +944,27 @@
       ]
     },
     {
-      "id": "math_wide_3",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_3",
+      "id": "planting_3",
+      "unit_id": "planting",
+      "lesson_id": "planting_lesson_3",
       "grade": "五年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--植树问题",
       "name": "封闭路线植树",
-      "description": "围绕“数学广角--植树问题”中“封闭路线植树”这一知识点，生成符合五年级上册学生水平的原创练习。",
+      "description": "五年级上册人教版数学“数学广角--植树问题”中“封闭路线植树”相关练习。",
       "common_mistakes": [
-        "封闭路线植树：把图形名称或单位混淆",
-        "封闭路线植树：周长、面积、体积公式用错",
-        "封闭路线植树：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

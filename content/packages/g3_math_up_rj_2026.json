@@ -3,9 +3,8 @@
   "package_name": "三年级数学上册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "三年级",
@@ -35,23 +34,30 @@
       "lessons": [
         {
           "id": "observe_objects_lesson_1",
-          "name": "从不同位置观察",
+          "name": "不同方向看同一物体",
           "knowledge_point_ids": [
             "observe_objects_1"
           ]
         },
         {
           "id": "observe_objects_lesson_2",
-          "name": "根据视图判断物体",
+          "name": "观察简单立体图形",
           "knowledge_point_ids": [
             "observe_objects_2"
           ]
         },
         {
           "id": "observe_objects_lesson_3",
-          "name": "搭拼与观察",
+          "name": "根据视图推测立体图形",
           "knowledge_point_ids": [
             "observe_objects_3"
+          ]
+        },
+        {
+          "id": "observe_objects_lesson_4",
+          "name": "立体图形展开和折叠",
+          "knowledge_point_ids": [
+            "observe_objects_4"
           ]
         }
       ]
@@ -69,84 +75,98 @@
         },
         {
           "id": "mixed_operations_lesson_2",
-          "name": "含括号混合运算",
+          "name": "两级混合运算",
           "knowledge_point_ids": [
             "mixed_operations_2"
           ]
         },
         {
           "id": "mixed_operations_lesson_3",
-          "name": "两步计算应用",
+          "name": "含括号混合运算",
           "knowledge_point_ids": [
             "mixed_operations_3"
           ]
+        },
+        {
+          "id": "mixed_operations_lesson_4",
+          "name": "用混合运算解决问题",
+          "knowledge_point_ids": [
+            "mixed_operations_4"
+          ]
         }
       ]
     },
     {
-      "id": "length_mass",
+      "id": "measure",
       "name": "测量",
       "lessons": [
         {
-          "id": "length_mass_lesson_1",
-          "name": "毫米和分米",
+          "id": "measure_lesson_1",
+          "name": "毫米分米的认识",
           "knowledge_point_ids": [
-            "length_mass_1"
+            "measure_1"
           ]
         },
         {
-          "id": "length_mass_lesson_2",
+          "id": "measure_lesson_2",
           "name": "千米的认识",
           "knowledge_point_ids": [
-            "length_mass_2"
+            "measure_2"
           ]
         },
         {
-          "id": "length_mass_lesson_3",
+          "id": "measure_lesson_3",
           "name": "吨的认识",
           "knowledge_point_ids": [
-            "length_mass_3"
+            "measure_3"
           ]
         },
         {
-          "id": "length_mass_lesson_4",
+          "id": "measure_lesson_4",
           "name": "单位换算",
           "knowledge_point_ids": [
-            "length_mass_4"
+            "measure_4"
           ]
         }
       ]
     },
     {
-      "id": "multiply_multi_digit",
+      "id": "multi_digit_mul",
       "name": "多位数乘一位数",
       "lessons": [
         {
-          "id": "multiply_multi_digit_lesson_1",
+          "id": "multi_digit_mul_lesson_1",
           "name": "口算乘法",
           "knowledge_point_ids": [
-            "multiply_multi_digit_1"
+            "multi_digit_mul_1"
           ]
         },
         {
-          "id": "multiply_multi_digit_lesson_2",
+          "id": "multi_digit_mul_lesson_2",
           "name": "笔算乘法",
           "knowledge_point_ids": [
-            "multiply_multi_digit_2"
+            "multi_digit_mul_2"
           ]
         },
         {
-          "id": "multiply_multi_digit_lesson_3",
+          "id": "multi_digit_mul_lesson_3",
           "name": "连续进位乘法",
           "knowledge_point_ids": [
-            "multiply_multi_digit_3"
+            "multi_digit_mul_3"
           ]
         },
         {
-          "id": "multiply_multi_digit_lesson_4",
+          "id": "multi_digit_mul_lesson_4",
           "name": "乘法估算",
           "knowledge_point_ids": [
-            "multiply_multi_digit_4"
+            "multi_digit_mul_4"
+          ]
+        },
+        {
+          "id": "multi_digit_mul_lesson_5",
+          "name": "解决问题",
+          "knowledge_point_ids": [
+            "multi_digit_mul_5"
           ]
         }
       ]
@@ -171,7 +191,7 @@
         },
         {
           "id": "time_lesson_3",
-          "name": "经过时间计算",
+          "name": "经过时间",
           "knowledge_point_ids": [
             "time_3"
           ]
@@ -184,30 +204,23 @@
       "lessons": [
         {
           "id": "rectangle_square_lesson_1",
-          "name": "周长的认识",
+          "name": "四边形",
           "knowledge_point_ids": [
             "rectangle_square_1"
           ]
         },
         {
           "id": "rectangle_square_lesson_2",
-          "name": "长方形周长",
+          "name": "周长",
           "knowledge_point_ids": [
             "rectangle_square_2"
           ]
         },
         {
           "id": "rectangle_square_lesson_3",
-          "name": "正方形周长",
+          "name": "长方形和正方形周长",
           "knowledge_point_ids": [
             "rectangle_square_3"
-          ]
-        },
-        {
-          "id": "rectangle_square_lesson_4",
-          "name": "周长应用",
-          "knowledge_point_ids": [
-            "rectangle_square_4"
           ]
         }
       ]
@@ -232,43 +245,36 @@
         },
         {
           "id": "fraction_intro_lesson_3",
-          "name": "简单分数比较",
+          "name": "简单分数加减法",
           "knowledge_point_ids": [
             "fraction_intro_3"
-          ]
-        },
-        {
-          "id": "fraction_intro_lesson_4",
-          "name": "同分母分数加减",
-          "knowledge_point_ids": [
-            "fraction_intro_4"
           ]
         }
       ]
     },
     {
-      "id": "math_wide",
+      "id": "math_wide_matching",
       "name": "数学广角--搭配问题",
       "lessons": [
         {
-          "id": "math_wide_lesson_1",
-          "name": "有序搭配",
+          "id": "math_wide_matching_lesson_1",
+          "name": "排列",
           "knowledge_point_ids": [
-            "math_wide_1"
+            "math_wide_matching_1"
           ]
         },
         {
-          "id": "math_wide_lesson_2",
-          "name": "简单排列",
+          "id": "math_wide_matching_lesson_2",
+          "name": "组合",
           "knowledge_point_ids": [
-            "math_wide_2"
+            "math_wide_matching_2"
           ]
         },
         {
-          "id": "math_wide_lesson_3",
-          "name": "简单组合",
+          "id": "math_wide_matching_lesson_3",
+          "name": "搭配应用",
           "knowledge_point_ids": [
-            "math_wide_3"
+            "math_wide_matching_3"
           ]
         }
       ]
@@ -284,17 +290,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "观察物体",
-      "name": "从不同位置观察",
-      "description": "围绕“观察物体”中“从不同位置观察”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "不同方向看同一物体",
+      "description": "三年级上册人教版数学“观察物体”中“不同方向看同一物体”相关练习。",
       "common_mistakes": [
-        "从不同位置观察：把图形名称或单位混淆",
-        "从不同位置观察：周长、面积、体积公式用错",
-        "从不同位置观察：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -311,17 +319,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "观察物体",
-      "name": "根据视图判断物体",
-      "description": "围绕“观察物体”中“根据视图判断物体”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "观察简单立体图形",
+      "description": "三年级上册人教版数学“观察物体”中“观察简单立体图形”相关练习。",
       "common_mistakes": [
-        "根据视图判断物体：把图形名称或单位混淆",
-        "根据视图判断物体：周长、面积、体积公式用错",
-        "根据视图判断物体：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -338,17 +348,48 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "观察物体",
-      "name": "搭拼与观察",
-      "description": "围绕“观察物体”中“搭拼与观察”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "根据视图推测立体图形",
+      "description": "三年级上册人教版数学“观察物体”中“根据视图推测立体图形”相关练习。",
       "common_mistakes": [
-        "搭拼与观察：把图形名称或单位混淆",
-        "搭拼与观察：周长、面积、体积公式用错",
-        "搭拼与观察：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "observe_objects_4",
+      "unit_id": "observe_objects",
+      "lesson_id": "observe_objects_lesson_4",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "观察物体",
+      "name": "立体图形展开和折叠",
+      "description": "三年级上册人教版数学“观察物体”中“立体图形展开和折叠”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -366,16 +407,18 @@
       "textbook": "人教版",
       "unit": "混合运算",
       "name": "同级混合运算",
-      "description": "围绕“混合运算”中“同级混合运算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“混合运算”中“同级混合运算”相关练习。",
       "common_mistakes": [
-        "同级混合运算：相同数位没有对齐",
-        "同级混合运算：进位、退位或约分步骤遗漏",
-        "同级混合运算：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -392,17 +435,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "混合运算",
-      "name": "含括号混合运算",
-      "description": "围绕“混合运算”中“含括号混合运算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "两级混合运算",
+      "description": "三年级上册人教版数学“混合运算”中“两级混合运算”相关练习。",
       "common_mistakes": [
-        "含括号混合运算：相同数位没有对齐",
-        "含括号混合运算：进位、退位或约分步骤遗漏",
-        "含括号混合运算：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -419,17 +464,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "混合运算",
-      "name": "两步计算应用",
-      "description": "围绕“混合运算”中“两步计算应用”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "含括号混合运算",
+      "description": "三年级上册人教版数学“混合运算”中“含括号混合运算”相关练习。",
       "common_mistakes": [
-        "两步计算应用：没有先找清数量关系",
-        "两步计算应用：只列式不写答语",
-        "两步计算应用：多步问题少算一步"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
-        "应用题",
+        "计算题",
         "填空题",
-        "变式题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -438,25 +485,56 @@
       ]
     },
     {
-      "id": "length_mass_1",
-      "unit_id": "length_mass",
-      "lesson_id": "length_mass_lesson_1",
+      "id": "mixed_operations_4",
+      "unit_id": "mixed_operations",
+      "lesson_id": "mixed_operations_lesson_4",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "混合运算",
+      "name": "用混合运算解决问题",
+      "description": "三年级上册人教版数学“混合运算”中“用混合运算解决问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "measure_1",
+      "unit_id": "measure",
+      "lesson_id": "measure_lesson_1",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "测量",
-      "name": "毫米和分米",
-      "description": "围绕“测量”中“毫米和分米”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "毫米分米的认识",
+      "description": "三年级上册人教版数学“测量”中“毫米分米的认识”相关练习。",
       "common_mistakes": [
-        "毫米和分米：没有看清题目要求",
-        "毫米和分米：答语单位写错或漏写",
-        "毫米和分米：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -465,25 +543,27 @@
       ]
     },
     {
-      "id": "length_mass_2",
-      "unit_id": "length_mass",
-      "lesson_id": "length_mass_lesson_2",
+      "id": "measure_2",
+      "unit_id": "measure",
+      "lesson_id": "measure_lesson_2",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "测量",
       "name": "千米的认识",
-      "description": "围绕“测量”中“千米的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“测量”中“千米的认识”相关练习。",
       "common_mistakes": [
-        "千米的认识：没有看清题目要求",
-        "千米的认识：答语单位写错或漏写",
-        "千米的认识：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -492,25 +572,27 @@
       ]
     },
     {
-      "id": "length_mass_3",
-      "unit_id": "length_mass",
-      "lesson_id": "length_mass_lesson_3",
+      "id": "measure_3",
+      "unit_id": "measure",
+      "lesson_id": "measure_lesson_3",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "测量",
       "name": "吨的认识",
-      "description": "围绕“测量”中“吨的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“测量”中“吨的认识”相关练习。",
       "common_mistakes": [
-        "吨的认识：没有看清题目要求",
-        "吨的认识：答语单位写错或漏写",
-        "吨的认识：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -519,25 +601,27 @@
       ]
     },
     {
-      "id": "length_mass_4",
-      "unit_id": "length_mass",
-      "lesson_id": "length_mass_lesson_4",
+      "id": "measure_4",
+      "unit_id": "measure",
+      "lesson_id": "measure_lesson_4",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "测量",
       "name": "单位换算",
-      "description": "围绕“测量”中“单位换算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“测量”中“单位换算”相关练习。",
       "common_mistakes": [
-        "单位换算：没有看清题目要求",
-        "单位换算：答语单位写错或漏写",
-        "单位换算：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -546,25 +630,27 @@
       ]
     },
     {
-      "id": "multiply_multi_digit_1",
-      "unit_id": "multiply_multi_digit",
-      "lesson_id": "multiply_multi_digit_lesson_1",
+      "id": "multi_digit_mul_1",
+      "unit_id": "multi_digit_mul",
+      "lesson_id": "multi_digit_mul_lesson_1",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "多位数乘一位数",
       "name": "口算乘法",
-      "description": "围绕“多位数乘一位数”中“口算乘法”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“多位数乘一位数”中“口算乘法”相关练习。",
       "common_mistakes": [
-        "口算乘法：相同数位没有对齐",
-        "口算乘法：进位、退位或约分步骤遗漏",
-        "口算乘法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -573,25 +659,27 @@
       ]
     },
     {
-      "id": "multiply_multi_digit_2",
-      "unit_id": "multiply_multi_digit",
-      "lesson_id": "multiply_multi_digit_lesson_2",
+      "id": "multi_digit_mul_2",
+      "unit_id": "multi_digit_mul",
+      "lesson_id": "multi_digit_mul_lesson_2",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "多位数乘一位数",
       "name": "笔算乘法",
-      "description": "围绕“多位数乘一位数”中“笔算乘法”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“多位数乘一位数”中“笔算乘法”相关练习。",
       "common_mistakes": [
-        "笔算乘法：相同数位没有对齐",
-        "笔算乘法：进位、退位或约分步骤遗漏",
-        "笔算乘法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -600,25 +688,27 @@
       ]
     },
     {
-      "id": "multiply_multi_digit_3",
-      "unit_id": "multiply_multi_digit",
-      "lesson_id": "multiply_multi_digit_lesson_3",
+      "id": "multi_digit_mul_3",
+      "unit_id": "multi_digit_mul",
+      "lesson_id": "multi_digit_mul_lesson_3",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "多位数乘一位数",
       "name": "连续进位乘法",
-      "description": "围绕“多位数乘一位数”中“连续进位乘法”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“多位数乘一位数”中“连续进位乘法”相关练习。",
       "common_mistakes": [
-        "连续进位乘法：相同数位没有对齐",
-        "连续进位乘法：进位、退位或约分步骤遗漏",
-        "连续进位乘法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -627,25 +717,56 @@
       ]
     },
     {
-      "id": "multiply_multi_digit_4",
-      "unit_id": "multiply_multi_digit",
-      "lesson_id": "multiply_multi_digit_lesson_4",
+      "id": "multi_digit_mul_4",
+      "unit_id": "multi_digit_mul",
+      "lesson_id": "multi_digit_mul_lesson_4",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "多位数乘一位数",
       "name": "乘法估算",
-      "description": "围绕“多位数乘一位数”中“乘法估算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“多位数乘一位数”中“乘法估算”相关练习。",
       "common_mistakes": [
-        "乘法估算：相同数位没有对齐",
-        "乘法估算：进位、退位或约分步骤遗漏",
-        "乘法估算：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "multi_digit_mul_5",
+      "unit_id": "multi_digit_mul",
+      "lesson_id": "multi_digit_mul_lesson_5",
+      "grade": "三年级",
+      "semester": "上册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "多位数乘一位数",
+      "name": "解决问题",
+      "description": "三年级上册人教版数学“多位数乘一位数”中“解决问题”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -663,16 +784,18 @@
       "textbook": "人教版",
       "unit": "时、分、秒",
       "name": "秒的认识",
-      "description": "围绕“时、分、秒”中“秒的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“时、分、秒”中“秒的认识”相关练习。",
       "common_mistakes": [
-        "秒的认识：没有看清题目要求",
-        "秒的认识：答语单位写错或漏写",
-        "秒的认识：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -690,16 +813,18 @@
       "textbook": "人教版",
       "unit": "时、分、秒",
       "name": "时间单位换算",
-      "description": "围绕“时、分、秒”中“时间单位换算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“时、分、秒”中“时间单位换算”相关练习。",
       "common_mistakes": [
-        "时间单位换算：没有看清题目要求",
-        "时间单位换算：答语单位写错或漏写",
-        "时间单位换算：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -716,17 +841,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "时、分、秒",
-      "name": "经过时间计算",
-      "description": "围绕“时、分、秒”中“经过时间计算”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "经过时间",
+      "description": "三年级上册人教版数学“时、分、秒”中“经过时间”相关练习。",
       "common_mistakes": [
-        "经过时间计算：相同数位没有对齐",
-        "经过时间计算：进位、退位或约分步骤遗漏",
-        "经过时间计算：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -743,17 +870,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "长方形和正方形",
-      "name": "周长的认识",
-      "description": "围绕“长方形和正方形”中“周长的认识”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "四边形",
+      "description": "三年级上册人教版数学“长方形和正方形”中“四边形”相关练习。",
       "common_mistakes": [
-        "周长的认识：把图形名称或单位混淆",
-        "周长的认识：周长、面积、体积公式用错",
-        "周长的认识：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -770,17 +899,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "长方形和正方形",
-      "name": "长方形周长",
-      "description": "围绕“长方形和正方形”中“长方形周长”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "周长",
+      "description": "三年级上册人教版数学“长方形和正方形”中“周长”相关练习。",
       "common_mistakes": [
-        "长方形周长：把图形名称或单位混淆",
-        "长方形周长：周长、面积、体积公式用错",
-        "长方形周长：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -797,44 +928,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "长方形和正方形",
-      "name": "正方形周长",
-      "description": "围绕“长方形和正方形”中“正方形周长”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "长方形和正方形周长",
+      "description": "三年级上册人教版数学“长方形和正方形”中“长方形和正方形周长”相关练习。",
       "common_mistakes": [
-        "正方形周长：把图形名称或单位混淆",
-        "正方形周长：周长、面积、体积公式用错",
-        "正方形周长：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "rectangle_square_4",
-      "unit_id": "rectangle_square",
-      "lesson_id": "rectangle_square_lesson_4",
-      "grade": "三年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "长方形和正方形",
-      "name": "周长应用",
-      "description": "围绕“长方形和正方形”中“周长应用”这一知识点，生成符合三年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "周长应用：把图形名称或单位混淆",
-        "周长应用：周长、面积、体积公式用错",
-        "周长应用：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -852,16 +958,18 @@
       "textbook": "人教版",
       "unit": "分数的初步认识",
       "name": "几分之一",
-      "description": "围绕“分数的初步认识”中“几分之一”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“分数的初步认识”中“几分之一”相关练习。",
       "common_mistakes": [
-        "几分之一：相同数位没有对齐",
-        "几分之一：进位、退位或约分步骤遗漏",
-        "几分之一：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -879,16 +987,18 @@
       "textbook": "人教版",
       "unit": "分数的初步认识",
       "name": "几分之几",
-      "description": "围绕“分数的初步认识”中“几分之几”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "description": "三年级上册人教版数学“分数的初步认识”中“几分之几”相关练习。",
       "common_mistakes": [
-        "几分之几：相同数位没有对齐",
-        "几分之几：进位、退位或约分步骤遗漏",
-        "几分之几：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -905,17 +1015,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的初步认识",
-      "name": "简单分数比较",
-      "description": "围绕“分数的初步认识”中“简单分数比较”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "简单分数加减法",
+      "description": "三年级上册人教版数学“分数的初步认识”中“简单分数加减法”相关练习。",
       "common_mistakes": [
-        "简单分数比较：相同数位没有对齐",
-        "简单分数比较：进位、退位或约分步骤遗漏",
-        "简单分数比较：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -924,25 +1036,27 @@
       ]
     },
     {
-      "id": "fraction_intro_4",
-      "unit_id": "fraction_intro",
-      "lesson_id": "fraction_intro_lesson_4",
+      "id": "math_wide_matching_1",
+      "unit_id": "math_wide_matching",
+      "lesson_id": "math_wide_matching_lesson_1",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
-      "unit": "分数的初步认识",
-      "name": "同分母分数加减",
-      "description": "围绕“分数的初步认识”中“同分母分数加减”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "unit": "数学广角--搭配问题",
+      "name": "排列",
+      "description": "三年级上册人教版数学“数学广角--搭配问题”中“排列”相关练习。",
       "common_mistakes": [
-        "同分母分数加减：相同数位没有对齐",
-        "同分母分数加减：进位、退位或约分步骤遗漏",
-        "同分母分数加减：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -951,25 +1065,27 @@
       ]
     },
     {
-      "id": "math_wide_1",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_1",
+      "id": "math_wide_matching_2",
+      "unit_id": "math_wide_matching",
+      "lesson_id": "math_wide_matching_lesson_2",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--搭配问题",
-      "name": "有序搭配",
-      "description": "围绕“数学广角--搭配问题”中“有序搭配”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "组合",
+      "description": "三年级上册人教版数学“数学广角--搭配问题”中“组合”相关练习。",
       "common_mistakes": [
-        "有序搭配：把图形名称或单位混淆",
-        "有序搭配：周长、面积、体积公式用错",
-        "有序搭配：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -978,52 +1094,27 @@
       ]
     },
     {
-      "id": "math_wide_2",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_2",
+      "id": "math_wide_matching_3",
+      "unit_id": "math_wide_matching",
+      "lesson_id": "math_wide_matching_lesson_3",
       "grade": "三年级",
       "semester": "上册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--搭配问题",
-      "name": "简单排列",
-      "description": "围绕“数学广角--搭配问题”中“简单排列”这一知识点，生成符合三年级上册学生水平的原创练习。",
+      "name": "搭配应用",
+      "description": "三年级上册人教版数学“数学广角--搭配问题”中“搭配应用”相关练习。",
       "common_mistakes": [
-        "简单排列：把图形名称或单位混淆",
-        "简单排列：周长、面积、体积公式用错",
-        "简单排列：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_3",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_3",
-      "grade": "三年级",
-      "semester": "上册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "数学广角--搭配问题",
-      "name": "简单组合",
-      "description": "围绕“数学广角--搭配问题”中“简单组合”这一知识点，生成符合三年级上册学生水平的原创练习。",
-      "common_mistakes": [
-        "简单组合：把图形名称或单位混淆",
-        "简单组合：周长、面积、体积公式用错",
-        "简单组合：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",

@@ -5,7 +5,8 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const bankPath = join(__dirname, "..", "..", "content", "extracted_question_bank.json");
 const MIN_VISIBLE_POINT_QUESTIONS = 3;
-const MIN_VISIBLE_TYPE_QUESTIONS = 5;
+const MIN_VISIBLE_TYPE_QUESTIONS = 3;
+const MIN_DELIVERABLE_TYPE_QUESTIONS = 5;
 
 let cache;
 
@@ -88,10 +89,33 @@ export async function getExtractedTypeMap() {
     const parts = typeKey.split("::");
     const key = parts.slice(0, 2).join("::");
     if ((pointCounts.get(key) || 0) < MIN_VISIBLE_POINT_QUESTIONS) continue;
+    if (deliverableTypeCount(bank.questions || [], key, parts.slice(2).join("::")) < MIN_DELIVERABLE_TYPE_QUESTIONS) continue;
     if (!map.has(key)) map.set(key, new Set());
     map.get(key).add(parts.slice(2).join("::"));
   }
   return map;
+}
+
+function deliverableTypeCount(questions, key, type) {
+  const [packageId, pointId] = key.split("::");
+  const exactItems = questions.filter((item) => item.package_id === packageId && item.knowledge_point_id === pointId);
+  const sample = exactItems.find((item) => item.question_type === type) || exactItems[0];
+  if (!sample) return 0;
+  const input = {
+    grade: sample.grade,
+    semester: sample.semester,
+    subject: sample.subject,
+    unit: sample.unit,
+    knowledgePoint: sample.knowledge_point,
+    type
+  };
+  const typedBase = questions.filter((item) => baseMatch(item, input, type));
+  const bookBase = questions.filter((item) => baseMatch(item, input, ""));
+  const base = typedBase.length ? typedBase : bookBase;
+  const exact = base.filter((item) => item.knowledge_point_id === pointId || item.knowledge_point === sample.knowledge_point);
+  const unit = base.filter((item) => item.unit === sample.unit);
+  const fallbackUnit = bookBase.filter((item) => item.unit === sample.unit);
+  return uniqueByStem(mergePools(exact, unit, fallbackUnit)).length;
 }
 
 function baseMatch(item, input, type) {

@@ -3,9 +3,8 @@
   "package_name": "五年级数学下册人教版内容包",
   "version": "2026-05-29",
   "usage_policy": {
-    "mode": "original_practice_generation",
-    "copyright_note": "本内容包依据用户提供的本地教材资料整理单元、课时、知识点和原创出题模板，不保存或复制教材、教辅原题。",
-    "source_rule": "教材资料仅用于确认章节范围、知识点方向和题型风格；练习题由 AI 按知识点原创生成。"
+    "mode": "source_question_extract_only",
+    "copyright_note": "根据用户提供的本地教材资料整理单元、课时、知识点，并接入本地摘录题库。"
   },
   "scope": {
     "grade": "五年级",
@@ -30,21 +29,14 @@
   ],
   "units": [
     {
-      "id": "observe_objects",
+      "id": "observe_objects_3",
       "name": "观察物体（三）",
       "lessons": [
         {
-          "id": "observe_objects_lesson_1",
-          "name": "根据三个方向视图摆物体",
+          "id": "observe_objects_3_lesson_1",
+          "name": "根据视图拼摆几何体",
           "knowledge_point_ids": [
-            "observe_objects_1"
-          ]
-        },
-        {
-          "id": "observe_objects_lesson_2",
-          "name": "立体图形还原",
-          "knowledge_point_ids": [
-            "observe_objects_2"
+            "observe_objects_3_1"
           ]
         }
       ]
@@ -73,13 +65,6 @@
           "knowledge_point_ids": [
             "factor_multiple_3"
           ]
-        },
-        {
-          "id": "factor_multiple_lesson_4",
-          "name": "最大公因数和最小公倍数",
-          "knowledge_point_ids": [
-            "factor_multiple_4"
-          ]
         }
       ]
     },
@@ -89,7 +74,7 @@
       "lessons": [
         {
           "id": "cuboid_cube_lesson_1",
-          "name": "长方体正方体特征",
+          "name": "长方体和正方体认识",
           "knowledge_point_ids": [
             "cuboid_cube_1"
           ]
@@ -110,14 +95,14 @@
         },
         {
           "id": "cuboid_cube_lesson_4",
-          "name": "容积",
+          "name": "体积计算",
           "knowledge_point_ids": [
             "cuboid_cube_4"
           ]
         },
         {
           "id": "cuboid_cube_lesson_5",
-          "name": "体积计算",
+          "name": "容积",
           "knowledge_point_ids": [
             "cuboid_cube_5"
           ]
@@ -137,37 +122,57 @@
         },
         {
           "id": "fraction_meaning_lesson_2",
-          "name": "分数与除法",
+          "name": "真分数和假分数",
           "knowledge_point_ids": [
             "fraction_meaning_2"
           ]
         },
         {
           "id": "fraction_meaning_lesson_3",
-          "name": "真分数假分数",
+          "name": "分数基本性质",
           "knowledge_point_ids": [
             "fraction_meaning_3"
           ]
         },
         {
           "id": "fraction_meaning_lesson_4",
-          "name": "分数基本性质",
+          "name": "约分",
           "knowledge_point_ids": [
             "fraction_meaning_4"
           ]
         },
         {
           "id": "fraction_meaning_lesson_5",
-          "name": "约分和通分",
+          "name": "通分",
           "knowledge_point_ids": [
             "fraction_meaning_5"
           ]
         },
         {
           "id": "fraction_meaning_lesson_6",
-          "name": "分数大小比较",
+          "name": "分数和小数互化",
           "knowledge_point_ids": [
             "fraction_meaning_6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shape_motion_3",
+      "name": "图形的运动（三）",
+      "lessons": [
+        {
+          "id": "shape_motion_3_lesson_1",
+          "name": "旋转",
+          "knowledge_point_ids": [
+            "shape_motion_3_1"
+          ]
+        },
+        {
+          "id": "shape_motion_3_lesson_2",
+          "name": "平移和旋转应用",
+          "knowledge_point_ids": [
+            "shape_motion_3_2"
           ]
         }
       ]
@@ -178,14 +183,14 @@
       "lessons": [
         {
           "id": "fraction_add_sub_lesson_1",
-          "name": "同分母分数加减",
+          "name": "同分母分数加减法",
           "knowledge_point_ids": [
             "fraction_add_sub_1"
           ]
         },
         {
           "id": "fraction_add_sub_lesson_2",
-          "name": "异分母分数加减",
+          "name": "异分母分数加减法",
           "knowledge_point_ids": [
             "fraction_add_sub_2"
           ]
@@ -200,48 +205,34 @@
       ]
     },
     {
-      "id": "statistics",
+      "id": "line_chart",
       "name": "折线统计图",
       "lessons": [
         {
-          "id": "statistics_lesson_1",
+          "id": "line_chart_lesson_1",
           "name": "单式折线统计图",
           "knowledge_point_ids": [
-            "statistics_1"
+            "line_chart_1"
           ]
         },
         {
-          "id": "statistics_lesson_2",
+          "id": "line_chart_lesson_2",
           "name": "复式折线统计图",
           "knowledge_point_ids": [
-            "statistics_2"
-          ]
-        },
-        {
-          "id": "statistics_lesson_3",
-          "name": "趋势分析",
-          "knowledge_point_ids": [
-            "statistics_3"
+            "line_chart_2"
           ]
         }
       ]
     },
     {
-      "id": "math_wide",
+      "id": "defective_item",
       "name": "数学广角--找次品",
       "lessons": [
         {
-          "id": "math_wide_lesson_1",
+          "id": "defective_item_lesson_1",
           "name": "天平找次品",
           "knowledge_point_ids": [
-            "math_wide_1"
-          ]
-        },
-        {
-          "id": "math_wide_lesson_2",
-          "name": "分组策略",
-          "knowledge_point_ids": [
-            "math_wide_2"
+            "defective_item_1"
           ]
         }
       ]
@@ -249,52 +240,27 @@
   ],
   "knowledge_points": [
     {
-      "id": "observe_objects_1",
-      "unit_id": "observe_objects",
-      "lesson_id": "observe_objects_lesson_1",
+      "id": "observe_objects_3_1",
+      "unit_id": "observe_objects_3",
+      "lesson_id": "observe_objects_3_lesson_1",
       "grade": "五年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "观察物体（三）",
-      "name": "根据三个方向视图摆物体",
-      "description": "围绕“观察物体（三）”中“根据三个方向视图摆物体”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "根据视图拼摆几何体",
+      "description": "五年级下册人教版数学“观察物体（三）”中“根据视图拼摆几何体”相关练习。",
       "common_mistakes": [
-        "根据三个方向视图摆物体：把图形名称或单位混淆",
-        "根据三个方向视图摆物体：周长、面积、体积公式用错",
-        "根据三个方向视图摆物体：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "observe_objects_2",
-      "unit_id": "observe_objects",
-      "lesson_id": "observe_objects_lesson_2",
-      "grade": "五年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "观察物体（三）",
-      "name": "立体图形还原",
-      "description": "围绕“观察物体（三）”中“立体图形还原”这一知识点，生成符合五年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "立体图形还原：把图形名称或单位混淆",
-        "立体图形还原：周长、面积、体积公式用错",
-        "立体图形还原：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -312,16 +278,18 @@
       "textbook": "人教版",
       "unit": "因数与倍数",
       "name": "因数和倍数",
-      "description": "围绕“因数与倍数”中“因数和倍数”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“因数与倍数”中“因数和倍数”相关练习。",
       "common_mistakes": [
-        "因数和倍数：没有看清题目要求",
-        "因数和倍数：答语单位写错或漏写",
-        "因数和倍数：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -339,16 +307,18 @@
       "textbook": "人教版",
       "unit": "因数与倍数",
       "name": "2、5、3的倍数特征",
-      "description": "围绕“因数与倍数”中“2、5、3的倍数特征”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“因数与倍数”中“2、5、3的倍数特征”相关练习。",
       "common_mistakes": [
-        "2、5、3的倍数特征：没有看清题目要求",
-        "2、5、3的倍数特征：答语单位写错或漏写",
-        "2、5、3的倍数特征：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -366,43 +336,18 @@
       "textbook": "人教版",
       "unit": "因数与倍数",
       "name": "质数和合数",
-      "description": "围绕“因数与倍数”中“质数和合数”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“因数与倍数”中“质数和合数”相关练习。",
       "common_mistakes": [
-        "质数和合数：没有看清题目要求",
-        "质数和合数：答语单位写错或漏写",
-        "质数和合数：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "factor_multiple_4",
-      "unit_id": "factor_multiple",
-      "lesson_id": "factor_multiple_lesson_4",
-      "grade": "五年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "因数与倍数",
-      "name": "最大公因数和最小公倍数",
-      "description": "围绕“因数与倍数”中“最大公因数和最小公倍数”这一知识点，生成符合五年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "最大公因数和最小公倍数：没有看清题目要求",
-        "最大公因数和最小公倍数：答语单位写错或漏写",
-        "最大公因数和最小公倍数：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -419,17 +364,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "长方体和正方体",
-      "name": "长方体正方体特征",
-      "description": "围绕“长方体和正方体”中“长方体正方体特征”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "长方体和正方体认识",
+      "description": "五年级下册人教版数学“长方体和正方体”中“长方体和正方体认识”相关练习。",
       "common_mistakes": [
-        "长方体正方体特征：把图形名称或单位混淆",
-        "长方体正方体特征：周长、面积、体积公式用错",
-        "长方体正方体特征：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -447,16 +394,18 @@
       "textbook": "人教版",
       "unit": "长方体和正方体",
       "name": "表面积",
-      "description": "围绕“长方体和正方体”中“表面积”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“长方体和正方体”中“表面积”相关练习。",
       "common_mistakes": [
-        "表面积：把图形名称或单位混淆",
-        "表面积：周长、面积、体积公式用错",
-        "表面积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -474,16 +423,18 @@
       "textbook": "人教版",
       "unit": "长方体和正方体",
       "name": "体积和体积单位",
-      "description": "围绕“长方体和正方体”中“体积和体积单位”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“长方体和正方体”中“体积和体积单位”相关练习。",
       "common_mistakes": [
-        "体积和体积单位：把图形名称或单位混淆",
-        "体积和体积单位：周长、面积、体积公式用错",
-        "体积和体积单位：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -500,17 +451,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "长方体和正方体",
-      "name": "容积",
-      "description": "围绕“长方体和正方体”中“容积”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "体积计算",
+      "description": "五年级下册人教版数学“长方体和正方体”中“体积计算”相关练习。",
       "common_mistakes": [
-        "容积：把图形名称或单位混淆",
-        "容积：周长、面积、体积公式用错",
-        "容积：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -527,17 +480,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "长方体和正方体",
-      "name": "体积计算",
-      "description": "围绕“长方体和正方体”中“体积计算”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "容积",
+      "description": "五年级下册人教版数学“长方体和正方体”中“容积”相关练习。",
       "common_mistakes": [
-        "体积计算：把图形名称或单位混淆",
-        "体积计算：周长、面积、体积公式用错",
-        "体积计算：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -555,16 +510,18 @@
       "textbook": "人教版",
       "unit": "分数的意义和性质",
       "name": "分数意义",
-      "description": "围绕“分数的意义和性质”中“分数意义”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“分数的意义和性质”中“分数意义”相关练习。",
       "common_mistakes": [
-        "分数意义：相同数位没有对齐",
-        "分数意义：进位、退位或约分步骤遗漏",
-        "分数意义：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -581,17 +538,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的意义和性质",
-      "name": "分数与除法",
-      "description": "围绕“分数的意义和性质”中“分数与除法”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "真分数和假分数",
+      "description": "五年级下册人教版数学“分数的意义和性质”中“真分数和假分数”相关练习。",
       "common_mistakes": [
-        "分数与除法：相同数位没有对齐",
-        "分数与除法：进位、退位或约分步骤遗漏",
-        "分数与除法：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -608,17 +567,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的意义和性质",
-      "name": "真分数假分数",
-      "description": "围绕“分数的意义和性质”中“真分数假分数”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "分数基本性质",
+      "description": "五年级下册人教版数学“分数的意义和性质”中“分数基本性质”相关练习。",
       "common_mistakes": [
-        "真分数假分数：相同数位没有对齐",
-        "真分数假分数：进位、退位或约分步骤遗漏",
-        "真分数假分数：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -635,17 +596,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的意义和性质",
-      "name": "分数基本性质",
-      "description": "围绕“分数的意义和性质”中“分数基本性质”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "约分",
+      "description": "五年级下册人教版数学“分数的意义和性质”中“约分”相关练习。",
       "common_mistakes": [
-        "分数基本性质：相同数位没有对齐",
-        "分数基本性质：进位、退位或约分步骤遗漏",
-        "分数基本性质：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -662,17 +625,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的意义和性质",
-      "name": "约分和通分",
-      "description": "围绕“分数的意义和性质”中“约分和通分”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "通分",
+      "description": "五年级下册人教版数学“分数的意义和性质”中“通分”相关练习。",
       "common_mistakes": [
-        "约分和通分：相同数位没有对齐",
-        "约分和通分：进位、退位或约分步骤遗漏",
-        "约分和通分：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -689,17 +654,77 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的意义和性质",
-      "name": "分数大小比较",
-      "description": "围绕“分数的意义和性质”中“分数大小比较”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "分数和小数互化",
+      "description": "五年级下册人教版数学“分数的意义和性质”中“分数和小数互化”相关练习。",
       "common_mistakes": [
-        "分数大小比较：相同数位没有对齐",
-        "分数大小比较：进位、退位或约分步骤遗漏",
-        "分数大小比较：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "shape_motion_3_1",
+      "unit_id": "shape_motion_3",
+      "lesson_id": "shape_motion_3_lesson_1",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "图形的运动（三）",
+      "name": "旋转",
+      "description": "五年级下册人教版数学“图形的运动（三）”中“旋转”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
+      ],
+      "difficulty_levels": [
+        "基础",
+        "提高",
+        "拔高"
+      ]
+    },
+    {
+      "id": "shape_motion_3_2",
+      "unit_id": "shape_motion_3",
+      "lesson_id": "shape_motion_3_lesson_2",
+      "grade": "五年级",
+      "semester": "下册",
+      "subject": "数学",
+      "textbook": "人教版",
+      "unit": "图形的运动（三）",
+      "name": "平移和旋转应用",
+      "description": "五年级下册人教版数学“图形的运动（三）”中“平移和旋转应用”相关练习。",
+      "common_mistakes": [
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
+      ],
+      "recommended_question_types": [
+        "计算题",
+        "填空题",
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -716,17 +741,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的加法和减法",
-      "name": "同分母分数加减",
-      "description": "围绕“分数的加法和减法”中“同分母分数加减”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "同分母分数加减法",
+      "description": "五年级下册人教版数学“分数的加法和减法”中“同分母分数加减法”相关练习。",
       "common_mistakes": [
-        "同分母分数加减：相同数位没有对齐",
-        "同分母分数加减：进位、退位或约分步骤遗漏",
-        "同分母分数加减：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -743,17 +770,19 @@
       "subject": "数学",
       "textbook": "人教版",
       "unit": "分数的加法和减法",
-      "name": "异分母分数加减",
-      "description": "围绕“分数的加法和减法”中“异分母分数加减”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "name": "异分母分数加减法",
+      "description": "五年级下册人教版数学“分数的加法和减法”中“异分母分数加减法”相关练习。",
       "common_mistakes": [
-        "异分母分数加减：相同数位没有对齐",
-        "异分母分数加减：进位、退位或约分步骤遗漏",
-        "异分母分数加减：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -771,16 +800,18 @@
       "textbook": "人教版",
       "unit": "分数的加法和减法",
       "name": "分数加减混合",
-      "description": "围绕“分数的加法和减法”中“分数加减混合”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“分数的加法和减法”中“分数加减混合”相关练习。",
       "common_mistakes": [
-        "分数加减混合：相同数位没有对齐",
-        "分数加减混合：进位、退位或约分步骤遗漏",
-        "分数加减混合：把运算顺序看错"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
         "计算题",
         "填空题",
-        "判断题"
+        "选择题",
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -789,25 +820,27 @@
       ]
     },
     {
-      "id": "statistics_1",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_1",
+      "id": "line_chart_1",
+      "unit_id": "line_chart",
+      "lesson_id": "line_chart_lesson_1",
       "grade": "五年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "折线统计图",
       "name": "单式折线统计图",
-      "description": "围绕“折线统计图”中“单式折线统计图”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“折线统计图”中“单式折线统计图”相关练习。",
       "common_mistakes": [
-        "单式折线统计图：没有看清题目要求",
-        "单式折线统计图：答语单位写错或漏写",
-        "单式折线统计图：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -816,25 +849,27 @@
       ]
     },
     {
-      "id": "statistics_2",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_2",
+      "id": "line_chart_2",
+      "unit_id": "line_chart",
+      "lesson_id": "line_chart_lesson_2",
       "grade": "五年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "折线统计图",
       "name": "复式折线统计图",
-      "description": "围绕“折线统计图”中“复式折线统计图”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“折线统计图”中“复式折线统计图”相关练习。",
       "common_mistakes": [
-        "复式折线统计图：没有看清题目要求",
-        "复式折线统计图：答语单位写错或漏写",
-        "复式折线统计图：计算后没有检查结果是否合理"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "判断题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
@@ -843,79 +878,27 @@
       ]
     },
     {
-      "id": "statistics_3",
-      "unit_id": "statistics",
-      "lesson_id": "statistics_lesson_3",
-      "grade": "五年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "折线统计图",
-      "name": "趋势分析",
-      "description": "围绕“折线统计图”中“趋势分析”这一知识点，生成符合五年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "趋势分析：没有看清题目要求",
-        "趋势分析：答语单位写错或漏写",
-        "趋势分析：计算后没有检查结果是否合理"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "判断题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_1",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_1",
+      "id": "defective_item_1",
+      "unit_id": "defective_item",
+      "lesson_id": "defective_item_lesson_1",
       "grade": "五年级",
       "semester": "下册",
       "subject": "数学",
       "textbook": "人教版",
       "unit": "数学广角--找次品",
       "name": "天平找次品",
-      "description": "围绕“数学广角--找次品”中“天平找次品”这一知识点，生成符合五年级下册学生水平的原创练习。",
+      "description": "五年级下册人教版数学“数学广角--找次品”中“天平找次品”相关练习。",
       "common_mistakes": [
-        "天平找次品：把图形名称或单位混淆",
-        "天平找次品：周长、面积、体积公式用错",
-        "天平找次品：没有结合图形条件分析"
+        "没有看清题目要求",
+        "计算后没有检查结果是否合理",
+        "单位、格式或关键条件遗漏"
       ],
       "recommended_question_types": [
+        "计算题",
         "填空题",
         "选择题",
-        "应用题"
-      ],
-      "difficulty_levels": [
-        "基础",
-        "提高",
-        "拔高"
-      ]
-    },
-    {
-      "id": "math_wide_2",
-      "unit_id": "math_wide",
-      "lesson_id": "math_wide_lesson_2",
-      "grade": "五年级",
-      "semester": "下册",
-      "subject": "数学",
-      "textbook": "人教版",
-      "unit": "数学广角--找次品",
-      "name": "分组策略",
-      "description": "围绕“数学广角--找次品”中“分组策略”这一知识点，生成符合五年级下册学生水平的原创练习。",
-      "common_mistakes": [
-        "分组策略：把图形名称或单位混淆",
-        "分组策略：周长、面积、体积公式用错",
-        "分组策略：没有结合图形条件分析"
-      ],
-      "recommended_question_types": [
-        "填空题",
-        "选择题",
-        "应用题"
+        "应用题",
+        "综合题"
       ],
       "difficulty_levels": [
         "基础",
